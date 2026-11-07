@@ -45,7 +45,7 @@ private val Bg = Color(0xFFF4F7F5)
 
 private val Nastaliq = FontFamily(Font(R.font.nastaliq, FontWeight.Normal))
 
-private fun urduStyle(size: Int, weight: FontWeight = FontWeight.Normal) = TextStyle(
+internal fun urduStyle(size: Int, weight: FontWeight = FontWeight.Normal) = TextStyle(
     fontFamily = Nastaliq,
     fontSize = size.sp,
     lineHeight = (size * 2.1).sp,
@@ -75,7 +75,7 @@ private val AppColors = lightColorScheme(
     primaryContainer = GreenLight,
 )
 
-private fun urduNumber(n: Int): String {
+internal fun urduNumber(n: Int): String {
     val digits = "۰۱۲۳۴۵۶۷۸۹"
     return n.toString().map { if (it.isDigit()) digits[it - '0'] else it }.joinToString("")
 }
@@ -95,22 +95,25 @@ private class Favorites(context: Context) {
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            MaterialTheme(colorScheme = AppColors, typography = UrduTypography) {
-                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                    App()
-                }
-            }
+        setContent { AppRoot() }
+    }
+}
+
+@Composable
+internal fun AppRoot(initialFolder: Int? = null, initialIdea: Int? = null) {
+    MaterialTheme(colorScheme = AppColors, typography = UrduTypography) {
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+            App(initialFolder, initialIdea)
         }
     }
 }
 
 @Composable
-private fun App() {
+internal fun App(initialFolder: Int? = null, initialIdea: Int? = null) {
     val context = LocalContext.current
     val favorites = remember { Favorites(context) }
-    var folderId by rememberSaveable { mutableStateOf<Int?>(null) }
-    var selectedId by rememberSaveable { mutableStateOf<Int?>(null) }
+    var folderId by rememberSaveable { mutableStateOf(initialFolder) }
+    var selectedId by rememberSaveable { mutableStateOf(initialIdea) }
 
     val selected = ideas.firstOrNull { it.id == selectedId }
     val folder = budgets.firstOrNull { it.id == folderId }
@@ -166,6 +169,7 @@ private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onO
     var query by rememberSaveable { mutableStateOf("") }
     var onlyFavorites by rememberSaveable { mutableStateOf(false) }
     var showTips by rememberSaveable { mutableStateOf(false) }
+    var showProfile by rememberSaveable { mutableStateOf(false) }
     var todayIdea by remember { mutableStateOf(ideas.random()) }
 
     val showList = query.isNotBlank() || onlyFavorites
@@ -186,6 +190,8 @@ private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onO
                         tint = if (onlyFavorites) Gold else Color.White,
                     )
                 }
+                // RTL میں آخری ایکشن سب سے بائیں طرف آتا ہے
+                ProfileAvatar(onClick = { showProfile = true })
             }
         },
     ) { padding ->
@@ -226,10 +232,10 @@ private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onO
                 items(budgets.chunked(2)) { row ->
                     Row(
                         Modifier.fillMaxWidth().padding(horizontal = 12.dp),
-                        horizontalArrangement = Arrangement.spacedBy(0.dp),
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
                         row.forEach { b ->
-                            FolderCard(b, Modifier.weight(1f), onClick = { onOpenFolder(b) })
+                            Folder3DCard(b, ideas.count { it.budget == b.id }, Modifier.weight(1f), onClick = { onOpenFolder(b) })
                         }
                         if (row.size == 1) Spacer(Modifier.weight(1f))
                     }
@@ -262,6 +268,14 @@ private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onO
         }
     }
 
+    if (showProfile) {
+        AlertDialog(
+            onDismissRequest = { showProfile = false },
+            confirmButton = { TextButton(onClick = { showProfile = false }) { Text("ٹھیک ہے") } },
+            text = { ProfileDialogContent() },
+        )
+    }
+
     if (showTips) {
         AlertDialog(
             onDismissRequest = { showTips = false },
@@ -275,34 +289,6 @@ private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onO
                 }
             },
         )
-    }
-}
-
-@Composable
-private fun FolderCard(budget: Budget, modifier: Modifier, onClick: () -> Unit) {
-    val count = ideas.count { it.budget == budget.id }
-    Card(
-        modifier = modifier.padding(6.dp).clickable(onClick = onClick),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(2.dp),
-        shape = RoundedCornerShape(18.dp),
-    ) {
-        Column(
-            Modifier.fillMaxWidth().padding(vertical = 14.dp, horizontal = 10.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Box(
-                Modifier.size(56.dp).background(GreenLight, RoundedCornerShape(14.dp)),
-                contentAlignment = Alignment.Center,
-            ) { Text("📁", fontSize = 28.sp) }
-            Text(
-                "${urduNumber(budget.id)}۔ ${budget.label}",
-                style = urduStyle(18, FontWeight.Bold),
-                color = Green,
-                textAlign = TextAlign.Center,
-            )
-            Text("${urduNumber(count)} آئیڈیاز", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
-        }
     }
 }
 

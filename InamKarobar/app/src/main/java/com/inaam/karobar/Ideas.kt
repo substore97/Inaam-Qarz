@@ -33,7 +33,7 @@ const val EASY = "آسان"
 const val MEDIUM = "درمیانہ"
 const val HARD = "مشکل"
 
-val ideas: List<Idea> = listOf(
+val baseIdeas: List<Idea> = listOf(
     // ================= 1) 50 ہزار =================
     Idea(
         1, 1, "ہوم کچن اور ٹفن سروس",

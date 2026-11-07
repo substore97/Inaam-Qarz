@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("app.cash.paparazzi")
 }
 
 android {
@@ -48,4 +49,5 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.activity:activity-compose:1.9.0")
+    testImplementation("junit:junit:4.13.2")
 }
