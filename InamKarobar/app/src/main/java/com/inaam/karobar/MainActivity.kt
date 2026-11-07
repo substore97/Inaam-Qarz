@@ -109,61 +109,84 @@ class MainActivity : ComponentActivity() {
 private fun App() {
     val context = LocalContext.current
     val favorites = remember { Favorites(context) }
+    var folderId by rememberSaveable { mutableStateOf<Int?>(null) }
     var selectedId by rememberSaveable { mutableStateOf<Int?>(null) }
 
     val selected = ideas.firstOrNull { it.id == selectedId }
-    if (selected != null) {
-        BackHandler { selectedId = null }
-        DetailScreen(
-            idea = selected,
-            isFavorite = selected.id in favorites.ids,
-            onToggleFavorite = { favorites.toggle(selected.id) },
-            onBack = { selectedId = null },
+    val folder = budgets.firstOrNull { it.id == folderId }
+    when {
+        selected != null -> {
+            BackHandler { selectedId = null }
+            DetailScreen(
+                idea = selected,
+                isFavorite = selected.id in favorites.ids,
+                onToggleFavorite = { favorites.toggle(selected.id) },
+                onBack = { selectedId = null },
+            )
+        }
+        folder != null -> {
+            BackHandler { folderId = null }
+            FolderScreen(folder, favorites, onOpen = { selectedId = it.id }, onBack = { folderId = null })
+        }
+        else -> HomeScreen(
+            favorites = favorites,
+            onOpenFolder = { folderId = it.id },
+            onOpen = { selectedId = it.id },
         )
-    } else {
-        HomeScreen(favorites = favorites, onOpen = { selectedId = it.id })
     }
 }
 
-// ================= ہوم اسکرین =================
+private fun budgetOf(idea: Idea) = budgets.first { it.id == idea.budget }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun HomeScreen(favorites: Favorites, onOpen: (Idea) -> Unit) {
+private fun GreenTopBar(
+    title: String,
+    onBack: (() -> Unit)? = null,
+    actions: @Composable RowScope.() -> Unit = {},
+) {
+    TopAppBar(
+        title = { Text(title, maxLines = 1, overflow = TextOverflow.Ellipsis, style = urduStyle(20, FontWeight.Bold)) },
+        navigationIcon = {
+            if (onBack != null) IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "واپس") }
+        },
+        actions = actions,
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = Green,
+            titleContentColor = Color.White,
+            navigationIconContentColor = Color.White,
+            actionIconContentColor = Color.White,
+        ),
+    )
+}
+
+// ================= ہوم اسکرین (فولڈرز) =================
+@Composable
+private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onOpen: (Idea) -> Unit) {
     var query by rememberSaveable { mutableStateOf("") }
-    var category by rememberSaveable { mutableStateOf<String?>(null) }
     var onlyFavorites by rememberSaveable { mutableStateOf(false) }
     var showTips by rememberSaveable { mutableStateOf(false) }
     var todayIdea by remember { mutableStateOf(ideas.random()) }
 
+    val showList = query.isNotBlank() || onlyFavorites
     val filtered = ideas.filter { idea ->
-        (category == null || idea.category == category) &&
-            (!onlyFavorites || idea.id in favorites.ids) &&
+        (!onlyFavorites || idea.id in favorites.ids) &&
             (query.isBlank() || idea.title.contains(query.trim()) || idea.description.contains(query.trim()))
     }
 
     Scaffold(
         containerColor = Bg,
         topBar = {
-            TopAppBar(
-                title = { Text("کاروباری آئیڈیاز", style = urduStyle(22, FontWeight.Bold)) },
-                actions = {
-                    IconButton(onClick = { showTips = true }) {
-                        Icon(Icons.Filled.Info, contentDescription = "مشورے")
-                    }
-                    IconButton(onClick = { onlyFavorites = !onlyFavorites }) {
-                        Icon(
-                            if (onlyFavorites) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                            contentDescription = "پسندیدہ",
-                            tint = if (onlyFavorites) Gold else Color.White,
-                        )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Green,
-                    titleContentColor = Color.White,
-                    actionIconContentColor = Color.White,
-                ),
-            )
+            GreenTopBar("انعام کاروبار") {
+                IconButton(onClick = { showTips = true }) { Icon(Icons.Filled.Info, contentDescription = "مشورے") }
+                IconButton(onClick = { onlyFavorites = !onlyFavorites }) {
+                    Icon(
+                        if (onlyFavorites) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                        contentDescription = "پسندیدہ",
+                        tint = if (onlyFavorites) Gold else Color.White,
+                    )
+                }
+            }
         },
     ) { padding ->
         LazyColumn(
@@ -188,56 +211,53 @@ private fun HomeScreen(favorites: Favorites, onOpen: (Idea) -> Unit) {
                     ),
                 )
             }
-            item {
-                LazyRow(
-                    contentPadding = PaddingValues(horizontal = 16.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    item {
-                        FilterChip(
-                            selected = category == null,
-                            onClick = { category = null },
-                            label = { Text("سب") },
-                        )
-                    }
-                    items(Categories.all) { c ->
-                        FilterChip(
-                            selected = category == c,
-                            onClick = { category = if (category == c) null else c },
-                            label = { Text(c) },
-                        )
-                    }
-                }
-            }
-            if (query.isBlank() && category == null && !onlyFavorites) {
+            if (!showList) {
                 item {
                     TodayCard(todayIdea, onOpen = { onOpen(todayIdea) }, onNext = { todayIdea = ideas.random() })
                 }
-            }
-            item {
-                Text(
-                    when {
-                        onlyFavorites -> "پسندیدہ آئیڈیاز (${urduNumber(filtered.size)})"
-                        else -> "کل آئیڈیاز: ${urduNumber(filtered.size)}"
-                    },
-                    style = MaterialTheme.typography.titleSmall,
-                    color = Color.Gray,
-                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp),
-                )
-            }
-            if (filtered.isEmpty()) {
                 item {
                     Text(
-                        if (onlyFavorites) "ابھی تک کوئی پسندیدہ آئیڈیا نہیں۔ کسی آئیڈیا پر ♥ دبائیں۔"
-                        else "کوئی آئیڈیا نہیں ملا۔",
-                        modifier = Modifier.fillMaxWidth().padding(32.dp),
-                        textAlign = TextAlign.Center,
-                        color = Color.Gray,
+                        "اپنے سرمائے کے مطابق فولڈر چنیں",
+                        style = urduStyle(17, FontWeight.Bold),
+                        color = Green,
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 6.dp),
                     )
                 }
-            }
-            items(filtered, key = { it.id }) { idea ->
-                IdeaCard(idea, idea.id in favorites.ids, onClick = { onOpen(idea) }, onFavorite = { favorites.toggle(idea.id) })
+                items(budgets.chunked(2)) { row ->
+                    Row(
+                        Modifier.fillMaxWidth().padding(horizontal = 12.dp),
+                        horizontalArrangement = Arrangement.spacedBy(0.dp),
+                    ) {
+                        row.forEach { b ->
+                            FolderCard(b, Modifier.weight(1f), onClick = { onOpenFolder(b) })
+                        }
+                        if (row.size == 1) Spacer(Modifier.weight(1f))
+                    }
+                }
+            } else {
+                item {
+                    Text(
+                        if (onlyFavorites) "پسندیدہ آئیڈیاز (${urduNumber(filtered.size)})"
+                        else "تلاش کے نتائج: ${urduNumber(filtered.size)}",
+                        style = MaterialTheme.typography.titleSmall,
+                        color = Color.Gray,
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp),
+                    )
+                }
+                if (filtered.isEmpty()) {
+                    item {
+                        Text(
+                            if (onlyFavorites) "ابھی تک کوئی پسندیدہ آئیڈیا نہیں۔ کسی آئیڈیا پر ♥ دبائیں۔"
+                            else "کوئی آئیڈیا نہیں ملا۔",
+                            modifier = Modifier.fillMaxWidth().padding(32.dp),
+                            textAlign = TextAlign.Center,
+                            color = Color.Gray,
+                        )
+                    }
+                }
+                items(filtered, key = { it.id }) { idea ->
+                    IdeaCard(idea, idea.id in favorites.ids, onClick = { onOpen(idea) }, onFavorite = { favorites.toggle(idea.id) })
+                }
             }
         }
     }
@@ -255,6 +275,68 @@ private fun HomeScreen(favorites: Favorites, onOpen: (Idea) -> Unit) {
                 }
             },
         )
+    }
+}
+
+@Composable
+private fun FolderCard(budget: Budget, modifier: Modifier, onClick: () -> Unit) {
+    val count = ideas.count { it.budget == budget.id }
+    Card(
+        modifier = modifier.padding(6.dp).clickable(onClick = onClick),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(2.dp),
+        shape = RoundedCornerShape(18.dp),
+    ) {
+        Column(
+            Modifier.fillMaxWidth().padding(vertical = 14.dp, horizontal = 10.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Box(
+                Modifier.size(56.dp).background(GreenLight, RoundedCornerShape(14.dp)),
+                contentAlignment = Alignment.Center,
+            ) { Text("📁", fontSize = 28.sp) }
+            Text(
+                "${urduNumber(budget.id)}۔ ${budget.label}",
+                style = urduStyle(18, FontWeight.Bold),
+                color = Green,
+                textAlign = TextAlign.Center,
+            )
+            Text("${urduNumber(count)} آئیڈیاز", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+        }
+    }
+}
+
+// ================= فولڈر اسکرین =================
+@Composable
+private fun FolderScreen(budget: Budget, favorites: Favorites, onOpen: (Idea) -> Unit, onBack: () -> Unit) {
+    val list = ideas.filter { it.budget == budget.id }
+    Scaffold(
+        containerColor = Bg,
+        topBar = { GreenTopBar("📁 ${budget.label} روپے", onBack = onBack) },
+    ) { padding ->
+        LazyColumn(
+            modifier = Modifier.padding(padding).fillMaxSize(),
+            contentPadding = PaddingValues(vertical = 10.dp),
+        ) {
+            item {
+                Card(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
+                    colors = CardDefaults.cardColors(containerColor = Green),
+                    shape = RoundedCornerShape(18.dp),
+                ) {
+                    Column(Modifier.padding(16.dp)) {
+                        Text("سرمایہ: ${budget.amount}", color = Gold, style = urduStyle(18, FontWeight.Bold))
+                        Text(
+                            "اس رقم سے شروع ہونے والے ${urduNumber(list.size)} بہترین کاروباری آئیڈیاز",
+                            color = Color.White,
+                        )
+                    }
+                }
+            }
+            items(list, key = { it.id }) { idea ->
+                IdeaCard(idea, idea.id in favorites.ids, onClick = { onOpen(idea) }, onFavorite = { favorites.toggle(idea.id) })
+            }
+        }
     }
 }
 
@@ -297,13 +379,13 @@ private fun IdeaCard(idea: Idea, isFavorite: Boolean, onClick: () -> Unit, onFav
                 Modifier.size(44.dp).background(GreenLight, CircleShape),
                 contentAlignment = Alignment.Center,
             ) {
-                Text(urduNumber(idea.id), color = Green, style = urduStyle(15, FontWeight.Bold))
+                Text("💡", fontSize = 20.sp)
             }
             Spacer(Modifier.width(12.dp))
             Column(Modifier.weight(1f)) {
                 Text(idea.title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                 Text(
-                    "${idea.category}  •  ${idea.level}",
+                    "📁 ${budgetOf(idea).label}  •  ${idea.level}",
                     style = MaterialTheme.typography.bodySmall,
                     color = Green,
                 )
@@ -327,41 +409,28 @@ private fun IdeaCard(idea: Idea, isFavorite: Boolean, onClick: () -> Unit, onFav
 }
 
 // ================= تفصیل اسکرین =================
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun DetailScreen(idea: Idea, isFavorite: Boolean, onToggleFavorite: () -> Unit, onBack: () -> Unit) {
     val context = LocalContext.current
     Scaffold(
         containerColor = Bg,
         topBar = {
-            TopAppBar(
-                title = { Text(idea.title, maxLines = 1, overflow = TextOverflow.Ellipsis, style = urduStyle(19, FontWeight.Bold)) },
-                navigationIcon = {
-                    IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "واپس") }
-                },
-                actions = {
-                    IconButton(onClick = onToggleFavorite) {
-                        Icon(
-                            if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                            "پسندیدہ",
-                            tint = if (isFavorite) Gold else Color.White,
-                        )
-                    }
-                    IconButton(onClick = { shareIdea(context, idea) }) { Icon(Icons.Filled.Share, "شیئر کریں") }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Green,
-                    titleContentColor = Color.White,
-                    navigationIconContentColor = Color.White,
-                    actionIconContentColor = Color.White,
-                ),
-            )
+            GreenTopBar(idea.title, onBack = onBack) {
+                IconButton(onClick = onToggleFavorite) {
+                    Icon(
+                        if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                        "پسندیدہ",
+                        tint = if (isFavorite) Gold else Color.White,
+                    )
+                }
+                IconButton(onClick = { shareIdea(context, idea) }) { Icon(Icons.Filled.Share, "شیئر کریں") }
+            }
         },
     ) { padding ->
         Column(
             Modifier.padding(padding).fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
         ) {
-            AssistChip(onClick = {}, label = { Text(idea.category) })
+            AssistChip(onClick = {}, label = { Text("📁 ${budgetOf(idea).label} روپے والے آئیڈیاز") })
             Spacer(Modifier.height(8.dp))
             Text(idea.description, style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(12.dp))
@@ -449,7 +518,7 @@ private fun shareIdea(context: Context, idea: Idea) {
         appendLine("شروع کرنے کا طریقہ:")
         idea.steps.forEachIndexed { i, s -> appendLine("${urduNumber(i + 1)}۔ $s") }
         appendLine()
-        append("— کاروباری آئیڈیاز ایپ")
+        append("— انعام کاروبار ایپ")
     }
     val intent = Intent(Intent.ACTION_SEND).apply {
         type = "text/plain"
