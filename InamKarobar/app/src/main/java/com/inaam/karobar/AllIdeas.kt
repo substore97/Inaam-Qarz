@@ -2,5 +2,6 @@ package com.inaam.karobar
 
 /** تمام آئیڈیاز، فولڈر کی ترتیب سے */
 val ideas: List<Idea> by lazy {
-    (baseIdeas + ideasA + ideasB + ideasC + ideasD + ideasE + ideasF + ideasG + ideasH + ideasI).sortedBy { it.budget }
+    (baseIdeas + ideasA + ideasB + ideasC + ideasD + ideasE + ideasF + ideasG + ideasH + ideasI +
+        more01 + more02 + more03 + more04 + more05 + more06 + more07 + more08 + more09 + more10 + more11).sortedBy { it.budget }
 }
