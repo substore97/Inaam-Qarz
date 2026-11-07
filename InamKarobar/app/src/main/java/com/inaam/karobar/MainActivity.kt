@@ -295,7 +295,9 @@ private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onO
 // ================= فولڈر اسکرین =================
 @Composable
 private fun FolderScreen(budget: Budget, favorites: Favorites, onOpen: (Idea) -> Unit, onBack: () -> Unit) {
-    val list = ideas.filter { it.budget == budget.id }
+    val all = ideas.filter { it.budget == budget.id }
+    var level by rememberSaveable { mutableStateOf<String?>(null) }
+    val list = if (level == null) all else all.filter { it.level == level }
     Scaffold(
         containerColor = Bg,
         topBar = { GreenTopBar("📁 ${budget.label} روپے", onBack = onBack) },
@@ -313,8 +315,26 @@ private fun FolderScreen(budget: Budget, favorites: Favorites, onOpen: (Idea) ->
                     Column(Modifier.padding(16.dp)) {
                         Text("سرمایہ: ${budget.amount}", color = Gold, style = urduStyle(18, FontWeight.Bold))
                         Text(
-                            "اس رقم سے شروع ہونے والے ${urduNumber(list.size)} بہترین کاروباری آئیڈیاز",
+                            "اس رقم سے شروع ہونے والے ${urduNumber(all.size)} بہترین کاروباری آئیڈیاز",
                             color = Color.White,
+                        )
+                    }
+                }
+            }
+            item {
+                LazyRow(
+                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    item {
+                        FilterChip(selected = level == null, onClick = { level = null }, label = { Text("سب (${urduNumber(all.size)})") })
+                    }
+                    items(listOf(EASY, MEDIUM, HARD)) { l ->
+                        val n = all.count { it.level == l }
+                        FilterChip(
+                            selected = level == l,
+                            onClick = { level = if (level == l) null else l },
+                            label = { Text("$l (${urduNumber(n)})") },
                         )
                     }
                 }
