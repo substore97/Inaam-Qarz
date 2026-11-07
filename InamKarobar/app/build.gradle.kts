@@ -12,8 +12,8 @@ android {
         applicationId = "com.inaam.karobar"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
     }
 
     buildTypes {
@@ -50,4 +50,17 @@ dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.activity:activity-compose:1.9.0")
     testImplementation("junit:junit:4.13.2")
+}
+
+// Paparazzi (اسکرین شاٹ ٹیسٹ) کو گواوا کا jre ورژن چاہیے
+dependencies.constraints {
+    add("testImplementation", "com.google.guava:guava") {
+        attributes {
+            attribute(
+                TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE,
+                objects.named(TargetJvmEnvironment::class.java, TargetJvmEnvironment.STANDARD_JVM),
+            )
+        }
+        because("LayoutLib and sdk-common depend on Guava's -jre published variant.")
+    }
 }
