@@ -2,7 +2,7 @@
 
 مکمل اردو زبان میں کاروباری آئیڈیاز کی ایپ، سرمائے کے حساب سے فولڈرز میں۔
 
-## فولڈرز (ہر فولڈر میں 10 آئیڈیاز، کل 110)
+## فولڈرز (ہر فولڈر میں 30 آئیڈیاز، کل 330)
 1. 50 ہزار
 2. 1 لاکھ
 3. 2 لاکھ
@@ -28,7 +28,7 @@
 ## APK
 تیار APK: `../apk/InamKarobar.apk`
 
-آئیڈیاز `Ideas.kt`، `IdeasA.kt`، `IdeasB.kt` اور `IdeasC.kt` میں ہیں (`app/src/main/java/com/inaam/karobar/`)۔
+آئیڈیاز `Ideas.kt` اور `IdeasA.kt` سے `IdeasI.kt` تک کی فائلوں میں ہیں (`app/src/main/java/com/inaam/karobar/`)۔
 
 اسکرین شاٹ ٹیسٹ: `ANDROID_HOME=... ./gradlew recordPaparazziDebug`
 
