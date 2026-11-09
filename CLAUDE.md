@@ -19,6 +19,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `fruits-veg-book/`: فواكهي وخضراواتي (fruits & vegetables), 32 pages
 - `vehicles-book/`: مركباتي الجميلة (vehicles), 32 pages
 - `opposites-book/`: أضدادي الجميلة (opposites), 28 pages
+- `seasons-book/`: فصولي الجميلة (weather, seasons & days), 28 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
