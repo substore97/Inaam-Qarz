@@ -127,8 +127,21 @@ class Ctx {
     return this.path(d + 'Z', c, { shine: [cx - r * .25, cy - r * .3, r * .2, r * .1, -30, .8] });
   }
   face(cx, cy, s = 1, o = {}) {
+    // Ctx.faceMode ('sleep' | 'sad') lets a book re-use any character with another expression
+    if (Ctx.faceMode && !o.keep) o = { ...o, mode: Ctx.faceMode };
     const ink = '#2b2340';
     const ex = 13 * s, ey = cy - 4 * s;
+    if (o.mode === 'sad') {
+      for (const sx of [-1, 1]) {
+        const x = cx + sx * ex;
+        this.raw(`<ellipse cx="${x}" cy="${ey + 1 * s}" rx="${4.6 * s}" ry="${5.6 * s}" fill="${ink}"/><circle cx="${x + 1.4 * s}" cy="${ey - 1.4 * s}" r="${1.8 * s}" fill="#fff"/>`);
+        this.line(`M${x - 6 * s * sx} ${ey - 10 * s} L${x + 4 * s * sx} ${ey - 7 * s}`, ink, 2.2 * s);
+      }
+      const my = cy + 10 * s + (o.mouthDy || 0) * s;
+      this.line(`M${cx - 6 * s} ${my} Q${cx} ${my - 6 * s} ${cx + 6 * s} ${my}`, ink, 2.5 * s);
+      this.raw(`<path d="M${cx + ex + 2 * s} ${ey + 6 * s} q${3 * s} ${6 * s} 0 ${9 * s} q${-3 * s} ${-3 * s} 0 ${-9 * s} Z" fill="#6cc4ff"/>`);
+      return this;
+    }
     if (o.mode === 'sleep') {
       this.line(`M${cx - ex - 5 * s} ${ey} Q${cx - ex} ${ey + 5 * s} ${cx - ex + 5 * s} ${ey}`, ink, 2.6 * s);
       this.line(`M${cx + ex - 5 * s} ${ey} Q${cx + ex} ${ey + 5 * s} ${cx + ex + 5 * s} ${ey}`, ink, 2.6 * s);
