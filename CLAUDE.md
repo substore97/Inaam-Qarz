@@ -8,5 +8,5 @@ Every time a book is made or updated, send ALL of these to the user:
 
 **Page size: always A4 (portrait).**
 
-Author credit "تأليف: انعام الرحمن" goes on page 2 only, always directly below the heading "هذا الكتاب ملك", not on the front or back cover.
+Author credit "تأليف: انعام الرحمن" goes on page 2 only, always directly below the heading "هذا الكتاب ملك", not on the front or back cover. Page 2 has no "عمري ... سنوات" (age) line.
 User communicates in Roman Urdu; reply in Roman Urdu.
