@@ -10,3 +10,10 @@ Every time a book is made or updated, send ALL of these to the user:
 
 Author credit "تأليف: انعام الرحمن" goes on page 2 only, always directly below the heading "هذا الكتاب ملك", not on the front or back cover. Page 2 has no "عمري ... سنوات" (age) line.
 User communicates in Roman Urdu; reply in Roman Urdu.
+
+## Books so far
+- `arabic-kids-book/`: حروفي الجميلة (Arabic alphabet), 36 pages
+- `animals-book/`: حيواناتي الجميلة (animals), 32 pages
+
+Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
+For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.

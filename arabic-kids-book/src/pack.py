@@ -8,6 +8,8 @@ import sys, glob, os, io
 from PIL import Image
 
 src, root = sys.argv[1], sys.argv[2]
+PREFIX = sys.argv[3] if len(sys.argv) > 3 else 'Huroofi-Al-Jameela'
+TITLE_ARG = sys.argv[4] if len(sys.argv) > 4 else 'حروفي الجميلة'
 files = sorted(glob.glob(os.path.join(src, 'page-*.png')))
 PAGE_W, PAGE_H = 595.28, 841.89  # A4 in points
 
@@ -52,11 +54,11 @@ def write_pdf(out, jpgs, size, title):
     print(os.path.basename(out), n, 'pages', round(len(out_b) / 1e6, 2), 'MB')
 
 
-TITLE = 'حروفي الجميلة'
+TITLE = TITLE_ARG
 APP = (1358, 1920)     # A4 at Full HD height
 PRINT = (2480, 3508)   # A4 at 300 DPI
-write_pdf(os.path.join(root, 'Huroofi-Al-Jameela-APP.pdf'), [jpeg(f, APP, 82) for f in files], APP, TITLE)
-write_pdf(os.path.join(root, 'Huroofi-Al-Jameela-PRINT.pdf'), [jpeg(f, PRINT, 92) for f in files], PRINT, TITLE)
-cover = os.path.join(root, 'Huroofi-Al-Jameela-Cover.jpg')
+write_pdf(os.path.join(root, PREFIX + '-APP.pdf'), [jpeg(f, APP, 82) for f in files], APP, TITLE)
+write_pdf(os.path.join(root, PREFIX + '-PRINT.pdf'), [jpeg(f, PRINT, 92) for f in files], PRINT, TITLE)
+cover = os.path.join(root, PREFIX + '-Cover.jpg')
 open(cover, 'wb').write(jpeg(files[0], PRINT, 92))
-print('Huroofi-Al-Jameela-Cover.jpg', round(os.path.getsize(cover) / 1e6, 2), 'MB')
+print(PREFIX + '-Cover.jpg', round(os.path.getsize(cover) / 1e6, 2), 'MB')

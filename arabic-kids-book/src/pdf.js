@@ -1,13 +1,14 @@
 // Renders every page of build/book.html to a high-res image, then packs them into PDFs:
 //   Huroofi-Al-Jameela-PRINT.pdf   – 300 DPI, A4, 300 DPI (for printing)
-//   Huroofi-Al-Jameela-MOBILE.pdf  – Full HD, smallest file for your app
+//   Huroofi-Al-Jameela-APP.pdf     – Full HD, smallest file for your app
+// Usage for another book: BOOK_DIR=<dir> node pdf.js <FilePrefix> <Arabic title>
 // Raster pages look identical in every PDF viewer (phones included).
 const { chromium } = require('playwright');
 const { execFileSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-const ROOT = path.join(__dirname, '..');
+const ROOT = process.env.BOOK_DIR || path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'build', 'pages');
 
 (async () => {
@@ -21,5 +22,5 @@ const OUT = path.join(ROOT, 'build', 'pages');
     await secs[i].screenshot({ path: path.join(OUT, `page-${String(i + 1).padStart(2, '0')}.png`) });
   }
   await b.close();
-  execFileSync('python3', ['-I', path.join(__dirname, 'pack.py'), OUT, ROOT], { stdio: 'inherit' });
+  execFileSync('python3', ['-I', path.join(__dirname, 'pack.py'), OUT, ROOT, ...process.argv.slice(2)], { stdio: 'inherit' });
 })();

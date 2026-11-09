@@ -503,4 +503,4 @@ function art(name, opts = {}) {
   return c.svg(opts.vb || '0 0 200 200', opts.cls || '');
 }
 
-module.exports = { art, mix, lighten, darken, Ctx };
+module.exports = { art, mix, lighten, darken, Ctx, A };
