@@ -104,7 +104,6 @@ pages.push(`
   <h1>${t3d('حُرُوفِي', '#ffd23f', '#e07b00', 12)}<br>${t3d('الجَمِيلَة', '#ffffff', '#7b3fe4', 12)}</h1>
   <div class="csub">كِتَابُ الحُرُوفِ العَرَبِيَّةِ لِلأَطْفَال</div>
   <div class="cen">My Beautiful Arabic Letters</div>
-  <div class="author">تَأْلِيف: انعام الرحمن</div>
   <div class="cart">
     ${['sun', 'rabbit', 'rocket', 'apple', 'bee', 'whale'].map((a, k) => `<div class="ca ca${k}">${art(a)}</div>`).join('')}
   </div>
@@ -116,6 +115,7 @@ pages.push(`
 <section class="page plain" style="--h:200">
   ${bubbles(2, 200)}
   <div class="owner">
+    <div class="author">تَأْلِيف: انعام الرحمن</div>
     ${art('bear', { cls: 'ownerart' })}
     <h2>${t3d('هٰذَا الكِتَابُ مِلْكُ', '#fff', '#2a7fd4', 7)}</h2>
     <div class="nameline"></div>
@@ -204,7 +204,6 @@ pages.push(`
   <div class="card blurb">
     <p>كِتَابٌ مُلَوَّنٌ بِرُسُومَاتٍ ثُلَاثِيَّةِ الأَبْعَاد يُعَلِّمُ طِفْلَكَ الحُرُوفَ العَرَبِيَّةَ الثَّمَانِيَةَ وَالعِشْرِين بِطَرِيقَةٍ مُمْتِعَة.</p>
     <ul><li>٢٨ حَرْفًا مَعَ صُورَةٍ وَكَلِمَة</li><li>أَشْكَالُ الحَرْفِ فِي الكَلِمَة</li><li>تَمَارِينُ كِتَابَةٍ مُنَقَّطَة</li><li>الأَرْقَامُ وَالأَلْوَانُ وَشَهَادَةُ تَقْدِير</li></ul>
-    <p class="author2">تَأْلِيف: انعام الرحمن</p>
     <p class="en2">A joyful 3D picture book to learn the 28 Arabic letters · Ages 3–7</p>
   </div>
   <div class="cart small">${['cake', 'moon', 'strawberry', 'gift', 'pumpkin', 'fish'].map((a, k) => `<div class="ca ca${k}">${art(a)}</div>`).join('')}</div>
@@ -282,7 +281,7 @@ body{font-family:Baloo,sans-serif;direction:rtl;color:#2b2340}
 .blurb ul{margin:8px 26px 0}.en2{font-family:Fredoka;direction:ltr;text-align:center;color:#7b3fe4;font-size:19px;margin-top:8px}
 /* plain pages */
 .owner{position:relative;text-align:center;padding-top:20px}
-.ownerart{width:300px;height:300px;filter:drop-shadow(0 12px 12px rgba(40,20,80,.2))}
+.ownerart{display:block;margin:6px auto 0;width:250px;height:250px;filter:drop-shadow(0 12px 12px rgba(40,20,80,.2))}
 .owner h2,.note h2,.ovt{font-size:62px;text-align:center;position:relative}
 .nameline{width:520px;height:86px;margin:16px auto;border-radius:44px;background:#fff;box-shadow:inset 0 4px 10px rgba(0,0,0,.08),0 6px 0 hsl(var(--h),50%,75%)}
 .owner p{font-size:30px;font-weight:700;color:hsl(var(--h),50%,35%)}
