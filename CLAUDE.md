@@ -14,6 +14,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 ## Books so far
 - `arabic-kids-book/`: حروفي الجميلة (Arabic alphabet), 36 pages
 - `animals-book/`: حيواناتي الجميلة (animals), 32 pages
+- `numbers-book/`: أرقامي الجميلة (numbers 1–20), 32 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
