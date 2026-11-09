@@ -16,6 +16,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `animals-book/`: حيواناتي الجميلة (animals), 32 pages
 - `numbers-book/`: أرقامي الجميلة (numbers 1–20), 32 pages
 - `colors-shapes-book/`: ألواني وأشكالي (colors & shapes), 32 pages
+- `fruits-veg-book/`: فواكهي وخضراواتي (fruits & vegetables), 32 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
