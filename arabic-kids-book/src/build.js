@@ -104,6 +104,7 @@ pages.push(`
   <h1>${t3d('حُرُوفِي', '#ffd23f', '#e07b00', 12)}<br>${t3d('الجَمِيلَة', '#ffffff', '#7b3fe4', 12)}</h1>
   <div class="csub">كِتَابُ الحُرُوفِ العَرَبِيَّةِ لِلأَطْفَال</div>
   <div class="cen">My Beautiful Arabic Letters</div>
+  <div class="author">تَأْلِيف: انعام الرحمن</div>
   <div class="cart">
     ${['sun', 'rabbit', 'rocket', 'apple', 'bee', 'whale'].map((a, k) => `<div class="ca ca${k}">${art(a)}</div>`).join('')}
   </div>
@@ -203,6 +204,7 @@ pages.push(`
   <div class="card blurb">
     <p>كِتَابٌ مُلَوَّنٌ بِرُسُومَاتٍ ثُلَاثِيَّةِ الأَبْعَاد يُعَلِّمُ طِفْلَكَ الحُرُوفَ العَرَبِيَّةَ الثَّمَانِيَةَ وَالعِشْرِين بِطَرِيقَةٍ مُمْتِعَة.</p>
     <ul><li>٢٨ حَرْفًا مَعَ صُورَةٍ وَكَلِمَة</li><li>أَشْكَالُ الحَرْفِ فِي الكَلِمَة</li><li>تَمَارِينُ كِتَابَةٍ مُنَقَّطَة</li><li>الأَرْقَامُ وَالأَلْوَانُ وَشَهَادَةُ تَقْدِير</li></ul>
+    <p class="author2">تَأْلِيف: انعام الرحمن</p>
     <p class="en2">A joyful 3D picture book to learn the 28 Arabic letters · Ages 3–7</p>
   </div>
   <div class="cart small">${['cake', 'moon', 'strawberry', 'gift', 'pumpkin', 'fish'].map((a, k) => `<div class="ca ca${k}">${art(a)}</div>`).join('')}</div>
@@ -273,6 +275,9 @@ body{font-family:Baloo,sans-serif;direction:rtl;color:#2b2340}
 .cart.small .ca{transform:scale(.8)}
 .back h2{position:relative;font-size:70px;margin-top:30px}
 .card{position:relative;background:#fff;border-radius:34px;padding:24px 34px;box-shadow:0 8px 0 rgba(120,90,200,.25),0 16px 26px rgba(40,20,80,.15);text-align:right}
+.author{position:relative;display:inline-block;margin-top:10px;font-size:26px;font-weight:800;color:#fff;padding:2px 26px;border-radius:26px;
+  background:linear-gradient(150deg,#ff7eb3,#ff4f8b);box-shadow:inset 0 3px 0 rgba(255,255,255,.35),0 5px 0 #c2366a,0 10px 16px rgba(0,0,0,.18)}
+.author2{text-align:center;font-weight:800;color:#c2366a;font-size:24px;margin-top:6px}
 .blurb{margin:16px 40px 0;font-size:24px;font-weight:600;line-height:1.7}
 .blurb ul{margin:8px 26px 0}.en2{font-family:Fredoka;direction:ltr;text-align:center;color:#7b3fe4;font-size:19px;margin-top:8px}
 /* plain pages */
