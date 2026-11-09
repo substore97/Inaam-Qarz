@@ -121,9 +121,9 @@ pages.push(`
   <div class="owner">
     ${art('bear', { cls: 'ownerart' })}
     <h2>${t3d('هٰذَا الكِتَابُ مِلْكُ', '#fff', '#2a7fd4', 7)}</h2>
+    <div class="author">تَأْلِيف: انعام الرحمن</div>
     <div class="nameline"></div>
     <p>عُمْرِي: ............ سَنَوَات</p>
-    <div class="author">تَأْلِيف: انعام الرحمن</div>
     <div class="stars">${art('rocket', { cls: 'mini' })}${art('cloud', { cls: 'mini' })}${art('flower', { cls: 'mini' })}</div>
   </div>
   <div class="pno">${AR_DIGITS(pno++)}</div>
@@ -293,7 +293,8 @@ body{font-family:Baloo,sans-serif;direction:rtl;color:#2b2340}
 .owner p{font-size:30px;font-weight:700;color:hsl(var(--h),50%,35%)}
 .stars,.row3{display:flex;justify-content:center;gap:30px;margin-top:10px}
 .stars .mini{width:160px;height:160px}
-.owner .author{margin-top:26px;font-size:30px}
+.owner .author{margin-top:4px;font-size:30px}
+.owner .nameline{margin-top:24px}
 .stars{margin-top:40px}
 .mini{width:150px;height:150px;filter:drop-shadow(0 8px 8px rgba(40,20,80,.2))}
 .note{position:relative;padding-top:50px}
