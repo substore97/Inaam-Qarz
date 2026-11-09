@@ -1,6 +1,6 @@
 """Packs rendered page PNGs into the deliverables:
-  Huroofi-Al-Jameela-APP.pdf    1920x1920 px per page (Full HD), optimized JPEG, smallest file for the app
-  Huroofi-Al-Jameela-PRINT.pdf  2550x2550 px per page (8.5in @ 300 DPI), full quality for printing
+  Huroofi-Al-Jameela-APP.pdf    A4, 1358x1920 px per page (Full HD), optimized JPEG, smallest file for the app
+  Huroofi-Al-Jameela-PRINT.pdf  A4, 2480x3508 px per page (300 DPI), full quality for printing
   Huroofi-Al-Jameela-Cover.jpg  front cover, full resolution
 JPEG bytes are embedded directly into the PDF (no re-encoding), so the size stays minimal.
 """
@@ -9,19 +9,20 @@ from PIL import Image
 
 src, root = sys.argv[1], sys.argv[2]
 files = sorted(glob.glob(os.path.join(src, 'page-*.png')))
-PAGE_PT = 612  # 8.5in
+PAGE_W, PAGE_H = 595.28, 841.89  # A4 in points
 
 
-def jpeg(path, px, q):
+def jpeg(path, size, q):
     im = Image.open(path).convert('RGB')
-    if im.width != px:
-        im = im.resize((px, px), Image.LANCZOS)
+    if im.size != size:
+        im = im.resize(size, Image.LANCZOS)
     b = io.BytesIO()
     im.save(b, 'JPEG', quality=q, optimize=True, progressive=True, subsampling=2)
     return b.getvalue()
 
 
-def write_pdf(out, jpgs, px, title):
+def write_pdf(out, jpgs, size, title):
+    w, h = size
     objs = []  # list of bytes, object i+1
     n = len(jpgs)
     # 1 catalog, 2 pages, 3 info, then per page: page, content, image
@@ -32,11 +33,11 @@ def write_pdf(out, jpgs, px, title):
     objs.append(f'<< /Title <FEFF{t}> /Author <FEFF{"انعام الرحمن".encode("utf-16-be").hex().upper()}> >>'.encode())
     for i, data in enumerate(jpgs):
         pg, ct, im = 4 + i * 3, 5 + i * 3, 6 + i * 3
-        objs.append(f'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {PAGE_PT} {PAGE_PT}] '
+        objs.append(f'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {PAGE_W} {PAGE_H}] '
                     f'/Resources << /XObject << /Im0 {im} 0 R >> >> /Contents {ct} 0 R >>'.encode())
-        cs = f'q {PAGE_PT} 0 0 {PAGE_PT} 0 0 cm /Im0 Do Q'.encode()
+        cs = f'q {PAGE_W} 0 0 {PAGE_H} 0 0 cm /Im0 Do Q'.encode()
         objs.append(b'<< /Length %d >>\nstream\n' % len(cs) + cs + b'\nendstream')
-        objs.append(f'<< /Type /XObject /Subtype /Image /Width {px} /Height {px} /ColorSpace /DeviceRGB '
+        objs.append(f'<< /Type /XObject /Subtype /Image /Width {w} /Height {h} /ColorSpace /DeviceRGB '
                     f'/BitsPerComponent 8 /Filter /DCTDecode /Length {len(data)} >>\nstream\n'.encode() + data + b'\nendstream')
     out_b = bytearray(b'%PDF-1.4\n%\xe2\xe3\xcf\xd3\n')
     offs = []
@@ -52,8 +53,10 @@ def write_pdf(out, jpgs, px, title):
 
 
 TITLE = 'حروفي الجميلة'
-write_pdf(os.path.join(root, 'Huroofi-Al-Jameela-APP.pdf'), [jpeg(f, 1920, 82) for f in files], 1920, TITLE)
-write_pdf(os.path.join(root, 'Huroofi-Al-Jameela-PRINT.pdf'), [jpeg(f, 2550, 92) for f in files], 2550, TITLE)
+APP = (1358, 1920)     # A4 at Full HD height
+PRINT = (2480, 3508)   # A4 at 300 DPI
+write_pdf(os.path.join(root, 'Huroofi-Al-Jameela-APP.pdf'), [jpeg(f, APP, 82) for f in files], APP, TITLE)
+write_pdf(os.path.join(root, 'Huroofi-Al-Jameela-PRINT.pdf'), [jpeg(f, PRINT, 92) for f in files], PRINT, TITLE)
 cover = os.path.join(root, 'Huroofi-Al-Jameela-Cover.jpg')
-open(cover, 'wb').write(jpeg(files[0], 2550, 92))
+open(cover, 'wb').write(jpeg(files[0], PRINT, 92))
 print('Huroofi-Al-Jameela-Cover.jpg', round(os.path.getsize(cover) / 1e6, 2), 'MB')
