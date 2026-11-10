@@ -359,7 +359,7 @@ svg{display:block}
 .oc svg{width:160px;height:160px;margin:0 auto}.oc b{font-size:28px;font-weight:800;color:#3b3355}
 .trace{position:relative;margin:0 auto;width:690px;height:126px;background:#fff;border-radius:26px;padding:4px 10px;box-shadow:0 6px 0 hsl(var(--h),45%,76%),0 12px 16px rgba(40,20,80,.12)}
 .trace svg{width:100%;height:100%}.trace text{font-family:Baloo;font-weight:800;font-size:62px}
-.trace .dash{fill:none;stroke:#b7aecb;stroke-width:2.4;stroke-dasharray:4 5;stroke-linecap:round}.trace .base{stroke:hsl(var(--h),50%,85%);stroke-width:2}
+.trace .dash{fill:#dcd5e8;stroke:none}.trace .base{stroke:hsl(var(--h),50%,85%);stroke-width:2}
 /* shape page */
 .shp{display:flex;flex-direction:column;gap:18px}
 .sname{position:relative;text-align:center}.sname .big{font-size:92px}

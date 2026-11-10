@@ -260,7 +260,7 @@ body{font-family:Baloo,sans-serif;direction:rtl;color:#2b2340}
 .trace text{font-family:Baloo;font-weight:700;font-size:84px}
 .trace text.w{font-size:62px;font-weight:800}
 .trace .solid{fill:hsl(var(--h),70%,50%)}
-.trace .dash{fill:none;stroke:#b7aecb;stroke-width:2.4;stroke-dasharray:4 5;stroke-linecap:round}
+.trace .dash{fill:#dcd5e8;stroke:none}
 .trace .base{stroke:hsl(var(--h),50%,85%);stroke-width:2}
 /* cover */
 .cover{--h:280;background:radial-gradient(circle at 50% 30%,#fff3c4,#ffb6d9 45%,#a78bfa 85%,#7c5ce0);text-align:center}

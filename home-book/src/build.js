@@ -318,7 +318,7 @@ svg{display:block}
 .tlabel{position:absolute;top:8px;right:18px;font-size:15px;font-weight:700;color:#8a80a3}
 .trace svg{width:100%;height:100%}.trace text{font-family:Baloo;font-weight:800;font-size:56px}
 .trace text.sm{font-size:42px}
-.trace .solid{fill:hsl(var(--h),70%,44%)}.trace .dash{fill:none;stroke:#b7aecb;stroke-width:2.4;stroke-dasharray:4 5;stroke-linecap:round}
+.trace .solid{fill:hsl(var(--h),70%,44%)}.trace .dash{fill:#dcd5e8;stroke:none}
 .trace .base{stroke:hsl(var(--h),50%,85%);stroke-width:2}
 /* activities */
 .sort{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;margin-top:20px}
