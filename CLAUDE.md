@@ -8,6 +8,8 @@ Every time a book is made or updated, send ALL of these to the user:
 
 **Page size: always A4 (portrait).**
 
+**White text always gets a dark outline/border** so it is clearly readable (see `ring()` / `t3d()` in `home-book/src/build.js`).
+
 Author credit "تأليف: انعام الرحمن" goes on page 2 only, always directly below the heading "هذا الكتاب ملك", not on the front or back cover. Page 2 has no "عمري ... سنوات" (age) line.
 User communicates in Roman Urdu; reply in Roman Urdu.
 
@@ -20,6 +22,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `vehicles-book/`: مركباتي الجميلة (vehicles), 32 pages
 - `opposites-book/`: أضدادي الجميلة (opposites), 28 pages
 - `seasons-book/`: فصولي الجميلة (weather, seasons & days), 28 pages
+- `home-book/`: بيتي الجميل (things at home), 32 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
