@@ -26,6 +26,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `seasons-book/`: فصولي الجميلة (weather, seasons & days), 28 pages
 - `home-book/`: بيتي الجميل (things at home), 32 pages
 - `space-book/`: فضائي الجميل (space & planets), 32 pages
+- `sea-book/`: بحري الجميل (sea creatures), 28 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
