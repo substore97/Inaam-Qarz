@@ -44,6 +44,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `islam-book/`: ديني الجميل (pillars of Islam & Iman, prayers, wudu), 20 pages
 - `day-book/`: يومي الجميل (daily routine & telling time), 24 pages
 - `manners-book/`: أخلاقي الجميلة (good manners with sources), 24 pages
+- `math-book/`: أجمع وأطرح (addition & subtraction), 28 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
