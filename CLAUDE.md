@@ -64,6 +64,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `verbs-book/`: أفعالي الجميلة (action verbs), 24 pages
 - `compare-book/`: أقارن وأقيس (comparing & measuring), 24 pages
 - `lughati-book/`: لغتي الجميلة (Arabic language, first-grade syllabus), 48 pages
+- `math1-book/`: رياضياتي الجميلة (math, first-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
