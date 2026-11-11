@@ -41,6 +41,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `sounds-book/`: أصوات الحيوانات (animal sounds), 24 pages
 - `garden-book/`: حديقتي الجميلة (plants & garden), 24 pages
 - `feelings-book/`: مشاعري الجميلة (feelings & emotions), 24 pages
+- `islam-book/`: ديني الجميل (pillars of Islam & Iman, prayers, wudu), 20 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
