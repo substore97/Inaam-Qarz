@@ -50,6 +50,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `months-book/`: شهوري الهجرية (Hijri months), 24 pages
 - `city-book/`: مدينتي الجميلة (places in the city), 24 pages
 - `family-book/`: أسرتي الجميلة (family members), 24 pages
+- `hygiene-book/`: نظافتي الجميلة (personal hygiene), 24 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
