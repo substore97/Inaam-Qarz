@@ -13,6 +13,7 @@ function kid(c, o) {
   c.ball(46, 150, 10, SKIN).ball(154, 150, 10, SKIN);
   c.raw(`<rect x="62" y="98" width="76" height="62" rx="24" fill="${c.vg(top)}" ${c.edge(top)}/>`);
   if (o.body) o.body();
+  if (o.girl) { for (const sx of [-1, 1]) { c.ball(100 + sx * 46, 70, 17, o.hair || '#5a3a22'); c.ball(100 + sx * 40, 54, 6, '#ff6fae', { shine: false }); } }
   c.ball(64, 64, 10, SKIN).ball(136, 64, 10, SKIN);
   c.ball(100, 62, 38, SKIN);
   if (!o.hatOnly) c.path('M62 58 Q60 22 100 22 Q140 22 138 58 Q128 40 112 40 Q104 30 92 38 Q76 36 62 58 Z', o.hair || '#5a3a22');
@@ -54,4 +55,6 @@ A.postman = c => kid(c, { shirt: '#4fa8ff', pants: '#2f55c4',
   hat: () => { c.path('M60 40 Q60 16 100 16 Q140 16 140 40 Z', '#2f55c4', { vert: true }); c.ell(100, 42, 44, 7, '#1f3a8f'); },
   prop: () => put(c, 'envelope', 124, 110, .36) });
 A.dentist = c => kid(c, { shirt: '#bfefff', pants: '#2ec4b6', body: () => { coatLines(c); c.raw('<rect x="70" y="40" width="0" height="0"/>'); }, prop: () => put(c, 'tooth', 128, 106, .34) });
+A.kidc = (c, col) => kid(c, { shirt: col || '#4fa8ff' });
+A.girlc = (c, col) => kid(c, { shirt: col || '#ff6fae', girl: true, hair: '#6b3a1e' });
 module.exports = lib;
