@@ -13,6 +13,8 @@ Every time a book is made or updated, send ALL of these to the user:
 
 **Writing must be very clear: big text, generous line-height so harakat never touch other letters; titles use the Baloo font (Lalezar crowds harakat). Never write "class" / grade on a book.**
 
+**Grade / syllabus books: when the owner asks for any grade, make one complete book per subject of the Arab-country syllabus for that grade, ALWAYS including English. Grade 1 set: لغتي، رياضياتي، علومي، دراساتي الإسلامية، English.** The English book is left-to-right, English text with Arabic translations only.
+
 **Tracing words are solid light grey (`fill:#dcd5e8`), never dashed outlines.**
 
 **White text always gets a dark outline/border** so it is clearly readable (see `ring()` / `t3d()` in `home-book/src/build.js`).
@@ -67,6 +69,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `math1-book/`: رياضياتي الجميلة (math, first-grade syllabus), 48 pages
 - `science1-book/`: علومي الجميلة (science, first-grade syllabus), 48 pages
 - `islamic1-book/`: دراساتي الإسلامية (Islamic studies, first-grade syllabus), 48 pages
+- `english1-book/`: My English Book (English, first-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
