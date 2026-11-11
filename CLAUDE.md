@@ -56,6 +56,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `homes-book/`: بيوت الحيوانات (animal homes), 24 pages
 - `shamsi-book/`: الحروف الشمسية والقمرية (sun & moon letters), 24 pages
 - `safety-book/`: سلامتي أولا (safety rules), 24 pages
+- `earth-book/`: أحافظ على بيئتي (caring for the environment), 24 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.

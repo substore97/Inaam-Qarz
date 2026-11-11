@@ -1,0 +1,23 @@
+// 3D environment scenes for "أحافظ على بيئتي". Extends the shared art library.
+const lib = require('../../safety-book/src/safety-art');
+const { A } = lib;
+const put = (c, name, x, y, s, param) => { c.raw(`<g transform="translate(${x} ${y}) scale(${s})">`); A[name](c, param); c.raw('</g>'); };
+const scene = (col, prop, s = .55, px = 96, py = 84, param, who = 'kidc') => c => { put(c, who, -4, 6, .92, col); put(c, prop, px, py, s, param); };
+const arrows = (c, cx, cy, r, col) => { for (let k = 0; k < 3; k++) { const a = k * 2.094 - 1.57, b = a + 1.6; c.raw(`<path d="M${(cx + r * Math.cos(a)).toFixed(1)} ${(cy + r * Math.sin(a)).toFixed(1)} A${r} ${r} 0 0 1 ${(cx + r * Math.cos(b)).toFixed(1)} ${(cy + r * Math.sin(b)).toFixed(1)}" stroke="${col}" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="${(cx + r * Math.cos(b)).toFixed(1)}" cy="${(cy + r * Math.sin(b)).toFixed(1)}" r="7" fill="${col}"/>`); } };
+A.recycle = c => { c.shadow(100, 188, 54, 7); c.path('M52 66 L148 66 L136 184 L64 184 Z', '#2f7de8', { vert: true }); c.raw(`<rect x="44" y="52" width="112" height="18" rx="8" fill="${c.vg('#1f55b8')}"/>`); arrows(c, 100, 124, 26, '#ffffff'); };
+A.solar = c => { c.ell(100, 186, 90, 10, '#9be07a', { shine: true }); c.raw('<path d="M100 120 V186" stroke="#9aa3b5" stroke-width="10"/>'); c.path('M20 120 L60 50 L180 50 L140 120 Z', '#1f3a8f', { vert: true }); c.raw('<g stroke="#8fb4ff" stroke-width="2.5"><path d="M50 67 H170 M40 85 H160 M30 103 H150 M90 50 L70 120 M120 50 L100 120 M150 50 L130 120"/></g>'); A.sun && put(c, 'sun', 130, 0, .34); };
+A.clothbag = c => { c.shadow(100, 188, 50, 6); c.raw(`<path d="M70 70 Q70 30 100 30 Q130 30 130 70" stroke="#c98a4e" stroke-width="9" fill="none"/><rect x="48" y="66" width="104" height="118" rx="14" fill="${c.vg('#f2e2c0')}" ${c.edge('#f2e2c0')}/>`); c.heart(100, 122, 22, '#36c45d'); c.face(100, 160, .45, { blush: false }); };
+A.e_tree = scene('#36c45d', 'sprout', .55, 96, 84);
+A.e_water = c => A.m_water(c);
+A.e_light = c => { put(c, 'girlc', -4, 6, .92, '#ffd23f'); put(c, 'lamp', 100, 70, .55); c.raw('<path d="M160 60 l14 -10 M166 84 h16" stroke="#ffd23f" stroke-width="5" stroke-linecap="round"/>'); };
+A.e_recycle = scene('#2ec4b6', 'recycle', .5, 100, 90);
+A.e_trash = c => A.h_trash(c);
+A.e_animals = c => { put(c, 'girlc', -4, 6, .92, '#ff6fae'); put(c, 'dove', 96, 40, .5); };
+A.e_park = c => { put(c, 'park', 0, 0, 1); put(c, 'trashbin', 150, 120, .3); };
+A.e_bike = c => A.s_bike(c);
+A.e_solar = c => A.solar(c);
+A.e_sea = c => { c.raw(`<rect x="0" y="40" width="200" height="150" rx="20" fill="${c.vg('#4fb3ff')}"/>`); put(c, 'seaturtle', 20, 50, .8); c.raw('<path d="M0 50 q12 -10 25 0 t25 0 t25 0 t25 0 t25 0 t25 0 t25 0 t25 0" stroke="#ffffff" stroke-width="5" fill="none"/>'); };
+A.e_flowers = c => { put(c, 'flower', 0, 50, .6); put(c, 'wateringcan', 80, 10, .6); for (const [x, y] of [[70, 80], [60, 100], [80, 110]]) c.drop(x, y, .4, '#4fb3ff'); };
+A.e_bag = scene('#ff8a1f', 'clothbag', .5, 100, 84, undefined, 'girlc');
+A.happyearth = c => { put(c, 'earth', 0, 0, 1); c.heart(160, 40, 20, '#ff4f8b'); };
+module.exports = lib;
