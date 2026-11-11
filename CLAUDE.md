@@ -33,6 +33,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `clothes-book/`: ملابسي الجميلة (clothes), 28 pages
 - `food-book/`: طعامي الجميل (food & eating manners), 28 pages
 - `duas-book/`: أدعيتي الجميلة (16 daily duas with sources), 28 pages
+- `school-book/`: أدواتي المدرسية (school supplies), 28 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
