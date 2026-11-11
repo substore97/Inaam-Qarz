@@ -52,6 +52,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `family-book/`: أسرتي الجميلة (family members), 24 pages
 - `hygiene-book/`: نظافتي الجميلة (personal hygiene), 24 pages
 - `sports-book/`: رياضتي الجميلة (sports), 24 pages
+- `where-book/`: أين القطة؟ (position words), 24 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
