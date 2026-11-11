@@ -1,0 +1,25 @@
+// Comparison scenes for "أقارن وأقيس". Extends the shared art library.
+const lib = require('../../verbs-book/src/verbs-art');
+const { A } = lib;
+const put = (c, name, x, y, s, param) => { c.raw(`<g transform="translate(${x} ${y}) scale(${s})">`); A[name](c, param); c.raw('</g>'); };
+const AR = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+const panel = (c, x, col, star) => { c.raw(`<rect x="${x}" y="30" width="92" height="150" rx="18" fill="#ffffff" stroke="${col}" stroke-width="5"/>`); if (star) c.star(x + 46, 20, 14, '#ffd23f'); };
+const grp = (c, x, item, n) => { const pos = [[0, 0], [1, 0], [0, 1], [1, 1], [0, 2], [1, 2]]; for (let i = 0; i < n; i++) { const [cx, cy] = n === 1 ? [.5, 1] : pos[i]; put(c, item, x + 6 + cx * 40, 40 + cy * 44, .2); } };
+const two = (item, a, b, sa, sb, mid) => c => { panel(c, 4, '#ff6b6b', sa); panel(c, 104, '#4fa8ff', sb); grp(c, 4, item, a); grp(c, 104, item, b); if (mid) c.raw(`<circle cx="100" cy="105" r="16" fill="#ffd23f" stroke="#c46a00" stroke-width="3"/><text x="100" y="115" text-anchor="middle" font-family="Baloo" font-weight="800" font-size="28" fill="#7a3a00">${mid}</text>`); };
+A.c_more = two('apple', 2, 5, false, true);
+A.c_less = two('strawberry', 4, 1, false, true);
+A.c_equal = two('orange', 3, 3, false, false, '=');
+A.c_bignum = c => { for (const [x, n, col, st] of [[10, 7, '#36c45d', true], [114, 3, '#b05cff', false]]) { c.raw(`<rect x="${x}" y="40" width="76" height="120" rx="20" fill="${c.vg(col)}" ${c.edge(col)}/><text x="${x + 38}" y="132" text-anchor="middle" font-family="Baloo" font-weight="800" font-size="84" fill="#fff" stroke="rgba(0,0,0,.35)" stroke-width="3" paint-order="stroke">${AR(n)}</text>`); if (st) c.star(x + 38, 26, 14, '#ffd23f'); } };
+const pen = (c, x, y, len, col) => { c.raw(`<rect x="${x}" y="${y}" width="${len}" height="26" rx="6" fill="${c.vg(col)}"/><path d="M${x + len} ${y} l26 13 l-26 13 Z" fill="#f2d09a"/><path d="M${x + len + 18} ${y + 9} l8 4 l-8 4 Z" fill="#2b2340"/><rect x="${x - 14}" y="${y}" width="16" height="26" rx="5" fill="#ff8fc0"/>`); };
+A.c_long = c => { pen(c, 26, 60, 130, '#ffd23f'); c.star(14, 40, 12, '#ffd23f'); pen(c, 26, 120, 60, '#4fa8ff'); };
+A.c_short = c => { pen(c, 26, 60, 130, '#ffd23f'); pen(c, 26, 120, 60, '#4fa8ff'); c.star(14, 112, 12, '#ffd23f'); };
+const seesaw = (heavyStar) => c => { c.raw('<path d="M100 150 L80 186 H120 Z" fill="#9aa3b5"/><g transform="rotate(14 100 146)"><rect x="10" y="140" width="180" height="12" rx="6" fill="#c98a4e"/></g>'); put(c, 'elephant', 110, 82, .44); put(c, 'mouse', 22, 80, .26); c.star(heavyStar ? 154 : 44, heavyStar ? 72 : 68, 12, '#ffd23f'); };
+A.c_heavy = seesaw(true);
+A.c_light = seesaw(false);
+const race = (st) => c => { c.raw('<rect x="0" y="150" width="200" height="14" rx="6" fill="#d5dbe6"/><path d="M182 60 V164" stroke="#2b2340" stroke-width="4"/><path d="M182 60 h16 v12 h-16 Z" fill="#ff4757"/>'); put(c, 'rabbit', 120, 80, .3); put(c, 'cat', 64, 80, .3); put(c, 'turtle', 4, 96, .3); c.star(st === 'first' ? 150 : 34, 70, 12, '#ffd23f'); };
+A.c_first = race('first');
+A.c_last = race('last');
+const glass = (lvl, st) => c => { c.shadow(100, 186, 46, 6); c.raw(`<path d="M60 40 L70 180 H130 L140 40 Z" fill="#e6f6ff" stroke="#9fd8ff" stroke-width="5" opacity=".95"/>`); if (lvl) c.raw(`<path d="M${60 + (1 - lvl) * 10 + 3} ${180 - lvl * 136} L72 178 H128 L${140 - (1 - lvl) * 10 - 3} ${180 - lvl * 136} Z" fill="${c.vg('#ff9f1a')}"/>`); c.raw('<path d="M72 52 L80 168" stroke="#ffffff" stroke-width="5" opacity=".8"/>'); c.face(100, 150, .5, { blush: false }); };
+A.c_full = glass(.92);
+A.c_empty = glass(0);
+module.exports = lib;
