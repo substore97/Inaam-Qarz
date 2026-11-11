@@ -57,6 +57,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `shamsi-book/`: الحروف الشمسية والقمرية (sun & moon letters), 24 pages
 - `safety-book/`: سلامتي أولا (safety rules), 24 pages
 - `earth-book/`: أحافظ على بيئتي (caring for the environment), 24 pages
+- `verbs-book/`: أفعالي الجميلة (action verbs), 24 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
