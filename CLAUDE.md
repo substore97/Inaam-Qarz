@@ -5,6 +5,7 @@ Every time a book is made or updated, send ALL of these to the user:
 1. **App PDF**: as few MB as possible but Full HD (1920 px tall pages), with no visible quality loss. This is what goes in their app.
 2. **Full PDF**: full-quality print version (300 DPI).
 3. **Front cover as a separate JPG**.
+4. **Play Console text file** `<Prefix>-PlayStore.txt` in the book folder: book name in Arabic and English, an Arabic short description (max 80 chars) and an Arabic full description (max 4000 chars). Check the lengths before sending.
 
 **Page size: always A4 (portrait).**
 
@@ -31,6 +32,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `birds-book/`: طيوري وحشراتي (birds & insects), 28 pages
 - `clothes-book/`: ملابسي الجميلة (clothes), 28 pages
 - `food-book/`: طعامي الجميل (food & eating manners), 28 pages
+- `duas-book/`: أدعيتي الجميلة (16 daily duas with sources), 28 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
