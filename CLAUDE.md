@@ -9,6 +9,10 @@ Every time a book is made or updated, send ALL of these to the user:
 
 **Page size: always A4 (portrait).**
 
+**Book text is ONLY Arabic and English. Never put Urdu (or any other language) inside a book.** (Chat replies stay in Roman Urdu.)
+
+**Writing must be very clear: big text, generous line-height so harakat never touch other letters; titles use the Baloo font (Lalezar crowds harakat). Never write "class" / grade on a book.**
+
 **Tracing words are solid light grey (`fill:#dcd5e8`), never dashed outlines.**
 
 **White text always gets a dark outline/border** so it is clearly readable (see `ring()` / `t3d()` in `home-book/src/build.js`).
@@ -59,6 +63,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `earth-book/`: أحافظ على بيئتي (caring for the environment), 24 pages
 - `verbs-book/`: أفعالي الجميلة (action verbs), 24 pages
 - `compare-book/`: أقارن وأقيس (comparing & measuring), 24 pages
+- `lughati-book/`: لغتي الجميلة (Arabic language, first-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
