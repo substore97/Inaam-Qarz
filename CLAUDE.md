@@ -37,6 +37,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `body-book/`: جسمي الجميل (body parts & five senses), 24 pages
 - `jobs-book/`: مهني الجميلة (professions), 24 pages
 - `sounds-book/`: أصوات الحيوانات (animal sounds), 24 pages
+- `garden-book/`: حديقتي الجميلة (plants & garden), 24 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
