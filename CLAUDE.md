@@ -46,6 +46,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `manners-book/`: أخلاقي الجميلة (good manners with sources), 24 pages
 - `math-book/`: أجمع وأطرح (addition & subtraction), 28 pages
 - `babies-book/`: صغار الحيوانات (baby animal names), 24 pages
+- `harakat-book/`: حركاتي الجميلة (vowel marks & reading), 20 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
