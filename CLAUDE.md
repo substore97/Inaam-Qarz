@@ -76,6 +76,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `islamic2-book/`: دراساتي الإسلامية ٢ (Islamic studies, second-grade syllabus), 48 pages
 - `english2-book/`: My English Book 2 (English, second-grade syllabus), 48 pages
 - `lughati3-book/`: لغتي الجميلة ٣ (Arabic language, third-grade syllabus), 48 pages
+- `math3-book/`: رياضياتي الجميلة ٣ (math, third-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
