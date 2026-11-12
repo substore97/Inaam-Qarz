@@ -10,7 +10,7 @@ const AR = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
 const AUTHOR = 'انعام الرحمن';
 
 // [name, english, art, sentence, chip1, chip2, traceword?]
-const ITEMS = [["الأَشْجَار", "Planting Trees", "e_tree", "أَزْرَعُ شَجَرَةً وَأَسْقِيهَا", "أَزْرَعُ وَأَسْقِي", "هَوَاءٌ نَظِيفٌ وَظِلّ"], ["المَاء", "Saving Water", "e_water", "أُغْلِقُ الصُّنْبُورَ وَلَا أُسْرِف", "أُغْلِقُ الصُّنْبُور", "المَاءُ نِعْمَةٌ غَالِيَة"], ["النُّور", "Saving Electricity", "e_light", "أُطْفِئُ النُّورَ عِنْدَمَا أَخْرُج", "أُطْفِئُ الأَجْهِزَة", "أُوَفِّرُ الكَهْرَبَاء"], ["التَّدْوِير", "Recycling", "e_recycle", "أَضَعُ العُلَبَ وَالوَرَقَ فِي سَلَّةِ التَّدْوِير", "أَفْصِلُ القُمَامَة", "نَصْنَعُ أَشْيَاءَ جَدِيدَة"], ["القُمَامَة", "Litter", "e_trash", "أَرْمِي القُمَامَةَ فِي السَّلَّة", "لَا أَرْمِي عَلَى الأَرْض", "شَوَارِعُ نَظِيفَة"], ["الحَيَوَانَات", "Kindness to Animals", "e_animals", "أَرْفُقُ بِالحَيَوَانَاتِ وَالطُّيُور", "أُطْعِمُهَا وَلَا أُؤْذِيهَا", "الرَّحْمَةُ يُحِبُّهَا اللّٰه"], ["الحَدِيقَة", "Clean Parks", "e_park", "أُحَافِظُ عَلَى نَظَافَةِ الحَدِيقَة", "لَا أَكْسِرُ الأَغْصَان", "مَكَانٌ جَمِيلٌ لِلَّعِب"], ["الدَّرَّاجَة", "Cycling", "e_bike", "أَرْكَبُ الدَّرَّاجَةَ بَدَلَ السَّيَّارَة", "أَمْشِي أَوْ أَرْكَبُ الدَّرَّاجَة", "هَوَاءٌ بِلَا دُخَان"], ["الشَّمْس", "Solar Energy", "e_solar", "نَأْخُذُ الطَّاقَةَ مِنْ نُورِ الشَّمْس", "أَلْوَاحٌ شَمْسِيَّة", "طَاقَةٌ نَظِيفَة"], ["البَحْر", "Clean Seas", "e_sea", "لَا أَرْمِي الأَكْيَاسَ فِي البَحْر", "أُنَظِّفُ الشَّاطِئ", "تَعِيشُ الأَسْمَاكُ بِسَلَام"], ["الزُّهُور", "Watering Flowers", "e_flowers", "أَسْقِي الزُّهُورَ وَلَا أَقْطِفُهَا", "أَسْقِيهَا بِلُطْف", "رَائِحَةٌ وَأَلْوَانٌ جَمِيلَة"], ["الأَكْيَاس", "Cloth Bags", "e_bag", "أَسْتَعْمِلُ كِيسَ القُمَاشِ لِلتَّسَوُّق", "كِيسُ القُمَاش", "أَقَلُّ بْلَاسْتِيك"]];
+const ITEMS = [["الأَشْجَار", "Planting Trees", "e_tree", "أَزْرَعُ شَجَرَةً وَأَسْقِيهَا", "أَزْرَعُ وَأَسْقِي", "هَوَاءٌ نَظِيفٌ وَظِلّ"], ["المَاء", "Saving Water", "e_water", "أُغْلِقُ الصُّنْبُورَ وَلَا أُسْرِف", "أُغْلِقُ الصُّنْبُور", "المَاءُ نِعْمَةٌ غَالِيَة"], ["النُّور", "Saving Electricity", "e_light", "أُطْفِئُ النُّورَ عِنْدَمَا أَخْرُج", "أُطْفِئُ الأَجْهِزَة", "أُوَفِّرُ الكَهْرَبَاء"], ["التَّدْوِير", "Recycling", "e_recycle", "أَضَعُ العُلَبَ وَالوَرَقَ فِي سَلَّةِ التَّدْوِير", "أَفْصِلُ القُمَامَة", "نَصْنَعُ أَشْيَاءَ جَدِيدَة"], ["القُمَامَة", "Litter", "e_trash", "أَرْمِي القُمَامَةَ فِي السَّلَّة", "لَا أَرْمِي عَلَى الأَرْض", "شَوَارِعُ نَظِيفَة"], ["الحَيَوَانَات", "Kindness to Animals", "e_animals", "أَرْفُقُ بِالحَيَوَانَاتِ وَالطُّيُور", "أُطْعِمُهَا وَلَا أُؤْذِيهَا", "الرَّحْمَةُ يُحِبُّهَا اللّٰه"], ["الحَدِيقَة", "Clean Parks", "e_park", "أُحَافِظُ عَلَى نَظَافَةِ الحَدِيقَة", "لَا أَكْسِرُ الأَغْصَان", "مَكَانٌ جَمِيلٌ لِلَّعِب"], ["الدَّرَّاجَة", "Cycling", "e_bike", "أَرْكَبُ الدَّرَّاجَةَ بَدَلَ السَّيَّارَة", "أَمْشِي أَوْ أَرْكَبُ الدَّرَّاجَة", "هَوَاءٌ بِلَا دُخَان"], ["الشَّمْس", "Solar Energy", "e_solar", "نَأْخُذُ الطَّاقَةَ مِنْ نُورِ الشَّمْس", "أَلْوَاحٌ شَمْسِيَّة", "طَاقَةٌ نَظِيفَة"], ["البَحْر", "Clean Seas", "e_sea", "لَا أَرْمِي الأَكْيَاسَ فِي البَحْر", "أُنَظِّفُ الشَّاطِئ", "تَعِيشُ الأَسْمَاكُ بِسَلَام"], ["الزُّهُور", "Watering Flowers", "e_flowers", "أَسْقِي الزُّهُورَ وَلَا أَقْطِفُهَا", "أَسْقِيهَا بِلُطْف", "رَائِحَةٌ وَأَلْوَانٌ جَمِيلَة"], ["الأَكْيَاس", "Cloth Bags", "e_bag", "أَسْتَعْمِلُ كِيسَ القُمَاشِ لِلتَّسَوُّق", "كِيسُ القُمَاش", "أَقَلُّ بِلَاسْتِيك"]];
 const BY = Object.fromEntries(ITEMS.map(i => [i[2], i]));
 const firstLetter = w => w.replace(/[ً-ْ]/g, '').replace(/^ال/, '')[0];
 const hue = i => Math.round((i * 360 / 12 * 5 + 320) % 360);
@@ -56,12 +56,14 @@ const pages = [];
 let P = 1;
 
 const C = {"dir": "earth-book", "prefix": "Uhafizu-Ala-Biati", "title": "أحافظ على بيئتي", "artmod": "earth-art", "header": "Builds \"أحافظ على بيئتي\" – caring for the environment – A4 portrait.", "cover": "--h:140;background:linear-gradient(#a9e6ff,#e8fbff 45%,#c9f0b8 70%,#6fcf5a)", "h": 140, "t1": "أُحَافِظُ", "t2": "عَلَى بِيئَتِي", "s1": "#1f8f4f", "s2": "#1f6fbf", "csub": "أَرْضُنَا جَمِيلَةٌ فَلْنَحْمِهَا مَعًا", "cen": "I Care for My Earth", "coverTop": ["e_tree", "happyearth", "e_recycle"], "coverBot": ["e_park", "e_flowers", "solar", "recycle"], "ownerArt": "happyearth", "ownerMini": ["sprout", "recycle", "wateringcan"], "noteP": "خَلَقَ اللّٰهُ الأَرْضَ جَمِيلَة، وَجَعَلَنَا نُحَافِظُ عَلَيْهَا 🌍 فِي هٰذَا الكِتَابِ يَتَعَلَّمُ طِفْلُكُم عَادَاتٍ بَسِيطَةً تَحْمِي البِيئَة.", "noteLi": ["طَبِّقُوا كُلَّ عَادَةٍ مَعَ طِفْلِكُم: أَغْلِقُوا الصُّنْبُورَ وَأَطْفِئُوا النُّور.", "ازْرَعُوا مَعَهُ نَبْتَةً صَغِيرَةً وَاسْقُوهَا كُلَّ يَوْم.", "اجْمَعُوا العُلَبَ وَالوَرَقَ لِإِعَادَةِ التَّدْوِير.", "ذَكِّرُوهُ بِأَنَّ الإِسْرَافَ لَا يُحِبُّهُ اللّٰه."], "noteMini": ["e_water", "e_light", "e_trash"], "ovTitle": "كَيْفَ أَحْمِي أَرْضِي؟", "chip1": ["🌍", "مَاذَا أَفْعَل؟"], "chip2": ["💚", "الفَائِدَة"], "acts": [{"type": "raw", "title": "أَرْضُ اللّٰهِ أَمَانَة", "html": "<div class=\"refc\" style=\"--h:140;margin-top:30px\"><p>«مَا مِنْ مُسْلِمٍ يَغْرِسُ غَرْسًا أَوْ يَزْرَعُ زَرْعًا، فَيَأْكُلُ مِنْهُ طَيْرٌ أَوْ إِنْسَانٌ أَوْ بَهِيمَةٌ، إِلَّا كَانَ لَهُ بِهِ صَدَقَة»</p><span>📖 رَوَاهُ البُخَارِيُّ وَمُسْلِم</span></div><div class=\"refc\" style=\"--h:200;margin-top:24px\"><p>﴿ وَكُلُوا وَاشْرَبُوا وَلَا تُسْرِفُوا ﴾</p><span>📖 سُورَةُ الأَعْرَاف: ٣١</span></div><div class=\"refc\" style=\"--h:40;margin-top:24px\"><p>﴿ وَلَا تُفْسِدُوا فِي الْأَرْضِ بَعْدَ إِصْلَاحِهَا ﴾</p><span>📖 سُورَةُ الأَعْرَاف: ٥٦</span></div>", "arts": ["e_tree", "happyearth", "e_water"]}, {"type": "tf", "title": "صَدِيقُ البِيئَة", "top": ["e_tree", "happyearth", "recycle"], "rows": ["أُغْلِقُ الصُّنْبُورَ بَعْدَ الوُضُوء", "أَرْمِي الأَكْيَاسَ فِي البَحْر", "أُطْفِئُ النُّورَ عِنْدَ الخُرُوج", "أَقْطِفُ الزُّهُورَ مِنَ الحَدِيقَة", "أَزْرَعُ شَجَرَةً مَعَ أَبِي", "أَضَعُ العُلَبَ فِي سَلَّةِ التَّدْوِير"]}, {"type": "circle", "title": "أَيْنَ أَضَعُهَا؟", "hint": "ضَعْ دَائِرَةً حَوْلَ المَكَانِ الصَّحِيح ⭕", "rows": [["قِشْرَةُ المَوْز 🍌", ["trashbin", "aquarium", "bag"]], ["عُلْبَةُ العَصِير 🧃", ["flower", "recycle", "bed"]], ["وَرَقَةٌ مُسْتَعْمَلَة 📄", ["recycle", "fridge", "kettle"]], ["البُذُورُ الصَّغِيرَة 🌱", ["pot", "trashbin", "tv"]]]}, {"type": "match", "title": "صِلِ الصُّورَةَ بِالعَادَة", "hint": "ارْسُمْ خَطًّا مِنَ الصُّورَةِ إِلَى العَادَةِ المُنَاسِبَة ✏️", "rows": [["tap", "", "=أَزْرَعُ شَجَرَة"], ["lamp", "", "=أُوَفِّرُ المَاء"], ["sprout", "", "=أُعِيدُ التَّدْوِير"], ["recycle", "", "=أُطْفِئُ النُّور"]]}, {"type": "count", "title": "كَمْ عَدَدُهَا؟", "rows": [["gtree", 4], ["flower", 5], ["recycle", 3], ["sparrow", 2]]}, {"type": "draw", "title": "ارْسُمْ أَرْضًا نَظِيفَة", "hint": "ارْسُمْ حَدِيقَةً نَظِيفَةً فِيهَا أَشْجَارٌ وَزُهُور 🖍️", "label": "أَنَا أُحِبُّ أَرْضِي لِأَنَّ: ...................."}], "certP": "لِأَنَّهُ صَدِيقٌ لِلْبِيئَةِ وَيُحَافِظُ عَلَى الأَرْض", "certArts": ["e_tree", "happyearth", "recycle"], "blurb": "كِتَابٌ مُلَوَّنٌ بِرُسُومَاتٍ ثُلَاثِيَّةِ الأَبْعَاد يُعَلِّمُ طِفْلَكَ كَيْفَ يُحَافِظُ عَلَى البِيئَةِ بِالعَرَبِيَّةِ الفَصِيحَة.", "blurbLi": ["زِرَاعَةُ الأَشْجَار، تَوْفِيرُ المَاءِ وَالكَهْرَبَاء ...", "إِعَادَةُ التَّدْوِير، وَحِمَايَةُ الحَيَوَانَاتِ وَالبَحْر", "آيَاتٌ وَحَدِيثٌ عَنِ الزَّرْعِ وَعَدَمِ الإِسْرَاف", "صَدِيقُ البِيئَة، وَأَيْنَ أَضَعُهَا؟ وَصِلْ، وَشَهَادَة"], "en2": "A joyful 3D picture book about caring for the environment · Ages 3–7", "backArts": ["e_bike", "e_sea", "e_bag", "e_animals"]};
-const G = (x, cls) => { const [n, col] = x.split(':'); const o = {}; if (cls) o.cls = cls; if (col) o.color = col; return art(n, o); };
-const L = (x) => BY[x.split(':')[0]] ? BY[x.split(':')[0]][0] : '';
+const AR2 = 0;
+const G = (x, cls) => { const k = x.indexOf(':'); const n = k < 0 ? x : x.slice(0, k), col = k < 0 ? '' : x.slice(k + 1); const o = {}; if (cls) o.cls = cls; if (col) o.color = col; return art(n, o); };
+const L = (x) => BY[x] ? BY[x][0] : BY[x.split(':')[0]] ? BY[x.split(':')[0]][0] : '';
 // 1 ---------- Cover
 pages.push(`
 <section class="page cover">
   ${bubbles(1, C.h, 12)}
+  ${C.grade ? `<div class="gbadge">${C.grade}</div>` : ''}
   ${C.coverTop.map((x, k) => `<div class="ca cs${k}">${G(x)}</div>`).join('')}
   <h1>${t3d(C.t1, '#ffffff', C.s1, 12)}<br>${t3d(C.t2, '#ffd23f', C.s2, 12)}</h1>
   <div class="csub">${C.csub}</div>
@@ -96,7 +98,17 @@ pages.push(`
   </div>
   ${pno(P++)}
 </section>`);
-// 4 ---------- Overview
+// 4 ---------- Overview / contents
+if (C.units) {
+  let pg = 5; const rows = C.units.map((u, k) => { const r = { n: k + 1, t: u.title, en: u.en, a: u.icon, pg }; pg += 1 + (u.items || []).length + (u.acts || []).length; return r; });
+  pages.push(`
+<section class="page plain" style="--h:${C.h}">
+  ${bubbles(4, C.h)}
+  ${title(C.tocTitle || 'الفِهْرِس', C.s1)}
+  <div class="toc">${rows.map(r => `<div class="tocr" style="--h:${(r.n * 47 + C.h) % 360}"><i>${AR(r.n)}</i>${G(r.a)}<div><b>${r.t}</b><small>${r.en}</small></div><span>${AR(r.pg)}</span></div>`).join('')}</div>
+  ${pno(P++)}
+</section>`);
+} else {
 pages.push(`
 <section class="page plain" style="--h:${C.h}">
   ${bubbles(4, C.h)}
@@ -104,9 +116,11 @@ pages.push(`
   <div class="ovg${ITEMS.length > 12 ? ' ov16' : ''}">${ITEMS.map(i => `<div class="ovc">${G(i[2])}<b>${i[0]}</b></div>`).join('')}</div>
   ${pno(P++)}
 </section>`);
+}
 // items
-ITEMS.forEach(([name, en, ill, sentence, c1, c2, tw], i) => {
-  const h = hue(i); const w = tw || name; const long = w.length > 10;
+const itemPages = (LIST, U, off) => LIST.forEach(([name, en, ill, sentence, c1, c2, tw], i) => {
+  i = i + off;
+  const h = hue(i); const w = tw || name; const long = w.length > (C.ltr ? 6 : 10);
   pages.push(`
   <section class="page item" style="--h:${h}">
     ${bubbles(i + 10, h)}
@@ -114,12 +128,12 @@ ITEMS.forEach(([name, en, ill, sentence, c1, c2, tw], i) => {
     <div class="water">${G(ill, 'ill')}</div>
     <div class="sent">${sentence}</div>
     <div class="chips">
-      <div class="chip"><i>${C.chip1[0]}</i><div><small>${C.chip1[1]}</small><b>${c1}</b></div></div>
-      <div class="chip"><i>${C.chip2[0]}</i><div><small>${C.chip2[1]}</small><b>${c2}</b></div></div>
+      <div class="chip"><i>${U.chip1[0]}</i><div><small>${U.chip1[1]}</small><b>${c1}</b></div></div>
+      <div class="chip"><i>${U.chip2[0]}</i><div><small>${U.chip2[1]}</small><b>${c2}</b></div></div>
     </div>
     <div class="trace">
-      <span class="tlabel">✎ أَكْتُبُ الكَلِمَة</span>
-      <svg viewBox="0 0 700 100"><line x1="20" y1="80" x2="690" y2="80" class="base"/>${(long ? [520, 175] : [590, 350, 115]).map((x, k) => `<text x="${x}" y="72" class="${k ? 'dash' : 'solid'}${long ? ' sm' : ''}" text-anchor="middle">${w}</text>`).join('')}</svg>
+      <span class="tlabel">${C.traceLabel || '✎ أَكْتُبُ الكَلِمَة'}</span>
+      <svg viewBox="0 0 700 100"><line x1="20" y1="80" x2="690" y2="80" class="base"/>${(C.ltr ? (long ? [175, 520] : [115, 350, 590]) : (long ? [520, 175] : [590, 350, 115])).map((x, k) => `<text x="${x}" y="72" class="${k ? 'dash' : 'solid'}${long ? ' sm' : ''}" text-anchor="middle">${w}</text>`).join('')}</svg>
     </div>
     ${pno(P++)}
   </section>`);
@@ -140,9 +154,11 @@ const ACT = { match: (a) => `<div class="hint">${a.hint}</div>
   ${a.rows.map(([x, n]) => `<div class="crow"><div class="cimgs">${Array.from({ length: n }, () => G(x)).join('')}</div><div class="cans"></div></div>`).join('')}`,
   draw: (a) => `<div class="hint">${a.hint}</div><div class="bigboard"><div></div></div><div class="todayrow"><span>${a.label}</span></div>`,
   words: (a) => `<div class="hint">${a.hint}</div>${a.rows.map(([w, o], j) => `<div class="qrow" style="--h:${(j * 60 + 260) % 360}"><div class="qw">${w}</div>${o.map(x => `<div class="qo">${x}</div>`).join('')}</div>`).join('')}`,
-  raw: (a) => a.html + (a.arts ? `<div class="tlrow big2">${a.arts.map(x => G(x)).join("")}</div>` : ""),
+  sums: (a) => `<div class="hint">${a.hint || 'أَحْسُبُ وَأَكْتُبُ الجَوَابَ فِي المُرَبَّع ✏️'}</div>${a.rows.map(([it, x, y, op]) => `<div class="sumr"><div class="sg">${Array.from({ length: x }, () => G(it)).join('')}</div><b>${op === '-' ? '−' : '+'}</b><div class="sg">${Array.from({ length: y }, () => G(it)).join('')}</div><b>=</b><i class="sbox"></i><span>${AR(x)} ${op === '-' ? '−' : '+'} ${AR(y)} = ....</span></div>`).join('')}`,
+  raw: (a) => a.html.replace(/<span data-a="([^"]+)"><\/span>/g, (_, x) => G(x)) + (a.arts ? `<div class="tlrow big2">${a.arts.map(x => G(x)).join("")}</div>` : ""),
 };
-C.acts.forEach((a, j) => {
+const actPages = (LIST, off) => LIST.forEach((a, j) => {
+  j = j + off;
   const h = [150, 200, 20, 45, 265, 100, 320, 180][j % 8];
   pages.push(`
 <section class="page plain" style="--h:${h}">
@@ -152,6 +168,19 @@ C.acts.forEach((a, j) => {
   ${pno(P++)}
 </section>`);
 });
+
+const unitPage = (u, k) => pages.push(`
+<section class="page plain unit" style="--h:${(k * 47 + C.h) % 360}">
+  ${bubbles(60 + k, (k * 47 + C.h) % 360, 14)}
+  <div class="unum">${t3d(C.ltr ? 'Unit ' + (k + 1) : 'الوَحْدَةُ ' + ['الأُولَى','الثَّانِيَةُ','الثَّالِثَةُ','الرَّابِعَةُ','الخَامِسَةُ','السَّادِسَةُ','السَّابِعَةُ','الثَّامِنَةُ','التَّاسِعَةُ','العَاشِرَةُ'][k], '#ffd23f', '#7a3a00', 7)}</div>
+  <h1 class="utitle">${t3d(u.title, '#ffffff', `hsl(${(k * 47 + C.h) % 360},60%,28%)`, 10)}</h1>
+  <div class="uen">${u.en}</div>
+  <div class="uart">${(u.arts || [u.icon]).map(x => G(x)).join('')}</div>
+  ${u.intro ? `<div class="card uintro">${u.intro}</div>` : ''}
+  ${pno(P++)}
+</section>`);
+if (C.units) { let off = 0, aoff = 0; C.units.forEach((u, k) => { unitPage(u, k); itemPages(u.items || [], u, off); off += (u.items || []).length; actPages(u.acts || [], aoff); aoff += (u.acts || []).length; }); }
+else { itemPages(ITEMS, C, 0); actPages(C.acts, 0); }
 // Certificate
 pages.push(`
 <section class="page cert">
@@ -263,6 +292,63 @@ svg{display:block}
 .qo{flex:1;text-align:center;font-size:44px;font-weight:800;background:#fff;border-radius:22px;padding:4px;box-shadow:0 4px 0 hsl(var(--h),40%,80%)}
 .tlrow.big2{margin-top:40px}.tlrow.big2 svg{width:200px;height:200px}
 .iname .en{margin-top:6px}
+/* readability: extra room for harakat so marks never touch neighbouring lines */
+.iname .t3d{line-height:1.45}.iname .en{margin-top:10px}
+.sent{line-height:1.7;padding:8px 36px}
+.chip b{line-height:1.6}.chip small{line-height:1.4}
+.hint{line-height:1.6}.qw,.qo{line-height:1.6}.rw b{line-height:1.6}
+.ovc b{font-size:19px;line-height:1.6}.mc b{line-height:1.5}.mq{line-height:1.5;font-size:36px}
+.note .card{line-height:2.1}.blurb{line-height:1.9}.refc p{line-height:1.9}
+.wgo b{line-height:1.6}
+.t3d{font-family:Baloo,sans-serif !important;font-weight:800}
+.ovg{grid-template-columns:repeat(3,1fr) !important;gap:16px !important;margin-top:22px !important}.ovc svg{width:150px !important;height:150px !important}.ovc b{font-size:23px !important}
+.toc{position:relative;margin-top:26px;display:flex;flex-direction:column;gap:14px}
+.tocr{display:flex;align-items:center;gap:16px;background:#fff;border-radius:28px;padding:8px 20px;box-shadow:0 6px 0 hsl(var(--h),55%,72%)}
+.tocr i{font-style:normal;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;background:hsl(var(--h),65%,48%);text-shadow:0 0 3px hsl(var(--h),60%,22%),0 0 3px hsl(var(--h),60%,22%)}
+.tocr svg{width:84px;height:84px}.tocr div{flex:1}.tocr b{display:block;font-size:31px;font-weight:800;color:hsl(var(--h),60%,26%);line-height:1.6}.tocr small{font-family:Fredoka;font-size:18px;color:#6f6a8a}
+.tocr span{font-size:30px;font-weight:800;color:hsl(var(--h),60%,30%)}
+.unit{text-align:center}.unum{position:relative;margin-top:60px;font-size:52px}
+.utitle{position:relative;font-size:84px;margin-top:20px;line-height:1.5}
+.uen{position:relative;font-family:Fredoka;font-weight:600;font-size:30px;color:hsl(var(--h),50%,30%);margin-top:6px}
+.uart{position:relative;display:flex;justify-content:center;gap:20px;margin-top:40px}.uart svg{width:220px;height:220px;filter:drop-shadow(0 12px 12px rgba(10,30,70,.25))}
+.uintro{margin:40px 30px 0;font-size:30px;font-weight:700;line-height:2;text-align:center}
+.lgrid7{position:relative;display:grid;grid-template-columns:repeat(7,1fr);gap:14px;margin-top:30px}
+.lgrid7 .lt{font-style:normal;text-align:center;font-size:60px;font-weight:800;color:#fff;border-radius:22px;padding:6px 0;line-height:1.5}
+.lt.q0{background:linear-gradient(#ff8a8a,#e8392b);text-shadow:0 0 3px #7a1010,0 0 3px #7a1010;box-shadow:0 6px 0 #a8201a}
+.lt.q1{background:linear-gradient(#ffd84d,#ff9f1a);text-shadow:0 0 3px #7a3a00,0 0 3px #7a3a00;box-shadow:0 6px 0 #c46a00}
+.lt.q2{background:linear-gradient(#7fe08a,#2aa84c);text-shadow:0 0 3px #0f5a20,0 0 3px #0f5a20;box-shadow:0 6px 0 #1f8f3f}
+.lt.q3{background:linear-gradient(#8fc4ff,#2f7de8);text-shadow:0 0 3px #0f2f70,0 0 3px #0f2f70;box-shadow:0 6px 0 #1f55b8}
+.ftab{position:relative;width:100%;margin-top:30px;border-collapse:separate;border-spacing:10px}
+.ftab th{font-size:28px;font-weight:800;color:#fff;background:hsl(var(--h),60%,45%);border-radius:18px;padding:6px;text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%);line-height:1.6}
+.ftab td{font-size:56px;font-weight:800;text-align:center;background:#fff;border-radius:18px;line-height:1.6;color:hsl(var(--h),60%,28%);box-shadow:0 5px 0 hsl(var(--h),50%,78%)}
+.ftab td.fl{background:hsl(var(--h),80%,92%)}
+.tabox{position:relative;margin-top:30px;background:#fff;border-radius:34px;padding:20px 30px;box-shadow:0 8px 0 #ffc2dc}.tabox p{text-align:center;font-size:32px;font-weight:800;line-height:1.8}.tabox p b{color:#ff2d7a;font-size:44px}.tarow{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:16px}.tarow span{min-width:200px;text-align:center;font-size:42px;font-weight:800;line-height:1.6;border-radius:22px;padding:4px 18px;background:#e3f0ff;color:#1f5fbf}.tarow span:last-child{background:#ffe3f0;color:#c2366a}.tarow i{font-style:normal;font-size:34px;font-weight:800;color:#ff2d7a}
+.rsent{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:16px}
+.rs{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:28px;padding:10px 26px;box-shadow:0 6px 0 hsl(var(--h),50%,76%)}
+.rs b{font-size:40px;font-weight:800;line-height:1.8;color:hsl(var(--h),60%,26%)}.rs svg{width:100px;height:100px}
+.story{margin-top:30px}.story h3{text-align:center;font-size:42px;font-weight:800;color:hsl(var(--h),60%,30%);line-height:1.6}.story p{font-size:36px;font-weight:700;line-height:2.2;text-align:right;margin-top:10px}
+.sumr{position:relative;display:flex;align-items:center;gap:10px;margin-top:30px;min-height:150px;background:#fff;border-radius:28px;padding:10px 18px;box-shadow:0 6px 0 hsl(var(--h),50%,76%);direction:rtl}
+.sumr .sg{display:flex;flex-wrap:wrap;gap:2px;width:170px;justify-content:center}.sumr .sg svg{width:60px;height:60px}
+.sumr b{font-size:46px;font-weight:800;color:hsl(var(--h),60%,35%)}.sumr .sbox{width:70px;height:70px;border:4px dashed hsl(var(--h),50%,60%);border-radius:16px}
+.sumr span{flex:1;text-align:center;font-size:30px;font-weight:800;color:#2b2340;direction:rtl}
+.ncards{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.ncard{display:flex;align-items:center;gap:16px;background:#fff;border-radius:26px;padding:8px 18px;box-shadow:0 6px 0 hsl(var(--h),50%,76%)}
+.ncard b{width:86px;text-align:center;font-size:58px;font-weight:800;color:#fff;border-radius:20px;line-height:1.4;background:hsl(var(--nh),65%,50%);text-shadow:0 0 3px hsl(var(--nh),60%,20%),0 0 3px hsl(var(--nh),60%,20%)}
+.ncard .dots{flex:1;display:flex;flex-wrap:wrap;gap:6px}.ncard .dots i{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,hsl(var(--nh),80%,60%) 50%,hsl(var(--nh),70%,40%))}
+.ncard small{font-size:24px;font-weight:800;color:#5a5470;line-height:1.6}
+.h100{position:relative;display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:24px;direction:rtl}
+.h100 i{font-style:normal;text-align:center;font-size:27px;font-weight:800;background:#fff;border-radius:10px;line-height:1.9;color:#2b2340;box-shadow:0 3px 0 hsl(var(--h),40%,80%)}
+.h100 i.t{background:hsl(var(--h),70%,55%);color:#fff;text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%)}
+.tens{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+.tens div{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:24px;padding:6px 22px;box-shadow:0 5px 0 hsl(var(--h),50%,76%)}
+.tens b{font-size:46px;font-weight:800;color:hsl(var(--h),60%,35%);line-height:1.5}.tens span{font-size:32px;font-weight:800;line-height:1.6}
+.twrite{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px}
+.twrite div{background:#fff;border-radius:22px;text-align:center;padding:6px;box-shadow:0 5px 0 hsl(var(--h),50%,76%)}
+.twrite b{display:block;font-size:64px;font-weight:800;color:hsl(var(--h),60%,35%);line-height:1.4}.twrite i{display:block;font-style:normal;font-size:64px;font-weight:800;color:#dcd5e8;line-height:1.4}
+.clk4{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}.clk4 div{background:#fff;border-radius:28px;padding:10px;text-align:center;box-shadow:0 6px 0 hsl(var(--h),50%,76%)}.clk4 svg{width:230px;height:230px;margin:0 auto}.clk4 b{font-size:30px;font-weight:800;line-height:1.6}
+.gbadge{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:5;font-family:Fredoka,Baloo,sans-serif;font-weight:700;font-size:26px;color:#fff;padding:2px 24px;border-radius:22px;direction:ltr;
+  background:linear-gradient(150deg,#ffb627,#ff6b1a);box-shadow:inset 0 3px 0 rgba(255,255,255,.4),0 4px 0 #c45000,0 8px 14px rgba(0,0,0,.18);text-shadow:0 0 3px #7a2a00,0 0 3px #7a2a00,0 0 3px #7a2a00}
+.cover .cs1{top:56px !important}
 
 .refc{position:relative;background:#fff;border-radius:28px;padding:14px 20px;text-align:center;border:4px solid hsl(var(--h),55%,72%);box-shadow:0 6px 0 hsl(var(--h),50%,62%)}
 .refc p{font-size:30px;font-weight:800;line-height:1.7;color:hsl(var(--h),65%,24%)}.refc span{font-size:20px;font-weight:800;color:#fff;background:hsl(var(--h),55%,40%);border-radius:16px;padding:2px 16px}
