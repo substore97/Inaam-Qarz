@@ -86,6 +86,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `math4-book/`: رياضياتي الجميلة ٤ (math, fourth-grade syllabus), 48 pages
 - `science4-book/`: علومي الجميلة ٤ (science, fourth-grade syllabus), 48 pages
 - `islamic4-book/`: دراساتي الإسلامية ٤ (Islamic studies, fourth-grade syllabus), 48 pages
+- `english4-book/`: My English Book 4 (English, fourth-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
