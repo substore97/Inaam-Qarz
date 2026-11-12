@@ -96,6 +96,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `lughati6-book/`: لغتي الجميلة ٦ (Arabic language, sixth-grade syllabus), 48 pages
 - `math6-book/`: رياضياتي الجميلة ٦ (math, sixth-grade syllabus), 48 pages
 - `science6-book/`: علومي الجميلة ٦ (science, sixth-grade syllabus), 48 pages
+- `islamic6-book/`: دراساتي الإسلامية ٦ (Islamic studies, sixth-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
