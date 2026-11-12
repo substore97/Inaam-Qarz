@@ -1,12 +1,12 @@
 # Notes for Claude
 
 ## Book delivery preferences (from the owner, Inaam ur Rahman)
-Every time a book is made or updated, send ALL of these to the user:
-1. **App PDF**: as few MB as possible but Full HD (1920 px tall pages), with no visible quality loss. This is what goes in their app.
-   App PDF target ≈ 3–4 MB: `pack.py` encodes it with mozjpeg (install once per container: `mkdir -p /tmp/mzj && cd /tmp/mzj && npm i mozjpeg@8.0.0`), lowering quality from q72 until ≤ 4 MB, never below q60. Busy page textures (ruled lines, dots) inflate size, so keep page backgrounds plain.
-2. **Full PDF**: full-quality print version (300 DPI).
-3. **Front cover as a separate JPG**.
-4. **Play Console text file** `<Prefix>-PlayStore.txt` in the book folder: book name in Arabic and English, an Arabic short description (max 80 chars) and an Arabic full description (max 4000 chars). Check the lengths before sending.
+Every time a book is made or updated, send the owner ONLY the **App PDF** (owner request, Nov 2026): as few MB as possible (≈3–4 MB) but Full HD (1920 px tall pages), with no visible quality loss. Do NOT make or send the print PDF or the cover JPG any more (build makes only the App PDF by default; `PRINT=1` env would add them).
+   `pack.py` encodes the App PDF with mozjpeg (install once per container: `mkdir -p /tmp/mzj && cd /tmp/mzj && npm i mozjpeg@8.0.0`), lowering quality from q72 until ≤ 4 MB, never below q60. Busy page textures (ruled lines, dots) inflate size, so keep page backgrounds plain.
+When a whole grade set is made, send all its App PDFs together in one message at the end.
+Still write `<Prefix>-PlayStore.txt` in each book folder (Arabic + English name, Arabic short ≤80 chars, full ≤4000 chars; check lengths) and keep it in the repo.
+**Every new grade must get a genuinely NEW page interface (layout, not just colours)** — the owner finds repeated layouts boring.
+Quality process for every book: lint script, an independent proofreader agent (Arabic/English/Quran/hadith/math answers), and a visual page check.
 
 **GitHub stores SOURCE CODE ONLY.** Built PDFs and cover JPGs are git-ignored (root `.gitignore`) and are only sent to the owner, who keeps them in Google Drive. Never commit them. (All book PDFs/JPGs were permanently purged from the git history at the owner's request; repo is source-only, ~5 MB.)
 
@@ -93,6 +93,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `science5-book/`: علومي الجميلة ٥ (science, fifth-grade syllabus), 48 pages
 - `islamic5-book/`: دراساتي الإسلامية ٥ (Islamic studies, fifth-grade syllabus), 48 pages
 - `english5-book/`: My English Book 5 (English, fifth-grade syllabus), 48 pages
+- `lughati6-book/`: لغتي الجميلة ٦ (Arabic language, sixth-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
