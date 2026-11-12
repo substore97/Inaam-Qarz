@@ -1,0 +1,4 @@
+# Built book outputs (PDFs and cover JPGs) are not stored on GitHub; they are rebuilt from source and kept in Google Drive.
+*-APP.pdf
+*-PRINT.pdf
+*-Cover.jpg

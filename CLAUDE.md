@@ -7,6 +7,8 @@ Every time a book is made or updated, send ALL of these to the user:
 3. **Front cover as a separate JPG**.
 4. **Play Console text file** `<Prefix>-PlayStore.txt` in the book folder: book name in Arabic and English, an Arabic short description (max 80 chars) and an Arabic full description (max 4000 chars). Check the lengths before sending.
 
+**GitHub stores SOURCE CODE ONLY.** Built PDFs and cover JPGs are git-ignored (root `.gitignore`) and are only sent to the owner, who keeps them in Google Drive. Never commit them. (Books 1–40 outputs were removed from the repo at the owner's request.)
+
 **Page size: always A4 (portrait).**
 
 **Book text is ONLY Arabic and English. Never put Urdu (or any other language) inside a book.** (Chat replies stay in Roman Urdu.)
