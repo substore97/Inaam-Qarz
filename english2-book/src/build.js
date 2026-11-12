@@ -120,7 +120,7 @@ pages.push(`
 // items
 const itemPages = (LIST, U, off) => LIST.forEach(([name, en, ill, sentence, c1, c2, tw], i) => {
   i = i + off;
-  const h = hue(i); const w = tw || name; const long = w.length > 10;
+  const h = hue(i); const w = tw || name; const long = w.length > (C.ltr ? 6 : 10);
   pages.push(`
   <section class="page item" style="--h:${h}">
     ${bubbles(i + 10, h)}

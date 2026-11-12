@@ -63,6 +63,7 @@ const L = (x) => BY[x] ? BY[x][0] : BY[x.split(':')[0]] ? BY[x.split(':')[0]][0]
 pages.push(`
 <section class="page cover">
   ${bubbles(1, C.h, 12)}
+  ${C.grade ? `<div class="gbadge">${C.grade}</div>` : ''}
   ${C.coverTop.map((x, k) => `<div class="ca cs${k}">${G(x)}</div>`).join('')}
   <h1>${t3d(C.t1, '#ffffff', C.s1, 12)}<br>${t3d(C.t2, '#ffd23f', C.s2, 12)}</h1>
   <div class="csub">${C.csub}</div>
@@ -119,7 +120,7 @@ pages.push(`
 // items
 const itemPages = (LIST, U, off) => LIST.forEach(([name, en, ill, sentence, c1, c2, tw], i) => {
   i = i + off;
-  const h = hue(i); const w = tw || name; const long = w.length > 10;
+  const h = hue(i); const w = tw || name; const long = w.length > (C.ltr ? 6 : 10);
   pages.push(`
   <section class="page item" style="--h:${h}">
     ${bubbles(i + 10, h)}
@@ -345,6 +346,9 @@ svg{display:block}
 .twrite div{background:#fff;border-radius:22px;text-align:center;padding:6px;box-shadow:0 5px 0 hsl(var(--h),50%,76%)}
 .twrite b{display:block;font-size:64px;font-weight:800;color:hsl(var(--h),60%,35%);line-height:1.4}.twrite i{display:block;font-style:normal;font-size:64px;font-weight:800;color:#dcd5e8;line-height:1.4}
 .clk4{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}.clk4 div{background:#fff;border-radius:28px;padding:10px;text-align:center;box-shadow:0 6px 0 hsl(var(--h),50%,76%)}.clk4 svg{width:230px;height:230px;margin:0 auto}.clk4 b{font-size:30px;font-weight:800;line-height:1.6}
+.gbadge{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:5;font-family:Fredoka,Baloo,sans-serif;font-weight:700;font-size:26px;color:#fff;padding:2px 24px;border-radius:22px;direction:ltr;
+  background:linear-gradient(150deg,#ffb627,#ff6b1a);box-shadow:inset 0 3px 0 rgba(255,255,255,.4),0 4px 0 #c45000,0 8px 14px rgba(0,0,0,.18);text-shadow:0 0 3px #7a2a00,0 0 3px #7a2a00,0 0 3px #7a2a00}
+.cover .cs1{top:56px !important}
 body{direction:ltr}.page{font-family:Fredoka,Baloo,sans-serif}.t3d{font-family:Fredoka,Baloo,sans-serif !important;font-weight:700}.tlabel{right:auto;left:18px}.owner,.note,.cert{direction:rtl;font-family:Baloo,sans-serif}.trace text{font-family:Fredoka !important;font-weight:600}.blurb{text-align:left}.blurb ul{margin:8px 0 0 28px}.iname .en{font-family:Baloo;direction:rtl}.uen{font-family:Baloo;direction:rtl}.tocr small{font-family:Baloo}.cen{direction:rtl;font-family:Baloo !important}.en2{direction:rtl;font-family:Baloo !important}.hint,.sent,.chip b,.qw,.qo,.wgo b,.mq,.mc b{font-family:Fredoka,Baloo;font-weight:600}.chip small{font-family:Fredoka}.mazebox{direction:rtl}.abcg{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}.abcg .lt{font-style:normal;text-align:center;font-family:Fredoka;font-size:52px;font-weight:700;color:#fff;border-radius:22px;padding:8px 0;line-height:1.4}.lpic{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.lpic div{background:#fff;border-radius:24px;text-align:center;padding:6px;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.lpic b{display:block;font-family:Fredoka;font-size:40px;font-weight:700;color:hsl(var(--h),65%,40%);line-height:1.2}.lpic svg{width:96px;height:96px;margin:0 auto}.lpic em{display:block;font-style:normal;font-family:Fredoka;font-size:26px;font-weight:600;color:#2b2340}.ncard small{font-family:Fredoka;font-size:28px}.grt{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:18px}.grt>div{display:flex;align-items:center;gap:20px;background:#fff;border-radius:30px;padding:10px 24px;box-shadow:0 6px 0 hsl(var(--h),50%,74%)}.grt svg{width:120px;height:120px;flex:none}.grt b{display:block;font-family:Fredoka;font-size:44px;font-weight:700;color:hsl(var(--h),60%,32%);line-height:1.4}.grt small{display:block;font-size:28px;font-weight:800;color:#5a5470;line-height:1.7;direction:rtl;text-align:left}
 .refc{position:relative;background:#fff;border-radius:28px;padding:14px 20px;text-align:center;border:4px solid hsl(var(--h),55%,72%);box-shadow:0 6px 0 hsl(var(--h),50%,62%)}
 .refc p{font-size:30px;font-weight:800;line-height:1.7;color:hsl(var(--h),65%,24%)}.refc span{font-size:20px;font-weight:800;color:#fff;background:hsl(var(--h),55%,40%);border-radius:16px;padding:2px 16px}
