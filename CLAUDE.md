@@ -3,6 +3,7 @@
 ## Book delivery preferences (from the owner, Inaam ur Rahman)
 Every time a book is made or updated, send ALL of these to the user:
 1. **App PDF**: as few MB as possible but Full HD (1920 px tall pages), with no visible quality loss. This is what goes in their app.
+   App PDF target ≈ 3–4 MB: `pack.py` encodes it with mozjpeg (install once per container: `mkdir -p /tmp/mzj && cd /tmp/mzj && npm i mozjpeg@8.0.0`), lowering quality from q72 until ≤ 4 MB, never below q60. Busy page textures (ruled lines, dots) inflate size, so keep page backgrounds plain.
 2. **Full PDF**: full-quality print version (300 DPI).
 3. **Front cover as a separate JPG**.
 4. **Play Console text file** `<Prefix>-PlayStore.txt` in the book folder: book name in Arabic and English, an Arabic short description (max 80 chars) and an Arabic full description (max 4000 chars). Check the lengths before sending.

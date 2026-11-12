@@ -57,7 +57,27 @@ def write_pdf(out, jpgs, size, title):
 TITLE = TITLE_ARG
 APP = (1358, 1920)     # A4 at Full HD height
 PRINT = (2480, 3508)   # A4 at 300 DPI
-write_pdf(os.path.join(root, PREFIX + '-APP.pdf'), [jpeg(f, APP, 82) for f in files], APP, TITLE)
+# APP PDF: mozjpeg (if installed) gives ~40% smaller files at the same visual quality.
+# Quality is lowered step by step until the whole book is <= APP_MB (default 4 MB), never below q60.
+import subprocess, shutil
+CJPEG = os.environ.get('MOZJPEG', '/tmp/mzj/node_modules/mozjpeg/vendor/cjpeg')
+APP_MB = float(os.environ.get('APP_MB', '4.0'))
+def moz(path, size, q):
+    im = Image.open(path).convert('RGB')
+    if im.size != size:
+        im = im.resize(size, Image.LANCZOS)
+    b = io.BytesIO(); im.save(b, 'PPM')
+    return subprocess.run([CJPEG, '-quality', str(q), '-sample', '2x2', '-optimize', '-progressive'],
+                          input=b.getvalue(), capture_output=True, check=True).stdout
+if os.path.exists(CJPEG):
+    for q in (72, 68, 65, 62, 60):
+        jp = [moz(f, APP, q) for f in files]
+        if sum(map(len, jp)) <= APP_MB * 1e6 or q == 60:
+            break
+    print('APP quality: mozjpeg q%d' % q)
+else:
+    jp = [jpeg(f, APP, 82) for f in files]
+write_pdf(os.path.join(root, PREFIX + '-APP.pdf'), jp, APP, TITLE)
 write_pdf(os.path.join(root, PREFIX + '-PRINT.pdf'), [jpeg(f, PRINT, 92) for f in files], PRINT, TITLE)
 cover = os.path.join(root, PREFIX + '-Cover.jpg')
 open(cover, 'wb').write(jpeg(files[0], PRINT, 92))
