@@ -79,6 +79,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `math3-book/`: رياضياتي الجميلة ٣ (math, third-grade syllabus), 48 pages
 - `science3-book/`: علومي الجميلة ٣ (science, third-grade syllabus), 48 pages
 - `islamic3-book/`: دراساتي الإسلامية ٣ (Islamic studies, third-grade syllabus), 48 pages
+- `english3-book/`: My English Book 3 (English, third-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
