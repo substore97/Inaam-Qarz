@@ -91,6 +91,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `math5-book/`: رياضياتي الجميلة ٥ (math, fifth-grade syllabus), 48 pages
 - `science5-book/`: علومي الجميلة ٥ (science, fifth-grade syllabus), 48 pages
 - `islamic5-book/`: دراساتي الإسلامية ٥ (Islamic studies, fifth-grade syllabus), 48 pages
+- `english5-book/`: My English Book 5 (English, fifth-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
