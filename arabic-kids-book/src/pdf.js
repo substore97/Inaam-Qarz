@@ -14,7 +14,7 @@ const OUT = path.join(ROOT, 'build', 'pages');
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const b = await chromium.launch();
-  const p = await b.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: 3.125 }); // A4 = 794x1123 CSS px -> ~2481x3509 px (300 DPI)
+  const p = await b.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: process.env.PRINT ? 3.125 : 2 }); // A4 = 794x1123 CSS px -> ~2481x3509 px (300 DPI)
   await p.goto('file://' + path.join(ROOT, 'build', 'book.html'), { waitUntil: 'load' });
   await p.evaluate(() => document.fonts.ready);
   const secs = await p.$$('section');

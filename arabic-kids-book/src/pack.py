@@ -78,7 +78,8 @@ if os.path.exists(CJPEG):
 else:
     jp = [jpeg(f, APP, 82) for f in files]
 write_pdf(os.path.join(root, PREFIX + '-APP.pdf'), jp, APP, TITLE)
-write_pdf(os.path.join(root, PREFIX + '-PRINT.pdf'), [jpeg(f, PRINT, 92) for f in files], PRINT, TITLE)
-cover = os.path.join(root, PREFIX + '-Cover.jpg')
-open(cover, 'wb').write(jpeg(files[0], PRINT, 92))
-print(PREFIX + '-Cover.jpg', round(os.path.getsize(cover) / 1e6, 2), 'MB')
+if os.environ.get('PRINT'):
+  write_pdf(os.path.join(root, PREFIX + '-PRINT.pdf'), [jpeg(f, PRINT, 92) for f in files], PRINT, TITLE)
+  cover = os.path.join(root, PREFIX + '-Cover.jpg')
+  open(cover, 'wb').write(jpeg(files[0], PRINT, 92))
+  print(PREFIX + '-Cover.jpg', round(os.path.getsize(cover) / 1e6, 2), 'MB')
