@@ -487,6 +487,8 @@ bdi[dir=ltr]{unicode-bidi:isolate-override !important;direction:ltr}
 .l7note{margin-top:20px}.l7note i{height:56px}
 .item7 .pno{bottom:16px !important}
 .u7num{top:auto !important;bottom:-40px;inset-inline-end:auto;inset-inline-start:40px;font-size:460px !important;color:hsla(0,0%,100%,.2) !important}
+.q7 p{flex:1 1 220px}.q7o{flex:0 1 auto;padding-inline-start:0;margin-inline-start:auto}
+.q7list + .tlrow svg,.tf7 + .tlrow svg{width:120px !important;height:120px !important}.q7list + .tlrow,.tf7 + .tlrow{margin-top:20px !important}
 sup{font-size:.6em;vertical-align:.7em;line-height:0}
 .refc{position:relative;background:#fff;border-radius:28px;padding:14px 20px;text-align:center;border:4px solid hsl(var(--h),55%,72%);box-shadow:0 6px 0 hsl(var(--h),50%,62%)}
 .refc p{font-size:30px;font-weight:800;line-height:1.7;color:hsl(var(--h),65%,24%)}.refc span{font-size:20px;font-weight:800;color:#fff;background:hsl(var(--h),55%,40%);border-radius:16px;padding:2px 16px}

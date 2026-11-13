@@ -408,6 +408,7 @@ svg{display:block}
 .gbadge{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:5;font-family:Fredoka,Baloo,sans-serif;font-weight:700;font-size:26px;color:#fff;padding:2px 24px;border-radius:22px;direction:ltr;
   background:linear-gradient(150deg,#ffb627,#ff6b1a);box-shadow:inset 0 3px 0 rgba(255,255,255,.4),0 4px 0 #c45000,0 8px 14px rgba(0,0,0,.18);text-shadow:0 0 3px #7a2a00,0 0 3px #7a2a00,0 0 3px #7a2a00}
 .cover .cs1{top:56px !important}
+bdi[dir=ltr]{unicode-bidi:isolate-override !important;direction:ltr}
 /* ===== Grade-7 interface: pastel page + white cards, hexagons, steps timeline, ribbons ===== */
 .page:not(.cover) .bub{display:none}
 .page:not(.cover):not(.cert){background:hsl(var(--h),75%,96%) !important}
@@ -486,6 +487,8 @@ svg{display:block}
 .l7note{margin-top:20px}.l7note i{height:56px}
 .item7 .pno{bottom:16px !important}
 .u7num{top:auto !important;bottom:-40px;inset-inline-end:auto;inset-inline-start:40px;font-size:460px !important;color:hsla(0,0%,100%,.2) !important}
+.q7 p{flex:1 1 220px}.q7o{flex:0 1 auto;padding-inline-start:0;margin-inline-start:auto}
+.q7list + .tlrow svg,.tf7 + .tlrow svg{width:120px !important;height:120px !important}.q7list + .tlrow,.tf7 + .tlrow{margin-top:20px !important}
 .wpair{position:relative;margin-top:24px;background:#fff;border-radius:34px;padding:16px 24px;box-shadow:0 8px 0 hsl(var(--h),50%,74%)}.wph{display:flex;justify-content:space-around;margin-bottom:8px}.wph b{font-size:30px;font-weight:800;color:#fff;background:hsl(var(--h),60%,45%);border-radius:18px;padding:2px 26px;line-height:1.6;text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%)}.wpr{display:flex;align-items:center;justify-content:space-around;margin-top:12px}.wpr span{min-width:220px;text-align:center;font-size:42px;font-weight:800;line-height:1.6;border-radius:22px;padding:2px 14px;background:hsl(var(--h),80%,94%);color:hsl(var(--h),60%,28%)}.wpr i{font-style:normal;font-size:42px;font-weight:800;color:hsl(var(--h),60%,45%)}.ptab{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:18px}.ptab>div{display:flex;align-items:center;gap:20px;background:#fff;border-radius:30px;padding:12px 22px;box-shadow:0 7px 0 hsl(var(--h),50%,72%)}
 .ptab i{font-style:normal;flex:none;width:110px;height:110px;border-radius:26px;display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:800;color:#fff;background:hsl(var(--h),65%,50%);text-shadow:0 0 4px hsl(var(--h),60%,20%),0 0 4px hsl(var(--h),60%,20%)}
 .ptab b{display:block;font-size:34px;font-weight:800;line-height:1.6;color:hsl(var(--h),60%,30%)}.ptab small{display:block;font-size:24px;font-weight:700;color:#6f6a8a;line-height:1.6}.ptab p{font-size:30px;font-weight:800;line-height:1.7;color:#2b2340}
