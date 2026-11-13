@@ -100,6 +100,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `english6-book/`: My English Book 6 (English, sixth-grade syllabus), 48 pages
 - `lughati7-book/`: لغتي الجميلة ٧ (Arabic language, seventh-grade syllabus), 48 pages
 - `math7-book/`: رياضياتي الجميلة ٧ (math, seventh-grade syllabus), 48 pages
+- `science7-book/`: علومي الجميلة ٧ (science, seventh-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
