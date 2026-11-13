@@ -8,5 +8,5 @@ Tools used to build the grade/syllabus books (Grade 1 onward). Copy this folder 
 - `python3 dumptext.py cfg.json out.txt` — plain text for the proofreader.
 - `bash finish.sh <dir> <prefix> "<arabic title>" "<topic>" <pages>` — checks PlayStore TXT lengths, writes README, adds the CLAUDE.md line, commits and pushes.
 
-Layouts: `layout: "g6"` (Grade 6), `"g7"` (Grade 7), `"g8"` (Grade 8), `"g9"` (Grade 9) in `gen_pages.js`; themes `theme3.css` … `theme9.css`. Every new grade needs a new layout/theme.
+Layouts: `layout: "g6"` (Grade 6), `"g7"` (Grade 7), `"g8"` (Grade 8), `"g9"` (Grade 9), `"g10"` (Grade 10) in `gen_pages.js`; themes `theme3.css` … `theme10.css`. Every new grade needs a new layout/theme.
 Note: `gen.py`, `mkbook.py` and `finish.sh` expect the repo at `/home/user/Inaam-Qarz`.

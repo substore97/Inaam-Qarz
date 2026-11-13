@@ -1,0 +1,886 @@
+{
+ "dir": "english10-book",
+ "prefix": "My-English-Book-10",
+ "title": "My English Book 10",
+ "artmod": "english10-art",
+ "header": "Builds \"My English Book 10\" – tenth-grade English syllabus – A4 portrait.",
+ "grade": "Grade 10",
+ "theme": "10",
+ "layout": "g10",
+ "cover": "--h:250;background:#ffffff",
+ "h": 250,
+ "t1": "My English",
+ "t2": "Book 10",
+ "s1": "#1f1060",
+ "s2": "#7a3a00",
+ "csub": "Past perfect • If I had … • I wish • Linking words • Stories",
+ "cen": "كِتَابِي لِلُّغَةِ الإِنْجِلِيزِيَّةِ ١٠",
+ "coverTop": [
+  "v_read",
+  "plane",
+  "stars"
+ ],
+ "coverBot": [
+  "school",
+  "train",
+  "puzzle",
+  "chain"
+ ],
+ "ownerArt": "v_read",
+ "ownerMini": [
+  "book",
+  "plane",
+  "stars"
+ ],
+ "noteP": "هٰذَا الكِتَابُ يُكْمِلُ تَعْلِيمَ الإِنْجِلِيزِيَّةِ: المَاضِي التَّامُّ، وَالشَّرْطُ فِي المَاضِي، وَالتَّمَنِّي بِـ wish، وَأَدَوَاتُ الرَّبْطِ، وَالمُسْتَقْبَلُ المُسْتَمِرُّ، وَتَكْوِينُ الكَلِمَاتِ، مَعَ قِصَّتَيْنِ 🇬🇧",
+ "noteLi": [
+  "فِي كُلِّ دَرْسٍ بِطَاقَةٌ لِيَكْتُبَ طِفْلُكُمْ جُمْلَةً إِنْجِلِيزِيَّةً مِنْ عِنْدِهِ.",
+  "اسْأَلُوهُ: What will you be doing this time tomorrow?",
+  "اطْلُبُوا مِنْهُ ثَلَاثَ أُمْنِيَاتٍ: I wish …",
+  "فِي المَهَمَّاتِ يُظَلِّلُ حَرْفَ الإِجَابَةِ فِي وَرَقَةِ الإِجَابَةِ، وَالكِتَابُ يُقْرَأُ مِنَ اليَسَارِ إِلَى اليَمِينِ."
+ ],
+ "noteMini": [
+  "clock",
+  "stars",
+  "plane"
+ ],
+ "certP": "لِأَنَّهُ أَتَمَّ «My English Book 10» بِنَجَاحٍ",
+ "certArts": [
+  "v_read",
+  "medal",
+  "book"
+ ],
+ "blurb": "A complete 3D English book with a brand-new design – part 10, with Arabic meanings for every word.",
+ "blurbLi": [
+  "The past perfect and the third conditional",
+  "I wish … and linking words",
+  "The future continuous",
+  "Word formation (un-, -ful, -less), and two stories"
+ ],
+ "en2": "كِتَابٌ شَامِلٌ بِتَصْمِيمٍ جَدِيدٍ لِتَعْلِيمِ الإِنْجِلِيزِيَّةِ – الجُزْءُ العَاشِرُ",
+ "backArts": [
+  "kaaba",
+  "plane",
+  "stars",
+  "school"
+ ],
+ "extraCss": "body{direction:ltr}.page{font-family:Fredoka,Baloo,sans-serif}.t3d{font-family:Fredoka,Baloo,sans-serif !important;font-weight:700}.tlabel{right:auto;left:18px}.owner,.note,.cert{direction:rtl;font-family:Baloo,sans-serif}.trace text{font-family:Fredoka !important;font-weight:600}.blurb{text-align:left}.blurb ul{margin:8px 0 0 28px}.iname .en{font-family:Baloo;direction:rtl}.uen{font-family:Baloo;direction:rtl}.tocr small{font-family:Baloo}.cen{direction:rtl;font-family:Baloo !important}.en2{direction:rtl;font-family:Baloo !important}.hint,.sent,.chip b,.qw,.qo,.wgo b,.mq,.mc b{font-family:Fredoka,Baloo;font-weight:600}.chip small{font-family:Fredoka}.mazebox{direction:rtl}.abcg{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}.abcg .lt{font-style:normal;text-align:center;font-family:Fredoka;font-size:52px;font-weight:700;color:#fff;border-radius:22px;padding:8px 0;line-height:1.4}.lpic{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.lpic div{background:#fff;border-radius:24px;text-align:center;padding:6px;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.lpic b{display:block;font-family:Fredoka;font-size:40px;font-weight:700;color:hsl(var(--h),65%,40%);line-height:1.2}.lpic svg{width:96px;height:96px;margin:0 auto}.lpic em{display:block;font-style:normal;font-family:Fredoka;font-size:26px;font-weight:600;color:#2b2340}.ncard small{font-family:Fredoka;font-size:28px}.grt{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:18px}.grt>div{display:flex;align-items:center;gap:20px;background:#fff;border-radius:30px;padding:10px 24px;box-shadow:0 6px 0 hsl(var(--h),50%,74%)}.grt svg{width:120px;height:120px;flex:none}.grt b{display:block;font-family:Fredoka;font-size:44px;font-weight:700;color:hsl(var(--h),60%,32%);line-height:1.4}.grt small{display:block;font-size:28px;font-weight:800;color:#5a5470;line-height:1.7;direction:rtl;text-align:left}.grt i.dn{font-style:normal;flex:none;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fredoka;font-size:34px;font-weight:700;color:#fff;background:hsl(var(--h),60%,48%);text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%)}.grt>div{padding:6px 24px}.grt b{font-size:40px}.story p{text-align:left !important;direction:ltr}.story h3{direction:ltr}.qrow{margin-top:22px !important;padding:12px 16px !important}.qo{font-size:34px !important}.qw{min-width:300px !important;max-width:360px;font-size:28px !important}.qo{font-size:28px !important}.qrow{margin-top:20px !important;padding:12px 16px !important}.mgrid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.mgrid div{position:relative;background:#fff;border-radius:24px;padding:10px;text-align:center;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.mgrid i{position:absolute;top:8px;left:10px;font-style:normal;font-family:Fredoka;font-weight:700;font-size:20px;color:#fff;background:hsl(var(--h),60%,48%);border-radius:50%;width:34px;height:34px;line-height:34px}.mgrid b{display:block;font-family:Fredoka;font-size:30px;font-weight:700;color:hsl(var(--h),60%,32%);margin-top:18px}.mgrid small{display:block;font-size:24px;font-weight:800;color:#5a5470;line-height:1.7}.l10h h2,.l10c p,.l10c small,.l10card b,.q10 p,.q10o em,.u10top h1,.u10stamp small,.u10road span,.u10intro,.a10h h2,.a10h span,.ans10>b,.hint10{font-family:Fredoka,Baloo,sans-serif !important}.l10map{grid-template-columns:1fr 270px 1fr !important}.l10pic{width:270px !important;height:270px !important}.l10pic svg{width:220px !important;height:220px !important}.l10a p,.l10b p{font-size:24px !important;line-height:1.6 !important}.q10{gap:10px !important;margin-top:12px !important}.q10>div{padding:8px 16px !important}.q10 p{font-size:25px !important;line-height:1.55 !important}.q10o em{font-size:23px !important}.q10 + .ans10{margin-top:16px !important;padding:8px 20px 10px !important}.q10 + .ans10 .ans10g{grid-template-columns:1fr 1fr !important;gap:8px 20px !important}.q10 + .ans10 i{width:42px !important;height:42px !important}.cen{margin-top:30px !important}.l10h em,.u10top em,.toc small{font-family:Baloo !important;direction:rtl;display:block}.story p{font-size:31px !important;line-height:1.95 !important}",
+ "units": [
+  {
+   "title": "Past Perfect",
+   "en": "المَاضِي التَّامُّ",
+   "icon": "train",
+   "arts": [
+    "train",
+    "clock",
+    "bus"
+   ],
+   "intro": "We use had + past participle for an action that happened before another action in the past.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "had left",
+     "كَانَ قَدْ غَادَرَ",
+     "train",
+     "When we arrived at the station, the train had already left.",
+     "had + left",
+     "The film had started when I sat down."
+    ],
+    [
+     "had finished",
+     "كَانَ قَدْ أَنْهَى",
+     "v_write",
+     "I had finished my homework before my friend called.",
+     "had + finished",
+     "She had eaten before she went out."
+    ],
+    [
+     "before / after",
+     "قَبْلَ / بَعْدَ",
+     "clock",
+     "After he had prayed, he read the Quran.",
+     "after + past perfect",
+     "Before I went to bed, I had brushed my teeth."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right form",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "When I got home, my family ... dinner.",
+       [
+        "had eaten",
+        "has eaten"
+       ]
+      ],
+      [
+       "She was sad because she ... her keys.",
+       [
+        "had lost",
+        "has lose"
+       ]
+      ],
+      [
+       "We ... the museum before, so we knew the way.",
+       [
+        "had visited",
+        "visit"
+       ]
+      ],
+      [
+       "By the time the teacher came, we ... the test.",
+       [
+        "had finished",
+        "finish"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Which happened first?",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "When I arrived, the bus had left.",
+       [
+        "The bus left.",
+        "I arrived."
+       ]
+      ],
+      [
+       "He had studied hard, so he passed.",
+       [
+        "He studied.",
+        "He passed."
+       ]
+      ],
+      [
+       "After she had cooked, she cleaned the kitchen.",
+       [
+        "She cooked.",
+        "She cleaned."
+       ]
+      ],
+      [
+       "I had never seen snow before I visited Abha.",
+       [
+        "I visited Abha.",
+        "I had never seen snow."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Third Conditional",
+   "en": "الشَّرْطُ فِي المَاضِي",
+   "icon": "raincloud",
+   "arts": [
+    "raincloud",
+    "clock",
+    "medal"
+   ],
+   "intro": "We use If + had + past participle, … would have + past participle to talk about imaginary past situations.",
+   "chip1": [
+    "❓",
+    "If …"
+   ],
+   "chip2": [
+    "➡️",
+    "… would have"
+   ],
+   "items": [
+    [
+     "If I had known",
+     "لَوْ كُنْتُ عَلِمْتُ",
+     "phone",
+     "If I had known you were ill, I would have visited you.",
+     "If I had known,",
+     "I would have visited you."
+    ],
+    [
+     "If she had studied",
+     "لَوْ كَانَتْ ذَاكَرَتْ",
+     "medal",
+     "If she had studied, she would have passed the exam.",
+     "If she had studied,",
+     "she would have passed."
+    ],
+    [
+     "If it hadn't rained",
+     "لَوْ لَمْ تُمْطِرْ",
+     "raincloud",
+     "If it hadn't rained, we would have played outside.",
+     "If it hadn't rained,",
+     "we would have played outside."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right form",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "If I had woken up early, I ... the bus.",
+       [
+        "would have caught",
+        "will catch"
+       ]
+      ],
+      [
+       "If he ... harder, he would have won.",
+       [
+        "had trained",
+        "trains"
+       ]
+      ],
+      [
+       "We would have helped you if you ... us.",
+       [
+        "had asked",
+        "ask"
+       ]
+      ],
+      [
+       "If they had left earlier, they ... late.",
+       [
+        "would not have been",
+        "are not"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "What really happened?",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "If I had seen him, I would have said hello.",
+       [
+        "I didn't see him.",
+        "I saw him."
+       ]
+      ],
+      [
+       "If it had been sunny, we would have gone to the beach.",
+       [
+        "It was sunny.",
+        "It wasn't sunny."
+       ]
+      ],
+      [
+       "If she had remembered, she would have called.",
+       [
+        "She forgot.",
+        "She remembered."
+       ]
+      ],
+      [
+       "If we had had time, we would have visited you.",
+       [
+        "We had time.",
+        "We didn't have time."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "I wish …",
+   "en": "التَّمَنِّي",
+   "icon": "stars",
+   "arts": [
+    "stars",
+    "s_bike",
+    "sun"
+   ],
+   "intro": "We use wish + past simple for wishes about the present, and wish + past perfect for regrets about the past.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "💭",
+    "Meaning"
+   ],
+   "items": [
+    [
+     "I wish I had …",
+     "لَيْتَ عِنْدِي …",
+     "s_bike",
+     "I wish I had a bike.",
+     "wish + past simple",
+     "I don't have a bike now."
+    ],
+    [
+     "I wish I were …",
+     "لَيْتَنِي كُنْتُ …",
+     "sun",
+     "I wish I were at the beach now.",
+     "wish + were",
+     "I am not at the beach."
+    ],
+    [
+     "I wish I had …ed",
+     "لَيْتَنِي كُنْتُ …",
+     "clock",
+     "I wish I had studied harder last year.",
+     "wish + past perfect",
+     "I didn't study hard. I regret it."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right form",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "I wish I ... taller.",
+       [
+        "were",
+        "am"
+       ]
+      ],
+      [
+       "She wishes she ... a cat.",
+       [
+        "had",
+        "has"
+       ]
+      ],
+      [
+       "I wish I ... to the party yesterday.",
+       [
+        "had gone",
+        "go"
+       ]
+      ],
+      [
+       "He wishes he ... speak French.",
+       [
+        "could",
+        "can"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "What does it mean?",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "I wish I knew the answer.",
+       [
+        "I don't know the answer.",
+        "I know the answer."
+       ]
+      ],
+      [
+       "I wish I hadn't eaten so much.",
+       [
+        "I ate a lot.",
+        "I ate a little."
+       ]
+      ],
+      [
+       "She wishes she lived near the sea.",
+       [
+        "She lives near the sea.",
+        "She doesn't live near the sea."
+       ]
+      ],
+      [
+       "I wish I had listened to my mother.",
+       [
+        "I listened to her.",
+        "I didn't listen to her."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Linking Words",
+   "en": "أَدَوَاتُ الرَّبْطِ",
+   "icon": "chain",
+   "arts": [
+    "chain",
+    "raincloud",
+    "book"
+   ],
+   "intro": "Linking words join ideas. We use although for contrast, because for reasons, and so for results.",
+   "chip1": [
+    "🔗",
+    "Use"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "although",
+     "عَلَى الرَّغْمِ مِنْ أَنَّ",
+     "raincloud",
+     "Although it was raining, we went to the mosque.",
+     "contrast",
+     "Although he was tired, he finished his work."
+    ],
+    [
+     "however",
+     "وَمَعَ ذٰلِكَ",
+     "book",
+     "The book was long. However, it was very interesting.",
+     "contrast (new sentence)",
+     "However, …"
+    ],
+    [
+     "so / because",
+     "لِذٰلِكَ / لِأَنَّ",
+     "f_sleepy",
+     "I was tired, so I went to bed early.",
+     "so → result",
+     "because → reason"
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the linking word",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "... it was cold, he didn't wear a coat.",
+       [
+        "Although",
+        "Because"
+       ]
+      ],
+      [
+       "She studied hard, ... she got full marks.",
+       [
+        "so",
+        "although"
+       ]
+      ],
+      [
+       "I stayed at home ... I was ill.",
+       [
+        "because",
+        "so"
+       ]
+      ],
+      [
+       "The test was hard. ..., everyone passed.",
+       [
+        "However",
+        "Because"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Choose the best ending",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "Although the food was cheap, ...",
+       [
+        "it was delicious.",
+        "it was cheap."
+       ]
+      ],
+      [
+       "He missed the bus because ...",
+       [
+        "he woke up late.",
+        "he was on time."
+       ]
+      ],
+      [
+       "It was very hot, so ...",
+       [
+        "we stayed inside.",
+        "we wore coats."
+       ]
+      ],
+      [
+       "The phone is old. However, ...",
+       [
+        "it still works well.",
+        "it is old."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Future Continuous",
+   "en": "المُسْتَقْبَلُ المُسْتَمِرُّ",
+   "icon": "plane",
+   "arts": [
+    "plane",
+    "clock",
+    "v_read"
+   ],
+   "intro": "We use will be + verb-ing for an action that will be in progress at a time in the future.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "⏱️",
+    "Time"
+   ],
+   "items": [
+    [
+     "will be flying",
+     "سَأَكُونُ مُسَافِرًا بِالطَّائِرَةِ",
+     "plane",
+     "This time tomorrow, I will be flying to Jeddah.",
+     "will be + flying",
+     "this time tomorrow"
+    ],
+    [
+     "will be studying",
+     "سَأَكُونُ أُذَاكِرُ",
+     "v_read",
+     "At 8 p.m. tonight, I will be studying for the test.",
+     "will be + studying",
+     "at 8 p.m. tonight"
+    ],
+    [
+     "Will you be …?",
+     "هَلْ سَتَكُونُ …؟",
+     "clock",
+     "Will you be using your laptop this evening?",
+     "Will you be + -ing?",
+     "Yes, I will. / No, I won't."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right form",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "At ten tomorrow, we ... a test.",
+       [
+        "will be taking",
+        "took"
+       ]
+      ],
+      [
+       "Don't call at seven. I ... dinner.",
+       [
+        "will be having",
+        "had"
+       ]
+      ],
+      [
+       "This time next week, they ... in Makkah.",
+       [
+        "will be staying",
+        "stayed"
+       ]
+      ],
+      [
+       "... you be working on Friday?",
+       [
+        "Will",
+        "Did"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Choose the correct sentence",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "(tomorrow at 9 / sleep)",
+       [
+        "Tomorrow at 9, I will be sleeping.",
+        "Tomorrow at 9, I was sleeping."
+       ]
+      ],
+      [
+       "(next Monday / travel)",
+       [
+        "Next Monday, she travelled.",
+        "Next Monday, she will be travelling."
+       ]
+      ],
+      [
+       "(tonight / watch the match)",
+       [
+        "Tonight, we will be watching the match.",
+        "Tonight, we watched the match."
+       ]
+      ],
+      [
+       "(in an hour / cook)",
+       [
+        "In an hour, my mother cooked.",
+        "In an hour, my mother will be cooking."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Word Formation",
+   "en": "تَكْوِينُ الكَلِمَاتِ",
+   "icon": "puzzle",
+   "arts": [
+    "puzzle",
+    "bigheart",
+    "f_happy"
+   ],
+   "intro": "We add prefixes and suffixes to make new words: un- means not, -ful means full of, and -less means without.",
+   "chip1": [
+    "🔤",
+    "Rule"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "un- (not)",
+     "عَدَمٌ (لَا)",
+     "f_sad",
+     "The test was unfair. (= not fair)",
+     "un + happy = unhappy",
+     "un + kind = unkind"
+    ],
+    [
+     "-ful (full of)",
+     "مَمْلُوءٌ بِـ",
+     "bigheart",
+     "My grandmother is very helpful.",
+     "help + ful = helpful",
+     "care + ful = careful"
+    ],
+    [
+     "-less (without)",
+     "بِلَا / بِدُونِ",
+     "puzzle",
+     "This old pen is useless.",
+     "use + less = useless",
+     "home + less = homeless"
+    ],
+    [
+     "im- / dis- (not)",
+     "عَدَمٌ (غَيْرُ)",
+     "bigbook",
+     "It is impossible to read in the dark.",
+     "im + possible = impossible",
+     "dis + agree = disagree"
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right word",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "Be ... when you cross the road.",
+       [
+        "careful",
+        "careless"
+       ]
+      ],
+      [
+       "He didn't eat all day. He was very ...",
+       [
+        "hungry",
+        "hungerless"
+       ]
+      ],
+      [
+       "I can't open this door. It's ...",
+       [
+        "possible",
+        "impossible"
+       ]
+      ],
+      [
+       "The room was dark and ... .",
+       [
+        "colourful",
+        "colourless"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Choose the meaning",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "unhappy",
+       [
+        "not happy",
+        "very happy"
+       ]
+      ],
+      [
+       "hopeful",
+       [
+        "without hope",
+        "full of hope"
+       ]
+      ],
+      [
+       "endless",
+       [
+        "without an end",
+        "with a big end"
+       ]
+      ],
+      [
+       "unsafe",
+       [
+        "not safe",
+        "very safe"
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Reading Time",
+   "en": "وَقْتُ القِرَاءَةِ",
+   "icon": "v_read",
+   "arts": [
+    "v_read",
+    "book"
+   ],
+   "intro": "Read the stories, then answer the questions.",
+   "acts": [
+    {
+     "type": "raw",
+     "title": "The Volunteer Club",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>The Volunteer Club 🤝</h3><p>Last year, Faisal joined the school volunteer club.<br>Before he joined, he had never helped in a hospital.<br>Although the work was hard, he enjoyed it.<br>He says, “I wish I had joined earlier.”<br>Next summer, he will be helping at the children's hospital again.</p></div>",
+     "arts": [
+      "hospital",
+      "kidc",
+      "bigheart"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "What did Faisal join?",
+       [
+        "the volunteer club",
+        "the football club"
+       ]
+      ],
+      [
+       "Had he helped in a hospital before?",
+       [
+        "Yes, many times.",
+        "No, never."
+       ]
+      ],
+      [
+       "What does Faisal wish?",
+       [
+        "that he had joined earlier",
+        "that he hadn't joined"
+       ]
+      ],
+      [
+       "What will he be doing next summer?",
+       [
+        "travelling",
+        "helping at the children's hospital"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "raw",
+     "title": "The Birthday Cake",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>The Birthday Cake 🎂</h3><p>Noura wanted to bake a cake for her mother's birthday.<br>When she started, she realised she had forgotten to buy eggs.<br>If she had checked the kitchen, she would have bought them.<br>However, her neighbour kindly gave her some eggs, so the cake was ready on time.</p></div>",
+     "arts": [
+      "cake",
+      "egg",
+      "girlc"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Read the question, then shade the letter of the correct answer on the answer sheet",
+     "rows": [
+      [
+       "Why did Noura bake a cake?",
+       [
+        "for her mother's birthday",
+        "for a school party"
+       ]
+      ],
+      [
+       "What had she forgotten?",
+       [
+        "sugar",
+        "eggs"
+       ]
+      ],
+      [
+       "What would she have done if she had checked the kitchen?",
+       [
+        "bought eggs",
+        "made tea"
+       ]
+      ],
+      [
+       "Who helped her?",
+       [
+        "her neighbour",
+        "her brother"
+       ]
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "tocTitle": "Contents",
+ "traceLabel": "✎ I write",
+ "ovTitle": "",
+ "ltr": true
+}
