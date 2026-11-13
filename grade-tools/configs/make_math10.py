@@ -144,4 +144,7 @@ cfg.update({"dir":"math10-book","prefix":"Riyadiyyati-10","title":"رياضيا�
  "blurbLi":["الجُذُورُ، وَنِظَامُ مُعَادَلَتَيْنِ خَطِّيَّتَيْنِ","التَّحْلِيلُ، وَالدَّوَالُّ التَّرْبِيعِيَّةُ","حِسَابُ المُثَلَّثَاتِ، وَالمُتَتَابِعَاتُ الحِسَابِيَّةُ","الإِحْصَاءُ، وَشَهَادَةٌ"],
  "en2":"A complete math book with a brand-new design – part 10","backArts":["parabola","trig","stairs","twolines"],"extraCss":"sup{font-size:.6em;vertical-align:.7em;line-height:0}sub{font-size:.6em;vertical-align:-.3em;line-height:0}","units":U})
 print('pages',6+sum(1+len(u.get('items',[]))+len(u['acts']) for u in U))
-json.dump(cfg,open('cfg_math10.json','w'),ensure_ascii=False,indent=1)
+txt=json.dumps(cfg,ensure_ascii=False,indent=1)
+import re
+txt=re.sub(r'(?<![\u0600-\u06ff])(جـ)',lambda m:'<bdi dir=\\"rtl\\">'+m.group(1)+'</bdi>',txt)
+open('cfg_math10.json','w').write(txt)
