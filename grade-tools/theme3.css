@@ -1,0 +1,16 @@
+/* ===== Grade-3 theme: wave header band + polka dots ===== */
+.bub{display:none}
+.page:not(.cover):not(.cert){background-color:hsl(var(--h),80%,95%);
+  background-image:radial-gradient(hsla(var(--h),60%,55%,.18) 2.6px,transparent 3.2px),linear-gradient(180deg,hsl(var(--h),85%,96%),hsl(var(--h),70%,87%));background-size:30px 30px,100% 100%}
+.page:not(.cover):not(.cert)::before{content:'';position:absolute;left:0;right:0;top:0;height:178px;
+  background:linear-gradient(135deg,hsl(var(--h),78%,60%),hsl(calc(var(--h) + 35),78%,55%));
+  border-radius:0 0 46% 46%/0 0 46px 46px;box-shadow:0 8px 0 hsl(var(--h),60%,42%),0 14px 24px rgba(10,30,70,.18)}
+.page:not(.cover):not(.cert)::after{content:'';position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:hsla(var(--h),80%,70%,.35)}
+.hint{color:#fff !important;text-shadow:0 0 3px hsl(var(--h),60%,22%),0 0 3px hsl(var(--h),60%,22%),0 0 3px hsl(var(--h),60%,22%)}
+.iname .en{color:#fff !important;text-shadow:0 0 3px hsl(var(--h),60%,22%),0 0 3px hsl(var(--h),60%,22%),0 0 3px hsl(var(--h),60%,22%)}
+.item .water{background:#fff;border-radius:56px;box-shadow:0 0 0 10px hsl(var(--h),75%,62%),0 0 0 16px #fff,0 18px 26px rgba(10,30,70,.22);margin:16px 16px 0}
+.sent{border-radius:18px;background:hsl(var(--h),75%,55%);color:#fff;text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%);box-shadow:0 7px 0 hsl(var(--h),60%,38%)}
+.chip{border:4px solid hsl(var(--h),70%,70%)}
+.unit .unum{margin-top:40px}.unit .utitle{margin-top:70px}.unit .uen{color:hsl(var(--h),60%,30%)}
+.note{padding-top:14px}.owner{padding-top:30px}
+.pno{bottom:22px}

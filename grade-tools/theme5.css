@@ -1,0 +1,28 @@
+/* ===== Grade-5 theme: notebook paper, red margin, clip tab, sticker pictures ===== */
+.page:not(.cover) .bub{display:none}
+.page:not(.cover):not(.cert){background:#fbfaf4 !important;
+  background-image:linear-gradient(90deg,transparent calc(100% - 64px),#ff9a9a calc(100% - 64px),#ff9a9a calc(100% - 60px),transparent calc(100% - 60px)) !important}
+.page:not(.cover):not(.cert)::before{content:'';position:absolute;top:0;left:0;right:0;height:22px;background:repeating-linear-gradient(90deg,hsl(var(--h),70%,58%) 0 30px,hsl(calc(var(--h) + 30),70%,62%) 30px 60px)}
+
+.ttl{display:table;margin:40px auto 0 !important;font-size:46px !important;padding:4px 40px 8px;border-radius:16px;background:hsl(var(--h),70%,55%);transform:rotate(-1deg);box-shadow:4px 6px 0 hsl(var(--h),50%,35%)}
+.hint{margin-top:16px !important;color:hsl(var(--h),55%,28%) !important}
+.iname{margin-top:40px}.iname .big{display:inline-block;font-size:68px !important;padding:0 40px 6px;border-radius:16px;background:hsl(var(--h),70%,55%);transform:rotate(-1deg);box-shadow:4px 6px 0 hsl(var(--h),50%,35%)}
+.iname .big.long{font-size:50px !important}
+.iname .en{color:hsl(var(--h),55%,30%) !important;margin-top:12px !important}
+.item .water{background:#fff;border-radius:50%/42%;margin:6px 70px 0;height:480px !important;border:10px solid hsl(var(--h),70%,80%);box-shadow:none}
+.item .ill{width:420px !important;height:420px !important}
+.sent{border-radius:14px;background:hsl(var(--h),85%,94%);border:3px solid hsl(var(--h),60%,60%);box-shadow:4px 5px 0 hsl(var(--h),45%,70%)}
+.chip{border-radius:14px;border:3px solid hsl(var(--h),60%,70%);box-shadow:4px 5px 0 hsl(var(--h),45%,80%)}
+.trace{border-radius:14px;border:3px solid hsl(var(--h),55%,78%)}
+.qrow,.rw,.wgo,.tocr,.steps div,.du,.wp,.vs,.dvs div{border-radius:14px !important}
+.unit .unum{margin-top:90px}.unit .utitle{margin-top:20px}
+.note{padding-top:30px}.owner{padding-top:60px}
+.pno{bottom:30px}
+
+/* grade-5 cover: soft gradient, floating bubbles, compact title */
+.cover h1{font-size:84px !important;margin-top:250px !important;line-height:1.25 !important}
+.cover .csub{font-size:26px}
+.cover .ca{filter:drop-shadow(0 10px 12px rgba(10,30,70,.22))}
+.cover::after{content:'';position:absolute;left:-10%;right:-10%;bottom:-120px;height:330px;border-radius:50% 50% 0 0;background:rgba(255,255,255,.55)}
+.cover .ca{z-index:2}
+.back h2{font-size:72px !important}

@@ -104,5 +104,6 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `islamic7-book/`: دراساتي الإسلامية ٧ (Islamic studies, seventh-grade syllabus), 48 pages
 - `english7-book/`: My English Book 7 (English, seventh-grade syllabus), 48 pages
 
+Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.

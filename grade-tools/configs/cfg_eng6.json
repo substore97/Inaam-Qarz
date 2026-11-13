@@ -1,0 +1,925 @@
+{
+ "dir": "english6-book",
+ "prefix": "My-English-Book-6",
+ "title": "My English Book 6",
+ "artmod": "english6-art",
+ "header": "Builds \"My English Book 6\" – sixth-grade English syllabus – A4 portrait.",
+ "grade": "Grade 6",
+ "theme": "6",
+ "layout": "g6",
+ "cover": "--h:255;background:#ffffff",
+ "h": 255,
+ "t1": "My English",
+ "t2": "Book 6",
+ "s1": "#4b2fb0",
+ "s2": "#c46a00",
+ "csub": "Past • Advice • Adverbs • Whose? • Hobbies • Time • Stories",
+ "cen": "كِتَابِي لِلُّغَةِ الإِنْجِلِيزِيَّةِ ٦",
+ "coverTop": [
+  "v_read",
+  "plane",
+  "swim"
+ ],
+ "coverBot": [
+  "school",
+  "clockt:7:00",
+  "snail",
+  "v_draw"
+ ],
+ "ownerArt": "v_read",
+ "ownerMini": [
+  "bag",
+  "swim",
+  "book"
+ ],
+ "noteP": "هٰذَا الكِتَابُ يُكْمِلُ تَعْلِيمَ الإِنْجِلِيزِيَّةِ: الأَفْعَالُ الشَّاذَّةُ فِي المَاضِي، وَالنَّصِيحَةُ بِـ should، وَالأَحْوَالُ (slowly)، وَضَمَائِرُ المِلْكِيَّةِ (mine)، وَالهِوَايَاتُ، وَحُرُوفُ الجَرِّ لِلزَّمَنِ، مَعَ قِصَّتَيْنِ 🇬🇧",
+ "noteLi": [
+  "فِي كُلِّ دَرْسٍ مَسَاحَةٌ لِيَكْتُبَ طِفْلُكُمْ جُمْلَةً إِنْجِلِيزِيَّةً مِنْ عِنْدِهِ.",
+  "اسْأَلُوهُ عَنْ يَوْمِهِ بِالإِنْجِلِيزِيَّةِ: What did you do yesterday?",
+  "اطْلُبُوا مِنْهُ نَصِيحَةً صِحِّيَّةً: You should …",
+  "الكِتَابُ يُقْرَأُ مِنَ اليَسَارِ إِلَى اليَمِينِ."
+ ],
+ "noteMini": [
+  "bus",
+  "snail",
+  "bag"
+ ],
+ "certP": "لِأَنَّهُ أَتَمَّ «My English Book 6» بِنَجَاحٍ",
+ "certArts": [
+  "v_read",
+  "medal",
+  "swim"
+ ],
+ "blurb": "A complete 3D English book with a brand-new design – part 6, with Arabic meanings for every word.",
+ "blurbLi": [
+  "Irregular past verbs and “Did you …?”",
+  "Giving advice with should and adverbs (-ly)",
+  "mine, yours, his, hers and hobbies with -ing",
+  "in, on, at for time, and two short stories"
+ ],
+ "en2": "كِتَابٌ شَامِلٌ بِتَصْمِيمٍ جَدِيدٍ لِتَعْلِيمِ الإِنْجِلِيزِيَّةِ – الجُزْءُ السَّادِسُ",
+ "backArts": [
+  "kaaba",
+  "snail",
+  "swim",
+  "school"
+ ],
+ "extraCss": "body{direction:ltr}.page{font-family:Fredoka,Baloo,sans-serif}.t3d{font-family:Fredoka,Baloo,sans-serif !important;font-weight:700}.tlabel{right:auto;left:18px}.owner,.note,.cert{direction:rtl;font-family:Baloo,sans-serif}.trace text{font-family:Fredoka !important;font-weight:600}.blurb{text-align:left}.blurb ul{margin:8px 0 0 28px}.iname .en{font-family:Baloo;direction:rtl}.uen{font-family:Baloo;direction:rtl}.tocr small{font-family:Baloo}.cen{direction:rtl;font-family:Baloo !important}.en2{direction:rtl;font-family:Baloo !important}.hint,.sent,.chip b,.qw,.qo,.wgo b,.mq,.mc b{font-family:Fredoka,Baloo;font-weight:600}.chip small{font-family:Fredoka}.mazebox{direction:rtl}.abcg{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}.abcg .lt{font-style:normal;text-align:center;font-family:Fredoka;font-size:52px;font-weight:700;color:#fff;border-radius:22px;padding:8px 0;line-height:1.4}.lpic{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.lpic div{background:#fff;border-radius:24px;text-align:center;padding:6px;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.lpic b{display:block;font-family:Fredoka;font-size:40px;font-weight:700;color:hsl(var(--h),65%,40%);line-height:1.2}.lpic svg{width:96px;height:96px;margin:0 auto}.lpic em{display:block;font-style:normal;font-family:Fredoka;font-size:26px;font-weight:600;color:#2b2340}.ncard small{font-family:Fredoka;font-size:28px}.grt{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:18px}.grt>div{display:flex;align-items:center;gap:20px;background:#fff;border-radius:30px;padding:10px 24px;box-shadow:0 6px 0 hsl(var(--h),50%,74%)}.grt svg{width:120px;height:120px;flex:none}.grt b{display:block;font-family:Fredoka;font-size:44px;font-weight:700;color:hsl(var(--h),60%,32%);line-height:1.4}.grt small{display:block;font-size:28px;font-weight:800;color:#5a5470;line-height:1.7;direction:rtl;text-align:left}.grt i.dn{font-style:normal;flex:none;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fredoka;font-size:34px;font-weight:700;color:#fff;background:hsl(var(--h),60%,48%);text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%)}.grt>div{padding:6px 24px}.grt b{font-size:40px}.story p{text-align:left !important;direction:ltr}.story h3{direction:ltr}.qrow{margin-top:22px !important;padding:12px 16px !important}.qo{font-size:34px !important}.qw{min-width:300px !important;max-width:360px;font-size:28px !important}.qo{font-size:28px !important}.qrow{margin-top:20px !important;padding:12px 16px !important}.mgrid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.mgrid div{position:relative;background:#fff;border-radius:24px;padding:10px;text-align:center;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.mgrid i{position:absolute;top:8px;left:10px;font-style:normal;font-family:Fredoka;font-weight:700;font-size:20px;color:#fff;background:hsl(var(--h),60%,48%);border-radius:50%;width:34px;height:34px;line-height:34px}.mgrid b{display:block;font-family:Fredoka;font-size:30px;font-weight:700;color:hsl(var(--h),60%,32%);margin-top:18px}.mgrid small{display:block;font-size:24px;font-weight:800;color:#5a5470;line-height:1.7}.l6h h2,.l6sent,.l6box b,.l6box small,.l6tag,.l6write b,.q6 p,.q6o span,.u6t h1,.u6t small,.u6list span,.u6list b,.u6intro,.a6h h2,.a6h span,.tf6 td,.tf6 th,.hint6{font-family:Fredoka,Baloo,sans-serif !important}.l6h em,.u6t em{font-family:Baloo !important;direction:rtl;display:inline-block}.story p{font-size:33px !important;line-height:2 !important}",
+ "units": [
+  {
+   "title": "Irregular Past Verbs",
+   "en": "الأَفْعَالُ الشَّاذَّةُ فِي المَاضِي",
+   "icon": "bus",
+   "arts": [
+    "bus",
+    "v_eat",
+    "v_write"
+   ],
+   "intro": "Some verbs do not take -ed in the past. We learn them by heart.",
+   "chip1": [
+    "⏪",
+    "Present → Past"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "went",
+     "ذَهَبَ",
+     "bus",
+     "Yesterday, I went to the park with my family.",
+     "go → went",
+     "She went to school by bus."
+    ],
+    [
+     "ate",
+     "أَكَلَ",
+     "v_eat",
+     "We ate dates and rice for lunch.",
+     "eat → ate",
+     "He ate an apple."
+    ],
+    [
+     "saw",
+     "رَأَى",
+     "sunflower",
+     "I saw a big yellow flower in the garden.",
+     "see → saw",
+     "They saw a camel."
+    ],
+    [
+     "wrote",
+     "كَتَبَ",
+     "v_write",
+     "Ali wrote a letter to his grandpa.",
+     "write → wrote",
+     "She wrote a story."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the past",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "Last week, we ... to Makkah.",
+       [
+        "goed",
+        "went"
+       ]
+      ],
+      [
+       "I ... a sandwich yesterday.",
+       [
+        "ate",
+        "eat"
+       ]
+      ],
+      [
+       "She ... a rainbow after the rain.",
+       [
+        "saw",
+        "seed"
+       ]
+      ],
+      [
+       "He ... his name on the board.",
+       [
+        "writed",
+        "wrote"
+       ]
+      ]
+     ],
+     "top": [
+      "bus",
+      "v_eat",
+      "v_write"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Did you …?",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "Did you go to school yesterday? Yes, I ...",
+       [
+        "did",
+        "didn't"
+       ]
+      ],
+      [
+       "Did she eat breakfast? No, she ...",
+       [
+        "did",
+        "didn't"
+       ]
+      ],
+      [
+       "... you see the moon last night?",
+       [
+        "Did",
+        "Do"
+       ]
+      ],
+      [
+       "He didn't ... a story.",
+       [
+        "wrote",
+        "write"
+       ]
+      ]
+     ],
+     "top": [
+      "school",
+      "moon"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Stay Healthy",
+   "en": "أُحَافِظُ عَلَى صِحَّتِي",
+   "icon": "broccoli",
+   "arts": [
+    "broccoli",
+    "bed",
+    "water"
+   ],
+   "intro": "We use should and shouldn't to give advice.",
+   "chip1": [
+    "✅",
+    "Advice"
+   ],
+   "chip2": [
+    "❌",
+    "Don't"
+   ],
+   "items": [
+    [
+     "sleep early",
+     "أَنَامُ مُبَكِّرًا",
+     "bed",
+     "You should sleep early every night.",
+     "You should sleep early.",
+     "You shouldn't stay up late."
+    ],
+    [
+     "eat vegetables",
+     "آكُلُ الخَضْرَاوَاتِ",
+     "broccoli",
+     "You should eat vegetables every day.",
+     "You should eat vegetables.",
+     "You shouldn't eat too many sweets."
+    ],
+    [
+     "drink water",
+     "أَشْرَبُ المَاءَ",
+     "water",
+     "You should drink a lot of water.",
+     "You should drink water.",
+     "You shouldn't drink too much soda."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "should or shouldn't?",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "You ... brush your teeth twice a day.",
+       [
+        "should",
+        "shouldn't"
+       ]
+      ],
+      [
+       "You ... eat too many sweets.",
+       [
+        "should",
+        "shouldn't"
+       ]
+      ],
+      [
+       "You ... wash your hands before meals.",
+       [
+        "should",
+        "shouldn't"
+       ]
+      ],
+      [
+       "You ... watch TV all day.",
+       [
+        "should",
+        "shouldn't"
+       ]
+      ]
+     ],
+     "top": [
+      "toothbrush",
+      "cookies"
+     ]
+    },
+    {
+     "type": "tf",
+     "title": "True or false?",
+     "hint": "Tick ✓ for true and ✗ for false",
+     "rows": [
+      "We should sleep early.",
+      "Vegetables are bad for us.",
+      "We should exercise every day.",
+      "We shouldn't drink water.",
+      "Fruit is good for our health."
+     ],
+     "top": [
+      "broccoli",
+      "runner",
+      "apple"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "How Do They Move?",
+   "en": "الأَحْوَالُ: كَيْفَ يَتَحَرَّكُونَ؟",
+   "icon": "snail",
+   "arts": [
+    "snail",
+    "racecar",
+    "s_road"
+   ],
+   "intro": "Adverbs tell us how we do something. Many adverbs end in -ly.",
+   "chip1": [
+    "🔤",
+    "Adjective → Adverb"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "slowly",
+     "بِبُطْءٍ",
+     "snail",
+     "The snail moves slowly.",
+     "slow → slowly",
+     "My grandpa walks slowly."
+    ],
+    [
+     "quickly",
+     "بِسُرْعَةٍ",
+     "racecar",
+     "The race car moves very quickly.",
+     "quick → quickly",
+     "He finished his work quickly."
+    ],
+    [
+     "carefully",
+     "بِحَذَرٍ",
+     "s_road",
+     "We cross the road carefully.",
+     "careful → carefully",
+     "She carries the cup carefully."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the adverb",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "quiet → ...",
+       [
+        "quietly",
+        "quietful"
+       ]
+      ],
+      [
+       "safe → ...",
+       [
+        "safely",
+        "safe"
+       ]
+      ],
+      [
+       "loud → ...",
+       [
+        "louder",
+        "loudly"
+       ]
+      ],
+      [
+       "happy → ...",
+       [
+        "happily",
+        "happyly"
+       ]
+      ]
+     ],
+     "top": [
+      "snail",
+      "racecar"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Complete the sentence",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "The turtle walks ...",
+       [
+        "slowly",
+        "quickly"
+       ]
+      ],
+      [
+       "We should read ... in the library.",
+       [
+        "loudly",
+        "quietly"
+       ]
+      ],
+      [
+       "Cross the street ...",
+       [
+        "carefully",
+        "carelessly"
+       ]
+      ],
+      [
+       "The cheetah runs very ...",
+       [
+        "slowly",
+        "quickly"
+       ]
+      ]
+     ],
+     "top": [
+      "library",
+      "s_road"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Whose Is It?",
+   "en": "لِمَنْ هٰذَا؟",
+   "icon": "bag",
+   "arts": [
+    "bag",
+    "kidc",
+    "girlc"
+   ],
+   "intro": "We use mine, yours, his and hers to show who owns something.",
+   "chip1": [
+    "🔑",
+    "Pronoun"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "mine",
+     "مِلْكِي",
+     "bag",
+     "This is my bag. It's mine.",
+     "my → mine",
+     "The red pencil is mine."
+    ],
+    [
+     "his",
+     "مِلْكُهُ",
+     "kidc",
+     "This is Omar's book. It's his.",
+     "his → his",
+     "The blue ball is his."
+    ],
+    [
+     "hers",
+     "مِلْكُهَا",
+     "girlc",
+     "This is Sara's pen. It's hers.",
+     "her → hers",
+     "The green bag is hers."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right word",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "This is your cup. It's ...",
+       [
+        "yours",
+        "mine"
+       ]
+      ],
+      [
+       "This is Ali's car. It's ...",
+       [
+        "hers",
+        "his"
+       ]
+      ],
+      [
+       "This is Mona's book. It's ...",
+       [
+        "his",
+        "hers"
+       ]
+      ],
+      [
+       "This is my pencil. It's ...",
+       [
+        "mine",
+        "yours"
+       ]
+      ]
+     ],
+     "top": [
+      "kidc",
+      "girlc"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Whose is it?",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "Whose bag is this? It's ... (Sara)",
+       [
+        "hers",
+        "his"
+       ]
+      ],
+      [
+       "Whose ball is this? It's ... (I)",
+       [
+        "mine",
+        "yours"
+       ]
+      ],
+      [
+       "Whose shoes are these? They're ... (Ahmed)",
+       [
+        "his",
+        "hers"
+       ]
+      ],
+      [
+       "Is this pen ...? Yes, it's mine.",
+       [
+        "you",
+        "yours"
+       ]
+      ]
+     ],
+     "top": [
+      "bag",
+      "book"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "My Hobbies",
+   "en": "هِوَايَاتِي",
+   "icon": "swim",
+   "arts": [
+    "swim",
+    "v_draw",
+    "v_read"
+   ],
+   "intro": "After like and love, we add -ing to the verb.",
+   "chip1": [
+    "❤️",
+    "I like"
+   ],
+   "chip2": [
+    "👦",
+    "He / She likes"
+   ],
+   "items": [
+    [
+     "swimming",
+     "السِّبَاحَةُ",
+     "swim",
+     "I like swimming in the sea.",
+     "I like swimming.",
+     "He likes swimming."
+    ],
+    [
+     "drawing",
+     "الرَّسْمُ",
+     "v_draw",
+     "My sister loves drawing flowers.",
+     "I love drawing.",
+     "She loves drawing."
+    ],
+    [
+     "reading",
+     "القِرَاءَةُ",
+     "v_read",
+     "Omar likes reading stories.",
+     "I like reading.",
+     "He likes reading."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "like or likes?",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "I ... playing football.",
+       [
+        "like",
+        "likes"
+       ]
+      ],
+      [
+       "She ... reading books.",
+       [
+        "like",
+        "likes"
+       ]
+      ],
+      [
+       "We ... drawing.",
+       [
+        "like",
+        "likes"
+       ]
+      ],
+      [
+       "My brother ... swimming.",
+       [
+        "like",
+        "likes"
+       ]
+      ]
+     ],
+     "top": [
+      "football",
+      "swim"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Add -ing",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "read → ...",
+       [
+        "reading",
+        "readding"
+       ]
+      ],
+      [
+       "swim → ...",
+       [
+        "swiming",
+        "swimming"
+       ]
+      ],
+      [
+       "write → ...",
+       [
+        "writing",
+        "writeing"
+       ]
+      ],
+      [
+       "run → ...",
+       [
+        "runing",
+        "running"
+       ]
+      ]
+     ],
+     "top": [
+      "v_read",
+      "runner"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "In, On or At?",
+   "en": "حُرُوفُ الجَرِّ لِلزَّمَنِ",
+   "icon": "clockt:7:00",
+   "arts": [
+    "clockt:7:00",
+    "mosque",
+    "sun"
+   ],
+   "intro": "We use at, on and in with times, days, months and seasons.",
+   "chip1": [
+    "🕐",
+    "We use it with"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "at",
+     "فِي (السَّاعَةِ)",
+     "clockt:7:00",
+     "I go to school at seven o'clock.",
+     "times",
+     "at 7 o'clock"
+    ],
+    [
+     "on",
+     "فِي (يَوْمِ)",
+     "mosque",
+     "We go to the mosque early on Friday.",
+     "days",
+     "on Friday"
+    ],
+    [
+     "in",
+     "فِي (شَهْرِ / فَصْلِ)",
+     "sun",
+     "It is very hot in summer.",
+     "months and seasons",
+     "in July / in summer"
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "at, on or in?",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "... Monday",
+       [
+        "at",
+        "on",
+        "in"
+       ]
+      ],
+      [
+       "... 3 o'clock",
+       [
+        "at",
+        "on",
+        "in"
+       ]
+      ],
+      [
+       "... winter",
+       [
+        "at",
+        "on",
+        "in"
+       ]
+      ],
+      [
+       "... March",
+       [
+        "at",
+        "on",
+        "in"
+       ]
+      ]
+     ],
+     "top": [
+      "clockt:3:00",
+      "snowflake"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Complete the sentence",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "We pray Fajr ... dawn.",
+       [
+        "at",
+        "in"
+       ]
+      ],
+      [
+       "My birthday is ... May.",
+       [
+        "on",
+        "in"
+       ]
+      ],
+      [
+       "We have no school ... Friday.",
+       [
+        "on",
+        "at"
+       ]
+      ],
+      [
+       "It is cold ... winter.",
+       [
+        "at",
+        "in"
+       ]
+      ]
+     ],
+     "top": [
+      "mosque",
+      "snowflake"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Reading Time",
+   "en": "وَقْتُ القِرَاءَةِ",
+   "icon": "v_read",
+   "arts": [
+    "v_read",
+    "book"
+   ],
+   "intro": "Read the stories, then answer the questions.",
+   "acts": [
+    {
+     "type": "raw",
+     "title": "A Visit to Grandpa",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>A Visit to Grandpa 👴</h3><p>Last Friday, Sara and her brother Ali visited their grandpa.<br>They went by car.<br>Grandpa told them a story about the old days.<br>They ate dates and drank milk.<br>Before they left, Grandpa gave them a big hug.</p></div>",
+     "arts": [
+      "car",
+      "grandpa",
+      "dates"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "When did they visit Grandpa?",
+       [
+        "last Friday",
+        "last Monday"
+       ]
+      ],
+      [
+       "How did they go?",
+       [
+        "by car",
+        "by bus"
+       ]
+      ],
+      [
+       "What did they eat?",
+       [
+        "cake",
+        "dates"
+       ]
+      ],
+      [
+       "What did Grandpa give them?",
+       [
+        "a big hug",
+        "a ball"
+       ]
+      ]
+     ],
+     "top": [
+      "grandpa",
+      "milk"
+     ]
+    },
+    {
+     "type": "raw",
+     "title": "The Lost Wallet",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>The Lost Wallet 👛</h3><p>Yusuf found a wallet in the park.<br>There was a lot of money in it.<br>He didn't keep it. He took it to the police station.<br>The owner was very happy and thanked him.<br>Yusuf felt proud because he was honest.</p></div>",
+     "arts": [
+      "park",
+      "coins",
+      "policestation"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Circle the correct answer ⭕",
+     "rows": [
+      [
+       "Where did Yusuf find the wallet?",
+       [
+        "at school",
+        "in the park"
+       ]
+      ],
+      [
+       "What did he do with it?",
+       [
+        "He took it to the police.",
+        "He kept it."
+       ]
+      ],
+      [
+       "How did the owner feel?",
+       [
+        "very happy",
+        "angry"
+       ]
+      ],
+      [
+       "Yusuf was ...",
+       [
+        "lazy",
+        "honest"
+       ]
+      ]
+     ],
+     "top": [
+      "f_proud",
+      "coins"
+     ]
+    }
+   ]
+  }
+ ],
+ "tocTitle": "Contents",
+ "traceLabel": "✎ I write",
+ "ovTitle": "",
+ "ltr": true
+}
