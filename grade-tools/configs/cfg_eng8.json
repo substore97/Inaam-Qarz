@@ -1,0 +1,942 @@
+{
+ "dir": "english8-book",
+ "prefix": "My-English-Book-8",
+ "title": "My English Book 8",
+ "artmod": "english8-art",
+ "header": "Builds \"My English Book 8\" – eighth-grade English syllabus – A4 portrait.",
+ "grade": "Grade 8",
+ "theme": "8",
+ "layout": "g8",
+ "cover": "--h:265;background:#3b2a8a",
+ "h": 265,
+ "t1": "My English",
+ "t2": "Book 8",
+ "s1": "#1f1060",
+ "s2": "#7a3a00",
+ "csub": "Passive • used to • as … as • have to • Tags • Stories",
+ "cen": "كِتَابِي لِلُّغَةِ الإِنْجِلِيزِيَّةِ ٨",
+ "coverTop": [
+  "v_read",
+  "house",
+  "teddy"
+ ],
+ "coverBot": [
+  "school",
+  "lamp",
+  "elephant",
+  "mosque"
+ ],
+ "ownerArt": "v_read",
+ "ownerMini": [
+  "book",
+  "lamp",
+  "house"
+ ],
+ "noteP": "هٰذَا الكِتَابُ يُكْمِلُ تَعْلِيمَ الإِنْجِلِيزِيَّةِ: المَبْنِيُّ لِلْمَجْهُولِ، وَ used to، وَ as … as، وَ have to، وَأَسْئِلَةُ التَّأْكِيدِ القَصِيرَةُ، وَالأَفْعَالُ المُرَكَّبَةُ، مَعَ قِصَّتَيْنِ 🇬🇧",
+ "noteLi": [
+  "فِي كُلِّ دَرْسٍ سَبُّورَةٌ لِيَكْتُبَ طِفْلُكُمْ جُمْلَةً إِنْجِلِيزِيَّةً مِنْ عِنْدِهِ.",
+  "اسْأَلُوهُ: What did you use to do when you were little?",
+  "العَبُوا مَعَهُ بِأَسْئِلَةِ التَّأْكِيدِ: It's hot, isn't it?",
+  "الكِتَابُ يُقْرَأُ مِنَ اليَسَارِ إِلَى اليَمِينِ."
+ ],
+ "noteMini": [
+  "house",
+  "teddy",
+  "lamp"
+ ],
+ "certP": "لِأَنَّهُ أَتَمَّ «My English Book 8» بِنَجَاحٍ",
+ "certArts": [
+  "v_read",
+  "medal",
+  "book"
+ ],
+ "blurb": "A complete 3D English book with a brand-new design – part 8, with Arabic meanings for every word.",
+ "blurbLi": [
+  "The passive voice: is made, was built",
+  "used to, and as … as",
+  "have to / don't have to, and question tags",
+  "Phrasal verbs, and two short stories"
+ ],
+ "en2": "كِتَابٌ شَامِلٌ بِتَصْمِيمٍ جَدِيدٍ لِتَعْلِيمِ الإِنْجِلِيزِيَّةِ – الجُزْءُ الثَّامِنُ",
+ "backArts": [
+  "kaaba",
+  "house",
+  "lamp",
+  "school"
+ ],
+ "extraCss": "body{direction:ltr}.page{font-family:Fredoka,Baloo,sans-serif}.t3d{font-family:Fredoka,Baloo,sans-serif !important;font-weight:700}.tlabel{right:auto;left:18px}.owner,.note,.cert{direction:rtl;font-family:Baloo,sans-serif}.trace text{font-family:Fredoka !important;font-weight:600}.blurb{text-align:left}.blurb ul{margin:8px 0 0 28px}.iname .en{font-family:Baloo;direction:rtl}.uen{font-family:Baloo;direction:rtl}.tocr small{font-family:Baloo}.cen{direction:rtl;font-family:Baloo !important}.en2{direction:rtl;font-family:Baloo !important}.hint,.sent,.chip b,.qw,.qo,.wgo b,.mq,.mc b{font-family:Fredoka,Baloo;font-weight:600}.chip small{font-family:Fredoka}.mazebox{direction:rtl}.abcg{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}.abcg .lt{font-style:normal;text-align:center;font-family:Fredoka;font-size:52px;font-weight:700;color:#fff;border-radius:22px;padding:8px 0;line-height:1.4}.lpic{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.lpic div{background:#fff;border-radius:24px;text-align:center;padding:6px;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.lpic b{display:block;font-family:Fredoka;font-size:40px;font-weight:700;color:hsl(var(--h),65%,40%);line-height:1.2}.lpic svg{width:96px;height:96px;margin:0 auto}.lpic em{display:block;font-style:normal;font-family:Fredoka;font-size:26px;font-weight:600;color:#2b2340}.ncard small{font-family:Fredoka;font-size:28px}.grt{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:18px}.grt>div{display:flex;align-items:center;gap:20px;background:#fff;border-radius:30px;padding:10px 24px;box-shadow:0 6px 0 hsl(var(--h),50%,74%)}.grt svg{width:120px;height:120px;flex:none}.grt b{display:block;font-family:Fredoka;font-size:44px;font-weight:700;color:hsl(var(--h),60%,32%);line-height:1.4}.grt small{display:block;font-size:28px;font-weight:800;color:#5a5470;line-height:1.7;direction:rtl;text-align:left}.grt i.dn{font-style:normal;flex:none;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fredoka;font-size:34px;font-weight:700;color:#fff;background:hsl(var(--h),60%,48%);text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%)}.grt>div{padding:6px 24px}.grt b{font-size:40px}.story p{text-align:left !important;direction:ltr}.story h3{direction:ltr}.qrow{margin-top:22px !important;padding:12px 16px !important}.qo{font-size:34px !important}.qw{min-width:300px !important;max-width:360px;font-size:28px !important}.qo{font-size:28px !important}.qrow{margin-top:20px !important;padding:12px 16px !important}.mgrid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.mgrid div{position:relative;background:#fff;border-radius:24px;padding:10px;text-align:center;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.mgrid i{position:absolute;top:8px;left:10px;font-style:normal;font-family:Fredoka;font-weight:700;font-size:20px;color:#fff;background:hsl(var(--h),60%,48%);border-radius:50%;width:34px;height:34px;line-height:34px}.mgrid b{display:block;font-family:Fredoka;font-size:30px;font-weight:700;color:hsl(var(--h),60%,32%);margin-top:18px}.mgrid small{display:block;font-size:24px;font-weight:800;color:#5a5470;line-height:1.7}.l8title,.l8quote,.l8info b,.l8info small,.l8board b,.l8side span,.q8 p,.q8o,.u8top h1,.u8top small,.u8grid span,.u8intro,.a8h h2,.a8h span,.tf8 p,.hint8{font-family:Fredoka,Baloo,sans-serif !important}.l8pol figcaption,.u8top em,.toc small{font-family:Baloo !important;direction:rtl}.story p{font-size:32px !important;line-height:2 !important}.l8side span{writing-mode:vertical-lr;transform:rotate(180deg)}.f8{border-radius:0 22px 22px 22px}",
+ "units": [
+  {
+   "title": "The Passive Voice",
+   "en": "المَبْنِيُّ لِلْمَجْهُولِ",
+   "icon": "bread",
+   "arts": [
+    "bread",
+    "dates",
+    "house"
+   ],
+   "intro": "We use the passive (be + past participle) when the action is more important than the person who does it.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "is made",
+     "يُصْنَعُ",
+     "bread",
+     "Bread is made from flour.",
+     "is + made",
+     "Cheese is made from milk."
+    ],
+    [
+     "are grown",
+     "تُزْرَعُ",
+     "dates",
+     "Dates are grown in Saudi Arabia.",
+     "are + grown",
+     "Oranges are grown in warm countries."
+    ],
+    [
+     "was built",
+     "بُنِيَ",
+     "house",
+     "This house was built in 2010.",
+     "was + built",
+     "The bridge was built last year."
+    ],
+    [
+     "were written",
+     "كُتِبَتْ",
+     "book",
+     "These stories were written by a famous writer.",
+     "were + written",
+     "The letters were written in Arabic."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "is, are, was or were?",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "Paper ... made from wood.",
+       [
+        "is",
+        "are"
+       ]
+      ],
+      [
+       "Cars ... made in factories.",
+       [
+        "is",
+        "are"
+       ]
+      ],
+      [
+       "The window ... broken yesterday.",
+       [
+        "was",
+        "were"
+       ]
+      ],
+      [
+       "The books ... sold last week.",
+       [
+        "was",
+        "were"
+       ]
+      ]
+     ],
+     "top": [
+      "book",
+      "window"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Active or passive?",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "The cat drank the milk.",
+       [
+        "active",
+        "passive"
+       ]
+      ],
+      [
+       "The milk was drunk by the cat.",
+       [
+        "active",
+        "passive"
+       ]
+      ],
+      [
+       "Rice is grown in Asia.",
+       [
+        "active",
+        "passive"
+       ]
+      ],
+      [
+       "My father grows vegetables.",
+       [
+        "active",
+        "passive"
+       ]
+      ]
+     ],
+     "top": [
+      "cat",
+      "milk"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "used to",
+   "en": "العَادَاتُ فِي المَاضِي",
+   "icon": "teddy",
+   "arts": [
+    "teddy",
+    "house",
+    "broccoli"
+   ],
+   "intro": "We use used to + verb for habits in the past that are not true now.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "used to play",
+     "كُنْتُ أَلْعَبُ",
+     "teddy",
+     "When I was little, I used to play with a teddy bear.",
+     "used to + play",
+     "He used to drink milk every night."
+    ],
+    [
+     "used to live",
+     "كَانُوا يَسْكُنُونَ",
+     "house",
+     "My grandparents used to live in a small village.",
+     "used to + live",
+     "We used to live in Jeddah."
+    ],
+    [
+     "didn't use to",
+     "لَمْ يَكُنْ (فِي المَاضِي)",
+     "broccoli",
+     "I didn't use to like vegetables, but now I do.",
+     "didn't use to + verb",
+     "Did you use to …?"
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right word",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "When I was five, I ... to sleep early.",
+       [
+        "used",
+        "use"
+       ]
+      ],
+      [
+       "My father used to ... football.",
+       [
+        "played",
+        "play"
+       ]
+      ],
+      [
+       "Did you use to ... milk?",
+       [
+        "drink",
+        "drank"
+       ]
+      ],
+      [
+       "I didn't ... to like fish.",
+       [
+        "used",
+        "use"
+       ]
+      ]
+     ],
+     "top": [
+      "teddy",
+      "football"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Then and now",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "Grandpa used to write letters. Now he ...",
+       [
+        "sends emails",
+        "used to send emails"
+       ]
+      ],
+      [
+       "People used to travel by camel. Now they travel by ...",
+       [
+        "camel",
+        "car and plane"
+       ]
+      ],
+      [
+       "I used to be short. Now I am ...",
+       [
+        "taller",
+        "shorter"
+       ]
+      ],
+      [
+       "My brother used to cry a lot. Now he ...",
+       [
+        "doesn't cry much",
+        "cries more"
+       ]
+      ]
+     ],
+     "top": [
+      "camel_",
+      "plane"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "as … as",
+   "en": "المُقَارَنَةُ بِالتَّسَاوِي",
+   "icon": "elephant",
+   "arts": [
+    "students",
+    "racecar",
+    "elephant"
+   ],
+   "intro": "We use as + adjective + as when two things are the same, and not as … as when they are different.",
+   "chip1": [
+    "🔍",
+    "We say"
+   ],
+   "chip2": [
+    "💡",
+    "It means"
+   ],
+   "items": [
+    [
+     "as tall as",
+     "طَوِيلٌ مِثْلَ",
+     "students",
+     "Ali is as tall as Omar.",
+     "as tall as",
+     "They are the same height."
+    ],
+    [
+     "not as fast as",
+     "لَيْسَ سَرِيعًا مِثْلَ",
+     "racecar",
+     "My bike is not as fast as a car.",
+     "not as fast as",
+     "The car is faster."
+    ],
+    [
+     "not as heavy as",
+     "لَيْسَ ثَقِيلًا مِثْلَ",
+     "elephant",
+     "A cat is not as heavy as an elephant.",
+     "not as heavy as",
+     "The elephant is heavier."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "as or than?",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "Sara is as old ... Mona. Both are twelve.",
+       [
+        "than",
+        "as"
+       ]
+      ],
+      [
+       "A mouse is not as big ... a cat.",
+       [
+        "as",
+        "than"
+       ]
+      ],
+      [
+       "My bag is as heavy ... yours.",
+       [
+        "as",
+        "than"
+       ]
+      ],
+      [
+       "Ahmed is taller ... Ali.",
+       [
+        "than",
+        "as"
+       ]
+      ]
+     ],
+     "top": [
+      "mouse",
+      "cat"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "What does it mean?",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "Omar is as tall as Ali.",
+       [
+        "They are the same height.",
+        "Omar is taller."
+       ]
+      ],
+      [
+       "A bike is not as fast as a plane.",
+       [
+        "The bike is faster.",
+        "The plane is faster."
+       ]
+      ],
+      [
+       "Tea is as hot as coffee.",
+       [
+        "They are equally hot.",
+        "Coffee is hotter."
+       ]
+      ],
+      [
+       "My room is not as big as yours.",
+       [
+        "Your room is bigger.",
+        "My room is bigger."
+       ]
+      ]
+     ],
+     "top": [
+      "plane",
+      "s_bike"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "have to / don't have to",
+   "en": "يَجِبُ / لَيْسَ ضَرُورِيًّا",
+   "icon": "school",
+   "arts": [
+    "school",
+    "doctor",
+    "sun"
+   ],
+   "intro": "have to means it is necessary. don't have to means it is not necessary.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "have to",
+     "يَجِبُ عَلَيَّ",
+     "school",
+     "We have to wear a uniform at school.",
+     "have to + verb",
+     "I have to do my homework."
+    ],
+    [
+     "has to",
+     "يَجِبُ عَلَيْهِ",
+     "doctor",
+     "A doctor has to work at night sometimes.",
+     "he / she + has to",
+     "She has to wake up early."
+    ],
+    [
+     "don't have to",
+     "لَيْسَ ضَرُورِيًّا",
+     "sun",
+     "It is Friday. We don't have to go to school.",
+     "don't have to + verb",
+     "You don't have to pay. It's free."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "have to or has to?",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "I ... study for the test.",
+       [
+        "have to",
+        "has to"
+       ]
+      ],
+      [
+       "My mother ... cook dinner.",
+       [
+        "have to",
+        "has to"
+       ]
+      ],
+      [
+       "They ... wear helmets.",
+       [
+        "have to",
+        "has to"
+       ]
+      ],
+      [
+       "Ali ... clean his room.",
+       [
+        "have to",
+        "has to"
+       ]
+      ]
+     ],
+     "top": [
+      "helmet",
+      "book"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Choose the right words",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "The museum is free. You ... pay.",
+       [
+        "have to",
+        "don't have to"
+       ]
+      ],
+      [
+       "Drivers ... stop at a red light.",
+       [
+        "have to",
+        "don't have to"
+       ]
+      ],
+      [
+       "It's a holiday. We ... get up early.",
+       [
+        "have to",
+        "don't have to"
+       ]
+      ],
+      [
+       "You ... wash your hands before eating.",
+       [
+        "have to",
+        "don't have to"
+       ]
+      ]
+     ],
+     "top": [
+      "trafficlight",
+      "soap"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Question Tags",
+   "en": "أَسْئِلَةُ التَّأْكِيدِ القَصِيرَةُ",
+   "icon": "sun",
+   "arts": [
+    "sun",
+    "fish",
+    "girlc"
+   ],
+   "intro": "A question tag is a short question at the end of a sentence. After a positive sentence we use a negative tag, and after a negative sentence we use a positive tag.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "isn't it?",
+     "أَلَيْسَ كَذٰلِكَ؟",
+     "sun",
+     "It's a sunny day, isn't it?",
+     "positive → negative tag",
+     "It is …, isn't it?"
+    ],
+    [
+     "don't you?",
+     "أَلَيْسَ كَذٰلِكَ؟",
+     "fish",
+     "You like fish, don't you?",
+     "You like …, don't you?",
+     "He likes …, doesn't he?"
+    ],
+    [
+     "is she?",
+     "أَلَيْسَ كَذٰلِكَ؟ (بَعْدَ النَّفْيِ)",
+     "girlc",
+     "Mona isn't late, is she?",
+     "negative → positive tag",
+     "They can't swim, can they?"
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the tag",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "It's cold, ...?",
+       [
+        "is it",
+        "isn't it"
+       ]
+      ],
+      [
+       "You are a student, ...?",
+       [
+        "aren't you",
+        "are you"
+       ]
+      ],
+      [
+       "He doesn't eat meat, ...?",
+       [
+        "doesn't he",
+        "does he"
+       ]
+      ],
+      [
+       "They can swim, ...?",
+       [
+        "can't they",
+        "can they"
+       ]
+      ]
+     ],
+     "top": [
+      "snowflake",
+      "swim"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Choose the tag",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "She likes apples, ...?",
+       [
+        "doesn't she",
+        "does she"
+       ]
+      ],
+      [
+       "We aren't late, ...?",
+       [
+        "aren't we",
+        "are we"
+       ]
+      ],
+      [
+       "Ali can draw, ...?",
+       [
+        "can't he",
+        "can he"
+       ]
+      ],
+      [
+       "You didn't forget, ...?",
+       [
+        "didn't you",
+        "did you"
+       ]
+      ]
+     ],
+     "top": [
+      "apple",
+      "v_draw"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Phrasal Verbs",
+   "en": "الأَفْعَالُ المُرَكَّبَةُ",
+   "icon": "lamp",
+   "arts": [
+    "glasses",
+    "lamp",
+    "baby"
+   ],
+   "intro": "A phrasal verb is a verb + a small word (up, off, for …). Together they have a new meaning.",
+   "chip1": [
+    "🔑",
+    "Meaning"
+   ],
+   "chip2": [
+    "📝",
+    "Example"
+   ],
+   "items": [
+    [
+     "look for",
+     "يَبْحَثُ عَنْ",
+     "glasses",
+     "I am looking for my glasses.",
+     "look for = search",
+     "She looked for her keys."
+    ],
+    [
+     "turn off",
+     "يُطْفِئُ",
+     "lamp",
+     "Please turn off the lights when you leave.",
+     "turn off ≠ turn on",
+     "Turn off the TV, please."
+    ],
+    [
+     "take care of",
+     "يَعْتَنِي بِـ",
+     "baby",
+     "My sister takes care of our baby brother.",
+     "take care of = look after",
+     "We take care of our plants."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the phrasal verb",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "Please ... the lights. We are saving energy.",
+       [
+        "look for",
+        "turn off"
+       ]
+      ],
+      [
+       "I can't find my pen. I'm ... it.",
+       [
+        "looking for",
+        "turning off"
+       ]
+      ],
+      [
+       "Nurses ... sick people.",
+       [
+        "turn off",
+        "take care of"
+       ]
+      ],
+      [
+       "We must ... our little sister.",
+       [
+        "take care of",
+        "turn off"
+       ]
+      ]
+     ],
+     "top": [
+      "lamp",
+      "glasses"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Choose the meaning",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "look for",
+       [
+        "search",
+        "sleep"
+       ]
+      ],
+      [
+       "turn off",
+       [
+        "open a door",
+        "stop a machine"
+       ]
+      ],
+      [
+       "take care of",
+       [
+        "look after",
+        "lose"
+       ]
+      ],
+      [
+       "wake up",
+       [
+        "stop sleeping",
+        "start sleeping"
+       ]
+      ]
+     ],
+     "top": [
+      "baby",
+      "clock"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Reading Time",
+   "en": "وَقْتُ القِرَاءَةِ",
+   "icon": "v_read",
+   "arts": [
+    "v_read",
+    "book"
+   ],
+   "intro": "Read the stories, then answer the questions.",
+   "acts": [
+    {
+     "type": "raw",
+     "title": "The Old Mosque",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>The Old Mosque 🕌</h3><p>This mosque was built more than one hundred years ago.<br>It was made of stone and wood.<br>People used to pray there every day.<br>Last year, it was repaired by the people of the town.<br>Now it is as beautiful as it was in the past.</p></div>",
+     "arts": [
+      "mosque",
+      "rock",
+      "f_happy"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "When was the mosque built?",
+       [
+        "last year",
+        "more than one hundred years ago"
+       ]
+      ],
+      [
+       "What was it made of?",
+       [
+        "stone and wood",
+        "glass and metal"
+       ]
+      ],
+      [
+       "Who repaired it?",
+       [
+        "the people of the town",
+        "the teacher"
+       ]
+      ],
+      [
+       "Is the mosque beautiful now?",
+       [
+        "No, it isn't.",
+        "Yes, it is."
+       ]
+      ]
+     ],
+     "top": [
+      "mosque",
+      "mymosque"
+     ]
+    },
+    {
+     "type": "raw",
+     "title": "A Busy Morning",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>A Busy Morning ⏰</h3><p>Every morning, Khalid has to wake up at six.<br>He turns off his alarm and prays Fajr.<br>Then he takes care of his little brother and gives him breakfast.<br>Khalid doesn't have to walk to school, because his father drives him.<br>He is a helpful boy, isn't he?</p></div>",
+     "arts": [
+      "clock",
+      "prayermat",
+      "baby"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Underline the correct answer",
+     "rows": [
+      [
+       "What time does Khalid have to wake up?",
+       [
+        "at nine",
+        "at six"
+       ]
+      ],
+      [
+       "What does he do after he turns off his alarm?",
+       [
+        "He prays Fajr.",
+        "He goes back to sleep."
+       ]
+      ],
+      [
+       "Who does he take care of?",
+       [
+        "his grandfather",
+        "his little brother"
+       ]
+      ],
+      [
+       "Why doesn't he have to walk to school?",
+       [
+        "His father drives him.",
+        "The school is closed."
+       ]
+      ]
+     ],
+     "top": [
+      "clock",
+      "car"
+     ]
+    }
+   ]
+  }
+ ],
+ "tocTitle": "Contents",
+ "traceLabel": "✎ I write",
+ "ovTitle": "",
+ "ltr": true
+}

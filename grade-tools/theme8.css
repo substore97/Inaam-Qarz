@@ -1,0 +1,76 @@
+/* ===== Grade-8 interface: cream paper, side spine, polaroid picture, quote, chalkboard, folder exercises, diamond page numbers ===== */
+.page:not(.cover) .bub{display:none}
+.page:not(.cover):not(.cert){background:#fbf7ef !important}
+.pno{width:50px !important;height:50px !important;background:transparent !important;box-shadow:none !important;bottom:34px !important;z-index:3;color:#fff !important;text-shadow:0 0 3px #0008 !important}
+.pno::before{content:'';position:absolute;inset:0;border-radius:10px;transform:rotate(45deg);background:hsl(var(--h),55%,42%);z-index:-1}
+/* ---- lesson page ---- */
+.item8{display:flex;padding:0 !important}
+.l8side{flex:none;width:118px;background:hsl(var(--h),55%,42%);display:flex;flex-direction:column;align-items:center;padding-top:40px;gap:24px}
+.l8side b{width:78px;height:78px;border-radius:50%;background:#fff;color:hsl(var(--h),55%,35%);font-size:44px;font-weight:800;display:flex;align-items:center;justify-content:center;line-height:1}
+.l8side span{writing-mode:vertical-rl;font-size:30px;font-weight:800;color:#fff;letter-spacing:1px;line-height:1.4;text-shadow:0 0 3px hsl(var(--h),60%,15%),0 0 3px hsl(var(--h),60%,15%)}
+.l8main{flex:1;padding:44px 40px 90px 36px;min-width:0}
+.l8title{font-size:56px;font-weight:800;line-height:1.5;color:hsl(var(--h),55%,30%);border-bottom:8px solid hsl(var(--h),70%,75%);display:inline-block;padding-bottom:2px}
+.l8row{display:flex;gap:26px;align-items:center;margin-top:30px}
+.l8pol{flex:none;width:300px;background:#fff;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(60,40,20,.18);transform:rotate(-3deg);text-align:center}
+.l8pol svg{width:272px;height:262px;background:hsl(var(--h),70%,93%)}
+.l8pol figcaption{font-family:Fredoka,Baloo;font-size:22px;font-weight:600;color:#5a5470;line-height:1.6;margin-top:6px}
+.l8quote{position:relative;flex:1;font-size:30px;font-weight:800;line-height:1.85;color:#2b2340;padding:10px 6px 10px 0}
+.l8quote::before{content:'❝';display:block;font-size:64px;line-height:.8;color:hsl(var(--h),60%,60%)}
+.l8info{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.l8info div{background:#fff;border-top:8px solid hsl(var(--h),60%,55%);border-radius:6px 6px 20px 20px;padding:12px 18px;box-shadow:0 6px 14px rgba(60,40,20,.08)}
+.l8info small{display:block;font-size:20px;font-weight:800;color:hsl(var(--h),45%,40%);line-height:1.6}
+.l8info b{display:block;font-size:26px;font-weight:800;line-height:1.7;color:#2b2340}
+.l8board{margin-top:30px;background:#2f5d46;border:14px solid #b07a46;border-radius:14px;padding:14px 26px 18px;box-shadow:inset 0 0 30px rgba(0,0,0,.25)}
+.l8board b{font-size:24px;font-weight:800;color:#fff;text-shadow:0 0 2px #000}
+.l8board i{display:block;height:58px;border-bottom:2px solid rgba(255,255,255,.55)}
+/* ---- unit opener ---- */
+.page.plain.unit8:not(.cover):not(.cert){padding:0 !important;text-align:center;background:#fbf7ef !important}
+.u8top{background:hsl(var(--h),55%,42%);padding:70px 50px 110px;clip-path:polygon(0 0,100% 0,100% 82%,0 100%)}
+.u8top small{display:inline-block;font-size:26px;font-weight:800;color:hsl(var(--h),55%,30%);background:#fff;border-radius:8px;padding:0 20px;line-height:1.7}
+.u8top h1{font-size:60px;font-weight:800;line-height:1.5;color:#fff;margin-top:12px;text-shadow:0 0 3px hsl(var(--h),60%,15%),0 0 3px hsl(var(--h),60%,15%),0 0 3px hsl(var(--h),60%,15%)}
+.u8top em{display:block;font-style:normal;font-family:Fredoka;font-size:26px;font-weight:600;color:#fff;text-shadow:0 0 3px hsl(var(--h),60%,15%),0 0 3px hsl(var(--h),60%,15%)}
+.u8num{position:relative;margin:-90px auto 0;width:140px;height:140px;border-radius:50%;background:#fff;border:10px solid hsl(var(--h),60%,62%);display:flex;align-items:center;justify-content:center;font-size:76px;font-weight:800;color:hsl(var(--h),55%,35%);line-height:1}
+.u8art{display:flex;justify-content:center;gap:28px;margin-top:20px}.u8art svg{width:130px;height:130px}
+.u8intro{margin:18px 60px 0;font-size:26px;font-weight:700;line-height:1.9;color:#3b3550}
+.u8grid{margin:22px 60px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.u8grid div{display:flex;align-items:center;gap:12px;background:#fff;border-radius:10px;padding:8px 14px;border-inline-start:6px solid hsl(var(--h),60%,55%);text-align:start}
+.u8grid i{font-style:normal;flex:none;font-size:24px;font-weight:800;color:hsl(var(--h),55%,40%)}
+.u8grid span{font-size:22px;font-weight:800;line-height:1.6;color:#2b2340}
+/* ---- activity pages (folder) ---- */
+.page.plain:not(.unit8){padding-top:40px}
+.a8h{position:relative;margin:10px 30px 0;display:flex;align-items:flex-end;gap:0}
+.a8h span{background:hsl(var(--h),55%,42%);color:#fff;font-size:22px;font-weight:800;padding:8px 22px 4px;border-radius:16px 16px 0 0;line-height:1.6;text-shadow:0 0 3px #0008}
+.a8h h2{flex:1;font-size:40px;font-weight:800;line-height:1.5;color:hsl(var(--h),55%,30%);padding:0 18px 4px}
+.f8{position:relative;margin:0 30px;background:#fff;border:4px solid hsl(var(--h),55%,42%);border-radius:0 22px 22px 22px;padding:18px 26px 22px}
+[dir=ltr] .f8,.f8:dir(ltr){border-radius:0 22px 22px 22px}
+.hint8{font-size:23px;font-weight:700;color:#6f6a8a;line-height:1.7;border-bottom:2px dashed #e4ddd0;padding-bottom:8px}
+.q8,.tf8{list-style:none;margin:0;padding:0}
+.q8 li{display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:2px solid #f0eadf}
+.q8 li:last-child,.tf8 li:last-child{border-bottom:none}
+.q8n{flex:none;width:44px;height:44px;border-radius:50%;background:hsl(var(--h),70%,92%);color:hsl(var(--h),55%,35%);font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:6px}
+.q8 p{font-size:30px;font-weight:800;line-height:1.75;color:#2b2340}
+.q8o{font-size:28px;font-weight:700;line-height:1.8;color:hsl(var(--h),50%,35%)}
+.q8o span{padding:0 6px}.q8o em{font-style:normal;color:#b8b0a0;padding:0 4px}
+.tf8 li{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:2px solid #f0eadf}
+.tf8 p{flex:1;font-size:28px;font-weight:700;line-height:1.75;color:#2b2340}
+.tf8 i{flex:none;font-style:normal;font-size:30px;font-weight:800;color:hsl(var(--h),50%,40%)}
+.f8 + .tlrow{margin-top:24px !important}.f8 + .tlrow svg{width:130px !important;height:130px !important}
+/* shared blocks */
+.card,.refc,.steps div,.du,.wtopic,.surah,.facts{box-shadow:0 6px 14px rgba(60,40,20,.08) !important;border:3px solid #ece4d6 !important}
+.surah{border-color:#e8c56a !important}
+.toc .tocr{background:#fff !important;border-radius:10px !important;border-inline-start:10px solid hsl(var(--h),55%,45%) !important}
+/* ---- cover ---- */
+.cover{background:radial-gradient(circle at 50% 46%,hsl(var(--h),55%,40%) 0 30%,hsl(var(--h),55%,26%) 70%) !important}
+.cover::before{content:'';position:absolute;left:50%;top:44%;width:640px;height:640px;transform:translate(-50%,-50%);border-radius:50%;border:26px solid hsla(0,0%,100%,.12)}
+.cover::after{content:'';position:absolute;left:-10%;right:-10%;bottom:-160px;height:400px;border-radius:50% 50% 0 0;background:hsl(var(--h),60%,88%)}
+.cover > *:not(.ca):not(.gbadge):not(.bub){position:relative;z-index:1}
+.cover .ca{z-index:2}.cover .bub{display:none}
+.cover h1{font-size:76px !important;line-height:1.45 !important;margin-top:270px !important}
+.back h2{font-size:62px !important;margin-top:120px !important}
+.l8pol{width:340px}.l8pol svg{width:312px;height:300px}.l8quote{font-size:32px}.l8row{margin-top:36px}.l8info{margin-top:36px}.l8board{margin-top:36px}.l8board i{height:62px}
+.u8grid{margin-top:30px}.u8art svg{width:150px;height:150px}.q8 li{padding:18px 0}
+.q8 li{padding:24px 0}.q8 p{font-size:32px}.q8o{font-size:30px}.tf8 li{padding:20px 0}.f8 + .tlrow{margin-top:34px !important}.f8 + .tlrow svg{width:150px !important;height:150px !important}
+.q8o span,.q8o em{display:inline-block;unicode-bidi:isolate}.q8o em{color:#c9bfae;padding:0 10px}
+.q8 li{padding:14px 0 !important}.q8 p{font-size:29px !important;line-height:1.65}.q8o{font-size:28px !important;line-height:1.6}
+.l8quote.long{font-size:25px !important;line-height:1.75}
+.l8board{margin-top:28px !important}.l8board i{height:52px !important}.l8info{margin-top:30px !important}

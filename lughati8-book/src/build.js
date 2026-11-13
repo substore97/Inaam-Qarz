@@ -179,7 +179,7 @@ const itemPages8 = (LIST, U, off) => LIST.forEach(([name, en, ill, sentence, c1,
       <h2 class="l8title">${name}</h2>
       <div class="l8row">
         <figure class="l8pol">${G(ill)}<figcaption>${en}</figcaption></figure>
-        <blockquote class="l8quote">${sentence}</blockquote>
+        <blockquote class="l8quote${sentence.length > 95 ? ' long' : ''}">${sentence}</blockquote>
       </div>
       <div class="l8info">
         <div><small>${U.chip1[0]} ${U.chip1[1]}</small><b>${c1}</b></div>
@@ -515,6 +515,9 @@ bdi[dir=ltr]{unicode-bidi:isolate-override !important;direction:ltr}
 .u8grid{margin-top:30px}.u8art svg{width:150px;height:150px}.q8 li{padding:18px 0}
 .q8 li{padding:24px 0}.q8 p{font-size:32px}.q8o{font-size:30px}.tf8 li{padding:20px 0}.f8 + .tlrow{margin-top:34px !important}.f8 + .tlrow svg{width:150px !important;height:150px !important}
 .q8o span,.q8o em{display:inline-block;unicode-bidi:isolate}.q8o em{color:#c9bfae;padding:0 10px}
+.q8 li{padding:14px 0 !important}.q8 p{font-size:29px !important;line-height:1.65}.q8o{font-size:28px !important;line-height:1.6}
+.l8quote.long{font-size:25px !important;line-height:1.75}
+.l8board{margin-top:28px !important}.l8board i{height:52px !important}.l8info{margin-top:30px !important}
 .wpair{position:relative;margin-top:24px;background:#fff;border-radius:34px;padding:16px 24px;box-shadow:0 8px 0 hsl(var(--h),50%,74%)}.wph{display:flex;justify-content:space-around;margin-bottom:8px}.wph b{font-size:30px;font-weight:800;color:#fff;background:hsl(var(--h),60%,45%);border-radius:18px;padding:2px 26px;line-height:1.6;text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%)}.wpr{display:flex;align-items:center;justify-content:space-around;margin-top:12px}.wpr span{min-width:220px;text-align:center;font-size:42px;font-weight:800;line-height:1.6;border-radius:22px;padding:2px 14px;background:hsl(var(--h),80%,94%);color:hsl(var(--h),60%,28%)}.wpr i{font-style:normal;font-size:42px;font-weight:800;color:hsl(var(--h),60%,45%)}.ptab{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:18px}.ptab>div{display:flex;align-items:center;gap:20px;background:#fff;border-radius:30px;padding:12px 22px;box-shadow:0 7px 0 hsl(var(--h),50%,72%)}
 .ptab i{font-style:normal;flex:none;width:110px;height:110px;border-radius:26px;display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:800;color:#fff;background:hsl(var(--h),65%,50%);text-shadow:0 0 4px hsl(var(--h),60%,20%),0 0 4px hsl(var(--h),60%,20%)}
 .ptab b{display:block;font-size:34px;font-weight:800;line-height:1.6;color:hsl(var(--h),60%,30%)}.ptab small{display:block;font-size:24px;font-weight:700;color:#6f6a8a;line-height:1.6}.ptab p{font-size:30px;font-weight:800;line-height:1.7;color:#2b2340}

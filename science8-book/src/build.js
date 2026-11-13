@@ -179,7 +179,7 @@ const itemPages8 = (LIST, U, off) => LIST.forEach(([name, en, ill, sentence, c1,
       <h2 class="l8title">${name}</h2>
       <div class="l8row">
         <figure class="l8pol">${G(ill)}<figcaption>${en}</figcaption></figure>
-        <blockquote class="l8quote">${sentence}</blockquote>
+        <blockquote class="l8quote${sentence.length > 95 ? ' long' : ''}">${sentence}</blockquote>
       </div>
       <div class="l8info">
         <div><small>${U.chip1[0]} ${U.chip1[1]}</small><b>${c1}</b></div>
@@ -516,6 +516,8 @@ bdi[dir=ltr]{unicode-bidi:isolate-override !important;direction:ltr}
 .q8 li{padding:24px 0}.q8 p{font-size:32px}.q8o{font-size:30px}.tf8 li{padding:20px 0}.f8 + .tlrow{margin-top:34px !important}.f8 + .tlrow svg{width:150px !important;height:150px !important}
 .q8o span,.q8o em{display:inline-block;unicode-bidi:isolate}.q8o em{color:#c9bfae;padding:0 10px}
 .q8 li{padding:14px 0 !important}.q8 p{font-size:29px !important;line-height:1.65}.q8o{font-size:28px !important;line-height:1.6}
+.l8quote.long{font-size:25px !important;line-height:1.75}
+.l8board{margin-top:28px !important}.l8board i{height:52px !important}.l8info{margin-top:30px !important}
 
 .refc{position:relative;background:#fff;border-radius:28px;padding:14px 20px;text-align:center;border:4px solid hsl(var(--h),55%,72%);box-shadow:0 6px 0 hsl(var(--h),50%,62%)}
 .refc p{font-size:30px;font-weight:800;line-height:1.7;color:hsl(var(--h),65%,24%)}.refc span{font-size:20px;font-weight:800;color:#fff;background:hsl(var(--h),55%,40%);border-radius:16px;padding:2px 16px}
