@@ -103,6 +103,11 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `science7-book/`: علومي الجميلة ٧ (science, seventh-grade syllabus), 48 pages
 - `islamic7-book/`: دراساتي الإسلامية ٧ (Islamic studies, seventh-grade syllabus), 48 pages
 - `english7-book/`: My English Book 7 (English, seventh-grade syllabus), 48 pages
+- `lughati8-book/`: لغتي الجميلة ٨ (Arabic language, eighth-grade syllabus), 48 pages
+- `math8-book/`: رياضياتي الجميلة ٨ (math, eighth-grade syllabus), 48 pages
+- `science8-book/`: علومي الجميلة ٨ (science, eighth-grade syllabus), 48 pages
+- `islamic8-book/`: دراساتي الإسلامية ٨ (Islamic studies, eighth-grade syllabus), 48 pages
+- `english8-book/`: My English Book 8 (English, eighth-grade syllabus), 48 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).

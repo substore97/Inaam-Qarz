@@ -13,7 +13,7 @@ cd ..
 grep -q "^- \`$1/\`" CLAUDE.md || python3 - "$1" "$3" "$4" "$5" <<'PY'
 import sys
 d,t,e,p=sys.argv[1:]
-c=open('CLAUDE.md').read(); m='\n\nShared tooling'
+c=open('CLAUDE.md').read(); m='\n\nGrade-book generator'
 c=c.replace(m, f'\n- `{d}/`: {t} ({e}), {p} pages'+m,1); open('CLAUDE.md','w').write(c)
 PY
 git add "$1" CLAUDE.md
