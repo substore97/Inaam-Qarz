@@ -114,6 +114,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `islamic9-book/`: دراساتي الإسلامية ٩ (Islamic studies, ninth-grade syllabus), 48 pages
 - `english9-book/`: My English Book 9 (English, ninth-grade syllabus), 48 pages
 - `lughati10-book/`: لغتي الجميلة ١٠ (Arabic language, tenth-grade syllabus), 48 pages
+- `math10-book/`: رياضياتي الجميلة ١٠ (math, tenth-grade syllabus), 48 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
