@@ -5,7 +5,7 @@ Every time a book is made or updated, send the owner ONLY the **App PDF** (owner
    `pack.py` encodes the App PDF with mozjpeg (install once per container: `mkdir -p /tmp/mzj && cd /tmp/mzj && npm i mozjpeg@8.0.0`), lowering quality from q72 until ≤ 4 MB, never below q60. Busy page textures (ruled lines, dots) inflate size, so keep page backgrounds plain.
 When a whole grade set is made, send all its App PDFs together in one message at the end.
 Still write `<Prefix>-PlayStore.txt` in each book folder (Arabic + English name, Arabic short ≤80 chars, full ≤4000 chars; check lengths) and keep it in the repo.
-**Every new grade must get a genuinely NEW page interface (layout, not just colours)** — the owner finds repeated layouts boring.
+**Every new grade must get a genuinely NEW page interface (layout, not just colours), different from EVERY earlier grade** — the owner finds repeated layouts boring (Nov 2026: "aage jitne b grades banaye sab ke interfaces har ek se alag alag hon"). Grade 6 = layout `g6` (white page, coloured header band, picture+side boxes, quiz cards with أ ب ج). Grade 7 = layout `g7` (pastel page, white cards, hexagon numbers, hero picture with name pill, steps timeline, yellow sticky note, ribbon exercise titles, tick-box options, full-colour unit pages).
 Quality process for every book: lint script, an independent proofreader agent (Arabic/English/Quran/hadith/math answers), and a visual page check.
 
 **GitHub stores SOURCE CODE ONLY.** Built PDFs and cover JPGs are git-ignored (root `.gitignore`) and are only sent to the owner, who keeps them in Google Drive. Never commit them. (All book PDFs/JPGs were permanently purged from the git history at the owner's request; repo is source-only, ~5 MB.)
@@ -98,6 +98,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `science6-book/`: علومي الجميلة ٦ (science, sixth-grade syllabus), 48 pages
 - `islamic6-book/`: دراساتي الإسلامية ٦ (Islamic studies, sixth-grade syllabus), 48 pages
 - `english6-book/`: My English Book 6 (English, sixth-grade syllabus), 48 pages
+- `lughati7-book/`: لغتي الجميلة ٧ (Arabic language, seventh-grade syllabus), 48 pages
 
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
 For a new book: `BOOK_DIR=<dir> node arabic-kids-book/src/pdf.js <FilePrefix> "<Arabic title>"`.
