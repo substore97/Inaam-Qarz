@@ -306,6 +306,14 @@ Object.assign(KI, {
   <div class="k16words"><div>${G(a1)}<b>${w1}</b></div><div>${G(a2)}<b>${w2}</b></div></div></div>`; },
 });
 Object.assign(KH, { k16: (a, j) => `<div class="k16ah"><i></i><i></i><i></i><h2>${a.title}</h2></div>` });
+Object.assign(KI, {
+  k17: ([d, word, art, n, en], i) => { const h = Math.round(i * 360 / 20 + 10) % 360;
+    const dots = k => `<div class="k17frame">${Array.from({ length: 10 }, (_, j) => `<i class="${j < k ? 'on' : ''}"></i>`).join('')}</div>`;
+    const count = n <= 10 ? `<div class="k17pics n${n}">${Array.from({ length: n }, () => G(art)).join('')}</div>` : `<div class="k17frames">${dots(10)}${dots(n - 10)}</div>`;
+    return `<div class="k17w" style="--h:${h}"><div class="k17ring"><div class="k17ball"><b>${d}</b><span>${en}</span></div></div>
+  <div class="k17word">${word}</div>${count}</div>`; },
+});
+Object.assign(KH, { k17: (a, j) => `<div class="k17ah"><span>١</span><span>٢</span><span>٣</span><h2>${a.title}</h2></div>` });
 const itemPagesK = (LIST) => LIST.forEach((it, i) => { const h = hue(i); pages.push(`
   <section class="page plain ki ${C.layout}i" style="--h:${h}">
   ${KI[C.layout](it, i, h)}
@@ -367,6 +375,7 @@ if (C.layout === 'g12') {
   ACT.tf = (a) => `<div class="hint12">⭕ ${a.hint || '' + (C.ltr ? 'I read the sentence and circle True or False.' : 'أَقْرَأُ العِبَارَةَ، ثُمَّ أَضَعُ دَائِرَةً حَوْلَ (صَحِيحَةٌ) أَوْ (خَاطِئَةٌ)') + ''}</div><div class="x12">${a.rows.map((t, j) => `<div><b>${N(j + 1)}</b><div><p>${t}</p><div class="xo12">${(C.ltr ? ['True', 'False'] : ['صَحِيحَةٌ', 'خَاطِئَةٌ']).map(x => `<em>${x}</em>`).join('')}</div></div></div>`).join('')}</div>`;
 }
 Object.assign(ACT, {
+  tens: (a) => `<div class="tn">${a.rows.map(([d, w]) => `<div><b>${d}</b><span>${w}</span></div>`).join('')}</div>`,
   review: (a) => `<div class="rv">${a.rows.map(([x, w]) => `<div>${G(x)}<b>${w}</b></div>`).join('')}</div>`,
   facts: (a) => `<ul class="fc">${a.rows.map(t => `<li>${t}</li>`).join('')}</ul>${a.arts ? `<div class="tlrow big2">${a.arts.map(x => G(x)).join('')}</div>` : ''}`,
   qa: (a) => `<div class="qa">${a.rows.map(([q, x]) => `<div><p class="qq">${q}</p><p class="aa">${x}</p></div>`).join('')}</div>`,
