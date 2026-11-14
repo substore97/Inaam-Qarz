@@ -1,0 +1,889 @@
+{
+ "dir": "english12-book",
+ "prefix": "My-English-Book-12",
+ "title": "My English Book 12",
+ "artmod": "english12-art",
+ "header": "Builds \"My English Book 12\" – twelfth-grade English syllabus – A4 portrait.",
+ "grade": "Grade 12",
+ "theme": "12",
+ "layout": "g12",
+ "cover": "--h:15;background:#7a2a10",
+ "h": 15,
+ "t1": "My English",
+ "t2": "Book 12",
+ "s1": "#5a1500",
+ "s2": "#1f3a8f",
+ "csub": "Mixed conditionals • Inversion • Cleft sentences • Future perfect",
+ "cen": "كِتَابِي لِلُّغَةِ الإِنْجِلِيزِيَّةِ ١٢",
+ "coverTop": [
+  "v_read",
+  "stars",
+  "clock"
+ ],
+ "coverBot": [
+  "school",
+  "teacher",
+  "rocket",
+  "palm"
+ ],
+ "ownerArt": "v_read",
+ "ownerMini": [
+  "book",
+  "clock",
+  "stars"
+ ],
+ "noteP": "هٰذَا الكِتَابُ يُكْمِلُ تَعْلِيمَ الإِنْجِلِيزِيَّةِ: الجُمَلُ الشَّرْطِيَّةُ المُخْتَلِطَةُ، وَتَقْدِيمُ الفِعْلِ المُسَاعِدِ، وَجُمَلُ التَّوْكِيدِ المُقَسَّمَةُ، وَجُمَلُ اسْمِ الفَاعِلِ وَالمَفْعُولِ، وَالمُسْتَقْبَلُ التَّامُّ، وَ would rather وَ had better، مَعَ نَصَّيْنِ 🇬🇧",
+ "noteLi": [
+  "فِي كُلِّ دَرْسٍ مَكَانٌ لِيَكْتُبَ طِفْلُكُمْ جُمْلَةً إِنْجِلِيزِيَّةً مِنْ عِنْدِهِ.",
+  "اسْأَلُوهُ: What will you have done by the end of this year?",
+  "اطْلُبُوا مِنْهُ أَنْ يَبْدَأَ جُمْلَةً بِـ: Never have I …",
+  "فِي التَّدْرِيبَاتِ يَضَعُ دَائِرَةً حَوْلَ الإِجَابَةِ الصَّحِيحَةِ، وَالكِتَابُ يُقْرَأُ مِنَ اليَسَارِ إِلَى اليَمِينِ."
+ ],
+ "noteMini": [
+  "clock",
+  "stars",
+  "book"
+ ],
+ "certP": "لِأَنَّهُ أَتَمَّ «My English Book 12» بِنَجَاحٍ",
+ "certArts": [
+  "v_read",
+  "medal",
+  "book"
+ ],
+ "blurb": "A complete 3D English book with a brand-new split-page design – part 12, with Arabic meanings for every lesson.",
+ "blurbLi": [
+  "Mixed conditionals and inversion",
+  "Cleft sentences and participle clauses",
+  "Future perfect, would rather and had better",
+  "Two reading texts and a certificate"
+ ],
+ "en2": "كِتَابٌ شَامِلٌ بِتَصْمِيمٍ جَدِيدٍ لِتَعْلِيمِ الإِنْجِلِيزِيَّةِ – الجُزْءُ الثَّانِيَ عَشَرَ",
+ "backArts": [
+  "v_read",
+  "stars",
+  "clock",
+  "school"
+ ],
+ "extraCss": "body{direction:ltr}.page{font-family:Fredoka,Baloo,sans-serif}.t3d{font-family:Fredoka,Baloo,sans-serif !important;font-weight:700}.tlabel{right:auto;left:18px}.owner,.note,.cert{direction:rtl;font-family:Baloo,sans-serif}.trace text{font-family:Fredoka !important;font-weight:600}.blurb{text-align:left}.blurb ul{margin:8px 0 0 28px}.iname .en{font-family:Baloo;direction:rtl}.uen{font-family:Baloo;direction:rtl}.tocr small{font-family:Baloo}.cen{direction:rtl;font-family:Baloo !important}.en2{direction:rtl;font-family:Baloo !important}.hint,.sent,.chip b,.qw,.qo,.wgo b,.mq,.mc b{font-family:Fredoka,Baloo;font-weight:600}.chip small{font-family:Fredoka}.mazebox{direction:rtl}.abcg{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}.abcg .lt{font-style:normal;text-align:center;font-family:Fredoka;font-size:52px;font-weight:700;color:#fff;border-radius:22px;padding:8px 0;line-height:1.4}.lpic{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.lpic div{background:#fff;border-radius:24px;text-align:center;padding:6px;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.lpic b{display:block;font-family:Fredoka;font-size:40px;font-weight:700;color:hsl(var(--h),65%,40%);line-height:1.2}.lpic svg{width:96px;height:96px;margin:0 auto}.lpic em{display:block;font-style:normal;font-family:Fredoka;font-size:26px;font-weight:600;color:#2b2340}.ncard small{font-family:Fredoka;font-size:28px}.grt{position:relative;margin-top:24px;display:flex;flex-direction:column;gap:18px}.grt>div{display:flex;align-items:center;gap:20px;background:#fff;border-radius:30px;padding:10px 24px;box-shadow:0 6px 0 hsl(var(--h),50%,74%)}.grt svg{width:120px;height:120px;flex:none}.grt b{display:block;font-family:Fredoka;font-size:44px;font-weight:700;color:hsl(var(--h),60%,32%);line-height:1.4}.grt small{display:block;font-size:28px;font-weight:800;color:#5a5470;line-height:1.7;direction:rtl;text-align:left}.grt i.dn{font-style:normal;flex:none;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fredoka;font-size:34px;font-weight:700;color:#fff;background:hsl(var(--h),60%,48%);text-shadow:0 0 3px hsl(var(--h),60%,20%),0 0 3px hsl(var(--h),60%,20%)}.grt>div{padding:6px 24px}.grt b{font-size:40px}.story p{text-align:left !important;direction:ltr}.story h3{direction:ltr}.qrow{margin-top:22px !important;padding:12px 16px !important}.qo{font-size:34px !important}.qw{min-width:300px !important;max-width:360px;font-size:28px !important}.qo{font-size:28px !important}.qrow{margin-top:20px !important;padding:12px 16px !important}.mgrid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.mgrid div{position:relative;background:#fff;border-radius:24px;padding:10px;text-align:center;box-shadow:0 5px 0 hsl(var(--h),55%,74%)}.mgrid i{position:absolute;top:8px;left:10px;font-style:normal;font-family:Fredoka;font-weight:700;font-size:20px;color:#fff;background:hsl(var(--h),60%,48%);border-radius:50%;width:34px;height:34px;line-height:34px}.mgrid b{display:block;font-family:Fredoka;font-size:30px;font-weight:700;color:hsl(var(--h),60%,32%);margin-top:18px}.mgrid small{display:block;font-size:24px;font-weight:800;color:#5a5470;line-height:1.7}.m12 h2,.q12,.tb12 b,.tb12 small,.lp12 b,.x12 p,.xo12 em,.hint12,.a12h h2,.a12h small,.u12band h1,.u12band small,.u12intro,.u12tiles span,.p12 small,.p12 span{font-family:Fredoka,Baloo,sans-serif !important}.p12 em{font-family:Baloo !important}.u12band em{font-family:Baloo !important}.page.plain .story p{font-size:29px !important;line-height:1.75 !important}.page.plain .story h3{font-size:38px}.x12 p{font-size:26px !important;line-height:1.55 !important}.xo12 em{font-size:22px !important;padding:3px 14px !important}.x12>div{padding:10px 0 !important}.q12{font-size:31px !important}.m12 h2{font-size:48px !important}",
+ "units": [
+  {
+   "title": "Mixed Conditionals",
+   "en": "الجُمَلُ الشَّرْطِيَّةُ المُخْتَلِطَةُ",
+   "icon": "clock",
+   "arts": [
+    "clock",
+    "umbrella",
+    "bigbook"
+   ],
+   "intro": "Mixed conditionals join a past condition with a present result, or a present condition with a past result.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Another example"
+   ],
+   "items": [
+    [
+     "past → present",
+     "شَرْطٌ مَاضٍ وَنَتِيجَةٌ حَاضِرَةٌ",
+     "bigbook",
+     "If I had studied harder, I would be a doctor now.",
+     "If + past perfect, would + verb",
+     "If she had taken the map, she wouldn't be lost now."
+    ],
+    [
+     "present → past",
+     "شَرْطٌ حَاضِرٌ وَنَتِيجَةٌ مَاضِيَةٌ",
+     "umbrella",
+     "If I weren't afraid of heights, I would have climbed the tower.",
+     "If + past simple, would have + p.p.",
+     "If he were careful, he wouldn't have broken the vase."
+    ],
+    [
+     "real meaning",
+     "المَعْنَى الحَقِيقِيُّ",
+     "clock",
+     "If I had slept early, I wouldn't be tired now.",
+     "= I didn't sleep early, so I am tired now.",
+     "Mixed conditionals talk about things that are not true."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the correct form",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "If I had eaten breakfast, I ... hungry now.",
+       [
+        "wouldn't be",
+        "won't be"
+       ]
+      ],
+      [
+       "If she ... the bus, she would be here now.",
+       [
+        "hadn't missed",
+        "doesn't miss"
+       ]
+      ],
+      [
+       "If he spoke English, he ... the job last year.",
+       [
+        "would have got",
+        "will get"
+       ]
+      ],
+      [
+       "If we ... the tickets, we would be at the match now.",
+       [
+        "had bought",
+        "buy"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "What does it mean?",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "If I had saved money, I would have a car now.",
+       [
+        "I didn't save money, and I don't have a car.",
+        "I saved money, and I have a car."
+       ]
+      ],
+      [
+       "If he weren't shy, he would have spoken at the party.",
+       [
+        "He is shy, and he didn't speak.",
+        "He isn't shy, and he spoke."
+       ]
+      ],
+      [
+       "If they had left earlier, they would be home now.",
+       [
+        "They didn't leave early, so they aren't home.",
+        "They left early and are home."
+       ]
+      ],
+      [
+       "If I knew her number, I would have called her.",
+       [
+        "I don't know her number, so I didn't call.",
+        "I know her number and I called."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Inversion",
+   "en": "تَقْدِيمُ الفِعْلِ المُسَاعِدِ لِلتَّوْكِيدِ",
+   "icon": "stars",
+   "arts": [
+    "stars",
+    "rocket",
+    "medal"
+   ],
+   "intro": "After some negative words at the start of a sentence, we put the auxiliary before the subject, like a question. It makes the sentence stronger.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Another example"
+   ],
+   "items": [
+    [
+     "Never have I …",
+     "لَمْ يَحْدُثْ أَبَدًا أَنْ …",
+     "stars",
+     "Never have I seen such a beautiful sky.",
+     "Never + auxiliary + subject",
+     "Never had she felt so happy."
+    ],
+    [
+     "Rarely / Seldom …",
+     "نَادِرًا مَا …",
+     "rocket",
+     "Rarely do we see snow in the desert.",
+     "Rarely + do / does + subject + verb",
+     "Seldom does he arrive late."
+    ],
+    [
+     "Not only … but also",
+     "لَيْسَ فَقَطْ … بَلْ أَيْضًا",
+     "medal",
+     "Not only did she win, but she also broke the record.",
+     "Not only + auxiliary + subject",
+     "Not only is he clever, but he is also kind."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the correct inversion",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "Never ... such a big fish.",
+       [
+        "have I seen",
+        "I have seen"
+       ]
+      ],
+      [
+       "Rarely ... to bed late.",
+       [
+        "does he go",
+        "he goes"
+       ]
+      ],
+      [
+       "Not only ... fast, but she also swims well.",
+       [
+        "does she run",
+        "she runs"
+       ]
+      ],
+      [
+       "Seldom ... so quiet.",
+       [
+        "is the class",
+        "the class is"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Which sentence means the same?",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "I have never tasted such good dates.",
+       [
+        "Never have I tasted such good dates.",
+        "Never I have tasted such good dates."
+       ]
+      ],
+      [
+       "He rarely complains.",
+       [
+        "Rarely does he complain.",
+        "Rarely he complains."
+       ]
+      ],
+      [
+       "She sings and she also plays the oud.",
+       [
+        "Not only does she sing, but she also plays the oud.",
+        "Not only she sings, but also plays the oud."
+       ]
+      ],
+      [
+       "We seldom eat out.",
+       [
+        "Seldom do we eat out.",
+        "Seldom we do eat out."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cleft Sentences",
+   "en": "جُمَلُ التَّوْكِيدِ المُقَسَّمَةُ",
+   "icon": "bigbook",
+   "arts": [
+    "bigbook",
+    "teacher",
+    "phone"
+   ],
+   "intro": "Cleft sentences help us focus on one part of the sentence: It was … that / who …, or What … is ….",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Another example"
+   ],
+   "items": [
+    [
+     "It was … who …",
+     "كَانَ … هُوَ الَّذِي …",
+     "teacher",
+     "It was my teacher who encouraged me to read.",
+     "It is / was + person + who",
+     "It was Ali who found the key."
+    ],
+    [
+     "It was … that …",
+     "كَانَ … هُوَ مَا …",
+     "phone",
+     "It was in Madinah that I met my best friend.",
+     "It is / was + thing / place / time + that",
+     "It was on Friday that we travelled."
+    ],
+    [
+     "What … is …",
+     "مَا … هُوَ …",
+     "bigbook",
+     "What I need is a good dictionary.",
+     "What + subject + verb + is / was",
+     "What she wanted was a quiet room."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the right word",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "It was Sara ... won the prize.",
+       [
+        "who",
+        "what"
+       ]
+      ],
+      [
+       "It was at the airport ... I lost my bag.",
+       [
+        "that",
+        "who"
+       ]
+      ],
+      [
+       "... I love most is reading.",
+       [
+        "What",
+        "It"
+       ]
+      ],
+      [
+       "It ... my father who taught me to swim.",
+       [
+        "was",
+        "were"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Which cleft sentence is correct?",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "Focus on 'Ahmed': Ahmed broke the window.",
+       [
+        "It was Ahmed who broke the window.",
+        "It was the window who Ahmed broke."
+       ]
+      ],
+      [
+       "Focus on 'a rest': I need a rest.",
+       [
+        "What I need is a rest.",
+        "What is a rest I need."
+       ]
+      ],
+      [
+       "Focus on 'yesterday': We arrived yesterday.",
+       [
+        "It was yesterday that we arrived.",
+        "It was we that arrived yesterday."
+       ]
+      ],
+      [
+       "Focus on 'the noise': The noise woke me up.",
+       [
+        "It was the noise that woke me up.",
+        "What the noise was woke me up."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Participle Clauses",
+   "en": "جُمَلُ اسْمِ الفَاعِلِ وَاسْمِ المَفْعُولِ",
+   "icon": "runner",
+   "arts": [
+    "runner",
+    "house",
+    "book"
+   ],
+   "intro": "Participle clauses make sentences shorter. We use -ing for active ideas and the past participle for passive ideas.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Another example"
+   ],
+   "items": [
+    [
+     "-ing clause",
+     "جُمْلَةٌ بِـ -ing",
+     "runner",
+     "Hearing the bell, the students ran out.",
+     "= When they heard the bell, …",
+     "Feeling tired, I went to bed early."
+    ],
+    [
+     "past participle clause",
+     "جُمْلَةٌ بِالتَّصْرِيفِ الثَّالِثِ",
+     "house",
+     "Built in 1900, the house is very old.",
+     "= The house, which was built in 1900, …",
+     "Written in Arabic, the book is easy for me."
+    ],
+    [
+     "Having + p.p.",
+     "Having + التَّصْرِيفُ الثَّالِثُ",
+     "book",
+     "Having finished my homework, I went out to play.",
+     "= After I had finished my homework, …",
+     "Having eaten lunch, we continued our trip."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the correct participle",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "... the news, she started to cry.",
+       [
+        "Hearing",
+        "Heard"
+       ]
+      ],
+      [
+       "... in 2010, the bridge is still strong.",
+       [
+        "Built",
+        "Building"
+       ]
+      ],
+      [
+       "... his keys, he couldn't open the door.",
+       [
+        "Having lost",
+        "Lost"
+       ]
+      ],
+      [
+       "The boy ... near the window is my brother.",
+       [
+        "standing",
+        "stood"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Which sentence means the same?",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "Because I felt cold, I closed the window.",
+       [
+        "Feeling cold, I closed the window.",
+        "Felt cold, I closed the window."
+       ]
+      ],
+      [
+       "The cake, which was made by Mum, was delicious.",
+       [
+        "Made by Mum, the cake was delicious.",
+        "Making by Mum, the cake was delicious."
+       ]
+      ],
+      [
+       "After he had read the letter, he smiled.",
+       [
+        "Having read the letter, he smiled.",
+        "Have read the letter, he smiled."
+       ]
+      ],
+      [
+       "When she opened the box, she found a gift.",
+       [
+        "Opening the box, she found a gift.",
+        "Opened the box, she found a gift."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Future Perfect",
+   "en": "المُسْتَقْبَلُ التَّامُّ",
+   "icon": "clock",
+   "arts": [
+    "clock",
+    "builder",
+    "school"
+   ],
+   "intro": "We use the future perfect for an action that will be finished before a time in the future, and the future perfect continuous for how long an action will have continued.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Another example"
+   ],
+   "items": [
+    [
+     "will have + p.p.",
+     "سَيَكُونُ قَدْ …",
+     "builder",
+     "By 2030, they will have built a new airport.",
+     "will have + past participle",
+     "By Friday, I will have finished the book."
+    ],
+    [
+     "by + time",
+     "بِحُلُولِ …",
+     "clock",
+     "By 8 o'clock, the shop will have closed.",
+     "by tomorrow / by next year / by then",
+     "By the time you arrive, we will have eaten."
+    ],
+    [
+     "will have been + -ing",
+     "سَيَكُونُ مُسْتَمِرًّا فِي …",
+     "school",
+     "Next June, I will have been studying English for ten years.",
+     "will have been + verb-ing",
+     "By noon, we will have been driving for five hours."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the correct form",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "By next week, I ... my exams.",
+       [
+        "will have finished",
+        "will finished"
+       ]
+      ],
+      [
+       "By 2040, people ... on the moon.",
+       [
+        "will have lived",
+        "have lived"
+       ]
+      ],
+      [
+       "By 10 p.m., she ... for six hours.",
+       [
+        "will have been working",
+        "will have work"
+       ]
+      ],
+      [
+       "By the time we get there, the film ...",
+       [
+        "will have started",
+        "will start already"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Complete the sentence",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "By the end of this year, I ...",
+       [
+        "will have read twenty books",
+        "have read twenty books yesterday"
+       ]
+      ],
+      [
+       "Next month, they ... in this house for a year.",
+       [
+        "will have been living",
+        "will be lived"
+       ]
+      ],
+      [
+       "By the time you wake up, I ...",
+       [
+        "will have left",
+        "had left"
+       ]
+      ],
+      [
+       "In two hours, the plane ...",
+       [
+        "will have landed",
+        "has landed"
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "would rather & had better",
+   "en": "أُفَضِّلُ / مِنَ الأَفْضَلِ",
+   "icon": "f_calm",
+   "arts": [
+    "f_calm",
+    "raincloud",
+    "clock"
+   ],
+   "intro": "We use would rather for preferences, had better for strong advice, and It's time for things that should happen now.",
+   "chip1": [
+    "🧩",
+    "Form"
+   ],
+   "chip2": [
+    "📝",
+    "Another example"
+   ],
+   "items": [
+    [
+     "would rather",
+     "أُفَضِّلُ",
+     "f_calm",
+     "I'd rather walk than take the bus.",
+     "would rather + verb (than …)",
+     "She'd rather stay at home tonight."
+    ],
+    [
+     "had better",
+     "مِنَ الأَفْضَلِ أَنْ",
+     "raincloud",
+     "You'd better take an umbrella. It's going to rain.",
+     "had better (not) + verb",
+     "We'd better not be late."
+    ],
+    [
+     "It's time …",
+     "حَانَ الوَقْتُ",
+     "clock",
+     "It's time to go to bed.",
+     "It's time + to + verb",
+     "It's time for lunch."
+    ]
+   ],
+   "acts": [
+    {
+     "type": "words",
+     "title": "Choose the correct form",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "I'd rather ... tea than coffee.",
+       [
+        "drink",
+        "to drink"
+       ]
+      ],
+      [
+       "You'd better ... your teeth.",
+       [
+        "brush",
+        "to brush"
+       ]
+      ],
+      [
+       "We'd better ... noise. The baby is sleeping.",
+       [
+        "not make",
+        "don't make"
+       ]
+      ],
+      [
+       "It's time ... home.",
+       [
+        "to go",
+        "going"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Choose the best reply",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "“Shall we eat out?”",
+       [
+        "I'd rather eat at home.",
+        "I'd better eating at home."
+       ]
+      ],
+      [
+       "“I have a test tomorrow.”",
+       [
+        "You'd better study tonight.",
+        "You'd rather studying tonight."
+       ]
+      ],
+      [
+       "“It's 11 p.m.!”",
+       [
+        "It's time to sleep.",
+        "It's time sleeping."
+       ]
+      ],
+      [
+       "“The road is icy.”",
+       [
+        "We'd better drive slowly.",
+        "We'd better to drive slowly."
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Reading Time",
+   "en": "وَقْتُ القِرَاءَةِ",
+   "icon": "v_read",
+   "arts": [
+    "v_read",
+    "book"
+   ],
+   "intro": "Read the texts, then answer the questions.",
+   "acts": [
+    {
+     "type": "raw",
+     "title": "My Grandfather's Farm",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>My Grandfather's Farm 🌴</h3><p>It was my grandfather who taught me to love the desert.<br>Never have I seen a sky as full of stars as the one above his farm.<br>Having lived there for fifty years, he knows every hill and every tree.<br>If he hadn't planted those palm trees long ago, the farm wouldn't be so green today.</p></div>",
+     "arts": [
+      "palm",
+      "stars",
+      "grandpa"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "Who taught the writer to love the desert?",
+       [
+        "his grandfather",
+        "his teacher"
+       ]
+      ],
+      [
+       "How long has the grandfather lived on the farm?",
+       [
+        "fifty years",
+        "five years"
+       ]
+      ],
+      [
+       "Why is the farm green today?",
+       [
+        "He planted palm trees long ago.",
+        "It rains every day."
+       ]
+      ],
+      [
+       "“Never have I seen …” is an example of …",
+       [
+        "inversion",
+        "a cleft sentence"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "raw",
+     "title": "Huda's Dream",
+     "html": "<div class=\"card story\" style=\"direction:ltr;text-align:left;font-family:Fredoka\"><h3>Huda's Dream 🩺</h3><p>By the end of this year, Huda will have finished school.<br>Rarely does she miss a lesson, and she would rather read than watch TV.<br>Encouraged by her teachers, she has decided to study medicine.<br>“You'd better start preparing now,” her mother told her with a smile.</p></div>",
+     "arts": [
+      "girlc",
+      "doctor",
+      "bigbook"
+     ]
+    },
+    {
+     "type": "words",
+     "title": "Answer",
+     "hint": "Circle the correct answer",
+     "rows": [
+      [
+       "What will Huda have done by the end of the year?",
+       [
+        "finished school",
+        "started medicine"
+       ]
+      ],
+      [
+       "What would Huda rather do?",
+       [
+        "read",
+        "watch TV"
+       ]
+      ],
+      [
+       "What has she decided to study?",
+       [
+        "medicine",
+        "engineering"
+       ]
+      ],
+      [
+       "“Encouraged by her teachers” is a …",
+       [
+        "participle clause",
+        "mixed conditional"
+       ]
+      ]
+     ]
+    },
+    {
+     "type": "tf",
+     "title": "True or False?",
+     "rows": [
+      "Huda often misses lessons.",
+      "The grandfather knows every hill and every tree.",
+      "Huda's mother gave her advice.",
+      "The farm is not green today.",
+      "The writer's teacher taught him to love the desert."
+     ]
+    }
+   ]
+  }
+ ],
+ "tocTitle": "Contents",
+ "traceLabel": "✎ I write",
+ "ovTitle": "",
+ "ltr": true
+}
