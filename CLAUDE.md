@@ -141,6 +141,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `ordinals-book/`: الأول والثاني (ordinal numbers first–tenth, grade 1, layout k9), 24 pages
 - `desert-book/`: صحرائي الجميلة (the desert, grade 1, layout k10), 24 pages
 - `stories-book/`: حكاياتي القصيرة (7 short stories, grade 1 reading-only, layout k11), 24 pages
+- `questions-book/`: أسأل وأجيب (question words with answers, grade 1 reading-only, layout k12), 24 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
