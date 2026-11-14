@@ -163,6 +163,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `riddles-book/`: ألغاز من أنا (Riddles: Who Am I?, reading-only, layout k30), 50 pages
 - `didyouknow-book/`: هل تعلم (Did You Know?, reading-only, layout k31), 50 pages
 - `experiments-book/`: تجارب علمية مدهشة (Amazing Science Experiments, reading-only, layout k32), 50 pages
+- `picture-dictionary-book/`: قاموسي المصور (My Picture Dictionary, reading-only, layout k33), 50 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
