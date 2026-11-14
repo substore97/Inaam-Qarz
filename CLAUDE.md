@@ -149,6 +149,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `hijaiyya-book/`: الحروف الهجائية (colourful Arabic alphabet, reading-only, layout k16), 36 pages
 - `ginti-book/`: أعدادي من ١ إلى ١٠٠ (colourful numbers 1–100, reading-only, layout k17), 36 pages
 - `animals-encyclopedia-book/`: موسوعتي للحيوانات (My Animal Encyclopedia, reading-only, layout k18), 50 pages
+- `sea-world-book/`: عالم البحار (The World of the Seas, reading-only, layout k19), 50 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
