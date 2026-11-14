@@ -1,0 +1,21 @@
+// Art for "رياضياتي ١٢": tangent line, area under a curve, vectors, bell curve, limit approach.
+const lib = require('../../science11-book/src/science11-art');
+const { A } = lib;
+const box = c => c.raw('<rect x="14" y="14" width="172" height="172" rx="10" fill="#ffffff"/><path d="M40 20 V180 M20 160 H180" stroke="#9aa3b5" stroke-width="3"/>');
+const curve = (f, x0, x1) => { let d = ''; for (let x = x0; x <= x1 + 1e-9; x += .05) { const X = 40 + x * 30, Y = 160 - f(x) * 30; if (Y < 18 || Y > 182) continue; d += `${d ? 'L' : 'M'}${X.toFixed(1)} ${Y.toFixed(1)} `; } return d; };
+A.tangent = c => { c.shadow(100, 194, 80, 5); box(c); const f = x => x * x / 4;
+  c.raw(`<path d="${curve(f, 0, 4.6)}" stroke="#2f7de8" stroke-width="6" fill="none" stroke-linecap="round"/>`);
+  c.raw('<path d="M70 160 L175 55" stroke="#e8392b" stroke-width="5" stroke-linecap="round"/>'); c.ball(130, 100, 8, '#ffb020'); };
+A.integral = c => { c.shadow(100, 194, 80, 5); box(c); const f = x => 1 + Math.sin(x * 1.1) * .8 + x * .35;
+  let a = 'M40 160 ', b = ''; for (let x = 0; x <= 4.01; x += .05) a += `L${(40 + x * 30).toFixed(1)} ${(160 - f(x) * 30).toFixed(1)} `; a += 'L160 160 Z';
+  c.raw(`<path d="${a}" fill="#9be7a8" opacity=".85"/><path d="${curve(f, 0, 4.6)}" stroke="#1f9d4a" stroke-width="6" fill="none" stroke-linecap="round"/>`); };
+A.vector = c => { c.shadow(100, 194, 80, 5); c.raw('<rect x="14" y="14" width="172" height="172" rx="10" fill="#ffffff"/>');
+  for (let i = 1; i < 6; i++) c.raw(`<path d="M${14 + i * 28.7} 14 V186 M14 ${14 + i * 28.7} H186" stroke="#e3e8f2" stroke-width="2"/>`);
+  const arr = (x1, y1, x2, y2, col) => { const a = Math.atan2(y2 - y1, x2 - x1), h = 16; c.raw(`<path d="M${x1} ${y1} L${x2} ${y2}" stroke="${col}" stroke-width="7" stroke-linecap="round"/><path d="M${x2} ${y2} L${(x2 - h * Math.cos(a - .45)).toFixed(1)} ${(y2 - h * Math.sin(a - .45)).toFixed(1)} L${(x2 - h * Math.cos(a + .45)).toFixed(1)} ${(y2 - h * Math.sin(a + .45)).toFixed(1)} Z" fill="${col}" stroke="${col}" stroke-width="3" stroke-linejoin="round"/>`); };
+  arr(40, 160, 120, 110, '#e8392b'); arr(120, 110, 150, 40, '#2f55c4'); arr(40, 160, 148, 46, '#36c45d'); };
+A.bell = c => { c.shadow(100, 194, 80, 5); c.raw('<rect x="14" y="14" width="172" height="172" rx="10" fill="#ffffff"/><path d="M22 160 H178" stroke="#9aa3b5" stroke-width="3"/>');
+  let d = ''; for (let x = -3; x <= 3.001; x += .1) d += `${d ? 'L' : 'M'}${(100 + x * 26).toFixed(1)} ${(160 - Math.exp(-x * x / 2) * 115).toFixed(1)} `;
+  c.raw(`<path d="${d} L178 160 L22 160 Z" fill="#ffe08a"/><path d="${d}" stroke="#ff8a1f" stroke-width="6" fill="none"/><path d="M100 45 V160" stroke="#e8392b" stroke-width="3" stroke-dasharray="6 6"/>`); };
+A.limit = c => { c.shadow(100, 194, 80, 5); box(c); c.raw(`<path d="${curve(x => .5 + x * .7, 0, 4.6)}" stroke="#8e44ad" stroke-width="6" fill="none" stroke-linecap="round"/>`);
+  c.raw('<circle cx="100" cy="122" r="9" fill="#fff" stroke="#8e44ad" stroke-width="5"/><path d="M100 160 V136" stroke="#e8392b" stroke-width="3" stroke-dasharray="5 5"/>'); };
+module.exports = lib;
