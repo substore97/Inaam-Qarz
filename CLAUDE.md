@@ -138,6 +138,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `shopping-book/`: أتسوق وأعد النقود (shopping & counting money, grade 1, layout k7), 24 pages
 - `connect-book/`: أتواصل مع الناس (communication & its manners, grade 1, layout k8), 24 pages
 - `ordinals-book/`: الأول والثاني (ordinal numbers first–tenth, grade 1, layout k9), 24 pages
+- `desert-book/`: صحرائي الجميلة (the desert, grade 1, layout k10), 24 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
