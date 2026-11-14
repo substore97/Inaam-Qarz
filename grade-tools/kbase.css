@@ -1,0 +1,8 @@
+/* ===== grade-1 topic books: shared base (no bubbles, plain backgrounds for small files) ===== */
+.bub{display:none !important}
+.t3d{font-family:Baloo !important}
+.ki{padding:0 !important;text-align:center;position:relative;overflow:hidden}
+.ki .trace{position:absolute;left:52px;right:52px;width:auto;bottom:96px;margin:0}
+.ki .pno,.kact .pno{bottom:22px}
+.kact .hint{font-size:26px;margin:10px 0 6px}
+.cover .cs6{display:none !important}

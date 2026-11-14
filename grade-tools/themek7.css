@@ -1,0 +1,28 @@
+/* ===== grade-1 topic books: shared base (no bubbles, plain backgrounds for small files) ===== */
+.bub{display:none !important}
+.t3d{font-family:Baloo !important}
+.ki{padding:0 !important;text-align:center;position:relative;overflow:hidden}
+.ki .trace{position:absolute;left:52px;right:52px;width:auto;bottom:96px;margin:0}
+.ki .pno,.kact .pno{bottom:22px}
+.cover>*:not(.ca):not(.gbadge){z-index:2}.cover .ca{z-index:3}
+.kact .hint{font-size:26px;margin:10px 0 6px}
+.cover .cs6{display:none !important}
+.k7i{background:#ffffff !important}
+.k7shop{position:relative;margin:0 40px;height:560px;background:#fff4e0;border-radius:0 0 30px 30px}
+.k7awn{height:86px;background:repeating-linear-gradient(90deg,#e8463a 0 72px,#ffffff 72px 144px);border-radius:0 0 34px 34px;border-bottom:6px solid #c0302a}
+.k7item{position:absolute;left:50%;transform:translateX(-50%);top:110px}.k7item svg{width:330px;height:330px}
+.k7shelf{position:absolute;left:24px;right:24px;top:455px;height:26px;background:#a8743a;border-radius:6px;box-shadow:0 8px 0 #7a5226}
+.k7tag{position:absolute;top:140px;left:36px;transform:rotate(-10deg);background:#ffd23f;border-radius:12px;padding:6px 18px;box-shadow:0 5px 0 #c99a00}
+.k7tag small{display:block;font-size:20px;font-weight:800;color:#6a4a00}.k7tag b{font-size:32px;font-weight:800;color:#3a2a00;line-height:1.5}
+.k7name{margin-top:10px}.k7name .t3d{font-size:72px}.k7name small{display:block;font-family:Fredoka;font-size:23px;color:#e8463a;font-weight:600}
+.k7coins{display:flex;align-items:center;justify-content:center;gap:4px;margin-top:6px}.k7coins small{font-size:24px;font-weight:800;margin-inline-end:10px}.k7coins svg{width:68px;height:68px}
+.k7sent{margin:12px 60px 0;font-size:31px;font-weight:800;line-height:1.75;border:3px dashed #e8463a;border-radius:16px;padding:10px 16px}
+.k7sent{font-size:35px !important}
+.k7i .trace{box-shadow:0 6px 0 #ffb3ad}
+.kact{background:#ffffff !important}
+.k7ah{position:relative;margin:30px auto 14px;width:600px}
+.k7ah i{position:absolute;top:-30px;left:50%;width:120px;height:60px;margin-left:-60px;border:10px solid #c0302a;border-bottom:none;border-radius:60px 60px 0 0}
+.k7ah h2{font-family:Baloo;font-size:40px;font-weight:800;color:#fff;background:#e8463a;border-radius:16px 16px 30px 30px;padding:10px 20px;line-height:1.5;text-shadow:0 0 3px #5a0e0a,0 0 3px #5a0e0a}
+.cover{background:#fff4e0 !important}
+.cover::before{content:'';position:absolute;left:0;right:0;top:0;height:150px;background:repeating-linear-gradient(90deg,#e8463a 0 80px,#ffffff 80px 160px);border-radius:0 0 50px 50px}
+.cover h1{margin-top:300px !important}

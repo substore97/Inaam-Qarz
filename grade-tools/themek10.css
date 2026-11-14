@@ -1,0 +1,26 @@
+/* ===== grade-1 topic books: shared base (no bubbles, plain backgrounds for small files) ===== */
+.bub{display:none !important}
+.t3d{font-family:Baloo !important}
+.ki{padding:0 !important;text-align:center;position:relative;overflow:hidden}
+.ki .trace{position:absolute;left:52px;right:52px;width:auto;bottom:96px;margin:0}
+.ki .pno,.kact .pno{bottom:22px}
+.cover>*:not(.ca):not(.gbadge){z-index:2}.cover .ca{z-index:3}
+.kact .hint{font-size:26px;margin:10px 0 6px}
+.cover .cs6{display:none !important}
+.k10i{background:#fdf1d8 !important}
+.k10sun{position:absolute;top:-90px;left:-90px;width:270px;height:270px;border-radius:50%;background:#ffc93c}
+.k10sign{position:relative;z-index:3;margin:56px auto 0;display:inline-block;background:#9a6a3a;border-radius:10px;padding:6px 40px 10px;box-shadow:0 6px 0 #6a4524}
+.k10sign .t3d{font-size:66px}.k10sign small{display:block;font-family:Fredoka;font-size:23px;color:#fff3dc;font-weight:600;text-shadow:0 0 3px #3a2410}
+.k10pic{position:relative;z-index:2;margin-top:30px;display:flex;justify-content:center}.k10pic svg{width:360px;height:360px}
+.k10dune{position:absolute;left:0;bottom:0;width:794px;height:560px;z-index:0}
+.k10card{position:relative;z-index:2;margin:0 60px;background:#fffaf0;border-radius:20px;padding:10px 20px;font-size:31px;font-weight:800;line-height:1.75;box-shadow:0 6px 0 #c9945a}
+.k10card div{display:flex;gap:12px;margin-top:6px}.k10card span{flex:1;font-size:22px;background:#f7e2bb;border-radius:12px;padding:4px 8px;line-height:1.6}
+.k10i .trace{z-index:2;box-shadow:0 6px 0 #c9945a}
+.kact{background:#fdf1d8 !important}
+.k10ah{position:relative;margin:0 auto 70px;width:560px}
+.k10ah h2{position:relative;z-index:1;font-family:Baloo;font-size:40px;font-weight:800;color:#fff;background:#9a6a3a;border-radius:10px;padding:8px 20px;line-height:1.5;box-shadow:0 6px 0 #6a4524;text-shadow:0 0 3px #3a2410,0 0 3px #3a2410}
+.k10ah i{position:absolute;left:50%;bottom:-62px;width:20px;height:62px;margin-left:-10px;background:#6a4524}
+.cover{background:#fdf1d8 !important}
+.cover::before{content:'';position:absolute;top:-120px;left:-120px;width:380px;height:380px;border-radius:50%;background:#ffc93c}
+.cover::after{content:'';position:absolute;left:0;right:0;bottom:0;height:360px;background:#e9bf78;border-radius:60% 40% 0 0 / 30% 25% 0 0}
+.cover h1{margin-top:300px !important}
