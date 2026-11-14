@@ -155,6 +155,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `forest-tales-book/`: حكايات الغابة (Forest Tales, reading-only, layout k22), 50 pages
 - `bedtime-book/`: حكايات قبل النوم (Bedtime Stories, reading-only, layout k23), 50 pages
 - `robo-book/`: مغامرات روبو (Robo's Adventures, reading-only, layout k24), 50 pages
+- `happy-farm-book/`: المزرعة السعيدة (The Happy Farm, reading-only, layout k25), 50 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
