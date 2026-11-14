@@ -1,0 +1,13 @@
+.k35i{background:#dff1ff !important}
+.k35sign{position:relative;z-index:2;margin:40px 60px 0;background:#1f7a3f;border:6px solid #fff;outline:4px solid #1f7a3f;border-radius:18px;padding:8px 16px 12px}
+.k35sign h2{font-family:Baloo;font-size:54px;font-weight:800;color:#fff;line-height:1.4;text-shadow:0 0 4px #04300f,0 0 4px #04300f}
+.k35sign em{font-style:normal;font-family:Fredoka;font-size:24px;color:#d8ffe4;font-weight:600}
+.k35post{display:block;margin:0 auto;width:22px;height:40px;background:#9aa3b5}
+.k35pic{--ps:370px;height:390px;position:relative;z-index:2}
+.k35road{position:relative;height:90px;background:#4a5262;margin-top:-50px}
+.k35road i{position:absolute;left:0;right:0;top:40px;height:10px;background:repeating-linear-gradient(90deg,#fff 0 60px,transparent 60px 110px)}
+.k35x{margin:24px 56px 0;font-size:38px;font-weight:800;line-height:1.75;color:#1a2a3a}
+.k35f{display:flex;gap:12px;margin:14px 50px 0}.k35f span{flex:1;background:#ffd23f;border-radius:10px;padding:12px 14px;font-size:26px;font-weight:800;line-height:1.55;color:#3a2a00;border:3px solid #3a2a00}
+.kact{background:#dff1ff !important}.k35ah h2{display:inline-block;background:#1f7a3f;color:#fff;border:5px solid #fff;outline:3px solid #1f7a3f;border-radius:12px;padding:0 30px;text-shadow:0 0 3px #000}
+.cover{background:#9fd8ff !important}.cover::before{content:'';position:absolute;left:0;right:0;bottom:0;height:260px;background:#4a5262}.cover::after{content:'';position:absolute;left:0;right:0;bottom:120px;height:14px;background:repeating-linear-gradient(90deg,#fff 0 70px,transparent 70px 130px)}
+.cover h1{margin-top:320px !important}

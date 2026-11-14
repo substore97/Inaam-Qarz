@@ -55,7 +55,7 @@ pages.push(`
 <section class="page plain" style="--h:${C.h}">
   ${bubbles(4, C.h)}
   ${title(C.ovTitle, C.s1)}
-  ${(() => { const OV = ITEMS.filter((i, k, a) => a.findIndex(x => x[0] === i[0]) === k); return `<div class="ovg${OV.length > 12 ? ' ov16' : ''}">${OV.map(i => `<div class="ovc">${G(String(i[2]).split(',')[0])}<b>${i[0]}</b></div>`).join('')}</div>`; })()}
+  ${(() => { const OV = ITEMS.filter((i, k, a) => a.findIndex(x => x[0] === i[0]) === k); return `<div class="ovg${OV.length > 20 ? ' ov40' : OV.length > 12 ? ' ov16' : ''}">${OV.map(i => `<div class="ovc">${G(String(i[2]).split(',')[0])}<b>${i[0]}</b></div>`).join('')}</div>`; })()}
   ${pno(P++)}
 </section>`);
 }
@@ -314,6 +314,45 @@ Object.assign(KI, {
   <div class="k17word">${word}</div>${count}</div>`; },
 });
 Object.assign(KH, { k17: (a, j) => `<div class="k17ah"><span>١</span><span>٢</span><span>٣</span><h2>${a.title}</h2></div>` });
+// ===== 50-page reading books: layouts k18..k37 (item = [title, en, arts, text, f1, f2]) =====
+const AS = a => String(a).split(',').map(x => G(x.trim())).join('');
+const F1 = f => `<b>${C.f1L}</b> ${f}`, F2 = f => `<b>${C.f2L}</b> ${f}`;
+const NA = a => String(a).split(',').length;
+Object.assign(KI, {
+  k18: ([t, en, a, x, f1, f2], i) => `<div class="k18card"><div class="k18top"><span>${AR(i + 1)}</span><h2>${t}</h2><em>${en}</em></div><div class="k18pic n${NA(a)}">${AS(a)}</div><p class="k18x">${x}</p><div class="k18stats"><div>${F1(f1)}</div><div>${F2(f2)}</div></div></div>`,
+  k19: ([t, en, a, x, f1, f2], i) => `<div class="k19port"><div class="k19glass n${NA(a)}">${AS(a)}</div>${[0,1,2,3,4,5,6,7].map(k => `<i class="r${k}"></i>`).join('')}</div><h2 class="k19t">${t}</h2><em class="k19en">${en}</em><p class="k19x">${x}</p><div class="k19f"><span>${F1(f1)}</span><span>${F2(f2)}</span></div><svg class="k19wave" viewBox="0 0 794 160" preserveAspectRatio="none"><path d="M0 60 Q100 20 200 60 T400 60 T600 60 T794 60 V160 H0Z" fill="#1e88c8"/><path d="M0 100 Q100 60 200 100 T400 100 T600 100 T794 100 V160 H0Z" fill="#136aa3"/></svg>`,
+  k20: ([t, en, a, x, f1, f2], i) => `<div class="k20sky"><i class="k20o o1"></i><i class="k20o o2"></i><div class="k20pl n${NA(a)}">${AS(a)}</div></div><div class="k20log"><div class="k20hd"><span>🚀 ${AR(i + 1)}</span><h2>${t}</h2></div><em>${en}</em><p>${x}</p><div class="k20f"><span>${F1(f1)}</span><span>${F2(f2)}</span></div></div>`,
+  k21: ([t, en, a, x, f1, f2], i) => `<div class="k21badge"><div class="k21in n${NA(a)}">${AS(a)}</div><svg class="k21mt" viewBox="0 0 400 120"><path d="M0 120 L90 40 L150 90 L230 10 L320 80 L400 30 V120 Z" fill="hsl(var(--h),45%,40%)"/></svg></div><div class="k21rib"><h2>${t}</h2></div><em class="k21en">${en}</em><p class="k21x">${x}</p><div class="k21f"><div>${F1(f1)}</div><div>${F2(f2)}</div></div>`,
+  k22: ([t, en, a, x, f1, f2], i) => `<div class="k22canopy"><i></i><i></i><i></i><i></i><i></i></div><div class="k22frame"><div class="k22pic n${NA(a)}">${AS(a)}</div></div><div class="k22sign"><h2>${t}</h2><small>${f1}</small></div><p class="k22x">${x}</p><div class="k22leaf">🍃 ${F2(f2)}</div>`,
+  k23: ([t, en, a, x, f1, f2], i) => `<i class="k23moon"></i><i class="k23s s1"></i><i class="k23s s2"></i><i class="k23s s3"></i><i class="k23s s4"></i><div class="k23pic n${NA(a)}">${AS(a)}</div><div class="k23cloud"><h2>${t}</h2><p>${x}</p></div><div class="k23f"><span>🌙 ${f1}</span><span>⭐ ${f2}</span></div>`,
+  k24: ([t, en, a, x, f1, f2], i) => `<div class="k24bar"><i></i><i></i><i></i><b>ROBO · ${i + 1}</b></div><div class="k24scr n${NA(a)}">${AS(a)}</div><div class="k24panel"><h2>${t}</h2><p>${x}</p></div><div class="k24chips"><span>⚙️ ${f1}</span><span>💡 ${f2}</span></div>`,
+  k25: ([t, en, a, x, f1, f2], i) => `<div class="k25quilt">${Array.from({ length: 12 }, (_, k) => `<i style="--k:${k}"></i>`).join('')}</div><div class="k25patch"><div class="k25pic n${NA(a)}">${AS(a)}</div><h2>${t}</h2><p>${x}</p><div class="k25f"><span>🌻 ${f1}</span><span>🐓 ${f2}</span></div></div>`,
+  k26: ([t, en, a, x, f1, f2], i) => `<div class="k26ms"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><div class="k26arch n${NA(a)}">${AS(a)}</div><h2>${t}</h2><div class="k26orn">❖ ❖ ❖</div><p>${x}</p><div class="k26f"><div>📜 ${f1}</div><div>💡 ${f2}</div></div></div>`,
+  k27: ([t, en, a, x, f1, f2], i) => `<div class="k27heart"><div class="n${NA(a)}">${AS(a)}</div></div><h2 class="k27t">${t}</h2><p class="k27x">${x}</p><div class="k27ev">📖 ${f1}</div><div class="k27med"><b>⭐</b>${f2}</div>`,
+  k28: ([t, en, a, x, f1, f2], i) => `<div class="k28star"><div><h2>${t}</h2></div></div><div class="k28pic n${NA(a)}">${AS(a)}</div><p class="k28x">${x}</p><div class="k28f"><div>📖 ${f1}</div><div>🤲 ${f2}</div></div>`,
+  k29: ([t, en, a, x, f1, f2], i) => `<div class="k29book"><i class="k29tape t1"></i><i class="k29tape t2"></i><div class="k29date"><b>${AR(i + 1)}</b><small>يَوْمٌ</small></div><h2>${t}</h2><div class="k29pic n${NA(a)}">${AS(a)}</div><p>${x}</p><div class="k29f"><span>💗 ${f1}</span><span>✨ ${f2}</span></div><i class="k29rib"></i></div>`,
+  k30: ([t, en, a, x, f1, f2], i) => `<div class="k30env"><div class="k30q"><span>؟</span><h2>${t}</h2><p>${x}</p></div><div class="k30flap"></div><div class="k30ans"><div class="k30pic n${NA(a)}">${AS(a)}</div><b>${f1}</b></div></div><div class="k30fact">🎉 ${f2}</div>`,
+  k31: ([t, en, a, x, f1, f2], i) => `<div class="k31bulb"><div class="k31glass"><div class="n${NA(a)}">${AS(a)}</div></div><i class="k31base"></i></div><h2 class="k31t">${t}</h2><p class="k31x">${x}</p><div class="k31st"><span class="s1">😮 ${f1}</span><span class="s2">🌟 ${f2}</span></div>`,
+  k32: ([t, en, a, x, f1, f2], i) => `<div class="k32head"><span>🧪 ${AR(i + 1)}</span><h2>${t}</h2></div><div class="k32flask"><div class="k32liq n${NA(a)}">${AS(a)}</div></div><div class="k32steps"><div><i>١</i><p>${x}</p></div><div><i>٢</i><p><b>${C.f1L}</b> ${f1}</p></div><div><i>٣</i><p><b>${C.f2L}</b> ${f2}</p></div></div>`,
+  k33: ([t, en, a, x, f1, f2], i) => `<div class="k33tabs">${['أ','ب','ت','ج','د','ر','س','ع','ف','ق','ك','م','ن','و'].map(l => `<i class="${t.replace(/[ً-ْال]/g, '').startsWith(l) ? 'on' : ''}">${l}</i>`).join('')}</div><div class="k33page"><h2>${t}</h2><em>${en}</em><div class="k33pic n${NA(a)}">${AS(a)}</div><p>${x}</p><div class="k33f"><div>${F1(f1)}</div><div>${F2(f2)}</div></div></div>`,
+  k34: ([t, en, a, x, f1, f2], i) => `<div class="k34crate"><div class="k34label">${t}<small>${en}</small></div><div class="k34pic n${NA(a)}">${AS(a)}</div><i class="k34slat"></i></div><p class="k34x">${x}</p><div class="k34tags"><span>🌱 ${f1}</span><span>💪 ${f2}</span></div>`,
+  k35: ([t, en, a, x, f1, f2], i) => `<div class="k35sign"><h2>${t}</h2><em>${en}</em></div><i class="k35post"></i><div class="k35pic n${NA(a)}">${AS(a)}</div><div class="k35road"><i></i></div><p class="k35x">${x}</p><div class="k35f"><span>🛣️ ${f1}</span><span>⚡ ${f2}</span></div>`,
+  k36: ([t, en, a, x, f1, f2], i) => `<div class="k36app"><div class="k36hd"><b>${t}</b><span>${en}</span></div><div class="k36big n${NA(a)}">${AS(a)}</div><div class="k36row"><div><small>${C.f1L}</small>${f1}</div><div><small>${C.f2L}</small>${f2}</div></div><p>${x}</p></div>`,
+  k37: ([t, en, a, x, f1, f2], i) => `<div class="k37lan"></div><div class="k37badge"><i class="k37hole"></i><div class="k37hd">${en}</div><div class="k37pic n${NA(a)}">${AS(a)}</div><h2>${t}</h2><p>${x}</p><div class="k37f"><div>🧰 ${f1}</div><div>🌟 ${f2}</div></div></div>`,
+});
+Object.assign(KH, {
+  k18: (a) => `<div class="kbh k18ah"><h2>${a.title}</h2></div>`, k19: (a) => `<div class="kbh k19ah"><i></i><h2>${a.title}</h2></div>`,
+  k20: (a) => `<div class="kbh k20ah"><h2>🚀 ${a.title}</h2></div>`, k21: (a) => `<div class="kbh k21ah"><h2>${a.title}</h2></div>`,
+  k22: (a) => `<div class="kbh k22ah"><h2>🌳 ${a.title}</h2></div>`, k23: (a) => `<div class="kbh k23ah"><h2>🌙 ${a.title}</h2></div>`,
+  k24: (a) => `<div class="kbh k24ah"><h2>${a.title}</h2></div>`, k25: (a) => `<div class="kbh k25ah"><h2>${a.title}</h2></div>`,
+  k26: (a) => `<div class="kbh k26ah"><h2>❖ ${a.title} ❖</h2></div>`, k27: (a) => `<div class="kbh k27ah"><h2>💗 ${a.title}</h2></div>`,
+  k28: (a) => `<div class="kbh k28ah"><h2>${a.title}</h2></div>`, k29: (a) => `<div class="kbh k29ah"><h2>${a.title}</h2></div>`,
+  k30: (a) => `<div class="kbh k30ah"><h2>✉️ ${a.title}</h2></div>`, k31: (a) => `<div class="kbh k31ah"><h2>💡 ${a.title}</h2></div>`,
+  k32: (a) => `<div class="kbh k32ah"><h2>🧪 ${a.title}</h2></div>`, k33: (a) => `<div class="kbh k33ah"><h2>${a.title}</h2></div>`,
+  k34: (a) => `<div class="kbh k34ah"><h2>${a.title}</h2></div>`, k35: (a) => `<div class="kbh k35ah"><h2>${a.title}</h2></div>`,
+  k36: (a) => `<div class="kbh k36ah"><h2>☀️ ${a.title}</h2></div>`, k37: (a) => `<div class="kbh k37ah"><h2>${a.title}</h2></div>`,
+});
+
 const itemPagesK = (LIST) => LIST.forEach((it, i) => { const h = hue(i); pages.push(`
   <section class="page plain ki ${C.layout}i" style="--h:${h}">
   ${KI[C.layout](it, i, h)}

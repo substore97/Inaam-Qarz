@@ -1,0 +1,12 @@
+.k27i{background:#ffeef3 !important}
+.k27heart{position:relative;margin:60px auto 0;transform:scale(1.12);transform-origin:top center;margin-bottom:50px;width:440px;height:400px}
+.k27heart::before{content:'';position:absolute;inset:0;background:#ff7aa2;clip-path:path('M220 400 C 90 300 0 230 0 120 C 0 50 55 0 120 0 C 165 0 200 25 220 60 C 240 25 275 0 320 0 C 385 0 440 50 440 120 C 440 230 350 300 220 400 Z')}
+.k27heart>div{--ps:260px;position:absolute;inset:40px 50px 90px;z-index:1}
+.k27t{margin-top:18px;font-family:Baloo;font-size:60px;font-weight:800;color:#c2185b;line-height:1.4}
+.k27x{margin:10px 56px 0;font-size:38px;font-weight:800;line-height:1.75;color:#3a1a2a}
+.k27ev{margin:14px 56px 0;background:#fff;border-radius:18px;padding:12px 16px;font-size:26px;font-weight:800;line-height:1.6;color:#3a1a2a;border:3px solid #ffb3c9}
+.k27med{display:flex;align-items:center;gap:12px;margin:12px 56px 0;background:#c2185b;border-radius:40px;padding:8px 18px 8px 8px;font-size:26px;font-weight:800;line-height:1.55;color:#fff;text-shadow:0 0 3px #4a0520,0 0 3px #4a0520}
+.k27med b{flex:none;width:48px;height:48px;border-radius:50%;background:#ffd23f;font-size:26px;line-height:48px;text-align:center}
+.kact{background:#ffeef3 !important}.k27ah h2{color:#c2185b}
+.cover{background:#ffeef3 !important}.cover::before{content:'';position:absolute;left:150px;top:220px;width:500px;height:460px;background:#ffb3c9;clip-path:path('M250 460 C 100 345 0 265 0 140 C 0 60 62 0 136 0 C 188 0 228 28 250 70 C 272 28 312 0 364 0 C 438 0 500 60 500 140 C 500 265 400 345 250 460 Z')}
+.cover h1{margin-top:300px !important}

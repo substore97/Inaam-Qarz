@@ -1,0 +1,7 @@
+/* 50-page reading books: shared */
+.n1,.n2,.n3{display:flex;align-items:center;justify-content:center;gap:6px}
+.n1 svg{width:var(--ps,300px);height:var(--ps,300px)}.n2 svg{width:calc(var(--ps,300px)*.72);height:calc(var(--ps,300px)*.72)}.n3 svg{width:calc(var(--ps,300px)*.56);height:calc(var(--ps,300px)*.56)}
+.ovg.ov40{display:grid !important;grid-template-columns:repeat(5,1fr) !important;gap:8px !important;margin-top:10px}
+.ovg.ov40 .ovc{height:auto !important;width:auto !important;padding:4px 2px !important}.ovg.ov40 .ovc svg{width:66px !important;height:66px !important}.ovg.ov40 .ovc b{font-size:17px !important;line-height:1.5 !important;display:block}
+.kbh{margin-bottom:16px;text-align:center}.kbh h2{font-family:Baloo;font-size:44px;font-weight:800;line-height:1.5}
+.ki p{text-wrap:pretty}

@@ -1,0 +1,45 @@
+/* ===== grade-1 topic books: shared base (no bubbles, plain backgrounds for small files) ===== */
+.bub{display:none !important}
+.t3d{font-family:Baloo !important}
+.ki{padding:0 !important;text-align:center;position:relative;overflow:hidden}
+.ki .trace{position:absolute;left:52px;right:52px;width:auto;bottom:96px;margin:0}
+.ki .pno,.kact .pno{bottom:22px}
+.cover>*:not(.ca):not(.gbadge){z-index:2}.cover .ca{z-index:3}
+.kact .hint{font-size:26px;margin:10px 0 6px}
+.cover .cs6{display:none !important}
+/* reading-only books: hide every writing place */
+.nameline,.sig,.trace{display:none !important}
+.cert .cp{margin-top:30px}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.rv>div{background:#fff;border-radius:24px;padding:10px 6px;text-align:center;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.rv svg{width:120px;height:120px}.rv b{display:block;font-size:32px;font-weight:800;line-height:1.6;color:hsl(var(--h),55%,28%)}
+.fc{list-style:none;margin-top:24px;padding:0}
+.fc li{position:relative;background:#fff;border-radius:22px;padding:14px 22px;margin-bottom:16px;font-size:32px;font-weight:800;line-height:1.75;color:#2b2340;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.qa{margin-top:20px}.qa>div{background:#fff;border-radius:24px;padding:12px 22px;margin-bottom:18px;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.qa .qq{font-size:32px;font-weight:800;line-height:1.7;color:hsl(var(--h),60%,30%)}.qa .qq::before{content:'❓ '}
+.qa .aa{font-size:32px;font-weight:800;line-height:1.7;color:#2b2340;border-top:2px dashed hsl(var(--h),40%,80%);margin-top:6px;padding-top:6px}.qa .aa::before{content:'✅ '}
+.st{margin-top:26px;background:#fff;border-radius:26px;padding:22px 28px;box-shadow:0 6px 0 hsl(var(--h),45%,82%)}
+.st p{font-size:36px;font-weight:800;line-height:2;color:#2b2340}
+.kact .refc{margin-top:40px}
+/* 50-page reading books: shared */
+.n1,.n2,.n3{display:flex;align-items:center;justify-content:center;gap:6px}
+.n1 svg{width:var(--ps,300px);height:var(--ps,300px)}.n2 svg{width:calc(var(--ps,300px)*.72);height:calc(var(--ps,300px)*.72)}.n3 svg{width:calc(var(--ps,300px)*.56);height:calc(var(--ps,300px)*.56)}
+.ovg.ov40{display:grid !important;grid-template-columns:repeat(5,1fr) !important;gap:8px !important;margin-top:10px}
+.ovg.ov40 .ovc{height:auto !important;width:auto !important;padding:4px 2px !important}.ovg.ov40 .ovc svg{width:66px !important;height:66px !important}.ovg.ov40 .ovc b{font-size:17px !important;line-height:1.5 !important;display:block}
+.kbh{margin-bottom:16px;text-align:center}.kbh h2{font-family:Baloo;font-size:44px;font-weight:800;line-height:1.5}
+.ki p{text-wrap:pretty}
+.k20i{background:#0f1430 !important}
+.k20sky{position:relative;height:590px;display:flex;align-items:center;justify-content:center}
+.k20o{position:absolute;left:50%;top:50%;border-radius:50%;border:3px dashed #5a6cc8}.k20o.o1{width:440px;height:440px;margin:-220px}.k20o.o2{width:600px;height:300px;margin:-150px -300px;transform:rotate(-14deg);border-color:#7a5ac8}
+.k20pl{--ps:380px;position:relative;z-index:1}
+.k20log{margin:0 40px;background:#1c2350;border:3px solid #3a4590;border-radius:30px;padding:16px 26px}
+.k20hd{display:flex;align-items:center;gap:14px}.k20hd span{flex:none;background:#ffd23f;color:#3a2a00;border-radius:14px;padding:2px 14px;font-size:24px;font-weight:800}
+.k20hd h2{font-family:Baloo;font-size:54px;font-weight:800;color:#fff;line-height:1.4;text-shadow:0 0 4px #000}
+.k20log em{display:block;text-align:start;font-style:normal;font-family:Fredoka;font-size:22px;color:#9fb0ff;font-weight:600}
+.k20log p{text-align:start;font-size:37px;font-weight:800;line-height:1.8;color:#fff;text-shadow:0 0 3px #000;margin-top:6px}
+.k20f{display:flex;gap:12px;margin-top:12px}.k20f span{flex:1;background:#2b3470;border-radius:16px;padding:10px 14px;font-size:25px;font-weight:800;line-height:1.55;color:#fff;text-align:start;text-shadow:0 0 3px #000}.k20f b{color:#ffd23f}
+.kact{background:#151b3e !important}.kact .hint,.kact h2{color:#fff}
+.k20ah h2{color:#fff;text-shadow:0 0 4px #000}
+.kact .rv b,.kact .fc li,.kact .qa .qq,.kact .qa .aa,.kact .st p{color:#1b2350}
+.cover{background:#0f1430 !important}.cover::before{content:'';position:absolute;left:50%;top:50%;width:640px;height:640px;margin:-320px;border-radius:50%;border:4px dashed #5a6cc8}
+.cover h1{margin-top:320px !important}

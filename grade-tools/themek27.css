@@ -1,0 +1,42 @@
+/* ===== grade-1 topic books: shared base (no bubbles, plain backgrounds for small files) ===== */
+.bub{display:none !important}
+.t3d{font-family:Baloo !important}
+.ki{padding:0 !important;text-align:center;position:relative;overflow:hidden}
+.ki .trace{position:absolute;left:52px;right:52px;width:auto;bottom:96px;margin:0}
+.ki .pno,.kact .pno{bottom:22px}
+.cover>*:not(.ca):not(.gbadge){z-index:2}.cover .ca{z-index:3}
+.kact .hint{font-size:26px;margin:10px 0 6px}
+.cover .cs6{display:none !important}
+/* reading-only books: hide every writing place */
+.nameline,.sig,.trace{display:none !important}
+.cert .cp{margin-top:30px}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.rv>div{background:#fff;border-radius:24px;padding:10px 6px;text-align:center;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.rv svg{width:120px;height:120px}.rv b{display:block;font-size:32px;font-weight:800;line-height:1.6;color:hsl(var(--h),55%,28%)}
+.fc{list-style:none;margin-top:24px;padding:0}
+.fc li{position:relative;background:#fff;border-radius:22px;padding:14px 22px;margin-bottom:16px;font-size:32px;font-weight:800;line-height:1.75;color:#2b2340;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.qa{margin-top:20px}.qa>div{background:#fff;border-radius:24px;padding:12px 22px;margin-bottom:18px;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.qa .qq{font-size:32px;font-weight:800;line-height:1.7;color:hsl(var(--h),60%,30%)}.qa .qq::before{content:'❓ '}
+.qa .aa{font-size:32px;font-weight:800;line-height:1.7;color:#2b2340;border-top:2px dashed hsl(var(--h),40%,80%);margin-top:6px;padding-top:6px}.qa .aa::before{content:'✅ '}
+.st{margin-top:26px;background:#fff;border-radius:26px;padding:22px 28px;box-shadow:0 6px 0 hsl(var(--h),45%,82%)}
+.st p{font-size:36px;font-weight:800;line-height:2;color:#2b2340}
+.kact .refc{margin-top:40px}
+/* 50-page reading books: shared */
+.n1,.n2,.n3{display:flex;align-items:center;justify-content:center;gap:6px}
+.n1 svg{width:var(--ps,300px);height:var(--ps,300px)}.n2 svg{width:calc(var(--ps,300px)*.72);height:calc(var(--ps,300px)*.72)}.n3 svg{width:calc(var(--ps,300px)*.56);height:calc(var(--ps,300px)*.56)}
+.ovg.ov40{display:grid !important;grid-template-columns:repeat(5,1fr) !important;gap:8px !important;margin-top:10px}
+.ovg.ov40 .ovc{height:auto !important;width:auto !important;padding:4px 2px !important}.ovg.ov40 .ovc svg{width:66px !important;height:66px !important}.ovg.ov40 .ovc b{font-size:17px !important;line-height:1.5 !important;display:block}
+.kbh{margin-bottom:16px;text-align:center}.kbh h2{font-family:Baloo;font-size:44px;font-weight:800;line-height:1.5}
+.ki p{text-wrap:pretty}
+.k27i{background:#ffeef3 !important}
+.k27heart{position:relative;margin:60px auto 0;transform:scale(1.12);transform-origin:top center;margin-bottom:50px;width:440px;height:400px}
+.k27heart::before{content:'';position:absolute;inset:0;background:#ff7aa2;clip-path:path('M220 400 C 90 300 0 230 0 120 C 0 50 55 0 120 0 C 165 0 200 25 220 60 C 240 25 275 0 320 0 C 385 0 440 50 440 120 C 440 230 350 300 220 400 Z')}
+.k27heart>div{--ps:260px;position:absolute;inset:40px 50px 90px;z-index:1}
+.k27t{margin-top:18px;font-family:Baloo;font-size:60px;font-weight:800;color:#c2185b;line-height:1.4}
+.k27x{margin:10px 56px 0;font-size:38px;font-weight:800;line-height:1.75;color:#3a1a2a}
+.k27ev{margin:14px 56px 0;background:#fff;border-radius:18px;padding:12px 16px;font-size:26px;font-weight:800;line-height:1.6;color:#3a1a2a;border:3px solid #ffb3c9}
+.k27med{display:flex;align-items:center;gap:12px;margin:12px 56px 0;background:#c2185b;border-radius:40px;padding:8px 18px 8px 8px;font-size:26px;font-weight:800;line-height:1.55;color:#fff;text-shadow:0 0 3px #4a0520,0 0 3px #4a0520}
+.k27med b{flex:none;width:48px;height:48px;border-radius:50%;background:#ffd23f;font-size:26px;line-height:48px;text-align:center}
+.kact{background:#ffeef3 !important}.k27ah h2{color:#c2185b}
+.cover{background:#ffeef3 !important}.cover::before{content:'';position:absolute;left:150px;top:220px;width:500px;height:460px;background:#ffb3c9;clip-path:path('M250 460 C 100 345 0 265 0 140 C 0 60 62 0 136 0 C 188 0 228 28 250 70 C 272 28 312 0 364 0 C 438 0 500 60 500 140 C 500 265 400 345 250 460 Z')}
+.cover h1{margin-top:300px !important}

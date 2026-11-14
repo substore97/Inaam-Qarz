@@ -1,0 +1,12 @@
+.k24i{background:#1d2633 !important}
+.k24bar{display:flex;align-items:center;gap:10px;margin:36px 40px 0;background:#2c3a4d;border-radius:20px 20px 0 0;padding:12px 18px}
+.k24bar i{width:20px;height:20px;border-radius:50%;background:#ff5a5f}.k24bar i:nth-child(2){background:#ffc93c}.k24bar i:nth-child(3){background:#36c45d}
+.k24bar b{margin-inline-start:auto;font-family:Fredoka;font-size:24px;color:#7fe6ff;direction:ltr}
+.k24scr{--ps:370px;margin:0 40px;height:470px;background:#e8fbff;border:6px solid #2c3a4d;border-top:none;border-radius:0 0 20px 20px}
+.k24panel{margin:22px 40px 0;background:#2c3a4d;border-radius:22px;padding:16px 24px;border-inline-start:10px solid #7fe6ff}
+.k24panel h2{font-family:Baloo;font-size:50px;font-weight:800;color:#7fe6ff;line-height:1.4;text-align:start}
+.k24panel p{font-size:37px;font-weight:800;line-height:1.75;color:#fff;text-align:start;text-shadow:0 0 3px #000}
+.k24chips{display:flex;gap:12px;margin:16px 40px 0}.k24chips span{flex:1;background:#36c45d;border-radius:12px;padding:10px 14px;font-size:25px;font-weight:800;line-height:1.55;color:#fff;text-shadow:0 0 3px #0a3a10,0 0 3px #0a3a10}.k24chips span+span{background:#ff8a1f;text-shadow:0 0 3px #4a2000,0 0 3px #4a2000}
+.kact{background:#e8f3f7 !important}.k24ah h2{display:inline-block;background:#1d2633;color:#7fe6ff;border-radius:12px;padding:2px 30px}
+.cover{background:#1d2633 !important}.cover::before{content:'';position:absolute;inset:150px 80px 180px;border-radius:30px;background:#e8fbff;border:12px solid #7fe6ff}
+.cover h1{margin-top:320px !important}

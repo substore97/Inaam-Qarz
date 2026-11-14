@@ -1,0 +1,13 @@
+.k21i{background:#f3efe2 !important}
+.k21badge{position:relative;margin:44px auto 0;width:510px;height:510px;border-radius:50%;background:hsl(var(--h),55%,85%);border:16px solid hsl(var(--h),45%,40%);overflow:hidden;box-shadow:0 0 0 8px #f3efe2,0 0 0 14px hsl(var(--h),45%,40%)}
+.k21in{--ps:340px;position:relative;z-index:1;height:420px}
+.k21mt{position:absolute;left:0;bottom:0;width:100%;height:110px}
+.k21rib{position:relative;margin:-40px auto 0;width:560px;background:#c8432f;padding:4px 20px 8px;clip-path:polygon(0 0,100% 0,94% 50%,100% 100%,0 100%,6% 50%);z-index:2}
+.k21rib h2{font-family:Baloo;font-size:50px;font-weight:800;color:#fff;line-height:1.45;text-shadow:0 0 4px #4a0e05,0 0 4px #4a0e05}
+.k21en{display:block;font-style:normal;font-family:Fredoka;font-size:23px;color:#7a6a4a;font-weight:600;margin-top:6px}
+.k21x{margin:8px 56px 0;font-size:37px;font-weight:800;line-height:1.75;color:#3a2e1a}
+.k21f{display:flex;gap:12px;margin:14px 46px 0}.k21f div{flex:1;border:3px dashed hsl(var(--h),45%,45%);border-radius:18px;padding:10px 14px;font-size:25px;font-weight:800;line-height:1.55;color:#3a2e1a;background:#fffaf0}.k21f b{color:hsl(var(--h),50%,32%)}
+.kact{background:#f3efe2 !important}
+.k21ah h2{display:inline-block;background:#c8432f;color:#fff;padding:2px 40px;clip-path:polygon(0 0,100% 0,95% 50%,100% 100%,0 100%,5% 50%);text-shadow:0 0 3px #000}
+.cover{background:#f3efe2 !important}.cover::before{content:'';position:absolute;left:50%;top:150px;width:620px;height:620px;margin-left:-310px;border-radius:50%;background:#bfe0c8;border:20px solid #3f6a4a}
+.cover h1{margin-top:330px !important}
