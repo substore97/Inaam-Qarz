@@ -1,0 +1,40 @@
+/* ===== grade-1 topic books: shared base (no bubbles, plain backgrounds for small files) ===== */
+.bub{display:none !important}
+.t3d{font-family:Baloo !important}
+.ki{padding:0 !important;text-align:center;position:relative;overflow:hidden}
+.ki .trace{position:absolute;left:52px;right:52px;width:auto;bottom:96px;margin:0}
+.ki .pno,.kact .pno{bottom:22px}
+.cover>*:not(.ca):not(.gbadge){z-index:2}.cover .ca{z-index:3}
+.kact .hint{font-size:26px;margin:10px 0 6px}
+.cover .cs6{display:none !important}
+/* reading-only books: hide every writing place */
+.nameline,.sig,.trace{display:none !important}
+.cert .cp{margin-top:30px}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.rv>div{background:#fff;border-radius:24px;padding:10px 6px;text-align:center;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.rv svg{width:120px;height:120px}.rv b{display:block;font-size:32px;font-weight:800;line-height:1.6;color:hsl(var(--h),55%,28%)}
+.fc{list-style:none;margin-top:24px;padding:0}
+.fc li{position:relative;background:#fff;border-radius:22px;padding:14px 22px;margin-bottom:16px;font-size:32px;font-weight:800;line-height:1.75;color:#2b2340;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.qa{margin-top:20px}.qa>div{background:#fff;border-radius:24px;padding:12px 22px;margin-bottom:18px;box-shadow:0 5px 0 hsl(var(--h),45%,82%)}
+.qa .qq{font-size:32px;font-weight:800;line-height:1.7;color:hsl(var(--h),60%,30%)}.qa .qq::before{content:'❓ '}
+.qa .aa{font-size:32px;font-weight:800;line-height:1.7;color:#2b2340;border-top:2px dashed hsl(var(--h),40%,80%);margin-top:6px;padding-top:6px}.qa .aa::before{content:'✅ '}
+.st{margin-top:26px;background:#fff;border-radius:26px;padding:22px 28px;box-shadow:0 6px 0 hsl(var(--h),45%,82%)}
+.st p{font-size:36px;font-weight:800;line-height:2;color:#2b2340}
+.kact .refc{margin-top:40px}
+.k11i{background:#fff9ee !important}
+.k11scene{position:relative;margin:44px 40px 0;height:580px;border-radius:40px;background:hsl(var(--h),70%,88%);display:flex;align-items:flex-end;justify-content:center;gap:10px;padding-bottom:40px;overflow:hidden}
+.k11scene svg{position:relative;z-index:1;width:280px;height:280px}
+.k11ground{position:absolute;left:0;right:0;bottom:0;height:90px;background:hsl(calc(var(--h) + 100),45%,70%)}
+.k11page{margin:30px 50px 0;text-align:start}
+.k11t{display:flex;align-items:center;justify-content:space-between;border-bottom:4px solid hsl(var(--h),50%,75%);padding-bottom:6px}
+.k11t b{font-family:Baloo;font-size:46px;font-weight:800;color:hsl(var(--h),55%,30%);line-height:1.5}
+.k11t span{font-size:22px;font-weight:800;color:#fff;background:hsl(var(--h),55%,45%);border-radius:20px;padding:2px 16px;text-shadow:0 0 3px #000,0 0 3px #000}
+.k11page small{display:block;font-family:Fredoka;font-size:22px;color:#8a7a6a;font-weight:600;direction:ltr;text-align:right}
+.k11page p{margin-top:14px;font-size:44px;font-weight:800;line-height:2.05;color:#2b2340}
+.k11i::after{content:'';position:absolute;left:0;bottom:0;width:90px;height:90px;background:linear-gradient(45deg,#e9dcc4 50%,transparent 50%)}
+.kact{background:#fff9ee !important}
+.k11ah{display:flex;align-items:center;gap:16px;margin-bottom:10px}.k11ah i{flex:1;height:4px;background:hsl(var(--h),50%,70%);border-radius:2px}
+.k11ah h2{font-family:Baloo;font-size:44px;font-weight:800;color:hsl(var(--h),55%,30%);line-height:1.5}
+.cover{background:#fff9ee !important}
+.cover::before{content:'';position:absolute;left:70px;right:70px;top:210px;height:540px;border-radius:40px;background:#ffd8a8;box-shadow:16px 16px 0 #f2b880}
+.cover h1{margin-top:320px !important}

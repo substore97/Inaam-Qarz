@@ -1,0 +1,18 @@
+.k13i{background:#dfeef7 !important}
+.k13board{position:relative;margin:56px 46px 0;height:960px;background:#b9814a;border-radius:30px;padding:60px 26px 26px}
+.k13clip{position:absolute;top:-22px;left:50%;width:220px;height:70px;margin-left:-110px;background:#9aa3b5;border-radius:18px 18px 10px 10px;box-shadow:0 6px 0 #6a7385}
+.k13paper{height:100%;background:#fff;border-radius:10px;padding:24px 34px;position:relative}
+.k13tag{position:absolute;top:20px;left:24px;font-family:Fredoka;font-size:22px;font-weight:600;color:#fff;background:#e8463a;border-radius:8px;padding:2px 14px}
+.k13pic svg{width:300px;height:300px}
+.k13paper h2{font-family:Baloo;font-size:70px;font-weight:800;color:hsl(var(--h),55%,32%);line-height:1.4}
+.k13paper p{font-size:36px;font-weight:800;line-height:1.8;color:#2b2340;margin-top:4px}
+.k13paper ul{list-style:none;padding:0;margin-top:18px;text-align:start}
+.k13paper li{font-size:31px;font-weight:800;line-height:1.7;color:#2b2340;padding:8px 0;border-bottom:2px solid #e8eef5}
+.k13paper li::before{content:'✔ ';color:#1f9d4a}
+.kact{background:#dfeef7 !important}
+.k13ah{position:relative;background:#fff;border:8px solid #b9814a;border-radius:20px;padding:24px 20px 10px;margin:22px 0 10px}
+.k13ah i{position:absolute;top:-26px;left:50%;width:150px;height:40px;margin-left:-75px;background:#9aa3b5;border-radius:12px}
+.k13ah h2{font-family:Baloo;font-size:42px;font-weight:800;color:#1f5a8a;line-height:1.5}
+.cover{background:#dfeef7 !important}
+.cover::before{content:'';position:absolute;left:110px;right:110px;top:190px;height:620px;background:#fff;border:22px solid #b9814a;border-radius:30px}
+.cover h1{margin-top:320px !important}
