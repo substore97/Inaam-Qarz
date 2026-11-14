@@ -161,6 +161,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `asmaa-book/`: من أسماء الله الحسنى (Allah's Beautiful Names, reading-only, layout k28), 50 pages
 - `sara-diary-book/`: يوميات سارة (Sara's Diary, reading-only, layout k29), 50 pages
 - `riddles-book/`: ألغاز من أنا (Riddles: Who Am I?, reading-only, layout k30), 50 pages
+- `didyouknow-book/`: هل تعلم (Did You Know?, reading-only, layout k31), 50 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
