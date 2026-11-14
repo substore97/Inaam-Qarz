@@ -299,6 +299,13 @@ Object.assign(KH, {
 });
 
 
+Object.assign(KI, {
+  k16: ([L, name, a1, w1, a2, w2, nc], i) => { const h = Math.round(i * 360 / 28); const fm = nc ? [L, 'ـ' + L] : [L + 'ـ', 'ـ' + L + 'ـ', 'ـ' + L]; const hk = L === 'ا' ? ['أَ', 'إِ', 'أُ'] : [L + 'َ', L + 'ِ', L + 'ُ'];
+    return `<div class="k16w" style="--h:${h}"><div class="k16top"><span class="k16n">${AR(i + 1)}</span><div class="k16block"><b>${L}</b></div><div class="k16name">${name}</div></div>
+  <div class="k16rows"><div class="k16row"><small>الحَرَكَاتُ</small>${hk.map(x => `<i>${x}</i>`).join('')}</div><div class="k16row"><small>أَشْكَالُهُ</small>${fm.map(x => `<i>${x}</i>`).join('')}</div></div>
+  <div class="k16words"><div>${G(a1)}<b>${w1}</b></div><div>${G(a2)}<b>${w2}</b></div></div></div>`; },
+});
+Object.assign(KH, { k16: (a, j) => `<div class="k16ah"><i></i><i></i><i></i><h2>${a.title}</h2></div>` });
 const itemPagesK = (LIST) => LIST.forEach((it, i) => { const h = hue(i); pages.push(`
   <section class="page plain ki ${C.layout}i" style="--h:${h}">
   ${KI[C.layout](it, i, h)}
