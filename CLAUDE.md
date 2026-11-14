@@ -157,6 +157,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `robo-book/`: مغامرات روبو (Robo's Adventures, reading-only, layout k24), 50 pages
 - `happy-farm-book/`: المزرعة السعيدة (The Happy Farm, reading-only, layout k25), 50 pages
 - `anbiya-stories-book/`: قصص الأنبياء (Stories of the Prophets, reading-only, layout k26), 50 pages
+- `akhlaq-book/`: أخلاق المسلم الصغير (Good Manners of a Little Muslim, reading-only, layout k27), 50 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
