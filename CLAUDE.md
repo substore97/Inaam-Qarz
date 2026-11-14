@@ -167,6 +167,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `fruits-encyclopedia-book/`: موسوعة الفواكه والخضار (My Fruit & Vegetable Encyclopedia, reading-only, layout k34), 50 pages
 - `transport-book/`: وسائل النقل (Ways to Travel, reading-only, layout k35), 50 pages
 - `weather-book/`: الطقس والفصول (Weather & Seasons, reading-only, layout k36), 50 pages
+- `when-i-grow-book/`: عندما أكبر (When I Grow Up, reading-only, layout k37), 50 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
