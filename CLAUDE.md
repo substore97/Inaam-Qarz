@@ -133,6 +133,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `masjid-book/`: مسجدي الجميل (the mosque & its manners, grade 1, layout k2), 24 pages
 - `prophets-book/`: أنبياء الله (12 prophets of Allah, grade 1, layout k3), 24 pages
 - `animalgifts-book/`: هدايا الحيوانات (what animals give us, grade 1, layout k4), 24 pages
+- `plural-book/`: واحد وكثير (singular & plural, grade 1, layout k5), 24 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
