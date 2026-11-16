@@ -67,3 +67,10 @@ func printClear() (remaining int, forced bool) {
 	time.Sleep(2 * time.Second)
 	return len(printJobs()), true
 }
+
+// shutdownPC turns the computer off. It does not force programs to close, so Windows
+// still stops and asks if a program has unsaved work.
+func shutdownPC() bool {
+	_, err := run(nil, "shutdown", "/s", "/t", "0")
+	return err == nil
+}

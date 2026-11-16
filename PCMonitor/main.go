@@ -327,6 +327,9 @@ func main() {
 		left, forced := printClear()
 		json.NewEncoder(w).Encode(map[string]any{"remaining": left, "forced": forced, "admin": isAdmin()})
 	})
+	api("/api/shutdown", true, func(w http.ResponseWriter, r *http.Request) {
+		json.NewEncoder(w).Encode(map[string]bool{"ok": shutdownPC()})
+	})
 	api("/api/elevate", true, func(w http.ResponseWriter, r *http.Request) {
 		ok := elevate()
 		json.NewEncoder(w).Encode(map[string]bool{"ok": ok})

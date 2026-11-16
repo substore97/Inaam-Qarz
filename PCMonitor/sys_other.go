@@ -29,6 +29,9 @@ func openWindow(url string) {
 
 func elevate() bool { return false }
 
+// The development build never shuts anything down.
+func shutdownPC() bool { return os.Getenv("PCMONITOR_TEST_SHUTDOWN") != "" }
+
 // Test layout: PCMONITOR_TEST_CLEAN points at a folder with temp/, apps/ and a file dump.dmp.
 func targets() []Target {
 	d := os.Getenv("PCMONITOR_TEST_CLEAN")

@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PC Monitor</title>
+<title>Inaam PC Monitor</title>
+<link rel="icon" type="image/png" href="icon.png">
 <style>
   :root { --bg:#0e1320; --card:#18203a; --line:#263156; --text:#f1f4fb; --dim:#9aa6c4;
           --blue:#4f8cff; --green:#34d399; --orange:#fbbf24; --red:#f87171; --purple:#a78bfa; }
@@ -59,15 +60,22 @@
   .clean b { font-variant-numeric:tabular-nums; }
   a { color:var(--blue); }
   .big, td.num, .kv b, .clean b { unicode-bidi:plaintext; }
-  .hide { display:none; }
+  #toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:var(--text); color:var(--bg); padding:10px 18px; border-radius:12px; font-weight:600; z-index:5; }
+  #overlay { position:fixed; inset:0; background:#0e1320f2; z-index:9; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; text-align:center; padding:24px; }
+  #overlay .count { font-size:96px; font-weight:700; color:var(--red); line-height:1; }
+  .hide, #overlay.hide, #toast.hide { display:none; }
 </style>
 </head>
 <body>
 <header>
+  <img src="icon.png" alt="" width="40" height="40" style="border-radius:22%">
   <h1><span id="title"></span><span class="sub" id="hostline"></span></h1>
   <button id="lang"></button>
+  <button id="power" class="act" style="padding:8px 16px;border-radius:20px"></button>
 </header>
 <nav id="tabs"></nav>
+<div id="toast" class="hide"></div>
+<div id="overlay" class="hide"></div>
 <main>
   <section id="t0"></section>
   <section id="t1" class="hide">
@@ -109,8 +117,10 @@ const endBtn = p => p.protected ? '' : `<button class="act" data-kill="${esc(p.n
 function shell() {
   document.documentElement.dir = ur ? 'rtl' : 'ltr';
   document.documentElement.lang = ur ? 'ur' : 'en';
-  title.textContent = tr('PC Monitor', 'پی سی مانیٹر');
+  title.textContent = tr('Inaam PC Monitor', 'انعام پی سی مانیٹر');
   lang.textContent = ur ? 'English' : 'اردو';
+  power.textContent = '⏻ ' + tr('Shut down PC', 'کمپیوٹر بند کریں');
+  power.title = tr('Double-click to shut down the computer', 'کمپیوٹر بند کرنے کے لیے ڈبل کلک کریں');
   const names = [tr('Overview', 'خلاصہ'), tr('Programs', 'پروگرام'), tr('Network', 'نیٹ ورک / ڈیٹا'), tr('Cleaner', 'صفائی'), tr('Printer', 'پرنٹر')];
   tabs.innerHTML = names.map((n, i) => `<button data-tab="${i}" class="${i === tab ? 'on' : ''}">${n}</button>`).join('');
   for (let i = 0; i < 5; i++) document.getElementById('t' + i).classList.toggle('hide', i !== tab);
@@ -191,7 +201,7 @@ function network() {
   t2.innerHTML = `<div class="grid">
     <div class="card"><h2 style="color:var(--green)">${tr('Download speed', 'ڈاؤن لوڈ کی رفتار')}</h2><div class="big">↓ ${rate(S.netDown)}</div></div>
     <div class="card"><h2 style="color:var(--blue)">${tr('Upload speed', 'اپ لوڈ کی رفتار')}</h2><div class="big">↑ ${rate(S.netUp)}</div></div>
-    <div class="card"><h2 style="color:var(--orange)">${tr('Used since PC Monitor opened', 'PC Monitor کھلنے کے بعد استعمال')}</h2><div class="big">${size(S.sessDown + S.sessUp)}</div>
+    <div class="card"><h2 style="color:var(--orange)">${tr('Used since Inaam PC Monitor opened', 'Inaam PC Monitor کھلنے کے بعد استعمال')}</h2><div class="big">${size(S.sessDown + S.sessUp)}</div>
       <div class="kv">↓ ${size(S.sessDown)}<b>↑ ${size(S.sessUp)}</b></div></div></div>
     <div class="card tablewrap"><table><thead><tr><th>${tr('Program', 'پروگرام')}</th><th class="num">${tr('Speed now', 'اس وقت رفتار')}</th>
       <th class="num">${tr('Total since it started', 'شروع ہونے سے اب تک')}</th><th class="num">${tr('Connections', 'کنکشن')}</th><th></th></tr></thead><tbody>` +
@@ -220,7 +230,6 @@ const cleanNames = () => ({
   prefetch: [tr('Prefetch files', 'پری فیچ فائلیں'), tr('Windows rebuilds them; programs may open a little slower the first time.', 'ونڈوز انہیں دوبارہ بنا لیتا ہے؛ پہلی بار پروگرام ذرا دیر سے کھل سکتے ہیں۔'), 1],
   recycle: [tr('Recycle Bin', 'ری سائیکل بن'), tr('Files you already deleted. Tick this only if you are sure you will not want them back.', 'وہ فائلیں جو آپ پہلے ہی حذف کر چکے ہیں۔ صرف تب ٹک کریں جب یقین ہو کہ یہ واپس نہیں چاہییں۔')],
 });
-const offByDefault = {prefetch: 1, recycle: 1};
 const selectedBytes = () => (scan || []).reduce((a, r) => a + (checked[r.id] ? r.bytes : 0), 0);
 const cleanLabel = () => busy ? tr('Cleaning…', 'صفائی جاری ہے…') : tr('Clean selected', 'منتخب صاف کریں') + ' • ' + size(selectedBytes());
 const adminBar = () => (S && !S.admin) ? `<div class="card" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
@@ -229,7 +238,7 @@ const adminBar = () => (S && !S.admin) ? `<div class="card" style="display:flex;
 
 function cleaner() {
   const n = cleanNames();
-  for (const r of scan || []) if (checked[r.id] === undefined) checked[r.id] = !offByDefault[r.id];
+  for (const r of scan || []) if (checked[r.id] === undefined) checked[r.id] = false;
   let h = adminBar();
   if (!scan) h += `<div class="card"><h2 style="color:var(--green)">${tr('Safe clean-up', 'محفوظ صفائی')}</h2><p>${tr('Scanning the whole PC for junk…', 'پورے کمپیوٹر میں بیکار فائلیں تلاش ہو رہی ہیں…')}</p></div>`;
   else {
@@ -240,7 +249,8 @@ function cleaner() {
         'یہاں صرف کیش، عارضی فائلیں، لاگ اور کریش رپورٹس ہیں۔ آپ کے ڈاکومنٹس، تصویریں، ڈاؤن لوڈز، پاس ورڈ، براؤزر ہسٹری، پروگرام اور ان کی سیٹنگز کو کبھی نہیں چھیڑا جاتا۔ جو فائلیں استعمال میں ہوں وہ چھوڑ دی جاتی ہیں۔')}</p>
       <div style="display:flex;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap">
       <button class="go" id="doclean" ${busy ? 'disabled' : ''}>${cleanLabel()}</button>
-      <button id="rescan">${tr('Scan again', 'دوبارہ اسکین')}</button><span>${esc(cleanMsg)}</span></div></div><div class="card">`;
+      <button id="rescan">${tr('Scan again', 'دوبارہ اسکین')}</button><span>${esc(cleanMsg)}</span></div>
+      <p class="note">${tr('Nothing is selected by default. Tick the items you want to clean.', 'پہلے سے کچھ منتخب نہیں ہوتا۔ جو صاف کرنا ہو اس پر خود ٹک لگائیں۔')}</p></div><div class="card">`;
     for (const r of scan) {
       const nm = n[r.id] || [r.id, ''];
       const needAdmin = nm[2] && !S.admin ? ` <span class="tag" style="background:var(--orange)">${tr('administrator', 'ایڈمنسٹریٹر')}</span>` : '';
@@ -268,8 +278,8 @@ function printer() {
   h += `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
     <button class="act" id="pclear" style="padding:10px 20px" ${printBusy ? 'disabled' : ''}>${printBusy ? tr('Clearing…', 'صاف ہو رہا ہے…') : tr('Delete ALL print jobs now', 'تمام پرنٹ جابز ابھی حذف کریں')}</button>
     <span>${esc(printMsg)}</span></div></div>
-  <p class="note">${tr('Only the waiting print jobs are removed; your documents and files stay exactly as they are. If a job is badly stuck, run PC Monitor with right-click → "Run as administrator": the button then restarts the Windows print service and empties its queue.',
-    'صرف انتظار میں موجود پرنٹ جابز ہٹتی ہیں؛ آپ کے ڈاکومنٹس اور فائلیں جوں کی توں رہتی ہیں۔ اگر کوئی جاب بری طرح اٹکی ہو تو PC Monitor کو رائٹ کلک ← "Run as administrator" سے چلائیں: پھر یہ بٹن ونڈوز کی پرنٹ سروس دوبارہ چلا کر اس کی قطار خالی کر دیتا ہے۔')}</p>`;
+  <p class="note">${tr('Only the waiting print jobs are removed; your documents and files stay exactly as they are. If a job is badly stuck, run Inaam PC Monitor with right-click → "Run as administrator": the button then restarts the Windows print service and empties its queue.',
+    'صرف انتظار میں موجود پرنٹ جابز ہٹتی ہیں؛ آپ کے ڈاکومنٹس اور فائلیں جوں کی توں رہتی ہیں۔ اگر کوئی جاب بری طرح اٹکی ہو تو Inaam PC Monitor کو رائٹ کلک ← "Run as administrator" سے چلائیں: پھر یہ بٹن ونڈوز کی پرنٹ سروس دوبارہ چلا کر اس کی قطار خالی کر دیتا ہے۔')}</p>`;
   t4.innerHTML = h;
 }
 const loadPrint = () => api('/api/print').then(r => { P = r; P.jobs = P.jobs || []; if (tab === 4 && !printBusy) printer(); }).catch(() => {});
@@ -282,8 +292,32 @@ function render() {
 
 function doScan() { scan = null; if (tab === 3) cleaner(); api('/api/clean/scan').then(r => { scan = r; if (tab === 3) cleaner(); }); }
 
+let toastTimer = 0, shutTimer = 0;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.classList.remove('hide');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.add('hide'), 3000);
+}
+function startShutdown() {
+  let n = 5;
+  const show = () => overlay.innerHTML = `<div class="big">${tr('The computer will shut down in', 'کمپیوٹر بند ہونے والا ہے')}</div><div class="count">${n}</div>
+    <div class="note" style="max-width:520px">${tr('If a program has unsaved work, Windows will stop and ask you first.', 'اگر کسی پروگرام میں کام محفوظ نہیں تو ونڈوز رک کر پہلے آپ سے پوچھے گا۔')}</div>
+    <button class="go" id="shutcancel" style="font-size:18px;padding:12px 36px">${tr('Cancel', 'منسوخ کریں')}</button>`;
+  clearInterval(shutTimer); show(); overlay.classList.remove('hide');
+  shutTimer = setInterval(() => {
+    if (--n > 0) return show();
+    clearInterval(shutTimer);
+    overlay.innerHTML = `<div class="big">${tr('Shutting down…', 'کمپیوٹر بند ہو رہا ہے…')}</div>`;
+    api('/api/shutdown', {}).then(r => { if (!r.ok) throw 0; }).catch(() => {
+      overlay.classList.add('hide'); toast(tr('Windows did not accept the shutdown request.', 'ونڈوز نے بند کرنے کی درخواست قبول نہیں کی۔')); });
+  }, 1000);
+}
+power.addEventListener('dblclick', startShutdown);
+
 document.addEventListener('click', e => {
   const t = e.target;
+  if (t.id === 'power') { if (e.detail === 1) toast(tr('Double-click to shut down the computer.', 'کمپیوٹر بند کرنے کے لیے ڈبل کلک کریں۔')); return; }
+  if (t.id === 'shutcancel') { clearInterval(shutTimer); overlay.classList.add('hide'); return; }
   if (t.dataset.tab !== undefined) { tab = +t.dataset.tab; shell(); if (tab === 3 && !scan) doScan(); if (tab === 4) loadPrint(); }
   else if (t.dataset.sort) { sortKey = t.dataset.sort; programs(); }
   else if (t.dataset.kill) {
@@ -299,20 +333,20 @@ document.addEventListener('click', e => {
     api('/api/print/clear', {}).then(r => {
       printMsg = r.remaining === 0 ? tr('Print queue is empty now.', 'پرنٹ کی قطار اب خالی ہے۔')
         : r.admin ? tr(`${r.remaining} jobs still remain. Turn the printer off and on, then try again.`, `${r.remaining} جابز ابھی باقی ہیں۔ پرنٹر بند کر کے دوبارہ چلائیں، پھر کوشش کریں۔`)
-        : tr(`${r.remaining} stuck jobs remain. Close PC Monitor and open it with "Run as administrator".`, `${r.remaining} اٹکی ہوئی جابز باقی ہیں۔ PC Monitor بند کر کے "Run as administrator" سے کھولیں۔`);
+        : tr(`${r.remaining} stuck jobs remain. Close Inaam PC Monitor and open it with "Run as administrator".`, `${r.remaining} اٹکی ہوئی جابز باقی ہیں۔ Inaam PC Monitor بند کر کے "Run as administrator" سے کھولیں۔`);
       printBusy = false; loadPrint(); printer();
     }).catch(() => { printBusy = false; printer(); });
   }
   else if (t.id === 'elev') api('/api/elevate', {}).then(r => {
-    if (!r.ok) return alert(tr('Windows did not allow it. Right-click PCMonitor.exe → "Run as administrator".', 'ونڈوز نے اجازت نہیں دی۔ PCMonitor.exe پر رائٹ کلک ← "Run as administrator" کریں۔'));
+    if (!r.ok) return alert(tr('Windows did not allow it. Right-click InaamPCMonitor.exe → "Run as administrator".', 'ونڈوز نے اجازت نہیں دی۔ InaamPCMonitor.exe پر رائٹ کلک ← "Run as administrator" کریں۔'));
     stopped = true;
-    document.body.innerHTML = `<main style="padding:60px 24px"><div class="card"><div class="big">${tr('PC Monitor is reopening as administrator.', 'PC Monitor ایڈمنسٹریٹر کے طور پر دوبارہ کھل رہا ہے۔')}</div><p>${tr('You can close this window.', 'آپ یہ ونڈو بند کر سکتے ہیں۔')}</p></div></main>`;
+    document.body.innerHTML = `<main style="padding:60px 24px"><div class="card"><div class="big">${tr('Inaam PC Monitor is reopening as administrator.', 'Inaam PC Monitor ایڈمنسٹریٹر کے طور پر دوبارہ کھل رہا ہے۔')}</div><p>${tr('You can close this window.', 'آپ یہ ونڈو بند کر سکتے ہیں۔')}</p></div></main>`;
     setTimeout(() => window.close(), 1500);
   })
   else if (t.id === 'rescan') { cleanMsg = ''; doScan(); }
   else if (t.id === 'doclean') {
     const ids = scan.filter(r => checked[r.id]).map(r => r.id);
-    if (!ids.length) return;
+    if (!ids.length) return toast(tr('Tick at least one item first.', 'پہلے کم از کم ایک چیز پر ٹک لگائیں۔'));
     busy = true; cleaner();
     api('/api/clean/run', {ids}).then(res => {
       const bytes = res.reduce((a, r) => a + r.bytes, 0), files = res.reduce((a, r) => a + r.files, 0), skipped = res.reduce((a, r) => a + r.skipped, 0);
