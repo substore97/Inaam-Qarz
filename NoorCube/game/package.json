@@ -1,0 +1,16 @@
+{
+  "name": "noor-cube-game",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "levels": "node tools/gen-levels.mjs",
+    "test": "node tools/test-logic.mjs",
+    "build": "node tools/build.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/noto-nastaliq-urdu": "^5.0.0",
+    "esbuild": "^0.24.0",
+    "three": "^0.170.0"
+  }
+}
