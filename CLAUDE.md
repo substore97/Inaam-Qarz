@@ -179,6 +179,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `trees-kids-book/`: أشجاري الجميلة (My Beautiful Trees, reading-only, kx combo 9), 40 pages
 - `flowers-kids-book/`: زهوري الملونة (My Colourful Flowers, reading-only, kx combo 10), 40 pages
 - `moon-kids-book/`: القمر صديقي (The Moon, My Friend, reading-only, kx combo 11), 40 pages
+- `sun-kids-book/`: الشمس العظيمة (The Great Sun, reading-only, kx combo 12), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
