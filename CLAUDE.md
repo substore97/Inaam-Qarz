@@ -210,6 +210,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `shapes-kids-book/`: أشكال من حولي (Shapes Around Me, reading-only, kx combo 42), 40 pages
 - `count10-kids-book/`: أعد من 1 إلى 10 (I Count from 1 to 10, reading-only, kx combo 43), 40 pages
 - `sizes-kids-book/`: طويل وقصير (Long and Short, reading-only, kx combo 44), 40 pages
+- `clock-kids-book/`: الساعة والوقت (The Clock and Time, reading-only, kx combo 45), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
