@@ -184,6 +184,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `raindrop-kids-book/`: رحلة قطرة المطر (The Raindrop's Journey, reading-only, kx combo 14), 40 pages
 - `mountains-kids-book/`: الجبال والصخور (Mountains and Rocks, reading-only, kx combo 15), 40 pages
 - `night-kids-book/`: حيوانات الليل (Animals of the Night, reading-only, kx combo 16), 40 pages
+- `fastslow-kids-book/`: الأسرع والأبطأ (The Fastest and the Slowest, reading-only, kx combo 17), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
