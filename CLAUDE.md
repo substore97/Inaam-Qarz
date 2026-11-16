@@ -231,6 +231,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `wudu-kids-book/`: أتوضأ (I Make Wudu, reading-only, kx combo 61), 40 pages
 - `salah-kids-book/`: صلاتي (My Prayer, reading-only, kx combo 62), 40 pages
 - `islampillars-kids-book/`: أركان الإسلام (The Pillars of Islam, reading-only, kx combo 63), 40 pages
+- `imanpillars-kids-book/`: أركان الإيمان (The Pillars of Faith, reading-only, kx combo 64), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
