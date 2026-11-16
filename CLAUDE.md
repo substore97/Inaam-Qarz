@@ -175,6 +175,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `pets-kids-book/`: حيواني الأليف (My Pet, reading-only, kx combo 5), 40 pages
 - `mothers-kids-book/`: أمهات وصغار (Mothers and Babies, reading-only, kx combo 6), 40 pages
 - `cycles-kids-book/`: من بيضة إلى فراشة (From an Egg to a Butterfly, reading-only, kx combo 7), 40 pages
+- `river-kids-book/`: النهر والبحيرة (The River and the Lake, reading-only, kx combo 8), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
