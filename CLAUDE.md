@@ -198,6 +198,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `beach-kids-book/`: على شاطئ البحر (At the Seaside, reading-only, kx combo 28), 40 pages
 - `zoo-kids-book/`: حديقة الحيوانات (At the Zoo, reading-only, kx combo 29), 40 pages
 - `library-kids-book/`: في المكتبة (At the Library, reading-only, kx combo 30), 40 pages
+- `grandparents-kids-book/`: زيارة جدي وجدتي (Visiting Grandpa and Grandma, reading-only, kx combo 32), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
