@@ -199,7 +199,8 @@ function network() {
 }
 
 const cleanNames = () => ({
-  temp: [tr('Temporary files', 'عارضی فائلیں'), tr('Leftovers from programs and installers, older than 1 day', 'پروگراموں اور انسٹالرز کی بچی ہوئی فائلیں، 1 دن سے پرانی')],
+  temp: [tr('Temporary files (%tmp%)', 'عارضی فائلیں (%tmp%)'), tr('Leftovers from programs and installers. Files from the last 2 hours and files in use are kept.', 'پروگراموں اور انسٹالرز کی بچی ہوئی فائلیں۔ پچھلے 2 گھنٹوں کی اور استعمال میں موجود فائلیں رہنے دی جاتی ہیں۔')],
+  prefetch: [tr('Prefetch files', 'پری فیچ فائلیں'), tr('Windows rebuilds them; programs may open a little slower the first time. Needs "Run as administrator".', 'ونڈوز انہیں دوبارہ بنا لیتا ہے؛ پہلی بار پروگرام ذرا دیر سے کھل سکتے ہیں۔ "Run as administrator" ضروری ہے۔')],
   browser: [tr('Browser cache', 'براؤزر کا کیش'), tr('Chrome, Edge, Brave, Opera, Firefox. Passwords, history, bookmarks and logins are NOT touched.', 'کروم، ایج، بریو، اوپیرا، فائر فاکس۔ پاس ورڈ، ہسٹری، بک مارکس اور لاگ اِن کو نہیں چھیڑا جاتا۔')],
   thumbs: [tr('Thumbnail cache', 'تھمب نیل کیش'), tr('Small preview pictures; Windows rebuilds them', 'چھوٹی پیش نظارہ تصویریں؛ ونڈوز انہیں دوبارہ بنا لیتا ہے')],
   shader: [tr('Graphics cache', 'گرافکس کیش'), tr('DirectX shader cache; rebuilt automatically', 'ڈائریکٹ ایکس شیڈر کیش؛ خود دوبارہ بن جاتا ہے')],
@@ -218,7 +219,7 @@ function cleaner() {
     let total = 0;
     for (const r of scan) {
       const nm = n[r.id] || [r.id, ''];
-      if (checked[r.id] === undefined) checked[r.id] = true;
+      if (checked[r.id] === undefined) checked[r.id] = r.id !== 'prefetch';
       if (checked[r.id]) total += r.bytes;
       h += `<label class="clean"><input type="checkbox" data-clean="${r.id}" ${checked[r.id] ? 'checked' : ''}><div>${nm[0]}<small>${nm[1]}</small></div><b>${size(r.bytes)}</b></label>`;
     }

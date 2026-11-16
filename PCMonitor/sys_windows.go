@@ -100,7 +100,7 @@ func targets() []Target {
 		browser = append(browser, glob(filepath.Join(local, `Mozilla\Firefox\Profiles`, "*", "cache2"))...)
 	}
 	t := []Target{
-		{ID: "temp", Dirs: []string{os.TempDir()}, MinAge: day},
+		{ID: "temp", Dirs: []string{os.TempDir()}, MinAge: 2 * time.Hour},
 		{ID: "browser", Dirs: browser},
 	}
 	if local != "" {
@@ -113,6 +113,7 @@ func targets() []Target {
 	if win != "" {
 		t = append(t,
 			Target{ID: "wintemp", Dirs: []string{filepath.Join(win, "Temp")}, MinAge: day},
+			Target{ID: "prefetch", Dirs: []string{filepath.Join(win, "Prefetch")}, Pattern: "*.pf"},
 			Target{ID: "update", Dirs: []string{filepath.Join(win, `SoftwareDistribution\Download`)}, MinAge: 7 * day},
 		)
 	}
