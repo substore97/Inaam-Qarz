@@ -73,10 +73,12 @@
   </section>
   <section id="t2" class="hide"></section>
   <section id="t3" class="hide"></section>
+  <section id="t4" class="hide"></section>
 </main>
 <script>
 const token = new URLSearchParams(location.search).get('t') || '';
 const api = (p, body) => fetch(p + '?t=' + token, body === undefined ? {} : {method:'POST', body:JSON.stringify(body)}).then(r => r.json());
+let P = null, printMsg = '', printBusy = false;
 let ur = false, tab = 0, S = null, sortKey = 'cpu', query = '', scan = null, cleanMsg = '', busy = false;
 try { ur = localStorage.getItem('ur') === '1'; } catch (e) {}
 const checked = {};
@@ -105,9 +107,9 @@ function shell() {
   document.documentElement.lang = ur ? 'ur' : 'en';
   title.textContent = tr('PC Monitor', 'پی سی مانیٹر');
   lang.textContent = ur ? 'English' : 'اردو';
-  const names = [tr('Overview', 'خلاصہ'), tr('Programs', 'پروگرام'), tr('Network', 'نیٹ ورک / ڈیٹا'), tr('Cleaner', 'صفائی')];
+  const names = [tr('Overview', 'خلاصہ'), tr('Programs', 'پروگرام'), tr('Network', 'نیٹ ورک / ڈیٹا'), tr('Cleaner', 'صفائی'), tr('Printer', 'پرنٹر')];
   tabs.innerHTML = names.map((n, i) => `<button data-tab="${i}" class="${i === tab ? 'on' : ''}">${n}</button>`).join('');
-  for (let i = 0; i < 4; i++) document.getElementById('t' + i).classList.toggle('hide', i !== tab);
+  for (let i = 0; i < 5; i++) document.getElementById('t' + i).classList.toggle('hide', i !== tab);
   q.placeholder = tr('Search program…', 'پروگرام تلاش کریں…');
   render();
 }
@@ -230,22 +232,53 @@ function cleaner() {
   t3.innerHTML = h + `</div><p class="note">${tr('For more space from the browser cache, close your browser first and then clean.', 'براؤزر کیش سے زیادہ جگہ خالی کرنے کے لیے پہلے براؤزر بند کریں، پھر صاف کریں۔')}</p>`;
 }
 
+function printer() {
+  let h = `<div class="card"><h2 style="color:var(--blue)">${tr('Print queue', 'پرنٹ کی قطار')}</h2>`;
+  if (!P) h += `<p>${tr('Checking printers…', 'پرنٹر چیک ہو رہے ہیں…')}</p>`;
+  else if (!P.jobs.length) h += `<div class="issue"><span class="dot" style="background:var(--green)"></span><div>${tr('No print jobs are waiting.', 'کوئی پرنٹ جاب انتظار میں نہیں ہے۔')}</div></div>`;
+  else for (const j of P.jobs) {
+    const bad = /error|offline|paper|blocked|intervention|deleting/i.test(j.status);
+    h += `<div class="issue"><span class="dot" style="background:${bad ? 'var(--red)' : 'var(--orange)'}"></span>
+      <div>${esc(j.doc || '—')}<small>${esc(j.printer)} • ${esc(j.status)} • ${size(j.size)}${j.user ? ' • ' + esc(j.user) : ''}</small></div>
+      <button class="act" data-pjob="${j.id}" data-printer="${esc(j.printer)}">${tr('Delete', 'حذف کریں')}</button></div>`;
+  }
+  h += `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
+    <button class="act" id="pclear" style="padding:10px 20px" ${printBusy ? 'disabled' : ''}>${printBusy ? tr('Clearing…', 'صاف ہو رہا ہے…') : tr('Delete ALL print jobs now', 'تمام پرنٹ جابز ابھی حذف کریں')}</button>
+    <span>${esc(printMsg)}</span></div></div>
+  <p class="note">${tr('Only the waiting print jobs are removed; your documents and files stay exactly as they are. If a job is badly stuck, run PC Monitor with right-click → "Run as administrator": the button then restarts the Windows print service and empties its queue.',
+    'صرف انتظار میں موجود پرنٹ جابز ہٹتی ہیں؛ آپ کے ڈاکومنٹس اور فائلیں جوں کی توں رہتی ہیں۔ اگر کوئی جاب بری طرح اٹکی ہو تو PC Monitor کو رائٹ کلک ← "Run as administrator" سے چلائیں: پھر یہ بٹن ونڈوز کی پرنٹ سروس دوبارہ چلا کر اس کی قطار خالی کر دیتا ہے۔')}</p>`;
+  t4.innerHTML = h;
+}
+const loadPrint = () => api('/api/print').then(r => { P = r; P.jobs = P.jobs || []; if (tab === 4 && !printBusy) printer(); }).catch(() => {});
+
 function render() {
   if (!S) return;
   hostline.textContent = `${S.host} • ${S.os} • ${tr('on for', 'چلتے ہوئے')} ${uptime(S.uptime)}`;
-  [overview, programs, network, cleaner][tab]();
+  [overview, programs, network, cleaner, printer][tab]();
 }
 
 function doScan() { scan = null; if (tab === 3) cleaner(); api('/api/clean/scan').then(r => { scan = r; if (tab === 3) cleaner(); }); }
 
 document.addEventListener('click', e => {
   const t = e.target;
-  if (t.dataset.tab !== undefined) { tab = +t.dataset.tab; shell(); if (tab === 3 && !scan) doScan(); }
+  if (t.dataset.tab !== undefined) { tab = +t.dataset.tab; shell(); if (tab === 3 && !scan) doScan(); if (tab === 4) loadPrint(); }
   else if (t.dataset.sort) { sortKey = t.dataset.sort; programs(); }
   else if (t.dataset.kill) {
     const name = t.dataset.kill;
     if (confirm(tr(`End "${name}" now?\n\nAnything not saved inside this program will be lost.`, `"${name}" کو ابھی بند کریں؟\n\nاس پروگرام میں جو کام محفوظ نہیں کیا گیا وہ ضائع ہو جائے گا۔`)))
       api('/api/kill', {name}).then(r => { if (!r.killed) alert(tr('Could not end it. Try "Run as administrator".', 'بند نہیں ہو سکا۔ "Run as administrator" آزمائیں۔')); });
+  }
+  else if (t.dataset.pjob) api('/api/print/delete', {printer: t.dataset.printer, id: +t.dataset.pjob}).then(r => {
+    printMsg = r.ok ? tr('Job deleted.', 'جاب حذف ہو گئی۔') : tr('Could not delete it. Use "Delete ALL" as administrator.', 'حذف نہیں ہو سکی۔ ایڈمنسٹریٹر کے طور پر "تمام حذف کریں" استعمال کریں۔');
+    loadPrint(); })
+  else if (t.id === 'pclear') {
+    printBusy = true; printMsg = ''; printer();
+    api('/api/print/clear', {}).then(r => {
+      printMsg = r.remaining === 0 ? tr('Print queue is empty now.', 'پرنٹ کی قطار اب خالی ہے۔')
+        : r.admin ? tr(`${r.remaining} jobs still remain. Turn the printer off and on, then try again.`, `${r.remaining} جابز ابھی باقی ہیں۔ پرنٹر بند کر کے دوبارہ چلائیں، پھر کوشش کریں۔`)
+        : tr(`${r.remaining} stuck jobs remain. Close PC Monitor and open it with "Run as administrator".`, `${r.remaining} اٹکی ہوئی جابز باقی ہیں۔ PC Monitor بند کر کے "Run as administrator" سے کھولیں۔`);
+      printBusy = false; loadPrint(); printer();
+    }).catch(() => { printBusy = false; printer(); });
   }
   else if (t.id === 'rescan') { cleanMsg = ''; doScan(); }
   else if (t.id === 'doclean') {
@@ -267,7 +300,8 @@ addEventListener('pagehide', () => navigator.sendBeacon('/api/bye?t=' + token));
 function poll() {
   api('/api/stats').then(s => {
     S = s; S.hung = S.hung || []; S.procs = S.procs || [];
-    if (tab !== 3) render(); else hostline.textContent = `${S.host} • ${S.os}`;
+    if (tab === 4) loadPrint();
+    if (tab !== 3 && !(tab === 4 && printBusy)) render(); else hostline.textContent = `${S.host} • ${S.os}`;
   }).catch(() => {});
 }
 shell(); poll(); setInterval(poll, 2000);

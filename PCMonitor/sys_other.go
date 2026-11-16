@@ -34,3 +34,24 @@ func targets() []Target {
 	}
 	return nil
 }
+
+var fakeJobs = []PrintJob{{"HP LaserJet 1020", 7, "Invoice-November.pdf", "user", 482000, "Error, Printing"}, {"HP LaserJet 1020", 8, "رسید.docx", "user", 91000, "Normal"}}
+
+func printJobs() []PrintJob {
+	if os.Getenv("PCMONITOR_TEST_PRINT") == "" {
+		return []PrintJob{}
+	}
+	return fakeJobs
+}
+
+func printDelete(printer string, id int) bool {
+	for i, j := range fakeJobs {
+		if j.Printer == printer && j.ID == id {
+			fakeJobs = append(fakeJobs[:i:i], fakeJobs[i+1:]...)
+			return true
+		}
+	}
+	return false
+}
+
+func printClear() (int, bool) { fakeJobs = nil; return 0, false }

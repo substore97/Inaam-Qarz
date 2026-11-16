@@ -48,6 +48,15 @@ type DiskInfo struct {
 	Used  uint64 `json:"used"`
 }
 
+type PrintJob struct {
+	Printer string `json:"printer"`
+	ID      int    `json:"id"`
+	Doc     string `json:"doc"`
+	User    string `json:"user"`
+	Size    int64  `json:"size"`
+	Status  string `json:"status"`
+}
+
 type HungWin struct {
 	Pid   int32  `json:"pid"`
 	Name  string `json:"name"`
@@ -302,6 +311,21 @@ func main() {
 			}
 		}
 		json.NewEncoder(w).Encode(map[string]int{"killed": killed})
+	})
+	api("/api/print", false, func(w http.ResponseWriter, r *http.Request) {
+		json.NewEncoder(w).Encode(map[string]any{"jobs": printJobs(), "admin": isAdmin()})
+	})
+	api("/api/print/delete", true, func(w http.ResponseWriter, r *http.Request) {
+		var req struct {
+			Printer string
+			ID      int
+		}
+		json.NewDecoder(r.Body).Decode(&req)
+		json.NewEncoder(w).Encode(map[string]bool{"ok": printDelete(req.Printer, req.ID)})
+	})
+	api("/api/print/clear", true, func(w http.ResponseWriter, r *http.Request) {
+		left, forced := printClear()
+		json.NewEncoder(w).Encode(map[string]any{"remaining": left, "forced": forced, "admin": isAdmin()})
 	})
 	api("/api/clean/scan", false, func(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(scanAll())
