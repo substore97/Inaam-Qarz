@@ -193,6 +193,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `kitchen-kids-book/`: في المطبخ (In the Kitchen, reading-only, kx combo 23), 40 pages
 - `bath-kids-book/`: وقت الاستحمام (Bath Time, reading-only, kx combo 24), 40 pages
 - `doctor-kids-book/`: عند الطبيب (At the Doctor, reading-only, kx combo 25), 40 pages
+- `dentist-kids-book/`: عند طبيب الأسنان (At the Dentist, reading-only, kx combo 26), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
