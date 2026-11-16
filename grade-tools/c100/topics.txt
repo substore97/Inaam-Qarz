@@ -1,0 +1,100 @@
+jungle|حَيَوَانَاتُ الأَدْغَالِ|Jungle Animals
+cold|حَيَوَانَاتُ البِلَادِ البَارِدَةِ|Animals of the Cold Lands
+bugs|عَالَمُ الحَشَرَاتِ الصَّغِيرَةِ|The Little World of Insects
+birds|طُيُورٌ مُلَوَّنَةٌ|Colourful Birds
+pets|حَيَوَانِي الأَلِيفُ|My Pet
+mothers|أُمَّهَاتٌ وَصِغَارٌ|Mothers and Babies
+cycles|مِنْ بَيْضَةٍ إِلَى فَرَاشَةٍ|From an Egg to a Butterfly
+river|النَّهْرُ وَالبُحَيْرَةُ|The River and the Lake
+trees|أَشْجَارِي الجَمِيلَةُ|My Beautiful Trees
+flowers|زُهُورِي المُلَوَّنَةُ|My Colourful Flowers
+moon|القَمَرُ صَدِيقِي|The Moon, My Friend
+sun|الشَّمْسُ العَظِيمَةُ|The Great Sun
+water|المَاءُ سِرُّ الحَيَاةِ|Water, the Secret of Life
+raindrop|رِحْلَةُ قَطْرَةِ المَطَرِ|The Raindrop's Journey
+mountains|الجِبَالُ وَالصُّخُورُ|Mountains and Rocks
+night|حَيَوَانَاتُ اللَّيْلِ|Animals of the Night
+fastslow|الأَسْرَعُ وَالأَبْطَأُ|The Fastest and the Slowest
+bigsmall|الأَكْبَرُ وَالأَصْغَرُ|The Biggest and the Smallest
+animalcolors|أَلْوَانُ الحَيَوَانَاتِ|Colours of Animals
+move|أَقْدَامٌ وَأَجْنِحَةٌ وَزَعَانِفُ|Feet, Wings and Fins
+morning|صَبَاحِي الجَمِيلُ|My Lovely Morning
+myroom|غُرْفَتِي المُرَتَّبَةُ|My Tidy Room
+kitchen|فِي المَطْبَخِ|In the Kitchen
+bath|وَقْتُ الاسْتِحْمَامِ|Bath Time
+doctor|عِنْدَ الطَّبِيبِ|At the Doctor
+dentist|عِنْدَ طَبِيبِ الأَسْنَانِ|At the Dentist
+park|فِي الحَدِيقَةِ العَامَّةِ|In the Park
+beach|عَلَى شَاطِئِ البَحْرِ|At the Seaside
+zoo|حَدِيقَةُ الحَيَوَانَاتِ|At the Zoo
+library|فِي المَكْتَبَةِ|At the Library
+airport|فِي المَطَارِ|At the Airport
+grandparents|زِيَارَةُ جَدِّي وَجَدَّتِي|Visiting Grandpa and Grandma
+schoolday|يَوْمِي فِي المَدْرَسَةِ|My Day at School
+picnic|نُزْهَةٌ جَمِيلَةٌ|A Lovely Picnic
+cooking|أَطْبُخُ مَعَ أُمِّي|Cooking with Mum
+cleanday|يَوْمُ التَّنْظِيفِ|Cleaning Day
+toys|أَلْعَابِي المُفَضَّلَةُ|My Favourite Toys
+sportsday|يَوْمٌ رِيَاضِيٌّ|Sports Day
+swimming|أَسْبَحُ بِأَمَانٍ|I Swim Safely
+market|فِي سُوقِ الخُضَارِ|At the Vegetable Market
+colors|أَلْوَانٌ مِنْ حَوْلِي|Colours Around Me
+shapes|أَشْكَالٌ مِنْ حَوْلِي|Shapes Around Me
+count10|أَعُدُّ مِنْ ١ إِلَى ١٠|I Count from 1 to 10
+sizes|طَوِيلٌ وَقَصِيرٌ|Long and Short
+clock|السَّاعَةُ وَالوَقْتُ|The Clock and Time
+week|أَيَّامُ الأُسْبُوعِ|Days of the Week
+seasons|الفُصُولُ الأَرْبَعَةُ|The Four Seasons
+feelings|مَشَاعِرِي|My Feelings
+senses|حَوَاسِّي الخَمْسُ|My Five Senses
+healthyfood|طَعَامِي الصِّحِّيُّ|My Healthy Food
+saving|أُحَافِظُ عَلَى المَاءِ وَالكَهْرَبَاءِ|I Save Water and Electricity
+recycle|أُعِيدُ التَّدْوِيرَ|I Recycle
+firstwords|كَلِمَاتِي الأُولَى|My First Words
+madd|أَقْرَأُ المَدَّ|I Read Long Vowels
+tanween|أَقْرَأُ التَّنْوِينَ|I Read Tanween
+dailyverbs|أَفْعَالِي اليَوْمِيَّةُ|My Daily Actions
+adjectives|صِفَاتٌ جَمِيلَةٌ|Lovely Describing Words
+prepositions|فِي وَعَلَى وَمِنْ|In, On and From
+opposites2|الشَّيْءُ وَعَكْسُهُ|Things and Their Opposites
+addstories|حِكَايَاتُ الجَمْعِ وَالطَّرْحِ|Adding and Taking Away Stories
+wudu|أَتَوَضَّأُ|I Make Wudu
+salah|صَلَاتِي|My Prayer
+islampillars|أَرْكَانُ الإِسْلَامِ|The Pillars of Islam
+imanpillars|أَرْكَانُ الإِيمَانِ|The Pillars of Faith
+angels|المَلَائِكَةُ|The Angels
+dailyduas|أَدْعِيَةُ يَوْمِي|My Daily Duas
+tablemanners|آدَابُ الطَّعَامِ|Table Manners
+parents|بِرُّ الوَالِدَيْنِ|Kindness to Parents
+friday|يَوْمُ الجُمُعَةِ|Friday
+ramadandays|رَمَضَانُ يَوْمًا بِيَوْمٍ|Ramadan Day by Day
+hajj|رِحْلَةُ الحَجِّ|The Journey of Hajj
+makkah|مَكَّةُ المُكَرَّمَةُ وَالمَدِينَةُ المُنَوَّرَةُ|Makkah and Madinah
+animalmercy|الرِّفْقُ بِالحَيَوَانِ|Kindness to Animals
+honesty|الصِّدْقُ وَالأَمَانَةُ|Honesty and Trust
+shukr|أَشْكُرُ اللّٰهَ|I Thank Allah
+sabr|الصَّبْرُ الجَمِيلُ|Beautiful Patience
+speech|آدَابُ الكَلَامِ وَالسَّلَامِ|Manners of Speech and Salam
+creation|مِنْ عَجَائِبِ خَلْقِ اللّٰهِ|Wonders of Allah's Creation
+adhkar|أَذْكَارُ الصَّبَاحِ وَالمَسَاءِ|Morning and Evening Remembrance
+cleanfaith|النَّظَافَةُ مِنَ الإِيمَانِ|Cleanliness Is Part of Faith
+bravefish|السَّمَكَةُ الصَّغِيرَةُ الشُّجَاعَةُ|The Brave Little Fish
+ants|النَّمْلَةُ المُجْتَهِدَةُ|The Hard-Working Ant
+lostcat|القِطَّةُ الضَّائِعَةُ|The Lost Kitten
+cloud|الغَيْمَةُ الصَّغِيرَةُ|The Little Cloud
+friendtree|الشَّجَرَةُ الصَّدِيقَةُ|The Friendly Tree
+littlecamel|الجَمَلُ الصَّغِيرُ|The Little Camel
+train|رِحْلَةٌ بِالقِطَارِ|A Train Journey
+pencil|القَلَمُ المُتَكَلِّمُ|The Talking Pencil
+fables|حِكَايَاتُ الحُكَمَاءِ مِنَ الحَيَوَانَاتِ|Wise Animal Fables
+crow|الغُرَابُ الذَّكِيُّ|The Clever Crow
+helpers|أَبْطَالٌ يُسَاعِدُونَنَا|Heroes Who Help Us
+machines|آلَاتُ البِنَاءِ|Building Machines
+harvest|المُزَارِعُ وَالحَصَادُ|The Farmer and the Harvest
+fishermen|الصَّيَّادُ وَالقَارِبُ|The Fisherman and the Boat
+inventions|اخْتِرَاعَاتٌ مُفِيدَةٌ|Useful Inventions
+earth|الأَرْضُ بَيْتُنَا|The Earth, Our Home
+games|أَلْعَابٌ نَلْعَبُهَا مَعًا|Games We Play Together
+letterstories|حِكَايَاتُ الحُرُوفِ|Stories of the Letters
+juha|نَوَادِرُ جُحَا|Funny Tales of Juha
+talkinganimals|أَنَا أَتَكَلَّمُ عَنْ نَفْسِي|I Talk About Myself

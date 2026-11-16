@@ -353,13 +353,28 @@ Object.assign(KH, {
   k36: (a) => `<div class="kbh k36ah"><h2>☀️ ${a.title}</h2></div>`, k37: (a) => `<div class="kbh k37ah"><h2>${a.title}</h2></div>`,
 });
 
-const itemPagesK = (LIST) => LIST.forEach((it, i) => { const h = hue(i); pages.push(`
-  <section class="page plain ki ${C.layout}i" style="--h:${h}">
+// ===== kx: combinatorial layout for the 100-book series. C.X = {bg,pic,ttl,txt,fac,pno,ord,hm}
+const XC = () => { const X = C.X; return `x-bg${X.bg} x-pic${X.pic} x-ttl${X.ttl} x-txt${X.txt} x-fac${X.fac} x-pno${X.pno} x-ord${X.ord}`; };
+const XH = i => { const X = C.X, b = X.hue; return X.hm === 1 ? b : X.hm === 2 ? (b + i * 37) % 360 : (i % 2 ? (b + 150) % 360 : b); };
+KI.kx = ([t, en, a, x, f1, f2], i) => {
+  const T = `<div class="xT"><span class="xN">${AR(i + 1)}</span><h2>${t}</h2><em>${en}</em></div>`;
+  const P = `<div class="xP"><div class="xPin n${NA(a)}">${AS(a)}</div></div>`;
+  const X = `<div class="xX"><p>${x}</p></div>`;
+  const F = `<div class="xF"><div><b>${C.f1L}</b><span>${f1}</span></div><div><b>${C.f2L}</b><span>${f2}</span></div></div>`;
+  const o = C.X.ord;
+  const body = o === 1 ? T + P + X + F : o === 2 ? P + T + X + F : o === 3 ? T + X + P + F : o === 4 ? T + P + F + X
+    : o === 5 ? `<div class="xRow">${P}<div class="xCol">${T}${F}</div></div>${X}` : `${T}<div class="xRow">${P}${F}</div>${X}`;
+  return `<div class="xW">${body}</div>`;
+};
+KH.kx = (a) => `<div class="xT xAH"><h2>${a.title}</h2></div>`;
+
+const itemPagesK = (LIST) => LIST.forEach((it, i) => { const h = C.X ? XH(i) : hue(i); pages.push(`
+  <section class="page plain ki ${C.layout}i ${C.X ? XC() : ''}" style="--h:${h}">
   ${KI[C.layout](it, i, h)}
   ${pno(P++)}
   </section>`); });
 
-const itemPages = (...a) => C.layout && /^k\d/.test(C.layout) ? itemPagesK(a[0]) : (C.layout === 'g6' ? itemPages6 : C.layout === 'g7' ? itemPages7 : C.layout === 'g8' ? itemPages8 : C.layout === 'g9' ? itemPages9 : C.layout === 'g10' ? itemPages10 : C.layout === 'g11' ? itemPages11 : C.layout === 'g12' ? itemPages12 : itemPagesStd)(...a);
+const itemPages = (...a) => C.layout && /^k(\d|x)/.test(C.layout) ? itemPagesK(a[0]) : (C.layout === 'g6' ? itemPages6 : C.layout === 'g7' ? itemPages7 : C.layout === 'g8' ? itemPages8 : C.layout === 'g9' ? itemPages9 : C.layout === 'g10' ? itemPages10 : C.layout === 'g11' ? itemPages11 : C.layout === 'g12' ? itemPages12 : itemPagesStd)(...a);
 // activities
 const ACT = { match: (a) => `<div class="hint">${a.hint}</div>
   <div class="match">${a.rows.map(([l, ll, r, rl]) => `<div class="mrow"><div class="mc">${G(l)}<b>${ll || (r.startsWith("=") ? "" : L(l))}</b></div><i class="dot"></i><i class="gap"></i><i class="dot"></i>${r.startsWith('=') ? `<div class="mq">${r.slice(1)}</div>` : `<div class="mc">${G(r)}<b>${rl || L(r)}</b></div>`}</div>`).join('')}</div>`,
@@ -424,9 +439,9 @@ const actPages = (LIST, off) => LIST.forEach((a, j) => {
   j = j + off;
   const h = [150, 200, 20, 45, 265, 100, 320, 180][j % 8];
   pages.push(`
-<section class="page plain kact" style="--h:${h}">
+<section class="page plain kact ${C.X ? XC() : ''}" style="--h:${C.X ? XH(j + 3) : h}">
   ${bubbles(40 + j, h)}
-  ${C.layout && /^k\d/.test(C.layout) ? KH[C.layout](a, j) : C.layout === 'g12' ? `<div class="a12h"><b>${C.ltr ? j + 1 : AR(j + 1)}</b><div><small>${C.ltr ? 'Task' : 'نَشَاطٌ'}</small><h2>${a.title}</h2></div></div>` : C.layout === 'g11' ? `<div class="run11"><span>${C.ltr ? 'Practice' : 'تَدْرِيبَاتٌ'}</span><b>${C.ltr ? 'My English Book' : C.t1}</b></div><div class="k11">${C.ltr ? 'Exercise ' + (j + 1) : 'تَدْرِيبٌ ' + AR(j + 1)}</div><h2 class="t11 sm">${a.title}</h2>` : C.layout === 'g10' ? `<div class="a10h"><span>${C.ltr ? 'Task ' + (j + 1) : 'مَهَمَّةٌ ' + AR(j + 1)}</span><h2>${a.title}</h2></div>` : C.layout === 'g9' ? `<div class="a9h"><i>✏️</i><div><small>${C.ltr ? 'Exercise ' + (j + 1) : 'تَمْرِينٌ ' + AR(j + 1)}</small><h2>${a.title}</h2></div></div>` : C.layout === 'g8' ? `<div class="a8h"><span>${C.ltr ? 'Activity' : 'نَشَاطٌ'}</span><h2>${a.title}</h2></div>` : C.layout === 'g7' ? `<div class="a7h"><b>${C.ltr ? 'Exercise' : 'تَمْرِينٌ'}</b><h2>${a.title}</h2></div>` : C.layout === 'g6' ? `<div class="a6h"><span>${C.ltr ? 'Practice' : 'تَدْرِيبٌ'}</span><h2>${a.title}</h2></div>` : title(a.title, `hsl(${h},60%,30%)`)}
+  ${C.layout && /^k(\d|x)/.test(C.layout) ? KH[C.layout](a, j) : C.layout === 'g12' ? `<div class="a12h"><b>${C.ltr ? j + 1 : AR(j + 1)}</b><div><small>${C.ltr ? 'Task' : 'نَشَاطٌ'}</small><h2>${a.title}</h2></div></div>` : C.layout === 'g11' ? `<div class="run11"><span>${C.ltr ? 'Practice' : 'تَدْرِيبَاتٌ'}</span><b>${C.ltr ? 'My English Book' : C.t1}</b></div><div class="k11">${C.ltr ? 'Exercise ' + (j + 1) : 'تَدْرِيبٌ ' + AR(j + 1)}</div><h2 class="t11 sm">${a.title}</h2>` : C.layout === 'g10' ? `<div class="a10h"><span>${C.ltr ? 'Task ' + (j + 1) : 'مَهَمَّةٌ ' + AR(j + 1)}</span><h2>${a.title}</h2></div>` : C.layout === 'g9' ? `<div class="a9h"><i>✏️</i><div><small>${C.ltr ? 'Exercise ' + (j + 1) : 'تَمْرِينٌ ' + AR(j + 1)}</small><h2>${a.title}</h2></div></div>` : C.layout === 'g8' ? `<div class="a8h"><span>${C.ltr ? 'Activity' : 'نَشَاطٌ'}</span><h2>${a.title}</h2></div>` : C.layout === 'g7' ? `<div class="a7h"><b>${C.ltr ? 'Exercise' : 'تَمْرِينٌ'}</b><h2>${a.title}</h2></div>` : C.layout === 'g6' ? `<div class="a6h"><span>${C.ltr ? 'Practice' : 'تَدْرِيبٌ'}</span><h2>${a.title}</h2></div>` : title(a.title, `hsl(${h},60%,30%)`)}
   ${ACT[a.type](a)}
   ${pno(P++)}
 </section>`);

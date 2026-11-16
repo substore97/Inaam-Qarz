@@ -1,0 +1,30 @@
+// node validate.js content_<slug>.json  -> checks schema, counts, art names, forbidden chars
+const fs = require('fs');
+const { A } = require('/home/user/Inaam-Qarz/science12-book/src/science12-art');
+const f = process.argv[2]; const c = JSON.parse(fs.readFileSync(f, 'utf8')); const err = [];
+const art = (x, w) => { const n = String(x).split(':')[0]; if (!A[n]) err.push(`unknown art "${x}" in ${w}`); };
+for (const k of ['title','t1','t2','csub','cen','noteP','ovTitle','certP','blurb','en2','f1L','f2L']) if (typeof c[k] !== 'string' || !c[k]) err.push('missing ' + k);
+for (const [k, n] of [['noteLi',3],['blurbLi',4],['coverTop',3],['coverBot',4],['ownerMini',3],['noteMini',3],['certArts',3],['backArts',4]]) if (!Array.isArray(c[k]) || c[k].length !== n) err.push(`${k} must have ${n}`);
+['coverTop','coverBot','ownerMini','noteMini','certArts','backArts'].forEach(k => (c[k]||[]).forEach(x => art(x, k))); art(c.ownerArt || '', 'ownerArt');
+if (!Array.isArray(c.items) || c.items.length !== 30) err.push('items must be exactly 30 (has ' + (c.items||[]).length + ')');
+(c.items||[]).forEach((it, i) => { if (!Array.isArray(it) || it.length !== 6) err.push(`item ${i} must be [title,en,arts,text,f1,f2]`); else { String(it[2]).split(',').forEach(x => art(x.trim(), 'item ' + i)); if (String(it[2]).split(',').length > 3) err.push(`item ${i}: max 3 arts`); if (it[3].length > 200) err.push(`item ${i}: text too long (${it[3].length} chars, max 200)`); if (it[4].length > 60 || it[5].length > 60) err.push(`item ${i}: f1/f2 max 60 chars`); } });
+if (!Array.isArray(c.acts) || c.acts.length !== 4) err.push('acts must be exactly 4');
+(c.acts||[]).forEach((a, i) => { if (!['review','facts','qa','story2','raw'].includes(a.type)) err.push('act ' + i + ' bad type');
+  if (a.type === 'review') { if (a.rows.length !== 12) err.push('review needs 12 rows'); a.rows.forEach(r => art(r[0], 'review')); }
+  if (a.type === 'qa' && (a.rows.length < 4 || a.rows.length > 5)) err.push('qa needs 4-5 rows');
+  if (a.type === 'facts' && (a.rows.length < 4 || a.rows.length > 6)) err.push('facts needs 4-6 rows');
+  if (a.type === 'story2' && (a.lines.length < 4 || a.lines.length > 7)) err.push('story2 needs 4-7 lines');
+  (a.arts||[]).forEach(x => art(x, 'act ' + i)); });
+const all = JSON.stringify(c);
+if (/ﷺ/.test(all)) err.push('ﷺ ligature is forbidden – write صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ');
+if (/[؀-ۿ]/.test(c.en2) && false) {}
+if (/(أكتب|أَكْتُبُ|ارسم|أَرْسُمُ|لوّن|أُلَوِّنُ|ضع دائرة|أَضَعُ|صِلْ|أَصِلُ)/.test(all)) err.push('writing/drawing/colouring instructions are forbidden (reading-only book)');
+if (/grade|Grade|الصف/.test(all)) err.push('no grade words allowed');
+console.log(err.length ? 'ERRORS:\n' + err.join('\n') : 'OK ' + f);
+// harakat coverage: every Arabic word (≥2 letters, not a name like الله handled) should carry diacritics
+const AR=/[ء-ي]/; const DI=/[ً-ْٰ]/; const bad=new Set();
+const scan=s=>String(s).replace(/<[^>]+>/g,' ').split(/[\s،,.!؟?:؛«»()\-–"]+/).forEach(w=>{const L=(w.match(/[ء-ي]/g)||[]).length; if(L>=3&&!DI.test(w)) bad.add(w);});
+c.items.forEach(it=>[it[0],it[3],it[4],it[5]].forEach(scan)); (c.acts||[]).forEach(a=>{(a.rows||[]).forEach(r=>[].concat(r).forEach((x,k)=>{ if(!(a.type==='review'&&k===0)) scan(x)})); (a.lines||[]).forEach(scan); scan(a.title)});
+['t1','t2','csub','noteP','certP','blurb','f1L','f2L','ovTitle'].forEach(k=>scan(c[k])); c.noteLi.forEach(scan); c.blurbLi.forEach(scan);
+if(bad.size) console.log('NO-HARAKAT WORDS ('+bad.size+'): '+[...bad].slice(0,40).join(' '));
+if (/[a-zA-Z]/.test(c.items.map(i=>i[0]+i[3]+i[4]+i[5]).join(''))) console.log('LATIN LETTERS inside Arabic item text');
