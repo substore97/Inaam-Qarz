@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PC Monitor</title>
+<style>
+  :root { --bg:#0e1320; --card:#18203a; --line:#263156; --text:#f1f4fb; --dim:#9aa6c4;
+          --blue:#4f8cff; --green:#34d399; --orange:#fbbf24; --red:#f87171; --purple:#a78bfa; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 "Segoe UI", system-ui, "Noto Sans Arabic", sans-serif; }
+  [dir=rtl] body { font-size:16px; line-height:1.9; }
+  header { display:flex; align-items:center; gap:12px; padding:16px 24px 8px; }
+  h1 { font-size:22px; margin:0; flex:1; }
+  .sub { color:var(--dim); font-size:13px; font-weight:400; margin-inline-start:10px; }
+  button { font:inherit; color:var(--text); background:var(--card); border:0; border-radius:20px; padding:8px 16px; cursor:pointer; }
+  button:hover { filter:brightness(1.2); }
+  button:focus-visible, input:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+  nav { display:flex; gap:8px; padding:6px 24px 14px; flex-wrap:wrap; }
+  nav button.on { background:var(--blue); color:var(--bg); font-weight:700; }
+  main { padding:0 24px 32px; max-width:1200px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin-bottom:12px; }
+  .card { background:var(--card); border-radius:16px; padding:16px; margin-bottom:12px; }
+  .card h2 { margin:0 0 4px; font-size:13px; font-weight:700; }
+  .big { font-size:26px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .bar { height:8px; border-radius:4px; background:#ffffff22; overflow:hidden; margin:8px 0; }
+  .bar i { display:block; height:100%; border-radius:4px; }
+  .kv { display:flex; justify-content:space-between; gap:12px; color:var(--dim); font-size:14px; padding:2px 0; }
+  .kv b { color:var(--text); font-weight:400; text-align:end; }
+  .issue { display:flex; align-items:center; gap:12px; padding:10px 0; border-top:1px solid var(--line); }
+  .issue:first-of-type { border-top:0; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  .issue div { flex:1; }
+  .issue small { display:block; color:var(--dim); }
+  .act { background:var(--red); color:var(--bg); font-weight:700; border-radius:10px; padding:6px 12px; white-space:nowrap; }
+  .go { background:var(--green); color:var(--bg); font-weight:700; border-radius:12px; padding:10px 20px; }
+  .tablewrap { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+  th, td { padding:8px 10px; text-align:start; white-space:nowrap; }
+  th { color:var(--dim); font-size:13px; font-weight:600; cursor:pointer; user-select:none; border-bottom:1px solid var(--line); }
+  th.sorted { color:var(--blue); }
+  td.num, th.num { text-align:end; }
+  tbody tr { border-bottom:1px solid #26315660; }
+  tbody tr:hover { background:#ffffff08; }
+  td.name { max-width:320px; overflow:hidden; text-overflow:ellipsis; font-weight:600; }
+  .tag { font-size:11px; font-weight:700; border-radius:8px; padding:1px 7px; margin-inline-start:6px; background:var(--red); color:var(--bg); }
+  .cnt { color:var(--dim); font-weight:400; margin-inline-start:4px; }
+  .hot { color:var(--red); font-weight:700; } .warm { color:var(--orange); }
+  input[type=search] { font:inherit; color:var(--text); background:var(--card); border:1px solid var(--line); border-radius:12px; padding:8px 14px; width:260px; max-width:100%; margin-bottom:12px; }
+  .note { color:var(--dim); font-size:13px; }
+  .clean { display:flex; align-items:center; gap:14px; padding:12px 0; border-top:1px solid var(--line); cursor:pointer; }
+  .clean:first-of-type { border-top:0; }
+  .clean input { width:20px; height:20px; accent-color:var(--green); flex:none; }
+  .clean div { flex:1; } .clean small { display:block; color:var(--dim); }
+  .clean b { font-variant-numeric:tabular-nums; }
+  a { color:var(--blue); }
+  .big, td.num, .kv b, .clean b { unicode-bidi:plaintext; }
+  .hide { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1><span id="title"></span><span class="sub" id="hostline"></span></h1>
+  <button id="lang"></button>
+</header>
+<nav id="tabs"></nav>
+<main>
+  <section id="t0"></section>
+  <section id="t1" class="hide">
+    <input type="search" id="q">
+    <div class="card tablewrap"><table><thead id="ph"></thead><tbody id="pb"></tbody></table></div>
+    <p class="note" id="pnote"></p>
+  </section>
+  <section id="t2" class="hide"></section>
+  <section id="t3" class="hide"></section>
+</main>
+<script>
+const token = new URLSearchParams(location.search).get('t') || '';
+const api = (p, body) => fetch(p + '?t=' + token, body === undefined ? {} : {method:'POST', body:JSON.stringify(body)}).then(r => r.json());
+let ur = false, tab = 0, S = null, sortKey = 'cpu', query = '', scan = null, cleanMsg = '', busy = false;
+try { ur = localStorage.getItem('ur') === '1'; } catch (e) {}
+const checked = {};
+const tr = (en, u) => ur ? u : en;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function size(b) {
+  if (b < 1024) return Math.round(b) + ' B';
+  const u = ['KB','MB','GB','TB']; let i = -1;
+  do { b /= 1024; i++; } while (b >= 1024 && i < 3);
+  return (b < 10 ? b.toFixed(1) : Math.round(b)) + ' ' + u[i];
+}
+const rate = b => b < 1 ? '—' : size(b) + '/s';
+const pct = v => (v < 10 ? v.toFixed(1) : Math.round(v)) + '%';
+function uptime(s) {
+  const d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60);
+  return (d ? d + tr('d ', ' دن ') : '') + h + tr('h ', ' گھنٹے ') + m + tr('m', ' منٹ');
+}
+const bar = (f, color) => `<div class="bar"><i style="width:${Math.min(100, Math.max(0, f * 100))}%;background:${color}"></i></div>`;
+const level = f => f > 0.9 ? 'var(--red)' : f > 0.75 ? 'var(--orange)' : 'var(--green)';
+const topOf = key => S.procs.reduce((a, p) => (!a || key(p) > key(a)) ? p : a, null);
+const endBtn = p => p.protected ? '' : `<button class="act" data-kill="${esc(p.name)}">${tr('End task', 'بند کریں')}</button>`;
+
+function shell() {
+  document.documentElement.dir = ur ? 'rtl' : 'ltr';
+  document.documentElement.lang = ur ? 'ur' : 'en';
+  title.textContent = tr('PC Monitor', 'پی سی مانیٹر');
+  lang.textContent = ur ? 'English' : 'اردو';
+  const names = [tr('Overview', 'خلاصہ'), tr('Programs', 'پروگرام'), tr('Network', 'نیٹ ورک / ڈیٹا'), tr('Cleaner', 'صفائی')];
+  tabs.innerHTML = names.map((n, i) => `<button data-tab="${i}" class="${i === tab ? 'on' : ''}">${n}</button>`).join('');
+  for (let i = 0; i < 4; i++) document.getElementById('t' + i).classList.toggle('hide', i !== tab);
+  q.placeholder = tr('Search program…', 'پروگرام تلاش کریں…');
+  render();
+}
+
+function issues() {
+  const out = [];
+  for (const h of S.hung) {
+    const p = S.procs.find(x => x.name === h.name);
+    out.push({c:'var(--red)', t: tr(`${h.name} is not responding (hung)`, `${h.name} جواب نہیں دے رہا (ہینگ ہے)`), s: h.title, p});
+  }
+  const mem = S.memUsed / S.memTotal;
+  if (S.cpu > 85) { const p = topOf(x => x.cpu);
+    out.push({c:'var(--red)', t: tr(`Processor is overloaded (${pct(S.cpu)})`, `پروسیسر پر بہت بوجھ ہے (${pct(S.cpu)})`),
+      s: p && tr(`${p.name} is using the most: ${pct(p.cpu)}`, `سب سے زیادہ ${p.name} استعمال کر رہا ہے: ${pct(p.cpu)}`), p}); }
+  if (mem > 0.85) { const p = topOf(x => x.mem);
+    out.push({c: mem > 0.93 ? 'var(--red)' : 'var(--orange)', t: tr(`Memory (RAM) is almost full (${pct(mem * 100)})`, `ریم تقریباً بھر چکی ہے (${pct(mem * 100)})`),
+      s: p && tr(`${p.name} is using the most: ${size(p.mem)}`, `سب سے زیادہ ${p.name} استعمال کر رہا ہے: ${size(p.mem)}`), p}); }
+  if (S.diskR + S.diskW > 40e6) { const p = topOf(x => x.diskR + x.diskW);
+    out.push({c:'var(--orange)', t: tr(`Disk is very busy (${rate(S.diskR + S.diskW)})`, `ڈسک بہت مصروف ہے (${rate(S.diskR + S.diskW)})`),
+      s: p && tr(`${p.name} is reading/writing the most`, `سب سے زیادہ ${p.name} پڑھ/لکھ رہا ہے`), p}); }
+  for (const d of S.disks || []) if (d.total > 2e9 && d.used / d.total > 0.9)
+    out.push({c:'var(--orange)', t: tr(`Drive ${d.path} is almost full`, `ڈرائیو ${d.path} تقریباً بھر چکی ہے`),
+      s: tr(`Only ${size(d.total - d.used)} free. Open the Cleaner tab.`, `صرف ${size(d.total - d.used)} خالی ہے۔ "صفائی" ٹیب کھولیں۔`)});
+  return out;
+}
+
+function overview() {
+  const mem = S.memUsed / S.memTotal, is = issues();
+  const tc = topOf(x => x.cpu), tm = topOf(x => x.mem), tn = topOf(x => x.net);
+  let h = `<div class="card"><h2 style="color:${is.length ? 'var(--red)' : 'var(--green)'}">${tr('What is slowing this PC?', 'کمپیوٹر کو کیا چیز سست کر رہی ہے؟')}</h2>`;
+  if (!is.length) h += `<div class="issue"><span class="dot" style="background:var(--green)"></span><div>${tr('Nothing right now — the PC is running normally.', 'ابھی کچھ نہیں — کمپیوٹر نارمل چل رہا ہے۔')}</div></div>`;
+  for (const i of is) h += `<div class="issue"><span class="dot" style="background:${i.c}"></span><div>${esc(i.t)}<small>${esc(i.s || '')}</small></div>${i.p ? endBtn(i.p) : ''}</div>`;
+  h += `</div><div class="grid">
+    <div class="card"><h2 style="color:var(--blue)">${tr('Processor (CPU)', 'پروسیسر (CPU)')}</h2><div class="big">${pct(S.cpu)}</div>${bar(S.cpu / 100, level(S.cpu / 100))}
+      <div class="kv">${tr('Top program', 'سب سے زیادہ')}<b>${tc ? esc(tc.name) + ' • ' + pct(tc.cpu) : '—'}</b></div></div>
+    <div class="card"><h2 style="color:var(--purple)">${tr('Memory (RAM)', 'ریم')}</h2><div class="big">${size(S.memUsed)} / ${size(S.memTotal)}</div>${bar(mem, level(mem))}
+      <div class="kv">${tr('Top program', 'سب سے زیادہ')}<b>${tm ? esc(tm.name) + ' • ' + size(tm.mem) : '—'}</b></div></div>
+    <div class="card"><h2 style="color:var(--orange)">${tr('Internet speed now', 'اس وقت انٹرنیٹ کی رفتار')}</h2><div class="big">↓ ${rate(S.netDown)}</div>
+      <div class="kv">${tr('Upload', 'اپ لوڈ')}<b>↑ ${rate(S.netUp)}</b></div>
+      <div class="kv">${tr('Top program', 'سب سے زیادہ')}<b>${tn && tn.net >= 1 ? esc(tn.name) + ' • ' + rate(tn.net) : '—'}</b></div></div>
+    <div class="card"><h2 style="color:var(--green)">${tr('Disk activity', 'ڈسک کی سرگرمی')}</h2><div class="big">${rate(S.diskR + S.diskW)}</div>
+      <div class="kv">${tr('Reading', 'پڑھنا')}<b>${rate(S.diskR)}</b></div><div class="kv">${tr('Writing', 'لکھنا')}<b>${rate(S.diskW)}</b></div></div>
+  </div><div class="card"><h2 style="color:var(--green)">${tr('Drives', 'ڈرائیوز')}</h2>`;
+  for (const d of S.disks || []) h += `<div class="kv" style="margin-top:8px"><span style="color:var(--text)">${esc(d.path)}</span><b>${size(d.used)} / ${size(d.total)} • ${tr('free', 'خالی')} ${size(d.total - d.used)}</b></div>${bar(d.used / d.total, level(d.used / d.total))}`;
+  h += `</div>`;
+  if (!S.admin) h += `<p class="note">${tr('Tip: right-click PC Monitor → "Run as administrator" to also see details of system programs.', 'مشورہ: PC Monitor پر رائٹ کلک ← "Run as administrator" سے سسٹم پروگراموں کی تفصیل بھی نظر آئے گی۔')}</p>`;
+  t0.innerHTML = h;
+}
+
+const cols = () => [
+  ['name', tr('Program', 'پروگرام'), p => 0],
+  ['cpu', 'CPU', p => p.cpu], ['mem', tr('RAM', 'ریم'), p => p.mem],
+  ['disk', tr('Disk', 'ڈسک'), p => p.diskR + p.diskW], ['net', tr('Network', 'نیٹ ورک'), p => p.net],
+];
+
+function programs() {
+  const c = cols();
+  ph.innerHTML = '<tr>' + c.map((x, i) => `<th data-sort="${x[0]}" class="${i ? 'num' : ''} ${sortKey === x[0] ? 'sorted' : ''}">${x[1]}${sortKey === x[0] ? ' ▾' : ''}</th>`).join('') + '<th></th></tr>';
+  const key = c.find(x => x[0] === sortKey)[2];
+  let rows = S.procs.filter(p => !query || p.name.toLowerCase().includes(query));
+  rows = sortKey === 'name' ? rows.sort((a, b) => a.name.localeCompare(b.name)) : rows.sort((a, b) => key(b) - key(a));
+  pb.innerHTML = rows.slice(0, 80).map(p => `<tr>
+    <td class="name" title="${esc(p.name)}">${esc(p.name)}${p.pids.length > 1 ? `<span class="cnt">×${p.pids.length}</span>` : ''}${p.hung ? `<span class="tag">${tr('Not responding', 'ہینگ')}</span>` : ''}</td>
+    <td class="num ${p.cpu > 50 ? 'hot' : p.cpu > 20 ? 'warm' : ''}">${pct(p.cpu)}</td>
+    <td class="num ${p.mem / S.memTotal > 0.3 ? 'hot' : p.mem / S.memTotal > 0.12 ? 'warm' : ''}">${size(p.mem)}</td>
+    <td class="num">${rate(p.diskR + p.diskW)}</td><td class="num">${rate(p.net)}</td>
+    <td class="num">${endBtn(p)}</td></tr>`).join('');
+  pnote.textContent = tr('Click a column name to sort. "End task" closes the program immediately — save your work in it first. Windows system programs cannot be ended from here.',
+    'ترتیب بدلنے کے لیے کالم کے نام پر کلک کریں۔ "بند کریں" پروگرام کو فوراً بند کر دیتا ہے — پہلے اس میں اپنا کام محفوظ کر لیں۔ ونڈوز کے سسٹم پروگرام یہاں سے بند نہیں ہو سکتے۔');
+}
+
+function network() {
+  const rows = S.procs.filter(p => p.conns > 0 || p.net >= 1 || p.netTotal > 0).sort((a, b) => b.net - a.net || b.netTotal - a.netTotal);
+  const max = Math.max(1, ...rows.map(p => p.netTotal));
+  t2.innerHTML = `<div class="grid">
+    <div class="card"><h2 style="color:var(--green)">${tr('Download speed', 'ڈاؤن لوڈ کی رفتار')}</h2><div class="big">↓ ${rate(S.netDown)}</div></div>
+    <div class="card"><h2 style="color:var(--blue)">${tr('Upload speed', 'اپ لوڈ کی رفتار')}</h2><div class="big">↑ ${rate(S.netUp)}</div></div>
+    <div class="card"><h2 style="color:var(--orange)">${tr('Used since PC Monitor opened', 'PC Monitor کھلنے کے بعد استعمال')}</h2><div class="big">${size(S.sessDown + S.sessUp)}</div>
+      <div class="kv">↓ ${size(S.sessDown)}<b>↑ ${size(S.sessUp)}</b></div></div></div>
+    <div class="card tablewrap"><table><thead><tr><th>${tr('Program', 'پروگرام')}</th><th class="num">${tr('Speed now', 'اس وقت رفتار')}</th>
+      <th class="num">${tr('Total since it started', 'شروع ہونے سے اب تک')}</th><th class="num">${tr('Connections', 'کنکشن')}</th><th></th></tr></thead><tbody>` +
+    rows.slice(0, 60).map(p => `<tr><td class="name">${esc(p.name)}${p.pids.length > 1 ? `<span class="cnt">×${p.pids.length}</span>` : ''}${bar(p.netTotal / max, 'var(--orange)')}</td>
+      <td class="num ${p.net > 1e6 ? 'hot' : p.net > 1e5 ? 'warm' : ''}">${rate(p.net)}</td><td class="num">${size(p.netTotal)}</td><td class="num">${p.conns}</td><td class="num">${endBtn(p)}</td></tr>`).join('') +
+    (rows.length ? '' : `<tr><td colspan="5" class="note">${tr('No program is using the internet right now.', 'اس وقت کوئی پروگرام انٹرنیٹ استعمال نہیں کر رہا۔')}</td></tr>`) +
+    `</tbody></table></div><p class="note">${tr(
+      'The speeds at the top are exact. Per-program numbers are estimates (Windows only gives exact per-program data to its own tools). For the exact 30-day total per app, open ',
+      'اوپر والی رفتار بالکل درست ہے۔ ہر پروگرام کے اعداد اندازہ ہیں (ونڈوز ہر پروگرام کا درست ڈیٹا صرف اپنے ٹولز کو دیتا ہے)۔ ہر ایپ کا 30 دن کا درست حساب دیکھنے کے لیے کھولیں: ')}
+      <a href="ms-settings:datausage">${tr('Windows Settings → Data usage', 'Windows Settings ← Data usage')}</a>.</p>`;
+}
+
+const cleanNames = () => ({
+  temp: [tr('Temporary files', 'عارضی فائلیں'), tr('Leftovers from programs and installers, older than 1 day', 'پروگراموں اور انسٹالرز کی بچی ہوئی فائلیں، 1 دن سے پرانی')],
+  browser: [tr('Browser cache', 'براؤزر کا کیش'), tr('Chrome, Edge, Brave, Opera, Firefox. Passwords, history, bookmarks and logins are NOT touched.', 'کروم، ایج، بریو، اوپیرا، فائر فاکس۔ پاس ورڈ، ہسٹری، بک مارکس اور لاگ اِن کو نہیں چھیڑا جاتا۔')],
+  thumbs: [tr('Thumbnail cache', 'تھمب نیل کیش'), tr('Small preview pictures; Windows rebuilds them', 'چھوٹی پیش نظارہ تصویریں؛ ونڈوز انہیں دوبارہ بنا لیتا ہے')],
+  shader: [tr('Graphics cache', 'گرافکس کیش'), tr('DirectX shader cache; rebuilt automatically', 'ڈائریکٹ ایکس شیڈر کیش؛ خود دوبارہ بن جاتا ہے')],
+  crash: [tr('Crash reports', 'کریش رپورٹس'), tr('Old error dumps from crashed programs', 'کریش ہونے والے پروگراموں کی پرانی رپورٹس')],
+  wintemp: [tr('Windows temporary files', 'ونڈوز کی عارضی فائلیں'), tr('Older than 1 day. Needs "Run as administrator".', '1 دن سے پرانی۔ "Run as administrator" ضروری ہے۔')],
+  update: [tr('Old Windows Update downloads', 'ونڈوز اپڈیٹ کی پرانی ڈاؤن لوڈز'), tr('Already-installed update files older than 7 days. Needs "Run as administrator".', 'انسٹال ہو چکی اپڈیٹس کی 7 دن سے پرانی فائلیں۔ "Run as administrator" ضروری ہے۔')],
+});
+
+function cleaner() {
+  const n = cleanNames();
+  let h = `<div class="card"><h2 style="color:var(--green)">${tr('Safe clean-up', 'محفوظ صفائی')}</h2>
+    <p class="note">${tr('Only cache and temporary files are removed. Your documents, pictures, downloads, passwords, browser history, programs and their settings are never touched. Files that are in use are skipped.',
+      'صرف کیش اور عارضی فائلیں ہٹائی جاتی ہیں۔ آپ کے ڈاکومنٹس، تصویریں، ڈاؤن لوڈز، پاس ورڈ، براؤزر ہسٹری، پروگرام اور ان کی سیٹنگز کو کبھی نہیں چھیڑا جاتا۔ جو فائلیں استعمال میں ہوں وہ چھوڑ دی جاتی ہیں۔')}</p>`;
+  if (!scan) h += `<p>${tr('Scanning…', 'اسکین ہو رہا ہے…')}</p>`;
+  else {
+    let total = 0;
+    for (const r of scan) {
+      const nm = n[r.id] || [r.id, ''];
+      if (checked[r.id] === undefined) checked[r.id] = true;
+      if (checked[r.id]) total += r.bytes;
+      h += `<label class="clean"><input type="checkbox" data-clean="${r.id}" ${checked[r.id] ? 'checked' : ''}><div>${nm[0]}<small>${nm[1]}</small></div><b>${size(r.bytes)}</b></label>`;
+    }
+    h += `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
+      <button class="go" id="doclean" ${busy ? 'disabled' : ''}>${busy ? tr('Cleaning…', 'صفائی جاری ہے…') : tr('Clean selected', 'منتخب صاف کریں') + ' • ' + size(total)}</button>
+      <button id="rescan">${tr('Scan again', 'دوبارہ اسکین')}</button><span>${esc(cleanMsg)}</span></div>`;
+  }
+  t3.innerHTML = h + `</div><p class="note">${tr('For more space from the browser cache, close your browser first and then clean.', 'براؤزر کیش سے زیادہ جگہ خالی کرنے کے لیے پہلے براؤزر بند کریں، پھر صاف کریں۔')}</p>`;
+}
+
+function render() {
+  if (!S) return;
+  hostline.textContent = `${S.host} • ${S.os} • ${tr('on for', 'چلتے ہوئے')} ${uptime(S.uptime)}`;
+  [overview, programs, network, cleaner][tab]();
+}
+
+function doScan() { scan = null; if (tab === 3) cleaner(); api('/api/clean/scan').then(r => { scan = r; if (tab === 3) cleaner(); }); }
+
+document.addEventListener('click', e => {
+  const t = e.target;
+  if (t.dataset.tab !== undefined) { tab = +t.dataset.tab; shell(); if (tab === 3 && !scan) doScan(); }
+  else if (t.dataset.sort) { sortKey = t.dataset.sort; programs(); }
+  else if (t.dataset.kill) {
+    const name = t.dataset.kill;
+    if (confirm(tr(`End "${name}" now?\n\nAnything not saved inside this program will be lost.`, `"${name}" کو ابھی بند کریں؟\n\nاس پروگرام میں جو کام محفوظ نہیں کیا گیا وہ ضائع ہو جائے گا۔`)))
+      api('/api/kill', {name}).then(r => { if (!r.killed) alert(tr('Could not end it. Try "Run as administrator".', 'بند نہیں ہو سکا۔ "Run as administrator" آزمائیں۔')); });
+  }
+  else if (t.id === 'rescan') { cleanMsg = ''; doScan(); }
+  else if (t.id === 'doclean') {
+    const ids = scan.filter(r => checked[r.id]).map(r => r.id);
+    if (!ids.length) return;
+    busy = true; cleaner();
+    api('/api/clean/run', {ids}).then(res => {
+      const bytes = res.reduce((a, r) => a + r.bytes, 0), files = res.reduce((a, r) => a + r.files, 0), skipped = res.reduce((a, r) => a + r.skipped, 0);
+      cleanMsg = tr(`Freed ${size(bytes)} (${files} files). ${skipped} in-use files were left alone.`, `${size(bytes)} جگہ خالی ہوئی (${files} فائلیں)۔ استعمال میں موجود ${skipped} فائلیں چھوڑ دی گئیں۔`);
+      busy = false; doScan();
+    }).catch(() => { busy = false; cleaner(); });
+  }
+});
+document.addEventListener('change', e => { if (e.target.dataset.clean) { checked[e.target.dataset.clean] = e.target.checked; cleaner(); } });
+q.addEventListener('input', () => { query = q.value.trim().toLowerCase(); programs(); });
+lang.addEventListener('click', () => { ur = !ur; try { localStorage.setItem('ur', ur ? '1' : '0'); } catch (e) {} shell(); });
+addEventListener('pagehide', () => navigator.sendBeacon('/api/bye?t=' + token));
+
+function poll() {
+  api('/api/stats').then(s => {
+    S = s; S.hung = S.hung || []; S.procs = S.procs || [];
+    if (tab !== 3) render(); else hostline.textContent = `${S.host} • ${S.os}`;
+  }).catch(() => {});
+}
+shell(); poll(); setInterval(poll, 2000);
+</script>
+</body>
+</html>
