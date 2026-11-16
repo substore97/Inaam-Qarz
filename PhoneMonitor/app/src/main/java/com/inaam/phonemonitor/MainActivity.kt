@@ -294,6 +294,11 @@ class MainActivity : Activity() {
         c.addView(button(tr("Grant access", "اجازت دیں"), ORANGE) {
             open(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS, Uri.parse("package:$packageName")), Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
         })
+        c.addView(text(tr(
+            "If the phone says \"App was denied access\" or the switch is grey: tap the button below, then tap ⋮ (three dots, top right) → \"Allow restricted settings\" and confirm with your PIN/fingerprint. Then press \"Grant access\" again.",
+            "اگر فون \"App was denied access\" کہے یا سوئچ دھندلا ہو: نیچے والا بٹن دبائیں، پھر اوپر دائیں کونے میں ⋮ (تین نقطے) ← \"Allow restricted settings\" دبائیں اور پن/فنگر پرنٹ سے تصدیق کریں۔ اس کے بعد دوبارہ \"اجازت دیں\" دبائیں۔",
+        ), 12f, DIM).apply { setPadding(0, dp(12), 0, 0) })
+        c.addView(button(tr("Access denied? Open App info", "اجازت نہیں مل رہی؟ ایپ انفو کھولیں"), BLUE) { appSettings(packageName) })
     }
 
     private fun fillOverview() {
