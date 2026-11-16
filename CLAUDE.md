@@ -229,6 +229,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `opposites2-kids-book/`: الشيء وعكسه (Things and Their Opposites, reading-only, kx combo 59), 40 pages
 - `addstories-kids-book/`: حكايات الجمع والطرح (Adding and Taking Away Stories, reading-only, kx combo 60), 40 pages
 - `wudu-kids-book/`: أتوضأ (I Make Wudu, reading-only, kx combo 61), 40 pages
+- `salah-kids-book/`: صلاتي (My Prayer, reading-only, kx combo 62), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
