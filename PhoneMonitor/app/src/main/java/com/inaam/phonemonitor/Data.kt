@@ -1,6 +1,15 @@
 package com.inaam.phonemonitor
 
+import android.accessibilityservice.AccessibilityServiceInfo
 import android.app.ActivityManager
+import android.app.admin.DevicePolicyManager
+import android.content.ComponentName
+import android.content.pm.PackageInfo
+import android.provider.Settings
+import android.view.accessibility.AccessibilityManager
+import com.google.android.gms.safetynet.SafetyNet
+import com.google.android.gms.tasks.Tasks
+import java.util.concurrent.TimeUnit
 import android.app.AppOpsManager
 import android.app.usage.NetworkStats
 import android.app.usage.NetworkStatsManager
@@ -45,7 +54,57 @@ class AppRow(
     var dataBytes = 0L
     var cacheBytes = 0L
 
+    // --- security check ---
+    var version = ""
+    var targetSdk = 0
+    var fromStore = false          // installed by Play Store / Galaxy Store etc.
+    var installer: String? = null
+    var hiddenIcon = false         // user-installed app with no launcher icon
+    var granted: Set<String> = emptySet() // sensitive things the app is allowed to do
+    var accessibility = false      // has an Accessibility service switched on
+    var deviceAdmin = false
+    var notifListener = false
+    var harmful = false            // flagged by Google Play Protect
+        set(v) { field = v; cache = null }
+    private var cache: List<Finding>? = null
+
     val totalBytes get() = appBytes + dataBytes
+
+    /** Reasons this app deserves a look, strongest first. */
+    val findings: List<Finding> get() = cache ?: build().also { cache = it }
+
+    private fun build(): List<Finding> {
+        val f = ArrayList<Finding>()
+        if (harmful) f.add(Finding(100, "Google Play Protect marks this app as harmful", "گوگل پلے پروٹیکٹ اس ایپ کو نقصان دہ قرار دیتا ہے"))
+        if (!system) {
+            if (accessibility) f.add(Finding(40, "Accessibility is ON: it can read your screen and tap for you", "Accessibility آن ہے: یہ آپ کی اسکرین پڑھ سکتی اور خود بٹن دبا سکتی ہے"))
+            if (deviceAdmin) f.add(Finding(30, "Device admin: can lock the phone and resist uninstalling", "ڈیوائس ایڈمن: فون لاک کر سکتی ہے اور ان انسٹال ہونے سے بچ سکتی ہے"))
+            if (hiddenIcon) f.add(Finding(25, "Hidden app: no icon on the home screen", "چھپی ہوئی ایپ: ہوم اسکرین پر آئیکن نہیں"))
+            if (!fromStore) f.add(Finding(20, "Not installed from an app store", "ایپ اسٹور سے انسٹال نہیں ہوئی"))
+            if (notifListener) f.add(Finding(20, "Reads all notifications (including OTP codes)", "تمام نوٹیفکیشن پڑھتی ہے (OTP کوڈ سمیت)"))
+            if (targetSdk in 1..22) f.add(Finding(20, "Made for very old Android (skips permission prompts)", "بہت پرانے اینڈرائیڈ کے لیے بنی ہے (اجازت پوچھے بغیر چلتی ہے)"))
+            if ("sms" in granted) f.add(Finding(15, "Can read and send SMS", "ایس ایم ایس پڑھ اور بھیج سکتی ہے"))
+            if ("overlay" in granted) f.add(Finding(10, "Can draw over other apps", "دوسری ایپس کے اوپر اسکرین دکھا سکتی ہے"))
+            if ("install" in granted) f.add(Finding(10, "Can install other apps", "دوسری ایپس انسٹال کر سکتی ہے"))
+            if ("bgloc" in granted) f.add(Finding(10, "Sees your location even when closed", "بند ہونے پر بھی آپ کی لوکیشن دیکھتی ہے"))
+            if ("calls" in granted) f.add(Finding(5, "Call history", "کال ہسٹری"))
+            if ("contacts" in granted) f.add(Finding(5, "Contacts", "رابطے"))
+            if ("location" in granted) f.add(Finding(5, "Location", "لوکیشن"))
+            if ("camera" in granted) f.add(Finding(5, "Camera", "کیمرہ"))
+            if ("mic" in granted) f.add(Finding(5, "Microphone", "مائیکروفون"))
+            if ("allfiles" in granted) f.add(Finding(5, "All files on the phone", "فون کی تمام فائلیں"))
+        }
+        return f
+    }
+
+    /** 0..100. Store apps cannot reach "suspicious" on permissions alone; only Google's verdict does that. */
+    val risk: Int get() {
+        val sum = findings.sumOf { it.points }.coerceAtMost(100)
+        return if (fromStore && !harmful) sum.coerceAtMost(59) else sum
+    }
+
+    /** 2 = suspicious, 1 = powerful access, 0 = fine */
+    val riskLevel get() = if (risk >= 60) 2 else if (risk >= 30) 1 else 0
 
     /** 0 = running now, 1 = can run in background, 2 = sleeping, 3 = stopped */
     val state get() = when {
@@ -54,6 +113,18 @@ class AppRow(
         sleeping -> 2
         else -> 1
     }
+}
+
+class Finding(val points: Int, val en: String, val ur: String) {
+    val text get() = tr(en, ur)
+}
+
+/** What Google Play Protect (the phone's built-in malware scanner) reports. */
+class Protect {
+    var available = false
+    var enabled = false
+    var lastScan = 0L
+    var harmful: Set<String> = emptySet()
 }
 
 class NetRow(val label: String, val pkg: String?, val app: AppRow?) {
@@ -92,6 +163,29 @@ class Collector(private val c: Context) {
         for (r in pm.queryIntentActivities(main, 0)) launchable.add(r.activityInfo.packageName)
 
         val power = c.getSystemService(Context.POWER_SERVICE) as PowerManager
+
+        // Apps holding the three most abused kinds of special access.
+        val a11y = HashSet<String>()
+        val admins = HashSet<String>()
+        val listeners = HashSet<String>()
+        try {
+            val am = c.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
+            for (s in am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_ALL_MASK)) {
+                s.resolveInfo?.serviceInfo?.packageName?.let { a11y.add(it) }
+            }
+        } catch (e: Exception) {
+        }
+        try {
+            val dpm = c.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+            dpm.activeAdmins?.forEach { admins.add(it.packageName) }
+        } catch (e: Exception) {
+        }
+        try {
+            Settings.Secure.getString(c.contentResolver, "enabled_notification_listeners")?.split(':')?.forEach { s ->
+                ComponentName.unflattenFromString(s)?.let { listeners.add(it.packageName) }
+            }
+        } catch (e: Exception) {
+        }
         val out = ArrayList<AppRow>()
         for (pi in pm.getInstalledPackages(PackageManager.GET_PERMISSIONS)) {
             val ai = pi.applicationInfo ?: continue
@@ -105,9 +199,62 @@ class Collector(private val c: Context) {
                 autoStart = pi.requestedPermissions?.contains("android.permission.RECEIVE_BOOT_COMPLETED") == true,
             )
             row.unrestricted = try { power.isIgnoringBatteryOptimizations(pi.packageName) } catch (e: Exception) { false }
+            row.version = pi.versionName ?: ""
+            row.targetSdk = ai.targetSdkVersion
+            row.hiddenIcon = !sys && pi.packageName !in launchable
+            row.accessibility = pi.packageName in a11y
+            row.deviceAdmin = pi.packageName in admins
+            row.notifListener = pi.packageName in listeners
+            row.installer = try {
+                @Suppress("DEPRECATION")
+                if (Build.VERSION.SDK_INT >= 30) pm.getInstallSourceInfo(pi.packageName).installingPackageName
+                else pm.getInstallerPackageName(pi.packageName)
+            } catch (e: Exception) { null }
+            row.fromStore = row.installer in STORES
+            val g = HashSet<String>()
+            val perms = pi.requestedPermissions
+            val flags = pi.requestedPermissionsFlags
+            if (perms != null) for (i in perms.indices) {
+                val name = perms[i].removePrefix("android.permission.")
+                // these two are switched on in Settings, so "requested" is the best signal we can read
+                if (name == "SYSTEM_ALERT_WINDOW") g.add("overlay")
+                if (name == "REQUEST_INSTALL_PACKAGES") g.add("install")
+                if (name == "MANAGE_EXTERNAL_STORAGE") g.add("allfiles")
+                if (flags == null || i >= flags.size || flags[i] and PackageInfo.REQUESTED_PERMISSION_GRANTED == 0) continue
+                when (name) {
+                    "READ_SMS", "RECEIVE_SMS", "SEND_SMS" -> g.add("sms")
+                    "READ_CALL_LOG", "WRITE_CALL_LOG", "PROCESS_OUTGOING_CALLS" -> g.add("calls")
+                    "READ_CONTACTS" -> g.add("contacts")
+                    "ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION" -> g.add("location")
+                    "ACCESS_BACKGROUND_LOCATION" -> g.add("bgloc")
+                    "CAMERA" -> g.add("camera")
+                    "RECORD_AUDIO" -> g.add("mic")
+                }
+            }
+            row.granted = g
             out.add(row)
         }
         return out
+    }
+
+    /**
+     * Ask Google Play Protect which installed apps it considers harmful. Blocking; call off the
+     * main thread. If Google Play services are missing or refuse, [Protect.available] stays false.
+     */
+    fun loadProtect(): Protect {
+        val p = Protect()
+        try {
+            val client = SafetyNet.getClient(c)
+            p.enabled = Tasks.await(client.isVerifyAppsEnabled, 8, TimeUnit.SECONDS).isVerifyAppsEnabled
+            p.available = true
+            if (p.enabled) {
+                val r = Tasks.await(client.listHarmfulApps(), 15, TimeUnit.SECONDS)
+                p.lastScan = r.lastScanTimeMs
+                p.harmful = r.harmfulAppsList.map { it.apkPackageName }.toSet()
+            }
+        } catch (e: Throwable) {
+        }
+        return p
     }
 
     /** Screen time, background-service time, what is running right now. Needs usage access. */
@@ -264,6 +411,12 @@ class Collector(private val c: Context) {
         )
     }
 }
+
+private val STORES = setOf(
+    "com.android.vending", "com.sec.android.app.samsungapps", "com.huawei.appmarket", "com.xiaomi.mipicks",
+    "com.xiaomi.market", "com.amazon.venezia", "com.oppo.market", "com.heytap.market", "com.vivo.appstore",
+    "com.bbk.appstore", "com.transsion.phoenix", "com.hihonor.appmarket",
+)
 
 var urdu = false
 fun tr(en: String, ur: String) = if (urdu) ur else en

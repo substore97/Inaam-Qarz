@@ -80,6 +80,7 @@ class MainActivity : Activity() {
     private var apps: List<AppRow> = emptyList()
     private var net: List<NetRow> = emptyList()
     private var loadId = 0
+    private var protect: Protect? = null
 
     private lateinit var content: FrameLayout
     private var overviewBox: LinearLayout? = null
@@ -135,6 +136,10 @@ class MainActivity : Activity() {
                 try { data.loadStorage(list) } catch (e: Exception) { }
             }
             post(id) { loading = false; render() }
+            // Last, because Google Play services can take a few seconds to answer.
+            val pr = data.loadProtect()
+            for (a in list) if (a.pkg in pr.harmful) a.harmful = true
+            post(id) { protect = pr; render() }
         }
     }
 
@@ -200,14 +205,15 @@ class MainActivity : Activity() {
 
         val names = arrayOf(
             tr("Overview", "خلاصہ"), tr("Background", "بیک گراؤنڈ"), tr("Storage", "میموری"),
-            tr("Battery", "بیٹری"), tr("Data", "ڈیٹا"), tr("Cache", "کیش"),
+            tr("Battery", "بیٹری"), tr("Data", "ڈیٹا"), tr("Cache", "کیش"), tr("Security", "سیکیورٹی"),
         )
+        val order = intArrayOf(0, 6, 1, 2, 3, 4, 5) // Security sits right after Overview
         val tabs = LinearLayout(this).apply { setPadding(dp(16), dp(4), dp(8), dp(10)) }
-        names.forEachIndexed { i, n -> tabs.addView(chip(n, i == tab) { tab = i; buildShell() }) }
+        for (i in order) tabs.addView(chip(names[i], i == tab, if (i == 6) RED else BLUE) { tab = i; buildShell() })
         root.addView(HorizontalScrollView(this).apply {
             isHorizontalScrollBarEnabled = false
             addView(tabs)
-            post { tabs.getChildAt(tab)?.let { c -> scrollTo(if (urdu) c.right - width + dp(16) else c.left - dp(16), 0) } }
+            post { tabs.getChildAt(order.indexOf(tab))?.let { c -> scrollTo(if (urdu) c.right - width + dp(16) else c.left - dp(16), 0) } }
         })
 
         content = FrameLayout(this)
@@ -306,6 +312,17 @@ class MainActivity : Activity() {
         box.removeAllViews()
         if (loading) box.addView(text(tr("Scanning apps…", "ایپس اسکین ہو رہی ہیں…"), 13f, DIM).apply { setPadding(dp(4), 0, 0, dp(8)) })
         if (!hasAccess && !loading) accessCard(box)
+
+        val sus = apps.count { it.riskLevel == 2 }
+        card(box, tr("Security check", "سیکیورٹی چیک"), if (sus > 0) RED else GREEN).let { c ->
+            big(c, if (sus > 0) tr("$sus suspicious apps", "$sus مشکوک ایپس") else tr("No suspicious apps", "کوئی مشکوک ایپ نہیں"))
+            kv(c, tr("Apps checked", "چیک کی گئی ایپس"), apps.size.toString())
+            protect?.takeIf { it.available }?.let {
+                kv(c, tr("Google Play Protect", "گوگل پلے پروٹیکٹ"),
+                    if (it.enabled) tr("On • ${it.harmful.size} harmful apps", "آن • ${it.harmful.size} نقصان دہ ایپس") else tr("OFF", "بند"))
+            }
+            c.addView(button(tr("Open security check", "سیکیورٹی چیک کھولیں"), if (sus > 0) RED else GREEN) { tab = 6; buildShell() })
+        }
 
         val r = data.ram()
         val ramFrac = r.used.toFloat() / r.total
@@ -486,11 +503,41 @@ class MainActivity : Activity() {
                     size(a.cacheBytes), a.cacheBytes.toFloat() / max, GREEN, a,
                 ))
             }
+            6 -> {
+                val pr = protect
+                card(head, tr("Google Play Protect (virus scanner)", "گوگل پلے پروٹیکٹ (وائرس اسکینر)"), BLUE).let { c ->
+                    when {
+                        pr == null -> c.addView(text(tr("Checking…", "چیک ہو رہا ہے…"), 14f, DIM))
+                        !pr.available -> c.addView(text(tr(
+                            "This phone did not share its Play Protect results. Use the button to open it and scan.",
+                            "اس فون نے پلے پروٹیکٹ کے نتائج نہیں دیے۔ بٹن سے اسے کھول کر اسکین کریں۔"), 14f, TEXT))
+                        else -> {
+                            kv(c, tr("Status", "حالت"), if (pr.enabled) tr("On", "آن") else tr("OFF — turn it on", "بند — اسے آن کریں"))
+                            if (pr.enabled) kv(c, tr("Harmful apps found", "نقصان دہ ایپس ملیں"), pr.harmful.size.toString())
+                            if (pr.lastScan > 0) kv(c, tr("Last scan", "آخری اسکین"), ago(pr.lastScan))
+                        }
+                    }
+                    c.addView(button(tr("Scan now with Play Protect", "پلے پروٹیکٹ سے ابھی اسکین کریں"), BLUE) { openPlayProtect() })
+                }
+                val flagged = apps.filter { it.risk > 0 }.sortedByDescending { it.risk }
+                summary = tr(
+                    "Checked ${apps.size} apps • ${apps.count { it.riskLevel == 2 }} suspicious • ${apps.count { it.riskLevel == 1 }} with powerful access",
+                    "${apps.size} ایپس چیک ہوئیں • ${apps.count { it.riskLevel == 2 }} مشکوک • ${apps.count { it.riskLevel == 1 }} زیادہ اختیارات والی",
+                )
+                note = tr(
+                    "Every installed app is checked, including system and hidden ones. \"Suspicious\" means the app did not come from an app store and holds access that viruses typically use. It is a warning to look closer, not proof of a virus; only Play Protect confirms a virus. Tap an app to see why and to uninstall it.",
+                    "ہر انسٹال شدہ ایپ چیک ہوتی ہے، سسٹم اور چھپی ہوئی ایپس سمیت۔ \"مشکوک\" کا مطلب ہے کہ ایپ کسی ایپ اسٹور سے نہیں آئی اور اس کے پاس وہ اختیارات ہیں جو وائرس عام طور پر استعمال کرتے ہیں۔ یہ غور سے دیکھنے کی وارننگ ہے، وائرس کا ثبوت نہیں؛ وائرس کی تصدیق صرف پلے پروٹیکٹ کرتا ہے۔ وجہ دیکھنے اور ان انسٹال کرنے کے لیے ایپ پر ٹیپ کریں۔",
+                )
+                for (a in flagged) rows.add(Row(
+                    a.pkg, a.label, a.findings.take(2).joinToString(" • ") { it.text },
+                    levelName(a.riskLevel), a.risk / 100f, levelColor(a.riskLevel), a,
+                ))
+            }
         }
 
         head.addView(text(summary, 16f, TEXT, true))
         if (note.isNotEmpty()) head.addView(text(note, 12f, DIM).apply { setPadding(0, dp(4), 0, 0) })
-        if (tab != 4) head.addView(chip((if (showSystem) "✓ " else "") + tr("Show system apps", "سسٹم ایپس دکھائیں"), showSystem) {
+        if (tab != 4 && tab != 6) head.addView(chip((if (showSystem) "✓ " else "") + tr("Show system apps", "سسٹم ایپس دکھائیں"), showSystem) {
             showSystem = !showSystem
             getPreferences(MODE_PRIVATE).edit().putBoolean("sys", showSystem).apply()
             render()
@@ -512,7 +559,7 @@ class MainActivity : Activity() {
                 if (tab == 5) {
                     appSettings(a.pkg)
                     Toast.makeText(this@MainActivity, tr("Storage → Clear cache", "Storage ← Clear cache دبائیں"), Toast.LENGTH_LONG).show()
-                } else details(a)
+                } else if (tab == 6) securityDetails(a) else details(a)
             }
         }
         content.addView(list)
@@ -586,6 +633,7 @@ class MainActivity : Activity() {
         line(tr("Status", "حالت"), stateName(a.state))
         line(tr("Auto-start at boot", "فون آن ہوتے ہی خود چلتی ہے"), yes(a.autoStart))
         line(tr("Exempt from battery limits", "بیٹری پابندی سے آزاد"), yes(a.unrestricted))
+        line(tr("Security", "سیکیورٹی"), levelName(a.riskLevel))
         if (hasAccess) {
             line(tr("Last active", "آخری بار فعال"), ago(a.lastUsed))
             line(tr("On screen (24h)", "اسکرین پر (24 گھنٹے)"), dur(a.fgTime))
@@ -628,6 +676,52 @@ class MainActivity : Activity() {
             }, 1000)
         }
     }
+
+    private fun levelName(l: Int) = when (l) {
+        2 -> tr("Suspicious", "مشکوک"); 1 -> tr("Powerful access", "زیادہ اختیارات"); else -> tr("OK", "ٹھیک")
+    }
+
+    private fun levelColor(l: Int) = when (l) { 2 -> RED; 1 -> ORANGE; else -> GREEN }
+
+    private fun securityDetails(a: AppRow) {
+        val sb = StringBuilder()
+        for (f in a.findings) sb.append("• ").append(f.text).append('\n')
+        if (a.findings.isEmpty()) sb.append(tr("Nothing unusual found.", "کوئی غیر معمولی چیز نہیں ملی۔")).append('\n')
+        sb.append('\n').append(tr("Installed from", "کہاں سے انسٹال ہوئی")).append(": ").append(when {
+            a.system -> tr("Came with the phone", "فون کے ساتھ آئی")
+            a.installer == "com.android.vending" -> "Google Play Store"
+            a.installer == "com.sec.android.app.samsungapps" -> "Galaxy Store"
+            a.fromStore -> a.installer
+            else -> tr("Outside a store (APK file)", "اسٹور کے باہر سے (APK فائل)")
+        }).append('\n')
+        if (a.version.isNotEmpty()) sb.append(tr("Version", "ورژن")).append(": ").append(a.version).append('\n')
+        sb.append(a.pkg)
+        val b = AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+            .setTitle(a.label + " — " + levelName(a.riskLevel))
+            .setMessage(sb)
+            .setNegativeButton(tr("Close", "بند کریں"), null)
+        if (a.system) b.setPositiveButton(tr("App settings", "ایپ سیٹنگز")) { _, _ -> appSettings(a.pkg) }
+        else b.setPositiveButton(tr("Uninstall", "ان انسٹال کریں")) { _, _ -> uninstall(a) }
+            .setNeutralButton(tr("App settings", "ایپ سیٹنگز")) { _, _ -> appSettings(a.pkg) }
+        b.show()
+    }
+
+    /** Hands over to Android's own uninstall screen, which asks the user to confirm. */
+    private fun uninstall(a: AppRow) {
+        if (a.deviceAdmin) {
+            Toast.makeText(this, tr(
+                "First switch this app OFF under \"Device admin apps\", then uninstall it.",
+                "پہلے \"Device admin apps\" میں اس ایپ کو بند کریں، پھر ان انسٹال کریں۔"), Toast.LENGTH_LONG).show()
+            open(Intent().setClassName("com.android.settings", "com.android.settings.DeviceAdminSettings"), Intent(Settings.ACTION_SECURITY_SETTINGS))
+            return
+        }
+        open(Intent(Intent.ACTION_DELETE, Uri.parse("package:${a.pkg}")))
+    }
+
+    private fun openPlayProtect() = open(
+        Intent().setClassName("com.google.android.gms", "com.google.android.gms.security.settings.VerifyAppsSettingsActivity"),
+        Intent(Settings.ACTION_SECURITY_SETTINGS),
+    )
 
     private fun yes(b: Boolean) = if (b) tr("Yes", "ہاں") else tr("No", "نہیں")
 

@@ -12,8 +12,8 @@ android {
         applicationId = "com.inaam.phonemonitor"
         minSdk = 26
         targetSdk = 34
-        versionCode = 4
-        versionName = "1.3"
+        versionCode = 5
+        versionName = "2.0"
     }
     buildTypes {
         release {
@@ -29,4 +29,9 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
     lint { checkReleaseBuilds = false }
+}
+
+dependencies {
+    // Google Play Protect's list of harmful apps (SafetyNet Verify Apps API)
+    implementation("com.google.android.gms:play-services-safetynet:18.1.0")
 }
