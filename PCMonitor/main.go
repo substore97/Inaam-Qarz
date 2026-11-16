@@ -327,6 +327,18 @@ func main() {
 		left, forced := printClear()
 		json.NewEncoder(w).Encode(map[string]any{"remaining": left, "forced": forced, "admin": isAdmin()})
 	})
+	api("/api/av", false, func(w http.ResponseWriter, r *http.Request) {
+		json.NewEncoder(w).Encode(avGet())
+	})
+	api("/api/av/start", true, func(w http.ResponseWriter, r *http.Request) {
+		var req struct{ Kind string }
+		json.NewDecoder(r.Body).Decode(&req)
+		json.NewEncoder(w).Encode(map[string]bool{"ok": avStart(req.Kind)})
+	})
+	api("/api/av/open", true, func(w http.ResponseWriter, r *http.Request) {
+		avOpen()
+		w.Write([]byte("{}"))
+	})
 	api("/api/shutdown", true, func(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(map[string]bool{"ok": shutdownPC()})
 	})

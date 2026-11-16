@@ -16,6 +16,7 @@
   .sub { color:var(--dim); font-size:13px; font-weight:400; margin-inline-start:10px; }
   button { font:inherit; color:var(--text); background:var(--card); border:0; border-radius:20px; padding:8px 16px; cursor:pointer; }
   button:hover { filter:brightness(1.2); }
+  button:disabled { opacity:.45; cursor:default; filter:none; }
   button:focus-visible, input:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
   nav { display:flex; gap:8px; padding:6px 24px 14px; flex-wrap:wrap; }
   nav button.on { background:var(--blue); color:var(--bg); font-weight:700; }
@@ -86,10 +87,12 @@
   <section id="t2" class="hide"></section>
   <section id="t3" class="hide"></section>
   <section id="t4" class="hide"></section>
+  <section id="t5" class="hide"></section>
 </main>
 <script>
 const token = new URLSearchParams(location.search).get('t') || '';
 const api = (p, body) => fetch(p + '?t=' + token, body === undefined ? {} : {method:'POST', body:JSON.stringify(body)}).then(r => r.json());
+let A = null, avTick = 0;
 let P = null, printMsg = '', printBusy = false;
 let ur = false, tab = 0, S = null, sortKey = 'cpu', query = '', scan = null, cleanMsg = '', busy = false;
 try { ur = localStorage.getItem('ur') === '1'; } catch (e) {}
@@ -121,9 +124,9 @@ function shell() {
   lang.textContent = ur ? 'English' : 'اردو';
   power.textContent = '⏻ ' + tr('Shut down PC', 'کمپیوٹر بند کریں');
   power.title = tr('Double-click to shut down the computer', 'کمپیوٹر بند کرنے کے لیے ڈبل کلک کریں');
-  const names = [tr('Overview', 'خلاصہ'), tr('Programs', 'پروگرام'), tr('Network', 'نیٹ ورک / ڈیٹا'), tr('Cleaner', 'صفائی'), tr('Printer', 'پرنٹر')];
+  const names = [tr('Overview', 'خلاصہ'), tr('Programs', 'پروگرام'), tr('Network', 'نیٹ ورک / ڈیٹا'), tr('Cleaner', 'صفائی'), tr('Printer', 'پرنٹر'), tr('Virus scan', 'وائرس اسکین')];
   tabs.innerHTML = names.map((n, i) => `<button data-tab="${i}" class="${i === tab ? 'on' : ''}">${n}</button>`).join('');
-  for (let i = 0; i < 5; i++) document.getElementById('t' + i).classList.toggle('hide', i !== tab);
+  for (let i = 0; i < 6; i++) document.getElementById('t' + i).classList.toggle('hide', i !== tab);
   q.placeholder = tr('Search program…', 'پروگرام تلاش کریں…');
   render();
 }
@@ -284,10 +287,53 @@ function printer() {
 }
 const loadPrint = () => api('/api/print').then(r => { P = r; P.jobs = P.jobs || []; if (tab === 4 && !printBusy) printer(); }).catch(() => {});
 
+const ago = d => d > 100000 ? tr('never', 'کبھی نہیں') : d <= 0 ? tr('today', 'آج') : tr(`${d} days ago`, `${d} دن پہلے`);
+const onOff = v => v ? `<b style="color:var(--green)">${tr('On', 'آن')}</b>` : `<b style="color:var(--red)">${tr('OFF', 'بند')}</b>`;
+const avNames = () => ({quick: tr('Quick scan', 'فوری اسکین'), full: tr('Full scan', 'مکمل اسکین'), update: tr('Updating virus definitions', 'وائرس کی فہرست اپڈیٹ'), remove: tr('Removing threats', 'خطرات ہٹائے جا رہے ہیں')});
+const clock = s => Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+
+function virus() {
+  let h = adminBar();
+  if (!A) { t5.innerHTML = h + `<div class="card"><p>${tr('Checking Windows protection…', 'ونڈوز کی حفاظت چیک ہو رہی ہے…')}</p></div>`; return; }
+  if (!A.supported) {
+    t5.innerHTML = h + `<div class="card"><h2 style="color:var(--orange)">${tr('Microsoft Defender is not available', 'مائیکروسافٹ ڈیفنڈر دستیاب نہیں')}</h2>
+      <p>${tr('This usually means another antivirus is installed and is protecting this PC. Please use that antivirus to scan.', 'اس کا عام مطلب یہ ہے کہ کوئی دوسرا اینٹی وائرس انسٹال ہے اور وہی اس کمپیوٹر کی حفاظت کر رہا ہے۔ اسکین کے لیے وہی اینٹی وائرس استعمال کریں۔')}</p>
+      <p class="note">${esc(A.error)}</p></div>`;
+    return;
+  }
+  const i = A.info, names = avNames(), busy = A.busy, active = i.threats.filter(t => t.active);
+  h += `<div class="card"><h2 style="color:var(--blue)">${tr('Protection (Microsoft Defender)', 'حفاظت (مائیکروسافٹ ڈیفنڈر)')}</h2>
+    <div class="kv">${tr('Antivirus', 'اینٹی وائرس')}${onOff(i.enabled)}</div>
+    <div class="kv">${tr('Real-time protection', 'ہر وقت کی حفاظت')}${onOff(i.realtime)}</div>
+    <div class="kv">${tr('Virus definitions updated', 'وائرس کی فہرست اپڈیٹ ہوئی')}<b style="${i.sigAge > 7 ? 'color:var(--orange)' : ''}">${ago(i.sigAge)}</b></div>
+    <div class="kv">${tr('Last quick scan', 'آخری فوری اسکین')}<b>${ago(i.quickAge)}</b></div>
+    <div class="kv">${tr('Last full scan', 'آخری مکمل اسکین')}<b>${ago(i.fullAge)}</b></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <button class="go" data-av="quick" ${busy ? 'disabled' : ''}>${tr('Quick scan (5–15 min)', 'فوری اسکین (5 تا 15 منٹ)')}</button>
+      <button class="go" data-av="full" style="background:var(--blue)" ${busy ? 'disabled' : ''}>${tr('Full scan (1 hour or more)', 'مکمل اسکین (1 گھنٹہ یا زیادہ)')}</button>
+      <button data-av="update" ${busy ? 'disabled' : ''}>${tr('Update definitions', 'فہرست اپڈیٹ کریں')}</button>
+      <button id="avopen">${tr('Open Windows Security', 'Windows Security کھولیں')}</button></div>`;
+  if (busy) h += `<p style="margin:14px 0 0"><b style="color:var(--orange)">${names[busy]}… ${clock(A.busySecs)}</b><br><span class="note">${tr('You can keep using the PC. Keep this window open until it finishes.', 'آپ کمپیوٹر استعمال کرتے رہ سکتے ہیں۔ مکمل ہونے تک یہ ونڈو کھلی رکھیں۔')}</span></p>`;
+  else if (A.lastKind) h += `<p style="margin:14px 0 0">${A.lastErr
+      ? `<b style="color:var(--red)">${names[A.lastKind]}: ${tr('did not finish', 'مکمل نہیں ہوا')}</b><br><span class="note">${esc(A.lastErr)}</span>`
+      : `<b style="color:var(--green)">${names[A.lastKind]}: ${tr('finished', 'مکمل')}</b> — ${active.length ? tr(`${active.length} active threats found`, `${active.length} فعال خطرات ملے`) : tr('no active threats', 'کوئی فعال خطرہ نہیں')}`}</p>`;
+  h += `</div><div class="card"><h2 style="color:${active.length ? 'var(--red)' : 'var(--green)'}">${tr('Threats', 'خطرات')}</h2>`;
+  if (!i.threats.length) h += `<div class="issue"><span class="dot" style="background:var(--green)"></span><div>${tr('No threats on record.', 'کوئی خطرہ ریکارڈ میں نہیں۔')}</div></div>`;
+  for (const t of i.threats) h += `<div class="issue"><span class="dot" style="background:${t.active ? 'var(--red)' : 'var(--green)'}"></span>
+    <div>${esc(t.name)} <span class="tag" style="background:${t.active ? 'var(--red)' : 'var(--green)'}">${t.active ? tr('Active', 'فعال') : tr('Handled', 'نمٹا دیا گیا')}</span>
+    <small class="path">${(t.files || []).map(f => esc(f.replace(/^[a-z]+:_?/i, ''))).join('<br>')}</small></div></div>`;
+  if (active.length) h += `<button class="act" id="avremove" style="padding:10px 20px;margin-top:12px" ${busy ? 'disabled' : ''}>${tr('Remove all active threats', 'تمام فعال خطرات ہٹائیں')}</button>`;
+  h += `</div><p class="note">${tr('Scanning and removal are done by Microsoft Defender, the antivirus built into Windows. It moves harmful files to quarantine, where they can no longer run; if it ever catches a safe file by mistake, you can restore it in Windows Security → Protection history. A scan makes the PC faster only when something harmful is actually found.',
+    'اسکین اور صفائی مائیکروسافٹ ڈیفنڈر کرتا ہے، جو ونڈوز کا اپنا اینٹی وائرس ہے۔ یہ نقصان دہ فائلوں کو قرنطینہ میں ڈال دیتا ہے جہاں وہ چل نہیں سکتیں؛ اگر کبھی غلطی سے کوئی ٹھیک فائل پکڑی جائے تو Windows Security ← Protection history سے واپس لائی جا سکتی ہے۔ اسکین سے کمپیوٹر تبھی تیز ہوتا ہے جب واقعی کوئی نقصان دہ چیز ملے۔')}</p>`;
+  t5.innerHTML = h;
+}
+const loadAV = () => api('/api/av').then(r => { A = r; A.info.threats = A.info.threats || []; if (tab === 5) virus(); }).catch(() => {});
+const avStart = kind => api('/api/av/start', {kind}).then(() => loadAV());
+
 function render() {
   if (!S) return;
   hostline.textContent = `${S.host} • ${S.os} • ${tr('on for', 'چلتے ہوئے')} ${uptime(S.uptime)}`;
-  [overview, programs, network, cleaner, printer][tab]();
+  [overview, programs, network, cleaner, printer, virus][tab]();
 }
 
 function doScan() { scan = null; if (tab === 3) cleaner(); api('/api/clean/scan').then(r => { scan = r; if (tab === 3) cleaner(); }); }
@@ -317,8 +363,11 @@ power.addEventListener('dblclick', startShutdown);
 document.addEventListener('click', e => {
   const t = e.target;
   if (t.id === 'power') { if (e.detail === 1) toast(tr('Double-click to shut down the computer.', 'کمپیوٹر بند کرنے کے لیے ڈبل کلک کریں۔')); return; }
+  if (t.dataset.av) return avStart(t.dataset.av);
+  if (t.id === 'avopen') return api('/api/av/open', {});
+  if (t.id === 'avremove') { if (confirm(tr('Let Microsoft Defender remove (quarantine) all active threats now?', 'کیا مائیکروسافٹ ڈیفنڈر ابھی تمام فعال خطرات ہٹا دے (قرنطینہ میں ڈال دے)؟'))) avStart('remove'); return; }
   if (t.id === 'shutcancel') { clearInterval(shutTimer); overlay.classList.add('hide'); return; }
-  if (t.dataset.tab !== undefined) { tab = +t.dataset.tab; shell(); if (tab === 3 && !scan) doScan(); if (tab === 4) loadPrint(); }
+  if (t.dataset.tab !== undefined) { tab = +t.dataset.tab; shell(); if (tab === 3 && !scan) doScan(); if (tab === 4) loadPrint(); if (tab === 5) loadAV(); }
   else if (t.dataset.sort) { sortKey = t.dataset.sort; programs(); }
   else if (t.dataset.kill) {
     const name = t.dataset.kill;
@@ -366,6 +415,7 @@ function poll() {
   api('/api/stats').then(s => {
     S = s; S.hung = S.hung || []; S.procs = S.procs || [];
     if (tab === 4) loadPrint();
+    if (tab === 5 && ++avTick % 2 === 0) loadAV();
     if (tab !== 3 && !(tab === 4 && printBusy)) render(); else hostline.textContent = `${S.host} • ${S.os}`;
   }).catch(() => {});
 }

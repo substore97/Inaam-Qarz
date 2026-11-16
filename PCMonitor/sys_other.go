@@ -68,3 +68,26 @@ func printDelete(printer string, id int) bool {
 }
 
 func printClear() (int, bool) { fakeJobs = nil; return 0, false }
+
+// Fake antivirus for interface tests (PCMONITOR_TEST_AV=1).
+var fakeThreats = []Threat{
+	{ID: 1, Name: "Trojan:Win32/Wacatac.B!ml", Severity: 5, Active: true, Files: flexStrings{`file:_C:\Users\user\Downloads\crack_setup.exe`}},
+	{ID: 2, Name: "PUA:Win32/Presenoker", Severity: 1, Active: false, Files: flexStrings{`file:_C:\Users\user\AppData\Local\Temp\toolbar.dll`}},
+}
+
+func avQuery() (AVInfo, string) {
+	if os.Getenv("PCMONITOR_TEST_AV") == "" {
+		return AVInfo{}, "Microsoft Defender is not available"
+	}
+	return AVInfo{Enabled: true, Realtime: true, SigAge: 3, QuickAge: 12, FullAge: 4294967295, Threats: fakeThreats}, ""
+}
+
+func avRun(kind string) string {
+	time.Sleep(4 * time.Second)
+	if kind == "remove" {
+		fakeThreats = fakeThreats[1:]
+	}
+	return ""
+}
+
+func avOpen() {}
