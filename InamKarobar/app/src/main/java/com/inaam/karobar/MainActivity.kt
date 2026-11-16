@@ -100,24 +100,35 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-internal fun AppRoot(initialFolder: Int? = null, initialIdea: Int? = null) {
+internal fun AppRoot(initialFolder: Int? = null, initialIdea: Int? = null, initialVideo: Int? = null, videoScene: Int = 0) {
     MaterialTheme(colorScheme = AppColors, typography = UrduTypography) {
         CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-            App(initialFolder, initialIdea)
+            App(initialFolder, initialIdea, initialVideo, videoScene)
         }
     }
 }
 
 @Composable
-internal fun App(initialFolder: Int? = null, initialIdea: Int? = null) {
+internal fun App(initialFolder: Int? = null, initialIdea: Int? = null, initialVideo: Int? = null, videoScene: Int = 0) {
     val context = LocalContext.current
     val favorites = remember { Favorites(context) }
     var folderId by rememberSaveable { mutableStateOf(initialFolder) }
     var selectedId by rememberSaveable { mutableStateOf(initialIdea) }
+    var videoId by rememberSaveable { mutableStateOf(initialVideo) }
 
     val selected = ideas.firstOrNull { it.id == selectedId }
     val folder = budgets.firstOrNull { it.id == folderId }
+    val video = ideas.firstOrNull { it.id == videoId }
     when {
+        video != null -> {
+            BackHandler { videoId = null }
+            PracticalVideoScreen(
+                video,
+                onClose = { videoId = null },
+                initialScene = videoScene,
+                autoPlay = initialVideo == null,
+            )
+        }
         selected != null -> {
             BackHandler { selectedId = null }
             DetailScreen(
@@ -125,6 +136,7 @@ internal fun App(initialFolder: Int? = null, initialIdea: Int? = null) {
                 isFavorite = selected.id in favorites.ids,
                 onToggleFavorite = { favorites.toggle(selected.id) },
                 onBack = { selectedId = null },
+                onPlay = { videoId = selected.id },
             )
         }
         folder != null -> {
@@ -135,6 +147,7 @@ internal fun App(initialFolder: Int? = null, initialIdea: Int? = null) {
             favorites = favorites,
             onOpenFolder = { folderId = it.id },
             onOpen = { selectedId = it.id },
+            onPlay = { videoId = it.id },
         )
     }
 }
@@ -165,7 +178,7 @@ private fun GreenTopBar(
 
 // ================= ہوم اسکرین (فولڈرز) =================
 @Composable
-private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onOpen: (Idea) -> Unit) {
+private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onOpen: (Idea) -> Unit, onPlay: (Idea) -> Unit) {
     var query by rememberSaveable { mutableStateOf("") }
     var onlyFavorites by rememberSaveable { mutableStateOf(false) }
     var showTips by rememberSaveable { mutableStateOf(false) }
@@ -219,7 +232,7 @@ private fun HomeScreen(favorites: Favorites, onOpenFolder: (Budget) -> Unit, onO
             }
             if (!showList) {
                 item {
-                    TodayCard(todayIdea, onOpen = { onOpen(todayIdea) }, onNext = { todayIdea = ideas.random() })
+                    TodayCard(todayIdea, onOpen = { onOpen(todayIdea) }, onNext = { todayIdea = ideas.random() }, onPlay = { onPlay(todayIdea) })
                 }
                 item {
                     Text(
@@ -347,7 +360,7 @@ private fun FolderScreen(budget: Budget, favorites: Favorites, onOpen: (Idea) ->
 }
 
 @Composable
-private fun TodayCard(idea: Idea, onOpen: () -> Unit, onNext: () -> Unit) {
+private fun TodayCard(idea: Idea, onOpen: () -> Unit, onNext: () -> Unit, onPlay: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp).clickable(onClick = onOpen),
         colors = CardDefaults.cardColors(containerColor = Green),
@@ -368,7 +381,24 @@ private fun TodayCard(idea: Idea, onOpen: () -> Unit, onNext: () -> Unit) {
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
+            Spacer(Modifier.height(10.dp))
+            PlayVideoButton(onPlay)
         }
+    }
+}
+
+@Composable
+private fun PlayVideoButton(onClick: () -> Unit) {
+    Button(
+        onClick = onClick,
+        modifier = Modifier.fillMaxWidth().height(50.dp),
+        shape = RoundedCornerShape(14.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = Gold, contentColor = Color(0xFF3D2A00)),
+        elevation = ButtonDefaults.buttonElevation(6.dp),
+    ) {
+        Icon(Icons.Filled.PlayArrow, null)
+        Spacer(Modifier.width(6.dp))
+        Text("3D پریکٹیکل ویڈیو دیکھیں", style = urduStyle(16, FontWeight.Bold))
     }
 }
 
@@ -416,7 +446,7 @@ private fun IdeaCard(idea: Idea, isFavorite: Boolean, onClick: () -> Unit, onFav
 
 // ================= تفصیل اسکرین =================
 @Composable
-private fun DetailScreen(idea: Idea, isFavorite: Boolean, onToggleFavorite: () -> Unit, onBack: () -> Unit) {
+private fun DetailScreen(idea: Idea, isFavorite: Boolean, onToggleFavorite: () -> Unit, onBack: () -> Unit, onPlay: () -> Unit) {
     val context = LocalContext.current
     Scaffold(
         containerColor = Bg,
@@ -437,6 +467,8 @@ private fun DetailScreen(idea: Idea, isFavorite: Boolean, onToggleFavorite: () -
             Modifier.padding(padding).fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
         ) {
             AssistChip(onClick = {}, label = { Text("📁 ${budgetOf(idea).label} روپے والے آئیڈیاز") })
+            Spacer(Modifier.height(8.dp))
+            PlayVideoButton(onPlay)
             Spacer(Modifier.height(8.dp))
             Text(idea.description, style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(12.dp))
