@@ -247,6 +247,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `speech-kids-book/`: آداب الكلام والسلام (Manners of Speech and Salam, reading-only, kx combo 77), 40 pages
 - `creation-kids-book/`: من عجائب خلق الله (Wonders of Allah's Creation, reading-only, kx combo 78), 40 pages
 - `adhkar-kids-book/`: أذكار الصباح والمساء (Morning and Evening Remembrance, reading-only, kx combo 79), 40 pages
+- `cleanfaith-kids-book/`: النظافة من الإيمان (Cleanliness Is Part of Faith, reading-only, kx combo 80), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
