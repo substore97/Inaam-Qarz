@@ -265,6 +265,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `crow-kids-book/`: الغراب الذكي (The Clever Crow, reading-only, kx combo 90), 40 pages
 - `helpers-kids-book/`: أبطال يساعدوننا (Heroes Who Help Us, reading-only, kx combo 91), 40 pages
 - `harvest-kids-book/`: المزارع والحصاد (The Farmer and the Harvest, reading-only, kx combo 93), 40 pages
+- `fishermen-kids-book/`: الصياد والقارب (The Fisherman and the Boat, reading-only, kx combo 94), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
