@@ -22,6 +22,13 @@ import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.TextButton
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -154,17 +161,20 @@ internal fun PracticalVideoScreen(
     var ttsReady by remember { mutableStateOf(false) }
     var urduMissing by remember { mutableStateOf(false) }
     val tts = remember {
-        if (inPreview) null else TextToSpeech(context) { status ->
+        if (inPreview) null else TextToSpeech(context, { status ->
             if (status == TextToSpeech.SUCCESS) ttsReady = true
-        }
+        }, UrduSpeech.engineFor(context))
     }
     LaunchedEffect(ttsReady) {
         if (ttsReady && tts != null) {
-            urduMissing = !UrduSpeech.setup(tts)
+            urduMissing = !UrduSpeech.setup(tts, context)
         }
     }
     DisposableEffect(Unit) { onDispose { tts?.stop(); tts?.shutdown() } }
-    LaunchedEffect(index, playing, muted, ttsReady, urduMissing) {
+    var showVoices by remember { mutableStateOf(false) }
+    var voiceVersion by remember { mutableIntStateOf(0) }
+    LaunchedEffect(index, playing, muted, ttsReady, urduMissing, showVoices, voiceVersion) {
+        if (showVoices) return@LaunchedEffect
         if (tts == null || !ttsReady || urduMissing) return@LaunchedEffect
         if (playing && !muted) UrduSpeech.speak(tts, scene.narration, "scene$index")
         else tts.stop()
@@ -239,13 +249,16 @@ internal fun PracticalVideoScreen(
                     style = urduStyle(15, FontWeight.Bold),
                     modifier = Modifier.weight(1f),
                 )
+                IconButton(onClick = { playing = false; showVoices = true }) {
+                    Icon(Icons.Filled.Settings, "آواز کی ترتیب", tint = Color.White)
+                }
                 IconButton(onClick = onClose) { Icon(Icons.Filled.Close, "بند کریں", tint = Color.White) }
             }
             if (urduMissing && !muted) {
                 Text(
-                    "اس فون میں اردو آواز انسٹال نہیں۔ سیٹنگز ← زبان ← ٹیکسٹ ٹو اسپیچ سے اردو شامل کریں۔",
-                    color = Color.White.copy(alpha = 0.7f),
-                    style = urduStyle(11),
+                    "اس فون میں اردو آواز انسٹال نہیں۔ ⚙️ دبا کر اردو آواز ڈاؤن لوڈ کریں۔",
+                    color = Color.White.copy(alpha = 0.8f),
+                    style = urduStyle(12),
                 )
             }
         }
@@ -280,6 +293,9 @@ internal fun PracticalVideoScreen(
                 Text(if (muted) "🔇" else "🔊", fontSize = 20.sp)
             }
         }
+        if (showVoices) {
+            VoiceDialog(tts, onDismiss = { showVoices = false }, onChanged = { voiceVersion++ })
+        }
     }
 }
 
@@ -306,6 +322,82 @@ private fun ControlButton(big: Boolean = false, onClick: () -> Unit, content: @C
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center,
     ) { content() }
+}
+
+// ======================= آواز کی ترتیب =======================
+
+private const val VOICE_SAMPLE = "السلام علیکم۔ انعام کاروبار میں خوش آمدید۔ صرف ایک لاکھ روپے سے اپنا کاروبار شروع کریں اور ماہانہ پچاس ہزار روپے تک کمائیں۔"
+
+@Composable
+private fun VoiceDialog(tts: TextToSpeech?, onDismiss: () -> Unit, onChanged: () -> Unit) {
+    val context = LocalContext.current
+    val voices = remember(tts) { tts?.let { UrduSpeech.urduVoices(it) }.orEmpty() }
+    var selected by remember { mutableStateOf(UrduSpeech.savedVoice(context) ?: voices.firstOrNull()?.name) }
+    var rate by remember { mutableStateOf(UrduSpeech.savedRate(context)) }
+    val usingGoogle = UrduSpeech.engineFor(context) != null
+
+    fun preview() {
+        if (tts == null) return
+        voices.firstOrNull { it.name == selected }?.let { runCatching { tts.voice = it } }
+        tts.setSpeechRate(rate)
+        UrduSpeech.speak(tts, VOICE_SAMPLE, "preview")
+    }
+
+    AlertDialog(
+        onDismissRequest = { tts?.stop(); onDismiss() },
+        confirmButton = {
+            TextButton(onClick = {
+                tts?.stop()
+                UrduSpeech.save(context, selected, rate)
+                tts?.let { UrduSpeech.setup(it, context) }
+                onChanged(); onDismiss()
+            }) { Text("محفوظ کریں") }
+        },
+        dismissButton = { TextButton(onClick = { tts?.stop(); onDismiss() }) { Text("واپس") } },
+        title = { Text("اردو آواز کی ترتیب", style = urduStyle(18, FontWeight.Bold)) },
+        text = {
+            Column(Modifier.verticalScroll(rememberScrollState())) {
+                if (voices.isEmpty()) {
+                    Text("اس فون میں کوئی اردو آواز نہیں ملی۔ نیچے والے بٹن سے اردو آواز ڈاؤن لوڈ کریں۔", style = urduStyle(14))
+                } else {
+                    Text("ہر آواز سن کر وہ چنیں جس کا لہجہ آپ کو سب سے صحیح لگے:", style = urduStyle(14))
+                    voices.forEachIndexed { i, v ->
+                        Row(
+                            Modifier.fillMaxWidth().clickable { selected = v.name; preview() },
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            RadioButton(selected = selected == v.name, onClick = { selected = v.name; preview() })
+                            Text(UrduSpeech.label(v, i), style = urduStyle(14))
+                        }
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+                Text("بولنے کی رفتار", style = urduStyle(15, FontWeight.Bold))
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    listOf(0.75f to "آہستہ", 0.88f to "درمیانی", 1.0f to "تیز").forEach { (r, name) ->
+                        FilterChip(selected = rate == r, onClick = { rate = r; preview() }, label = { Text(name) })
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+                TextButton(onClick = { preview() }) { Text("▶ نمونہ سنیں") }
+                TextButton(onClick = { runCatching { context.startActivity(UrduSpeech.installIntent()) } }) {
+                    Text("⬇ بہتر اردو آواز ڈاؤن لوڈ کریں")
+                }
+                if (!usingGoogle) {
+                    Text(
+                        "بہترین اردو کے لیے پلے اسٹور سے Google کی اسپیچ ایپ (Speech Services by Google) انسٹال کریں۔",
+                        style = urduStyle(12),
+                        color = Color.Gray,
+                    )
+                }
+                Text(
+                    "مشورہ: انٹرنیٹ والی آواز عام طور پر زیادہ قدرتی لگتی ہے۔",
+                    style = urduStyle(12),
+                    color = Color.Gray,
+                )
+            }
+        },
+    )
 }
 
 // ======================= 3D اسٹیج =======================

@@ -4,7 +4,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class UrduSpeechTest {
-    private fun s(t: String) = UrduSpeech.spoken(t)
+    // اعراب ہٹا کر موازنہ
+    private fun s(t: String) = UrduSpeech.spoken(t).replace(Regex("[\\u064B-\\u065F\\u0670]"), "")
 
     @Test fun lakhs() {
         assertEquals("ایک لاکھ روپے", s("1,00,000 روپے"))
@@ -39,6 +40,13 @@ class UrduSpeechTest {
     @Test fun cleanup() {
         assertEquals("سرمایہ، کیمرہ، لینس", s("💰 سرمایہ (کیمرہ، لینس)"))
         assertEquals("موبائل یا لیپ ٹاپ", s("موبائل/لیپ ٹاپ"))
+    }
+
+    @Test fun diacriticsAdded() {
+        org.junit.Assert.assertTrue(UrduSpeech.spoken("متوقع منافع").contains("مُتَوَقَّع"))
+        // لفظ کے اندر حصہ نہیں بدلنا چاہیے
+        assertEquals("دکانداروں", s("دکانداروں"))
+        org.junit.Assert.assertFalse(UrduSpeech.spoken("دکانداروں").contains("ُ"))
     }
 
     @Test fun allIdeasSpeakWithoutDigits() {
