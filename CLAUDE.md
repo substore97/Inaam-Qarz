@@ -216,6 +216,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `healthyfood-kids-book/`: طعامي الصحي (My Healthy Food, reading-only, kx combo 50), 40 pages
 - `airport-kids-book/`: في المطار (At the Airport, reading-only, kx combo 31), 40 pages
 - `toys-kids-book/`: ألعابي المفضلة (My Favourite Toys, reading-only, kx combo 37), 40 pages
+- `week-kids-book/`: أيام الأسبوع (Days of the Week, reading-only, kx combo 46), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
