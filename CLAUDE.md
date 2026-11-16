@@ -267,6 +267,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `harvest-kids-book/`: المزارع والحصاد (The Farmer and the Harvest, reading-only, kx combo 93), 40 pages
 - `fishermen-kids-book/`: الصياد والقارب (The Fisherman and the Boat, reading-only, kx combo 94), 40 pages
 - `machines-kids-book/`: آلات البناء (Building Machines, reading-only, kx combo 92), 40 pages
+- `inventions-kids-book/`: اختراعات مفيدة (Useful Inventions, reading-only, kx combo 95), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
