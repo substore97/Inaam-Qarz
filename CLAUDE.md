@@ -208,6 +208,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `market-kids-book/`: في سوق الخضار (At the Vegetable Market, reading-only, kx combo 40), 40 pages
 - `colors-kids-book/`: ألوان من حولي (Colours Around Me, reading-only, kx combo 41), 40 pages
 - `shapes-kids-book/`: أشكال من حولي (Shapes Around Me, reading-only, kx combo 42), 40 pages
+- `count10-kids-book/`: أعد من 1 إلى 10 (I Count from 1 to 10, reading-only, kx combo 43), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
