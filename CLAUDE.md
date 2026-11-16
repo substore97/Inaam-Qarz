@@ -214,6 +214,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `seasons-kids-book/`: الفصول الأربعة (The Four Seasons, reading-only, kx combo 47), 40 pages
 - `senses-kids-book/`: حواسي الخمس (My Five Senses, reading-only, kx combo 49), 40 pages
 - `healthyfood-kids-book/`: طعامي الصحي (My Healthy Food, reading-only, kx combo 50), 40 pages
+- `airport-kids-book/`: في المطار (At the Airport, reading-only, kx combo 31), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
