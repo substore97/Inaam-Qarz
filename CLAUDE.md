@@ -201,6 +201,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `grandparents-kids-book/`: زيارة جدي وجدتي (Visiting Grandpa and Grandma, reading-only, kx combo 32), 40 pages
 - `schoolday-kids-book/`: يومي في المدرسة (My Day at School, reading-only, kx combo 33), 40 pages
 - `picnic-kids-book/`: نزهة جميلة (A Lovely Picnic, reading-only, kx combo 34), 40 pages
+- `cooking-kids-book/`: أطبخ مع أمي (Cooking with Mum, reading-only, kx combo 35), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
