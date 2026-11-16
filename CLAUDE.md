@@ -253,6 +253,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `lostcat-kids-book/`: القطة الضائعة (The Lost Kitten, reading-only, kx combo 83), 40 pages
 - `cloud-kids-book/`: الغيمة الصغيرة (The Little Cloud, reading-only, kx combo 84), 40 pages
 - `friendtree-kids-book/`: الشجرة الصديقة (The Friendly Tree, reading-only, kx combo 85), 40 pages
+- `earth-kids-book/`: الأرض بيتنا (The Earth, Our Home, reading-only, kx combo 96), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
