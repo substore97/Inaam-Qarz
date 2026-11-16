@@ -27,6 +27,7 @@ class AppRow(
     val pkg: String,
     val label: String,
     val uid: Int,
+    val system: Boolean,
     /** System app with no launcher icon (hidden unless "show system apps" is on). */
     val hiddenSystem: Boolean,
     /** Force-stopped / never launched: cannot run until the user opens it. */
@@ -98,7 +99,7 @@ class Collector(private val c: Context) {
             val label = labels.getOrPut(pi.packageName) { ai.loadLabel(pm).toString() }
             val sys = ai.flags and ApplicationInfo.FLAG_SYSTEM != 0
             val row = AppRow(
-                pi.packageName, label, ai.uid,
+                pi.packageName, label, ai.uid, sys,
                 hiddenSystem = sys && pi.packageName !in launchable,
                 stopped = ai.flags and ApplicationInfo.FLAG_STOPPED != 0,
                 autoStart = pi.requestedPermissions?.contains("android.permission.RECEIVE_BOOT_COMPLETED") == true,

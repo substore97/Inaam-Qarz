@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Phone Monitor</string>
+    <string name="cleaner_desc">Lets Phone Monitor press \"Force stop\" and \"Clear cache\" for you, only when you tap a clean/stop button inside the app. It does not read or send anything else.\n\nیہ اجازت Phone Monitor کو آپ کی جگہ \"Force stop\" اور \"Clear cache\" دبانے دیتی ہے، صرف تب جب آپ ایپ میں صاف کرنے یا روکنے کا بٹن دبائیں۔</string>
 </resources>
