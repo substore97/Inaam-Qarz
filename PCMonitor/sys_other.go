@@ -6,7 +6,6 @@ package main
 import (
 	"os"
 	"os/exec"
-	"strings"
 	"time"
 
 	"github.com/shirou/gopsutil/v4/process"
@@ -28,11 +27,22 @@ func openWindow(url string) {
 	exec.Command("xdg-open", url).Start()
 }
 
+func elevate() bool { return false }
+
+// Test layout: PCMONITOR_TEST_CLEAN points at a folder with temp/, apps/ and a file dump.dmp.
 func targets() []Target {
-	if d := os.Getenv("PCMONITOR_TEST_CLEAN"); d != "" {
-		return []Target{{ID: "temp", Dirs: strings.Split(d, ":"), MinAge: time.Second}, {ID: "browser"}}
+	d := os.Getenv("PCMONITOR_TEST_CLEAN")
+	if d == "" {
+		return nil
 	}
-	return nil
+	var set dirSet
+	return []Target{
+		{ID: "temp", Dirs: set.add(d + "/temp"), MinAge: time.Second},
+		{ID: "apps", Dirs: set.add(d+"/apps/one", d+"/apps/two", d+"/apps/one/nested", d+"/apps/missing")},
+		{ID: "dumps", Files: []string{d + "/dump.dmp"}},
+		{ID: "prefetch"},
+		{ID: "recycle", Scan: func() CleanResult { return CleanResult{ID: "recycle", Bytes: 5 << 20, Files: 3} }, Clean: func() CleanResult { return CleanResult{ID: "recycle"} }},
+	}
 }
 
 var fakeJobs = []PrintJob{{"HP LaserJet 1020", 7, "Invoice-November.pdf", "user", 482000, "Error, Printing"}, {"HP LaserJet 1020", 8, "رسید.docx", "user", 91000, "Normal"}}

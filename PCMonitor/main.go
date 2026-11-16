@@ -327,6 +327,13 @@ func main() {
 		left, forced := printClear()
 		json.NewEncoder(w).Encode(map[string]any{"remaining": left, "forced": forced, "admin": isAdmin()})
 	})
+	api("/api/elevate", true, func(w http.ResponseWriter, r *http.Request) {
+		ok := elevate()
+		json.NewEncoder(w).Encode(map[string]bool{"ok": ok})
+		if ok { // the administrator copy opens its own window; this one steps aside
+			go func() { time.Sleep(700 * time.Millisecond); os.Exit(0) }()
+		}
+	})
 	api("/api/clean/scan", false, func(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(scanAll())
 	})

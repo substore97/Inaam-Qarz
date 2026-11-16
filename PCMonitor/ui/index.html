@@ -48,7 +48,11 @@
   .hot { color:var(--red); font-weight:700; } .warm { color:var(--orange); }
   input[type=search] { font:inherit; color:var(--text); background:var(--card); border:1px solid var(--line); border-radius:12px; padding:8px 14px; width:260px; max-width:100%; margin-bottom:12px; }
   .note { color:var(--dim); font-size:13px; }
-  .clean { display:flex; align-items:center; gap:14px; padding:12px 0; border-top:1px solid var(--line); cursor:pointer; }
+  .clean { display:flex; align-items:flex-start; gap:14px; padding:12px 0; border-top:1px solid var(--line); }
+  .clean label { cursor:pointer; } .clean input { margin-top:3px; cursor:pointer; }
+  details { margin-top:6px; } summary { cursor:pointer; color:var(--blue); font-size:13px; }
+  .path { direction:ltr; unicode-bidi:plaintext; overflow-wrap:anywhere; font-size:12px; }
+  .clean > div { min-width:0; }
   .clean:first-of-type { border-top:0; }
   .clean input { width:20px; height:20px; accent-color:var(--green); flex:none; }
   .clean div { flex:1; } .clean small { display:block; color:var(--dim); }
@@ -155,7 +159,7 @@ function overview() {
   </div><div class="card"><h2 style="color:var(--green)">${tr('Drives', 'ڈرائیوز')}</h2>`;
   for (const d of S.disks || []) h += `<div class="kv" style="margin-top:8px"><span style="color:var(--text)">${esc(d.path)}</span><b>${size(d.used)} / ${size(d.total)} • ${tr('free', 'خالی')} ${size(d.total - d.used)}</b></div>${bar(d.used / d.total, level(d.used / d.total))}`;
   h += `</div>`;
-  if (!S.admin) h += `<p class="note">${tr('Tip: right-click PC Monitor → "Run as administrator" to also see details of system programs.', 'مشورہ: PC Monitor پر رائٹ کلک ← "Run as administrator" سے سسٹم پروگراموں کی تفصیل بھی نظر آئے گی۔')}</p>`;
+  h += adminBar();
   t0.innerHTML = h;
 }
 
@@ -202,38 +206,57 @@ function network() {
 
 const cleanNames = () => ({
   temp: [tr('Temporary files (%tmp%)', 'عارضی فائلیں (%tmp%)'), tr('Leftovers from programs and installers. Files from the last 2 hours and files in use are kept.', 'پروگراموں اور انسٹالرز کی بچی ہوئی فائلیں۔ پچھلے 2 گھنٹوں کی اور استعمال میں موجود فائلیں رہنے دی جاتی ہیں۔')],
-  prefetch: [tr('Prefetch files', 'پری فیچ فائلیں'), tr('Windows rebuilds them; programs may open a little slower the first time. Needs "Run as administrator".', 'ونڈوز انہیں دوبارہ بنا لیتا ہے؛ پہلی بار پروگرام ذرا دیر سے کھل سکتے ہیں۔ "Run as administrator" ضروری ہے۔')],
-  browser: [tr('Browser cache', 'براؤزر کا کیش'), tr('Chrome, Edge, Brave, Opera, Firefox. Passwords, history, bookmarks and logins are NOT touched.', 'کروم، ایج، بریو، اوپیرا، فائر فاکس۔ پاس ورڈ، ہسٹری، بک مارکس اور لاگ اِن کو نہیں چھیڑا جاتا۔')],
-  thumbs: [tr('Thumbnail cache', 'تھمب نیل کیش'), tr('Small preview pictures; Windows rebuilds them', 'چھوٹی پیش نظارہ تصویریں؛ ونڈوز انہیں دوبارہ بنا لیتا ہے')],
-  shader: [tr('Graphics cache', 'گرافکس کیش'), tr('DirectX shader cache; rebuilt automatically', 'ڈائریکٹ ایکس شیڈر کیش؛ خود دوبارہ بن جاتا ہے')],
-  crash: [tr('Crash reports', 'کریش رپورٹس'), tr('Old error dumps from crashed programs', 'کریش ہونے والے پروگراموں کی پرانی رپورٹس')],
-  wintemp: [tr('Windows temporary files', 'ونڈوز کی عارضی فائلیں'), tr('Older than 1 day. Needs "Run as administrator".', '1 دن سے پرانی۔ "Run as administrator" ضروری ہے۔')],
-  update: [tr('Old Windows Update downloads', 'ونڈوز اپڈیٹ کی پرانی ڈاؤن لوڈز'), tr('Already-installed update files older than 7 days. Needs "Run as administrator".', 'انسٹال ہو چکی اپڈیٹس کی 7 دن سے پرانی فائلیں۔ "Run as administrator" ضروری ہے۔')],
+  wintemp: [tr('Windows temporary files', 'ونڈوز کی عارضی فائلیں'), tr('C:\\Windows\\Temp, older than 1 day.', 'C:\\Windows\\Temp، 1 دن سے پرانی۔'), 1],
+  browser: [tr('Browser cache', 'براؤزر کا کیش'), tr('Chrome, Edge, Brave, Opera, Vivaldi, Firefox. Passwords, history, bookmarks, cookies and logins are NOT touched.', 'کروم، ایج، بریو، اوپیرا، ویوالڈی، فائر فاکس۔ پاس ورڈ، ہسٹری، بک مارکس، کوکیز اور لاگ اِن کو نہیں چھیڑا جاتا۔')],
+  apps: [tr('App cache', 'ایپس کا کیش'), tr('Cache of programs like Teams, Discord, Slack, WhatsApp, VS Code and Steam. Chats, logins and settings stay.', 'ٹیمز، ڈسکارڈ، سلیک، واٹس ایپ، وی ایس کوڈ اور اسٹیم جیسے پروگراموں کا کیش۔ چیٹس، لاگ اِن اور سیٹنگز محفوظ رہتی ہیں۔')],
+  storetemp: [tr('Microsoft Store app temp files', 'مائیکروسافٹ اسٹور ایپس کی عارضی فائلیں'), tr('Only the temporary folders of Store apps, older than 2 hours.', 'صرف اسٹور ایپس کے عارضی فولڈر، 2 گھنٹے سے پرانے۔')],
+  thumbs: [tr('Thumbnail and icon cache', 'تھمب نیل اور آئیکن کیش'), tr('Small preview pictures; Windows rebuilds them.', 'چھوٹی پیش نظارہ تصویریں؛ ونڈوز انہیں دوبارہ بنا لیتا ہے۔')],
+  shader: [tr('Graphics cache', 'گرافکس کیش'), tr('DirectX, NVIDIA, AMD and Intel shader caches; rebuilt automatically.', 'ڈائریکٹ ایکس، این ویڈیا، اے ایم ڈی اور انٹیل کے شیڈر کیش؛ خود دوبارہ بن جاتے ہیں۔')],
+  crash: [tr('Crash reports', 'کریش رپورٹس'), tr('Error reports and dumps left by crashed programs.', 'کریش ہونے والے پروگراموں کی چھوڑی ہوئی رپورٹس۔')],
+  dumps: [tr('System crash dumps', 'سسٹم کریش ڈمپس'), tr('Memory dumps from blue-screen crashes (MEMORY.DMP, Minidump). Often very large.', 'نیلی اسکرین والے کریش کے میموری ڈمپ (MEMORY.DMP، Minidump)۔ اکثر بہت بڑے ہوتے ہیں۔'), 1],
+  logs: [tr('Old Windows log files', 'ونڈوز کی پرانی لاگ فائلیں'), tr('Update and setup logs in C:\\Windows\\Logs, older than 7 days.', 'C:\\Windows\\Logs میں اپڈیٹ اور سیٹ اپ کے لاگ، 7 دن سے پرانے۔'), 1],
+  update: [tr('Old Windows Update downloads', 'ونڈوز اپڈیٹ کی پرانی ڈاؤن لوڈز'), tr('Update files older than 7 days; Windows downloads them again if it ever needs them.', '7 دن سے پرانی اپڈیٹ فائلیں؛ ضرورت پڑے تو ونڈوز انہیں دوبارہ ڈاؤن لوڈ کر لیتا ہے۔'), 1],
+  delivery: [tr('Update sharing cache', 'اپڈیٹ شیئرنگ کیش'), tr('Copies of updates kept to share with other PCs (Delivery Optimization).', 'دوسرے کمپیوٹرز کے ساتھ بانٹنے کے لیے رکھی گئی اپڈیٹس کی کاپیاں (Delivery Optimization)۔'), 1],
+  prefetch: [tr('Prefetch files', 'پری فیچ فائلیں'), tr('Windows rebuilds them; programs may open a little slower the first time.', 'ونڈوز انہیں دوبارہ بنا لیتا ہے؛ پہلی بار پروگرام ذرا دیر سے کھل سکتے ہیں۔'), 1],
+  recycle: [tr('Recycle Bin', 'ری سائیکل بن'), tr('Files you already deleted. Tick this only if you are sure you will not want them back.', 'وہ فائلیں جو آپ پہلے ہی حذف کر چکے ہیں۔ صرف تب ٹک کریں جب یقین ہو کہ یہ واپس نہیں چاہییں۔')],
 });
+const offByDefault = {prefetch: 1, recycle: 1};
+const selectedBytes = () => (scan || []).reduce((a, r) => a + (checked[r.id] ? r.bytes : 0), 0);
+const cleanLabel = () => busy ? tr('Cleaning…', 'صفائی جاری ہے…') : tr('Clean selected', 'منتخب صاف کریں') + ' • ' + size(selectedBytes());
+const adminBar = () => (S && !S.admin) ? `<div class="card" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+  <div style="flex:1;min-width:240px">${tr('Some Windows folders and system programs can only be seen and cleaned as administrator.', 'ونڈوز کے کچھ فولڈر اور سسٹم پروگرام صرف ایڈمنسٹریٹر کے طور پر دیکھے اور صاف کیے جا سکتے ہیں۔')}</div>
+  <button class="go" id="elev" style="background:var(--blue)">${tr('Restart as administrator', 'ایڈمنسٹریٹر کے طور پر دوبارہ کھولیں')}</button></div>` : '';
 
 function cleaner() {
   const n = cleanNames();
-  let h = `<div class="card"><h2 style="color:var(--green)">${tr('Safe clean-up', 'محفوظ صفائی')}</h2>
-    <p class="note">${tr('Only cache and temporary files are removed. Your documents, pictures, downloads, passwords, browser history, programs and their settings are never touched. Files that are in use are skipped.',
-      'صرف کیش اور عارضی فائلیں ہٹائی جاتی ہیں۔ آپ کے ڈاکومنٹس، تصویریں، ڈاؤن لوڈز، پاس ورڈ، براؤزر ہسٹری، پروگرام اور ان کی سیٹنگز کو کبھی نہیں چھیڑا جاتا۔ جو فائلیں استعمال میں ہوں وہ چھوڑ دی جاتی ہیں۔')}</p>`;
-  if (!scan) h += `<p>${tr('Scanning…', 'اسکین ہو رہا ہے…')}</p>`;
+  for (const r of scan || []) if (checked[r.id] === undefined) checked[r.id] = !offByDefault[r.id];
+  let h = adminBar();
+  if (!scan) h += `<div class="card"><h2 style="color:var(--green)">${tr('Safe clean-up', 'محفوظ صفائی')}</h2><p>${tr('Scanning the whole PC for junk…', 'پورے کمپیوٹر میں بیکار فائلیں تلاش ہو رہی ہیں…')}</p></div>`;
   else {
-    let total = 0;
+    const all = scan.reduce((a, r) => a + r.bytes, 0), files = scan.reduce((a, r) => a + r.files, 0);
+    h += `<div class="card"><h2 style="color:var(--green)">${tr('Junk found on this PC', 'اس کمپیوٹر میں ملی بیکار فائلیں')}</h2>
+      <div class="big">${size(all)}</div><div class="kv">${tr('Files', 'فائلیں')}<b>${files.toLocaleString('en')}</b></div>
+      <p class="note">${tr('Only cache, temporary files, logs and crash reports are listed. Your documents, pictures, downloads, passwords, browser history, programs and their settings are never touched. Files that are in use are skipped.',
+        'یہاں صرف کیش، عارضی فائلیں، لاگ اور کریش رپورٹس ہیں۔ آپ کے ڈاکومنٹس، تصویریں، ڈاؤن لوڈز، پاس ورڈ، براؤزر ہسٹری، پروگرام اور ان کی سیٹنگز کو کبھی نہیں چھیڑا جاتا۔ جو فائلیں استعمال میں ہوں وہ چھوڑ دی جاتی ہیں۔')}</p>
+      <div style="display:flex;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap">
+      <button class="go" id="doclean" ${busy ? 'disabled' : ''}>${cleanLabel()}</button>
+      <button id="rescan">${tr('Scan again', 'دوبارہ اسکین')}</button><span>${esc(cleanMsg)}</span></div></div><div class="card">`;
     for (const r of scan) {
       const nm = n[r.id] || [r.id, ''];
-      if (checked[r.id] === undefined) checked[r.id] = r.id !== 'prefetch';
-      if (checked[r.id]) total += r.bytes;
-      h += `<label class="clean"><input type="checkbox" data-clean="${r.id}" ${checked[r.id] ? 'checked' : ''}><div>${nm[0]}<small>${nm[1]}</small></div><b>${size(r.bytes)}</b></label>`;
+      const needAdmin = nm[2] && !S.admin ? ` <span class="tag" style="background:var(--orange)">${tr('administrator', 'ایڈمنسٹریٹر')}</span>` : '';
+      const places = (r.places || []).map(p => `<div class="kv"><span class="path">${esc(p.path)}</span><b>${size(p.bytes)} • ${p.files.toLocaleString('en')}</b></div>`).join('');
+      h += `<div class="clean"><input type="checkbox" id="c_${r.id}" data-clean="${r.id}" ${checked[r.id] ? 'checked' : ''}>
+        <div><label for="c_${r.id}">${nm[0]}${needAdmin}</label><small>${nm[1]}</small>
+        ${places ? `<details><summary>${tr('Show where', 'دکھائیں کہاں ہیں')} (${r.places.length})</summary>${places}</details>` : ''}</div>
+        <b style="${r.bytes ? '' : 'color:var(--dim)'}">${size(r.bytes)}</b></div>`;
     }
-    h += `<div style="display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap">
-      <button class="go" id="doclean" ${busy ? 'disabled' : ''}>${busy ? tr('Cleaning…', 'صفائی جاری ہے…') : tr('Clean selected', 'منتخب صاف کریں') + ' • ' + size(total)}</button>
-      <button id="rescan">${tr('Scan again', 'دوبارہ اسکین')}</button><span>${esc(cleanMsg)}</span></div>`;
+    h += `</div>`;
   }
-  t3.innerHTML = h + `</div><p class="note">${tr('For more space from the browser cache, close your browser first and then clean.', 'براؤزر کیش سے زیادہ جگہ خالی کرنے کے لیے پہلے براؤزر بند کریں، پھر صاف کریں۔')}</p>`;
+  t3.innerHTML = h + `<p class="note">${tr('For more space from browser and app caches, close those programs first and then clean.', 'براؤزر اور ایپس کے کیش سے زیادہ جگہ خالی کرنے کے لیے پہلے وہ پروگرام بند کریں، پھر صاف کریں۔')}</p>`;
 }
 
 function printer() {
-  let h = `<div class="card"><h2 style="color:var(--blue)">${tr('Print queue', 'پرنٹ کی قطار')}</h2>`;
+  let h = adminBar() + `<div class="card"><h2 style="color:var(--blue)">${tr('Print queue', 'پرنٹ کی قطار')}</h2>`;
   if (!P) h += `<p>${tr('Checking printers…', 'پرنٹر چیک ہو رہے ہیں…')}</p>`;
   else if (!P.jobs.length) h += `<div class="issue"><span class="dot" style="background:var(--green)"></span><div>${tr('No print jobs are waiting.', 'کوئی پرنٹ جاب انتظار میں نہیں ہے۔')}</div></div>`;
   else for (const j of P.jobs) {
@@ -280,6 +303,12 @@ document.addEventListener('click', e => {
       printBusy = false; loadPrint(); printer();
     }).catch(() => { printBusy = false; printer(); });
   }
+  else if (t.id === 'elev') api('/api/elevate', {}).then(r => {
+    if (!r.ok) return alert(tr('Windows did not allow it. Right-click PCMonitor.exe → "Run as administrator".', 'ونڈوز نے اجازت نہیں دی۔ PCMonitor.exe پر رائٹ کلک ← "Run as administrator" کریں۔'));
+    stopped = true;
+    document.body.innerHTML = `<main style="padding:60px 24px"><div class="card"><div class="big">${tr('PC Monitor is reopening as administrator.', 'PC Monitor ایڈمنسٹریٹر کے طور پر دوبارہ کھل رہا ہے۔')}</div><p>${tr('You can close this window.', 'آپ یہ ونڈو بند کر سکتے ہیں۔')}</p></div></main>`;
+    setTimeout(() => window.close(), 1500);
+  })
   else if (t.id === 'rescan') { cleanMsg = ''; doScan(); }
   else if (t.id === 'doclean') {
     const ids = scan.filter(r => checked[r.id]).map(r => r.id);
@@ -287,17 +316,19 @@ document.addEventListener('click', e => {
     busy = true; cleaner();
     api('/api/clean/run', {ids}).then(res => {
       const bytes = res.reduce((a, r) => a + r.bytes, 0), files = res.reduce((a, r) => a + r.files, 0), skipped = res.reduce((a, r) => a + r.skipped, 0);
-      cleanMsg = tr(`Freed ${size(bytes)} (${files} files). ${skipped} in-use files were left alone.`, `${size(bytes)} جگہ خالی ہوئی (${files} فائلیں)۔ استعمال میں موجود ${skipped} فائلیں چھوڑ دی گئیں۔`);
+      cleanMsg = tr(`Freed ${size(bytes)} (${files.toLocaleString('en')} files). ${skipped.toLocaleString('en')} in-use files were left alone.`, `${size(bytes)} جگہ خالی ہوئی (${files} فائلیں)۔ استعمال میں موجود ${skipped} فائلیں چھوڑ دی گئیں۔`);
       busy = false; doScan();
     }).catch(() => { busy = false; cleaner(); });
   }
 });
-document.addEventListener('change', e => { if (e.target.dataset.clean) { checked[e.target.dataset.clean] = e.target.checked; cleaner(); } });
+document.addEventListener('change', e => { if (e.target.dataset.clean) { checked[e.target.dataset.clean] = e.target.checked; const b = document.getElementById('doclean'); if (b) b.textContent = cleanLabel(); } });
 q.addEventListener('input', () => { query = q.value.trim().toLowerCase(); programs(); });
 lang.addEventListener('click', () => { ur = !ur; try { localStorage.setItem('ur', ur ? '1' : '0'); } catch (e) {} shell(); });
 addEventListener('pagehide', () => navigator.sendBeacon('/api/bye?t=' + token));
 
+let stopped = false;
 function poll() {
+  if (stopped) return;
   api('/api/stats').then(s => {
     S = s; S.hung = S.hung || []; S.procs = S.procs || [];
     if (tab === 4) loadPrint();
