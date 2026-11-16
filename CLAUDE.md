@@ -226,6 +226,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `adjectives-kids-book/`: صفات جميلة (Lovely Describing Words, reading-only, kx combo 57), 40 pages
 - `saving-kids-book/`: أحافظ على الماء والكهرباء (I Save Water and Electricity, reading-only, kx combo 51), 40 pages
 - `prepositions-kids-book/`: في وعلى ومن (In, On and From, reading-only, kx combo 58), 40 pages
+- `opposites2-kids-book/`: الشيء وعكسه (Things and Their Opposites, reading-only, kx combo 59), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
