@@ -189,6 +189,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `animalcolors-kids-book/`: ألوان الحيوانات (Colours of Animals, reading-only, kx combo 19), 40 pages
 - `move-kids-book/`: أقدام وأجنحة وزعانف (Feet, Wings and Fins, reading-only, kx combo 20), 40 pages
 - `morning-kids-book/`: صباحي الجميل (My Lovely Morning, reading-only, kx combo 21), 40 pages
+- `myroom-kids-book/`: غرفتي المرتبة (My Tidy Room, reading-only, kx combo 22), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
