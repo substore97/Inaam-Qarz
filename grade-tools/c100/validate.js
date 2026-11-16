@@ -1,6 +1,6 @@
 // node validate.js content_<slug>.json  -> checks schema, counts, art names, forbidden chars
 const fs = require('fs');
-const { A } = require('/home/user/Inaam-Qarz/science12-book/src/science12-art');
+const { A } = require('/home/user/Inaam-Qarz/arabic-kids-book/src/extra100-art');
 const f = process.argv[2]; const c = JSON.parse(fs.readFileSync(f, 'utf8')); const err = [];
 const art = (x, w) => { const n = String(x).split(':')[0]; if (!A[n]) err.push(`unknown art "${x}" in ${w}`); };
 for (const k of ['title','t1','t2','csub','cen','noteP','ovTitle','certP','blurb','en2','f1L','f2L']) if (typeof c[k] !== 'string' || !c[k]) err.push('missing ' + k);

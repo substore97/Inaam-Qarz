@@ -84,3 +84,7 @@
 /* end pages */
 .xAH{margin-bottom:16px}
 .kact .rv{gap:14px}.kact .rv>div{padding:10px 6px}
+.kact .qa .qq,.kact .qa .aa{font-size:29px !important}.kact .qa>div{margin-bottom:14px !important}.kact .fc li{font-size:30px !important}.kact .st p{font-size:32px !important}
+.ovg.ov40{gap:6px !important;margin-top:4px}.ovg.ov40 .ovc{padding:2px !important}.ovg.ov40 .ovc svg{width:58px !important;height:58px !important}.ovg.ov40 .ovc b{font-size:16px !important;line-height:1.45 !important}
+.ovg.ov40{grid-template-columns:repeat(5,minmax(0,1fr)) !important}.ovg.ov40 .ovc{min-width:0 !important;overflow:hidden}.ovg.ov40 .ovc b{white-space:normal !important;word-break:normal}
+.ovg.ov16{grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:10px !important}.ovg.ov16 .ovc{min-width:0 !important;overflow:hidden}.ovg.ov16 .ovc svg{width:120px !important;height:120px !important}.ovg.ov16 .ovc b{white-space:normal !important;font-size:20px !important;line-height:1.6 !important}
