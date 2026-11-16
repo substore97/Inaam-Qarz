@@ -236,6 +236,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `dailyduas-kids-book/`: أدعية يومي (My Daily Duas, reading-only, kx combo 66), 40 pages
 - `tablemanners-kids-book/`: آداب الطعام (Table Manners, reading-only, kx combo 67), 40 pages
 - `parents-kids-book/`: بر الوالدين (Kindness to Parents, reading-only, kx combo 68), 40 pages
+- `friday-kids-book/`: يوم الجمعة (Friday, reading-only, kx combo 69), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
