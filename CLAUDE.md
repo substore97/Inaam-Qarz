@@ -263,6 +263,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `pencil-kids-book/`: القلم المتكلم (The Talking Pencil, reading-only, kx combo 88), 40 pages
 - `fables-kids-book/`: حكايات الحكماء من الحيوانات (Wise Animal Fables, reading-only, kx combo 89), 40 pages
 - `crow-kids-book/`: الغراب الذكي (The Clever Crow, reading-only, kx combo 90), 40 pages
+- `helpers-kids-book/`: أبطال يساعدوننا (Heroes Who Help Us, reading-only, kx combo 91), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
