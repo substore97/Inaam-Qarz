@@ -181,6 +181,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `moon-kids-book/`: القمر صديقي (The Moon, My Friend, reading-only, kx combo 11), 40 pages
 - `sun-kids-book/`: الشمس العظيمة (The Great Sun, reading-only, kx combo 12), 40 pages
 - `water-kids-book/`: الماء سر الحياة (Water, the Secret of Life, reading-only, kx combo 13), 40 pages
+- `raindrop-kids-book/`: رحلة قطرة المطر (The Raindrop's Journey, reading-only, kx combo 14), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
