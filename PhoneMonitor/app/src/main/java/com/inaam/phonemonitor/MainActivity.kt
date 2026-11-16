@@ -411,9 +411,7 @@ class MainActivity : Activity() {
                     "\"ابھی چل رہی ہے\" کا مطلب ہے ایپ کی بیک گراؤنڈ سروس اس وقت فعال ہے۔ دکھایا گیا وقت پچھلے 24 گھنٹوں کا بیک گراؤنڈ کام ہے۔ روکنے کے لیے ایپ پر ٹیپ کریں۔",
                 )
                 head.addView(button(tr("Free RAM now (quick stop all)", "ابھی ریم خالی کریں (سب کو فوری روکیں)"), BLUE) { quickStopAll() }
-                    .apply { (layoutParams as LinearLayout.LayoutParams).topMargin = 0 })
-                head.addView(button(tr("Force stop all apps (automatic)", "تمام ایپس مکمل بند کریں (خودکار)"), RED) { confirmForceStopAll() }
-                    .apply { (layoutParams as LinearLayout.LayoutParams).bottomMargin = dp(12) })
+                    .apply { (layoutParams as LinearLayout.LayoutParams).apply { topMargin = 0; bottomMargin = dp(12) } })
                 val max = (v.maxOfOrNull { it.bgTime } ?: 0L).coerceAtLeast(1)
                 for (a in v.sortedWith(compareBy<AppRow> { it.state }.thenByDescending { it.bgTime }.thenByDescending { it.lastUsed })) {
                     val flags = ArrayList<String>()
@@ -476,12 +474,11 @@ class MainActivity : Activity() {
                 val withCache = v.filter { it.cacheBytes > 0 }.sortedByDescending { it.cacheBytes }
                 summary = tr("Total cache: ${size(withCache.sumOf { it.cacheBytes })}", "کل کیش: ${size(withCache.sumOf { it.cacheBytes })}")
                 note = tr(
-                    "The button clears every app's cache for you: the phone's screens open and close by themselves for a few seconds per app. Tap a single app to clear only that one.",
-                    "یہ بٹن تمام ایپس کا کیش خود صاف کرتا ہے: ہر ایپ کے لیے چند سیکنڈ فون کی اسکرینیں خود کھلتی اور بند ہوتی ہیں۔ صرف ایک ایپ صاف کرنی ہو تو اس پر ٹیپ کریں۔",
+                    "Tap an app → its page opens → Storage → \"Clear cache\". Only press \"Clear cache\", never \"Clear data\". Biggest cache is at the top.",
+                    "ایپ پر ٹیپ کریں ← اس کا صفحہ کھلے گا ← Storage ← \"Clear cache\" دبائیں۔ صرف \"Clear cache\" دبائیں، \"Clear data\" کبھی نہیں۔ سب سے زیادہ کیش والی ایپ سب سے اوپر ہے۔",
                 )
-                head.addView(button(tr("Clear all cache (automatic)", "تمام کیش صاف کریں (خودکار)"), GREEN) {
-                    val t = if (hasAccess) withCache.filter { it.cacheBytes > 200_000 } else v.filter { !it.system }
-                    auto(t.map { it.pkg }, false)
+                head.addView(button(tr("Open phone storage cleaner", "فون کا اسٹوریج کلینر کھولیں"), GREEN) {
+                    open(Intent("android.os.storage.action.MANAGE_STORAGE"), Intent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS))
                 }.apply { (layoutParams as LinearLayout.LayoutParams).apply { topMargin = 0; bottomMargin = dp(12) } })
                 val max = (withCache.firstOrNull()?.cacheBytes ?: 0L).coerceAtLeast(1)
                 for (a in withCache) rows.add(Row(
@@ -512,7 +509,10 @@ class MainActivity : Activity() {
             setOnItemClickListener { p, _, pos, _ ->
                 val r = p.getItemAtPosition(pos) as? Row ?: return@setOnItemClickListener
                 val a = r.app ?: return@setOnItemClickListener
-                if (tab == 5) auto(listOf(a.pkg), false) else details(a)
+                if (tab == 5) {
+                    appSettings(a.pkg)
+                    Toast.makeText(this@MainActivity, tr("Storage → Clear cache", "Storage ← Clear cache دبائیں"), Toast.LENGTH_LONG).show()
+                } else details(a)
             }
         }
         content.addView(list)
@@ -605,8 +605,10 @@ class MainActivity : Activity() {
             .setPositiveButton(tr("App settings", "ایپ سیٹنگز")) { _, _ -> appSettings(a.pkg) }
             .setNeutralButton(tr("Stop background", "بیک گراؤنڈ روکیں")) { _, _ ->
                 (getSystemService(ACTIVITY_SERVICE) as ActivityManager).killBackgroundProcesses(a.pkg)
-                if (CleanerService.instance != null) auto(listOf(a.pkg), true)
-                else Toast.makeText(this, tr("Background processes stopped.", "بیک گراؤنڈ پروسیس روک دیے گئے۔"), Toast.LENGTH_LONG).show()
+                Toast.makeText(this, tr(
+                    "Background processes stopped. If it restarts, use App settings → Force stop.",
+                    "بیک گراؤنڈ پروسیس روک دیے گئے۔ اگر دوبارہ چل پڑے تو ایپ سیٹنگز ← Force stop استعمال کریں۔",
+                ), Toast.LENGTH_LONG).show()
             }
             .setNegativeButton(tr("Close", "بند کریں"), null)
             .show()
@@ -625,42 +627,6 @@ class MainActivity : Activity() {
                 if (!isDestroyed) render()
             }, 1000)
         }
-    }
-
-    private fun confirmForceStopAll() {
-        val list = visible().filter { !it.system && !it.stopped }.map { it.pkg }
-        AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
-            .setTitle(tr("Force stop ${list.size} apps?", "${list.size} ایپس مکمل بند کریں؟"))
-            .setMessage(tr(
-                "Every app you installed will be fully stopped. Apps like WhatsApp will not show new messages until you open them again.",
-                "آپ کی انسٹال کی ہوئی ہر ایپ مکمل بند ہو جائے گی۔ واٹس ایپ جیسی ایپس دوبارہ کھولنے تک نئے پیغام نہیں دکھائیں گی۔",
-            ))
-            .setPositiveButton(tr("Stop all", "سب بند کریں")) { _, _ -> auto(list, true) }
-            .setNegativeButton(tr("Cancel", "منسوخ"), null)
-            .show()
-    }
-
-    /** Let the cleaner service press Force stop / Clear cache for each package. */
-    private fun auto(pkgs: List<String>, forceStop: Boolean) {
-        if (pkgs.isEmpty()) {
-            Toast.makeText(this, tr("Nothing to do.", "کرنے کو کچھ نہیں۔"), Toast.LENGTH_SHORT).show()
-            return
-        }
-        if (CleanerService.instance == null) {
-            AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
-                .setTitle(tr("Turn on the cleaner", "کلینر آن کریں"))
-                .setMessage(tr(
-                    "Android only lets an app stop other apps or clear their cache through an Accessibility service. On the next screen open \"Installed apps\" → Phone Monitor → turn it on, then come back and press the button again.\n\nIf the switch is grey or says \"denied\": first use \"Open App info\" → ⋮ → Allow restricted settings (not during a phone call).",
-                    "اینڈرائیڈ کسی ایپ کو دوسری ایپس بند کرنے یا ان کا کیش صاف کرنے کی اجازت صرف Accessibility سروس کے ذریعے دیتا ہے۔ اگلی اسکرین پر \"Installed apps\" ← Phone Monitor کھول کر آن کریں، پھر واپس آ کر بٹن دوبارہ دبائیں۔\n\nاگر سوئچ دھندلا ہو یا \"denied\" آئے: پہلے \"ایپ انفو کھولیں\" ← ⋮ ← Allow restricted settings کریں (فون کال کے دوران نہیں ہوتا)۔",
-                ))
-                .setPositiveButton(tr("Open Accessibility", "Accessibility کھولیں")) { _, _ -> open(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)) }
-                .setNeutralButton(tr("Open App info", "ایپ انفو کھولیں")) { _, _ -> appSettings(packageName) }
-                .setNegativeButton(tr("Cancel", "منسوخ"), null)
-                .show()
-            return
-        }
-        Toast.makeText(this, tr("Working on ${pkgs.size} apps… please don't touch the screen.", "${pkgs.size} ایپس پر کام جاری ہے… براہ کرم اسکرین کو نہ چھوئیں۔"), Toast.LENGTH_LONG).show()
-        CleanerService.start(pkgs, forceStop)
     }
 
     private fun yes(b: Boolean) = if (b) tr("Yes", "ہاں") else tr("No", "نہیں")
