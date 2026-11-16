@@ -46,7 +46,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import java.util.Locale
 import kotlin.math.max
 
 // ======================= مناظر (سینز) =======================
@@ -59,7 +58,7 @@ private sealed class Scene(val narration: String) {
         "اس کاروبار کے لیے سرمایہ: $amount۔ " + items.joinToString("، "),
     )
     class Step(val index: Int, val total: Int, val text: String, val emoji: String) : Scene(
-        "قدم نمبر ${index + 1}۔ $text",
+        "${UrduSpeech.ordinal(index + 1)} قدم۔ $text",
     )
     class Tips(val tips: List<String>) : Scene("اہم مشورے۔ " + tips.joinToString("۔ "))
     class Profit(val profit: String, val level: String) : Scene(
@@ -124,7 +123,7 @@ private fun emojiFor(step: String, idea: Idea, domainFirst: Boolean = false): St
 /** ٹیسٹ اسکرین شاٹ میں ہر منظر مکمل حالت میں دکھانے کے لیے */
 private val LocalStill = staticCompositionLocalOf { false }
 
-private fun sceneDurationMs(s: Scene): Int = max(5500, s.narration.length * 80)
+private fun sceneDurationMs(s: Scene): Int = max(5500, UrduSpeech.spoken(s.narration).length * 85 + 800)
 
 // ======================= ویڈیو پلیئر =======================
 
@@ -161,18 +160,13 @@ internal fun PracticalVideoScreen(
     }
     LaunchedEffect(ttsReady) {
         if (ttsReady && tts != null) {
-            val r = tts.setLanguage(Locale("ur", "PK"))
-            if (r == TextToSpeech.LANG_MISSING_DATA || r == TextToSpeech.LANG_NOT_SUPPORTED) {
-                val r2 = tts.setLanguage(Locale("ur"))
-                urduMissing = r2 == TextToSpeech.LANG_MISSING_DATA || r2 == TextToSpeech.LANG_NOT_SUPPORTED
-            }
-            tts.setSpeechRate(0.95f)
+            urduMissing = !UrduSpeech.setup(tts)
         }
     }
     DisposableEffect(Unit) { onDispose { tts?.stop(); tts?.shutdown() } }
     LaunchedEffect(index, playing, muted, ttsReady, urduMissing) {
         if (tts == null || !ttsReady || urduMissing) return@LaunchedEffect
-        if (playing && !muted) tts.speak(scene.narration, TextToSpeech.QUEUE_FLUSH, null, "scene$index")
+        if (playing && !muted) UrduSpeech.speak(tts, scene.narration, "scene$index")
         else tts.stop()
     }
 

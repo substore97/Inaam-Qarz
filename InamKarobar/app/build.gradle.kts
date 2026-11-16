@@ -12,8 +12,8 @@ android {
         applicationId = "com.inaam.karobar"
         minSdk = 24
         targetSdk = 34
-        versionCode = 5
-        versionName = "5.0"
+        versionCode = 6
+        versionName = "5.1"
     }
 
     buildTypes {
