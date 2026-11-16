@@ -222,6 +222,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `firstwords-kids-book/`: كلماتي الأولى (My First Words, reading-only, kx combo 53), 40 pages
 - `madd-kids-book/`: أقرأ المد (I Read Long Vowels, reading-only, kx combo 54), 40 pages
 - `tanween-kids-book/`: أقرأ التنوين (I Read Tanween, reading-only, kx combo 55), 40 pages
+- `dailyverbs-kids-book/`: أفعالي اليومية (My Daily Actions, reading-only, kx combo 56), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
