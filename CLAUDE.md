@@ -243,6 +243,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `animalmercy-kids-book/`: الرفق بالحيوان (Kindness to Animals, reading-only, kx combo 73), 40 pages
 - `honesty-kids-book/`: الصدق والأمانة (Honesty and Trust, reading-only, kx combo 74), 40 pages
 - `shukr-kids-book/`: أشكر الله (I Thank Allah, reading-only, kx combo 75), 40 pages
+- `sabr-kids-book/`: الصبر الجميل (Beautiful Patience, reading-only, kx combo 76), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
