@@ -255,6 +255,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `friendtree-kids-book/`: الشجرة الصديقة (The Friendly Tree, reading-only, kx combo 85), 40 pages
 - `earth-kids-book/`: الأرض بيتنا (The Earth, Our Home, reading-only, kx combo 96), 40 pages
 - `games-kids-book/`: ألعاب نلعبها معا (Games We Play Together, reading-only, kx combo 97), 40 pages
+- `letterstories-kids-book/`: حكايات الحروف (Stories of the Letters, reading-only, kx combo 98), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
