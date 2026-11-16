@@ -47,4 +47,5 @@ A.fox = c => { c.shadow(100, 176, 70, 6);
   c.ell(96, 136, 46, 30, '#ff8a1f'); c.raw('<path d="M74 160 L72 176 M118 160 L120 176" stroke="#8a3a10" stroke-width="7" stroke-linecap="round"/>');
   c.ball(126, 92, 32, '#ff8a1f'); c.raw('<path d="M104 70 L108 38 L124 64 Z M136 64 L152 38 L152 72 Z" fill="#ff8a1f"/><path d="M110 64 L112 48 L120 62 Z M142 62 L150 48 L149 66 Z" fill="#5a2a10"/><path d="M118 104 Q140 128 160 100 Q150 94 140 96 Z" fill="#fff"/>');
   c.ball(156, 100, 5, '#2b2340', { shine: false }); c.face(132, 90, .45, { blush: false }); };
+{ const b = A.balloon; A.balloon = (c, col) => b(c, col || '#ff6b8a'); }
 module.exports = lib;
