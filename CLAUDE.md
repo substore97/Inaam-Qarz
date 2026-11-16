@@ -170,6 +170,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `when-i-grow-book/`: عندما أكبر (When I Grow Up, reading-only, layout k37), 50 pages
 - `jungle-kids-book/`: حيوانات الأدغال (Jungle Animals, reading-only, kx combo 1), 40 pages
 - `cold-kids-book/`: حيوانات البلاد الباردة (Animals of the Cold Lands, reading-only, kx combo 2), 40 pages
+- `bugs-kids-book/`: عالم الحشرات الصغيرة (The Little World of Insects, reading-only, kx combo 3), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
