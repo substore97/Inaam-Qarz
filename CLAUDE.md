@@ -219,6 +219,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `week-kids-book/`: أيام الأسبوع (Days of the Week, reading-only, kx combo 46), 40 pages
 - `feelings-kids-book/`: مشاعري (My Feelings, reading-only, kx combo 48), 40 pages
 - `recycle-kids-book/`: أعيد التدوير (I Recycle, reading-only, kx combo 52), 40 pages
+- `firstwords-kids-book/`: كلماتي الأولى (My First Words, reading-only, kx combo 53), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
