@@ -239,6 +239,7 @@ User communicates in Roman Urdu; reply in Roman Urdu.
 - `friday-kids-book/`: يوم الجمعة (Friday, reading-only, kx combo 69), 40 pages
 - `ramadandays-kids-book/`: رمضان يوما بيوم (Ramadan Day by Day, reading-only, kx combo 70), 40 pages
 - `hajj-kids-book/`: رحلة الحج (The Journey of Hajj, reading-only, kx combo 71), 40 pages
+- `makkah-kids-book/`: مكة المكرمة والمدينة المنورة (Makkah and Madinah, reading-only, kx combo 72), 40 pages
 
 Grade-book generator (configs, page templates, themes, lint, proofread dump) is saved in `grade-tools/` — copy it to the scratchpad to use.
 Shared tooling lives in `arabic-kids-book/src/` (3D art library `art.js`, `pdf.js`, `pack.py`).
