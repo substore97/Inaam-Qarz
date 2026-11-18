@@ -1,0 +1,692 @@
+{
+ "n": 14,
+ "entries": [
+  {
+   "w": "tradition",
+   "pos": "n.",
+   "ipa": "/trəˈdɪʃn/",
+   "lvl": "B1",
+   "ar": "تقليد، عادة متوارثة",
+   "ex": "In many Gulf countries, the *tradition* of serving coffee to guests is still strong.",
+   "exAr": "في كثير من دول الخليج لا يزال *تقليد* تقديم القهوة للضيوف راسخًا.",
+   "syn": [
+    "convention",
+    "practice"
+   ],
+   "col": [
+    "a long tradition",
+    "break with tradition",
+    "oral tradition"
+   ],
+   "fam": "traditional (adj.) · traditionally (adv.)"
+  },
+  {
+   "w": "custom",
+   "pos": "n.",
+   "ipa": "/ˈkʌstəm/",
+   "lvl": "B2",
+   "ar": "عادة، عُرف",
+   "ex": "It is a local *custom* to remove your shoes before entering someone's home.",
+   "exAr": "من *العادات* المحلية خلع الحذاء قبل دخول بيت أحدهم.",
+   "syn": [
+    "practice",
+    "convention",
+    "habit"
+   ],
+   "col": [
+    "local customs",
+    "an ancient custom",
+    "social customs"
+   ],
+   "fam": "customary (adj.)"
+  },
+  {
+   "w": "heritage",
+   "pos": "n.",
+   "ipa": "/ˈherɪtɪdʒ/",
+   "lvl": "B2",
+   "ar": "تراث",
+   "ex": "UNESCO works to protect places of outstanding cultural *heritage* around the world.",
+   "exAr": "تعمل اليونسكو على حماية الأماكن ذات القيمة الاستثنائية في *التراث* الثقافي حول العالم.",
+   "syn": [
+    "legacy",
+    "inheritance"
+   ],
+   "col": [
+    "cultural heritage",
+    "national heritage",
+    "a heritage site"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "festival",
+   "pos": "n.",
+   "ipa": "/ˈfestɪvl/",
+   "lvl": "B1",
+   "ar": "مهرجان",
+   "ex": "The city's annual book *festival* attracts thousands of readers and writers.",
+   "exAr": "يجذب *مهرجان* الكتاب السنوي في المدينة آلاف القراء والكتّاب.",
+   "syn": [
+    "fair",
+    "celebration"
+   ],
+   "col": [
+    "an annual festival",
+    "a film festival",
+    "hold a festival"
+   ],
+   "fam": "festive (adj.) · festivity (n.)"
+  },
+  {
+   "w": "ceremony",
+   "pos": "n.",
+   "ipa": "/ˈserəməni/",
+   "lvl": "B2",
+   "ar": "حفل، مراسم",
+   "ex": "Graduation *ceremonies* are an important milestone for students and their families.",
+   "exAr": "تُعدّ *حفلات* التخرج محطة مهمة في حياة الطلاب وأسرهم.",
+   "syn": [
+    "rite",
+    "event",
+    "celebration"
+   ],
+   "col": [
+    "an opening ceremony",
+    "a graduation ceremony",
+    "hold a ceremony"
+   ],
+   "fam": "ceremonial (adj.)"
+  },
+  {
+   "w": "museum",
+   "pos": "n.",
+   "ipa": "/mjuːˈziːəm/",
+   "lvl": "B1",
+   "ar": "متحف",
+   "ex": "Free entry to national *museums* has greatly increased visitor numbers in the UK.",
+   "exAr": "أدى الدخول المجاني إلى *المتاحف* الوطنية إلى زيادة كبيرة في أعداد الزوار في المملكة المتحدة.",
+   "syn": [],
+   "col": [
+    "a science museum",
+    "museum exhibits",
+    "visit a museum"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "gallery",
+   "pos": "n.",
+   "ipa": "/ˈɡæləri/",
+   "lvl": "B1",
+   "ar": "معرض فني، صالة عرض",
+   "ex": "The new *gallery* displays the work of young local painters.",
+   "exAr": "يعرض *المعرض الفني* الجديد أعمال الرسامين المحليين الشباب.",
+   "syn": [
+    "exhibition hall"
+   ],
+   "col": [
+    "an art gallery",
+    "a national gallery"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "exhibition",
+   "pos": "n.",
+   "ipa": "/ˌeksɪˈbɪʃn/",
+   "lvl": "B1",
+   "ar": "معرض",
+   "ex": "The *exhibition* on early Islamic science drew large crowds of schoolchildren.",
+   "exAr": "اجتذب *المعرض* الخاص بالعلوم في العصر الإسلامي المبكر حشودًا كبيرة من تلاميذ المدارس.",
+   "syn": [
+    "display",
+    "show",
+    "exposition"
+   ],
+   "col": [
+    "a temporary exhibition",
+    "hold an exhibition",
+    "an art exhibition"
+   ],
+   "fam": "exhibit (v./n.) · exhibitor (n.)"
+  },
+  {
+   "w": "sculpture",
+   "pos": "n.",
+   "ipa": "/ˈskʌlptʃə/",
+   "lvl": "B2",
+   "ar": "منحوتة، فن النحت",
+   "ex": "A huge steel *sculpture* now stands at the entrance to the city park.",
+   "exAr": "تنتصب الآن *منحوتة* فولاذية ضخمة عند مدخل حديقة المدينة.",
+   "syn": [
+    "carving",
+    "statue"
+   ],
+   "col": [
+    "a bronze sculpture",
+    "modern sculpture",
+    "stone sculpture"
+   ],
+   "fam": "sculptor (n.) · sculpt (v.) · sculptural (adj.)"
+  },
+  {
+   "w": "literature",
+   "pos": "n.",
+   "ipa": "/ˈlɪtrətʃə/",
+   "lvl": "B2",
+   "ar": "الأدب",
+   "ex": "Studying classic *literature* helps students understand other periods and cultures.",
+   "exAr": "تساعد دراسة *الأدب* الكلاسيكي الطلاب على فهم عصور وثقافات أخرى.",
+   "syn": [
+    "writing",
+    "written works"
+   ],
+   "col": [
+    "classic literature",
+    "English literature",
+    "children's literature"
+   ],
+   "fam": "literary (adj.)"
+  },
+  {
+   "w": "novel",
+   "pos": "n.",
+   "ipa": "/ˈnɒvl/",
+   "lvl": "B1",
+   "ar": "رواية",
+   "ex": "Naguib Mahfouz's *novels* describe everyday life in twentieth-century Cairo.",
+   "exAr": "تصف *روايات* نجيب محفوظ الحياة اليومية في القاهرة خلال القرن العشرين.",
+   "syn": [
+    "fiction",
+    "story"
+   ],
+   "col": [
+    "a historical novel",
+    "publish a novel",
+    "a best-selling novel"
+   ],
+   "fam": "novelist (n.)"
+  },
+  {
+   "w": "poetry",
+   "pos": "n.",
+   "ipa": "/ˈpəʊətri/",
+   "lvl": "B1",
+   "ar": "الشعر",
+   "ex": "Arabic *poetry* has been recited at gatherings and in markets for centuries.",
+   "exAr": "يُلقى *الشعر* العربي في المجالس والأسواق منذ قرون.",
+   "syn": [
+    "verse",
+    "poems"
+   ],
+   "col": [
+    "classical poetry",
+    "write poetry",
+    "a poetry reading"
+   ],
+   "fam": "poet (n.) · poem (n.) · poetic (adj.)"
+  },
+  {
+   "w": "theatre",
+   "pos": "n.",
+   "ipa": "/ˈθɪətə/",
+   "lvl": "B1",
+   "ar": "المسرح",
+   "ex": "Government funding helps local *theatres* keep their ticket prices affordable.",
+   "exAr": "يساعد التمويل الحكومي *المسارح* المحلية على إبقاء أسعار تذاكرها في متناول الجميع.",
+   "syn": [
+    "drama",
+    "the stage"
+   ],
+   "col": [
+    "live theatre",
+    "a theatre production",
+    "go to the theatre"
+   ],
+   "fam": "theatrical (adj.)"
+  },
+  {
+   "w": "performance",
+   "pos": "n.",
+   "ipa": "/pəˈfɔːməns/",
+   "lvl": "B1",
+   "ar": "عرض، أداء",
+   "ex": "Tickets for the play's opening *performance* sold out within hours.",
+   "exAr": "نفدت تذاكر *العرض* الأول للمسرحية في غضون ساعات.",
+   "syn": [
+    "show",
+    "production",
+    "presentation"
+   ],
+   "col": [
+    "a live performance",
+    "give a performance",
+    "an outstanding performance"
+   ],
+   "fam": "perform (v.) · performer (n.)"
+  },
+  {
+   "w": "creativity",
+   "pos": "n.",
+   "ipa": "/ˌkriːeɪˈtɪvəti/",
+   "lvl": "B2",
+   "ar": "الإبداع",
+   "ex": "Art lessons encourage *creativity* and help children express their ideas.",
+   "exAr": "تشجع حصص الفنون على *الإبداع* وتساعد الأطفال على التعبير عن أفكارهم.",
+   "syn": [
+    "imagination",
+    "originality",
+    "inventiveness"
+   ],
+   "col": [
+    "encourage creativity",
+    "artistic creativity",
+    "foster creativity"
+   ],
+   "fam": "create (v.) · creative (adj.) · creation (n.)"
+  },
+  {
+   "w": "craftsmanship",
+   "pos": "n.",
+   "ipa": "/ˈkrɑːftsmənʃɪp/",
+   "lvl": "C1",
+   "ar": "الحرفية، إتقان الصنعة",
+   "ex": "Visitors admire the fine *craftsmanship* of the hand-woven carpets.",
+   "exAr": "يُعجب الزوار *بالحرفية* العالية في السجاد المنسوج يدويًا.",
+   "syn": [
+    "skill",
+    "workmanship",
+    "artistry"
+   ],
+   "col": [
+    "fine craftsmanship",
+    "traditional craftsmanship",
+    "quality craftsmanship"
+   ],
+   "fam": "craft (n.) · craftsman (n.) · crafted (adj.)"
+  },
+  {
+   "w": "folk",
+   "pos": "adj.",
+   "ipa": "/fəʊk/",
+   "lvl": "B2",
+   "ar": "شعبي",
+   "ex": "Many *folk* tales were passed down orally long before they were written down.",
+   "exAr": "انتقلت كثير من الحكايات *الشعبية* شفهيًا قبل أن تُدوَّن بزمن طويل.",
+   "syn": [
+    "traditional",
+    "popular"
+   ],
+   "col": [
+    "folk tales",
+    "folk art",
+    "folk traditions"
+   ],
+   "fam": "folklore (n.)"
+  },
+  {
+   "w": "cultural identity",
+   "pos": "n.",
+   "ipa": "/ˌkʌltʃərəl aɪˈdentəti/",
+   "lvl": "C1",
+   "ar": "الهوية الثقافية",
+   "ex": "Speaking their parents' language helps immigrant children keep their *cultural identity*.",
+   "exAr": "يساعد التحدث بلغة الوالدين أطفال المهاجرين على الحفاظ على *هويتهم الثقافية*.",
+   "syn": [
+    "sense of identity"
+   ],
+   "col": [
+    "a strong cultural identity",
+    "preserve cultural identity",
+    "lose cultural identity"
+   ],
+   "fam": "culture (n.) · culturally (adv.)"
+  },
+  {
+   "w": "cultural diversity",
+   "pos": "n.",
+   "ipa": "/ˌkʌltʃərəl daɪˈvɜːsəti/",
+   "lvl": "C1",
+   "ar": "التنوع الثقافي",
+   "ex": "London's *cultural diversity* is reflected in its food, languages and festivals.",
+   "exAr": "ينعكس *التنوع الثقافي* في لندن على طعامها ولغاتها ومهرجاناتها.",
+   "syn": [
+    "multiculturalism"
+   ],
+   "col": [
+    "celebrate cultural diversity",
+    "respect for cultural diversity"
+   ],
+   "fam": "diverse (adj.) · diversify (v.)"
+  },
+  {
+   "w": "multicultural",
+   "pos": "adj.",
+   "ipa": "/ˌmʌltiˈkʌltʃərəl/",
+   "lvl": "B2",
+   "ar": "متعدد الثقافات",
+   "ex": "Growing up in a *multicultural* society teaches tolerance and open-mindedness.",
+   "exAr": "تعلّم النشأة في مجتمع *متعدد الثقافات* التسامح والانفتاح.",
+   "syn": [
+    "diverse",
+    "cosmopolitan",
+    "multi-ethnic"
+   ],
+   "col": [
+    "a multicultural society",
+    "a multicultural city"
+   ],
+   "fam": "multiculturalism (n.)"
+  },
+  {
+   "w": "ancient",
+   "pos": "adj.",
+   "ipa": "/ˈeɪnʃənt/",
+   "lvl": "B1",
+   "ar": "قديم، عتيق",
+   "ex": "The *ancient* city of Petra was carved into rock more than two thousand years ago.",
+   "exAr": "نُحتت مدينة البتراء *القديمة* في الصخر قبل أكثر من ألفي عام.",
+   "syn": [
+    "old",
+    "historic",
+    "age-old"
+   ],
+   "col": [
+    "ancient civilisations",
+    "ancient history",
+    "ancient ruins"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "historical site",
+   "pos": "n.",
+   "ipa": "/hɪˌstɒrɪkl ˈsaɪt/",
+   "lvl": "B2",
+   "ar": "موقع تاريخي",
+   "ex": "Mass tourism can damage fragile *historical sites* such as old city walls.",
+   "exAr": "قد تُلحق السياحة الجماعية الضرر *بالمواقع التاريخية* الهشة مثل أسوار المدن القديمة.",
+   "syn": [
+    "heritage site",
+    "landmark"
+   ],
+   "col": [
+    "visit a historical site",
+    "protect historical sites"
+   ],
+   "fam": "history (n.) · historian (n.) · historic (adj.)"
+  },
+  {
+   "w": "architecture",
+   "pos": "n.",
+   "ipa": "/ˈɑːkɪtektʃə/",
+   "lvl": "B2",
+   "ar": "العمارة، فن البناء",
+   "ex": "Islamic *architecture* is famous for its domes, arches and geometric patterns.",
+   "exAr": "تشتهر *العمارة* الإسلامية بقبابها وأقواسها وزخارفها الهندسية.",
+   "syn": [
+    "building design"
+   ],
+   "col": [
+    "modern architecture",
+    "Islamic architecture",
+    "traditional architecture"
+   ],
+   "fam": "architect (n.) · architectural (adj.)"
+  },
+  {
+   "w": "monument",
+   "pos": "n.",
+   "ipa": "/ˈmɒnjumənt/",
+   "lvl": "B2",
+   "ar": "معلم أثري، نصب تذكاري",
+   "ex": "The pyramids of Giza are among the most visited *monuments* in the world.",
+   "exAr": "تُعدّ أهرامات الجيزة من أكثر *المعالم الأثرية* زيارة في العالم.",
+   "syn": [
+    "landmark",
+    "memorial",
+    "structure"
+   ],
+   "col": [
+    "a national monument",
+    "an ancient monument",
+    "historic monuments"
+   ],
+   "fam": "monumental (adj.)"
+  },
+  {
+   "w": "artefact",
+   "pos": "n.",
+   "ipa": "/ˈɑːtɪfækt/",
+   "lvl": "C1",
+   "ar": "قطعة أثرية",
+   "ex": "Archaeologists found pottery and other *artefacts* dating back three thousand years.",
+   "exAr": "عثر علماء الآثار على فخاريات وغيرها من *القطع الأثرية* التي يعود تاريخها إلى ثلاثة آلاف عام.",
+   "syn": [
+    "relic",
+    "object",
+    "antiquity"
+   ],
+   "col": [
+    "ancient artefacts",
+    "cultural artefacts",
+    "museum artefacts"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "masterpiece",
+   "pos": "n.",
+   "ipa": "/ˈmɑːstəpiːs/",
+   "lvl": "B2",
+   "ar": "تحفة فنية، رائعة",
+   "ex": "The Alhambra in Granada is considered a *masterpiece* of Islamic design.",
+   "exAr": "يُعدّ قصر الحمراء في غرناطة *تحفة* من روائع التصميم الإسلامي.",
+   "syn": [
+    "classic",
+    "work of art",
+    "gem"
+   ],
+   "col": [
+    "a literary masterpiece",
+    "an architectural masterpiece",
+    "a true masterpiece"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "aesthetic",
+   "pos": "adj.",
+   "ipa": "/iːsˈθetɪk/",
+   "lvl": "C1",
+   "ar": "جمالي",
+   "ex": "New buildings should be judged on their *aesthetic* value as well as their cost.",
+   "exAr": "ينبغي تقييم المباني الجديدة وفق قيمتها *الجمالية* إلى جانب تكلفتها.",
+   "syn": [
+    "artistic",
+    "visual",
+    "decorative"
+   ],
+   "col": [
+    "aesthetic value",
+    "aesthetic appeal",
+    "purely aesthetic"
+   ],
+   "fam": "aesthetics (n.) · aesthetically (adv.)"
+  },
+  {
+   "w": "ritual",
+   "pos": "n.",
+   "ipa": "/ˈrɪtʃuəl/",
+   "lvl": "C1",
+   "ar": "طقس، شعيرة، عادة ثابتة",
+   "ex": "Sharing a family meal on Fridays is a weekly *ritual* in many homes.",
+   "exAr": "يُعدّ تناول وجبة عائلية يوم الجمعة *طقسًا* أسبوعيًا في كثير من البيوت.",
+   "syn": [
+    "custom",
+    "routine",
+    "rite"
+   ],
+   "col": [
+    "a daily ritual",
+    "religious rituals",
+    "an ancient ritual"
+   ],
+   "fam": "ritual (adj.) · ritualistic (adj.)"
+  },
+  {
+   "w": "costume",
+   "pos": "n.",
+   "ipa": "/ˈkɒstjuːm/",
+   "lvl": "B2",
+   "ar": "زي، لباس تقليدي",
+   "ex": "Visitors to the heritage village can see *costumes* worn by local people a century ago.",
+   "exAr": "يستطيع زوار القرية التراثية مشاهدة *الأزياء* التي كان يرتديها السكان المحليون قبل قرن.",
+   "syn": [
+    "dress",
+    "outfit",
+    "attire"
+   ],
+   "col": [
+    "traditional costume",
+    "national costume",
+    "period costume"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "contemporary",
+   "pos": "adj.",
+   "ipa": "/kənˈtemprəri/",
+   "lvl": "B2",
+   "ar": "معاصر",
+   "ex": "The museum combines classical works with *contemporary* art by Arab artists.",
+   "exAr": "يجمع المتحف بين الأعمال الكلاسيكية والفن *المعاصر* لفنانين عرب.",
+   "syn": [
+    "modern",
+    "current",
+    "present-day"
+   ],
+   "col": [
+    "contemporary art",
+    "contemporary architecture",
+    "contemporary society"
+   ],
+   "fam": "contemporary (n.)"
+  }
+ ],
+ "practice": {
+  "bank": [
+   "heritage",
+   "craftsmanship",
+   "masterpiece",
+   "multicultural",
+   "artefact",
+   "exhibition",
+   "ancient",
+   "contemporary"
+  ],
+  "gap": [
+   {
+    "s": "Archaeologists discovered pottery, coins and other ____ at the site.",
+    "a": "artefacts"
+   },
+   {
+    "s": "Many young people prefer ____ art to the paintings of earlier centuries.",
+    "a": "contemporary"
+   },
+   {
+    "s": "Hand-made furniture is expensive because of the time and ____ involved.",
+    "a": "craftsmanship"
+   },
+   {
+    "s": "Shakespeare's Hamlet is widely regarded as a ____ of English drama.",
+    "a": "masterpiece"
+   },
+   {
+    "s": "Toronto is a highly ____ city where dozens of languages are spoken.",
+    "a": "multicultural"
+   },
+   {
+    "s": "The ____ will open next month and run until the end of the year.",
+    "a": "exhibition"
+   },
+   {
+    "s": "Governments should spend more on preserving their national ____.",
+    "a": "heritage"
+   },
+   {
+    "s": "The ____ Egyptians built the pyramids as tombs for their kings.",
+    "a": "ancient"
+   }
+  ],
+  "para": [
+   {
+    "a": "Lots of people from different countries live in this city.",
+    "b": "This city is home to a remarkably *multicultural* population."
+   },
+   {
+    "a": "Old buildings show us how people lived in the past.",
+    "b": "*Historical sites* offer valuable insight into how earlier generations lived."
+   },
+   {
+    "a": "People in this country still do things their grandparents did.",
+    "b": "Many age-old *customs* are still observed in this country."
+   },
+   {
+    "a": "New buildings in many cities all look the same.",
+    "b": "Much modern *architecture* lacks local character and looks identical everywhere."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you like visiting museums?",
+    "a": "Yes, I do, especially history *museums*. I find it fascinating to see real objects that people used hundreds of years ago. Whenever I travel, I try to visit at least one, even if I only have a couple of hours."
+   },
+   {
+    "q": "Is traditional art popular in your country?",
+    "a": "Fairly popular, yes. Things like calligraphy and pottery are still appreciated, and you can find beautiful *folk* crafts in the old markets. However, I'd say younger people are more interested in modern digital art these days."
+   },
+   {
+    "q": "Do you enjoy reading?",
+    "a": "Very much. I mostly read *novels*, both in Arabic and in English, because they help me relax and also improve my vocabulary. Recently I've also started reading some classical *poetry*, which is challenging but rewarding."
+   }
+  ],
+  "p2": {
+   "cue": "Describe a historical place you have visited.",
+   "points": [
+    "where it is",
+    "when you went there",
+    "what you saw there",
+    "and explain why you found it interesting"
+   ],
+   "a": "I'd like to describe the old town of Al-Balad in Jeddah, which is a UNESCO World Heritage Site. I went there about two years ago with my cousins during the winter holiday, when the weather was pleasant enough to walk around all afternoon. What struck me first was the *architecture*. Many of the houses are several storeys high and are built from coral stone, with beautiful carved wooden balconies and window screens. We also explored a small *museum* inside one of the restored houses, where we saw old *costumes*, coffee pots and other everyday *artefacts*. I found the place interesting because it showed me how people lived before air conditioning and modern cities. The narrow lanes stay surprisingly cool, which shows how clever traditional builders were. More importantly, the visit made me proud of our *heritage* and made me realise how important it is to protect places like this for future generations."
+  },
+  "p3": [
+   {
+    "q": "Why is it important to protect historical buildings?",
+    "a": "I think they are an important part of a nation's *cultural identity*. They show us where we come from and how our ancestors lived. They also bring economic benefits, because tourists travel long distances to see *ancient* places. Once a historic building is destroyed, it can never truly be replaced, so protecting it is really an investment in the future."
+   },
+   {
+    "q": "Do you think globalisation is a threat to traditional cultures?",
+    "a": "To some extent, yes. Global brands, films and social media spread the same lifestyle everywhere, so local *traditions* can start to seem old-fashioned to young people. On the other hand, the internet also allows small communities to share their crafts, food and *festivals* with the whole world, so I'd say it is both a threat and an opportunity."
+   }
+  ],
+  "tipAr": "إذا لم تعرف إجابة سؤال في الجزء الثالث فلا تصمت، بل قل إنك لم تفكر فيه من قبل، ثم قدّم رأيًا مع سبب ومثال."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Discussion essay",
+  "q": "Some people think that governments should spend money on preserving old buildings and traditional arts, while others believe this money should be spent on modern needs such as housing and transport. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "Governments everywhere face difficult choices about how to spend limited public funds. While some people argue that preserving *historical sites* and traditional arts should be a priority, others feel that money is better spent on practical needs like housing and transport. In my view, both are important, but a modest, well-planned investment in *heritage* is fully justified.",
+   "Those who favour spending on modern needs have a strong case. In rapidly growing cities, many families cannot afford decent homes, and congested roads waste millions of hours each year. For these citizens, a restored palace or a new *exhibition* may seem like a luxury when basic services are lacking. Supporters of this view also point out that *contemporary* infrastructure directly improves people's quality of life and boosts economic productivity.",
+   "On the other hand, there are convincing reasons to protect the past. *Ancient* buildings, *monuments* and traditional crafts are central to a nation's *cultural identity*, and once they are lost they cannot be rebuilt. Moreover, heritage can be an economic asset rather than a burden. Cities such as Istanbul and Cairo attract millions of tourists every year largely because of their *architecture* and history, creating jobs in hotels, restaurants and local workshops. Funding for traditional *craftsmanship* also keeps alive skills that might otherwise disappear within a generation.",
+   "In conclusion, although housing and transport must remain the main priorities for public spending, I believe a reasonable share of the budget should be used to preserve historical buildings and traditional arts, since they enrich society both culturally and financially."
+  ],
+  "tipAr": "في مقال المناقشة اعرض الرأيين بإنصاف في فقرتين منفصلتين، ثم وضّح رأيك الشخصي في المقدمة وأكّده في الخاتمة."
+ }
+}

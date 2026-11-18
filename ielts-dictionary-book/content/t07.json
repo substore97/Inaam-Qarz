@@ -1,0 +1,691 @@
+{
+ "n": 7,
+ "entries": [
+  {
+   "w": "offender",
+   "pos": "n.",
+   "ipa": "/əˈfendə/",
+   "lvl": "B2",
+   "ar": "الجاني، مرتكب الجريمة",
+   "ex": "Young *offenders* are often given a second chance through education programmes.",
+   "exAr": "كثيرًا ما يحصل *الجناة* صغار السن على فرصة ثانية من خلال برامج تعليمية.",
+   "syn": [
+    "criminal",
+    "wrongdoer",
+    "lawbreaker"
+   ],
+   "col": [
+    "young offenders",
+    "a first-time offender",
+    "a repeat offender"
+   ],
+   "fam": "offend (v.) · offence (n.) · offensive (adj.)"
+  },
+  {
+   "w": "victim",
+   "pos": "n.",
+   "ipa": "/ˈvɪktɪm/",
+   "lvl": "B1",
+   "ar": "ضحية",
+   "ex": "Many *victims* of crime never report it to the police.",
+   "exAr": "كثير من *ضحايا* الجرائم لا يبلغون الشرطة عنها أبدًا.",
+   "syn": [
+    "casualty",
+    "sufferer"
+   ],
+   "col": [
+    "crime victims",
+    "an innocent victim",
+    "fall victim to"
+   ],
+   "fam": "victimise (v.) · victimisation (n.)"
+  },
+  {
+   "w": "punishment",
+   "pos": "n.",
+   "ipa": "/ˈpʌnɪʃmənt/",
+   "lvl": "B1",
+   "ar": "عقوبة، عقاب",
+   "ex": "Some experts argue that harsher *punishment* does not actually reduce crime.",
+   "exAr": "يرى بعض الخبراء أن *العقوبة* الأشد لا تقلل الجريمة في الواقع.",
+   "syn": [
+    "penalty",
+    "sanction"
+   ],
+   "col": [
+    "harsh punishment",
+    "physical punishment",
+    "punishment for a crime"
+   ],
+   "fam": "punish (v.) · punitive (adj.)"
+  },
+  {
+   "w": "imprisonment",
+   "pos": "n.",
+   "ipa": "/ɪmˈprɪznmənt/",
+   "lvl": "B2",
+   "ar": "السجن، الحبس",
+   "ex": "The court ordered five years' *imprisonment* for the armed robbery.",
+   "exAr": "حكمت المحكمة *بالسجن* خمس سنوات بسبب السطو المسلح.",
+   "syn": [
+    "custody",
+    "detention",
+    "incarceration"
+   ],
+   "col": [
+    "life imprisonment",
+    "a term of imprisonment",
+    "face imprisonment"
+   ],
+   "fam": "imprison (v.) · prison (n.) · prisoner (n.)"
+  },
+  {
+   "w": "sentence",
+   "pos": "n.",
+   "ipa": "/ˈsentəns/",
+   "lvl": "B2",
+   "ar": "حكم قضائي، عقوبة",
+   "ex": "The judge gave him a lighter *sentence* because he had shown genuine regret.",
+   "exAr": "أصدر القاضي عليه *حكمًا* أخف لأنه أبدى ندمًا صادقًا.",
+   "syn": [
+    "penalty",
+    "term"
+   ],
+   "col": [
+    "a prison sentence",
+    "a long sentence",
+    "serve a sentence"
+   ],
+   "fam": "sentence (v.) · sentencing (n.)"
+  },
+  {
+   "w": "fine",
+   "pos": "n.",
+   "ipa": "/faɪn/",
+   "lvl": "B1",
+   "ar": "غرامة مالية",
+   "ex": "Drivers who use their phones at the wheel face a heavy *fine*.",
+   "exAr": "يواجه السائقون الذين يستخدمون هواتفهم أثناء القيادة *غرامة* كبيرة.",
+   "syn": [
+    "penalty"
+   ],
+   "col": [
+    "a heavy fine",
+    "pay a fine",
+    "an on-the-spot fine"
+   ],
+   "fam": "fine (v.)"
+  },
+  {
+   "w": "justice",
+   "pos": "n.",
+   "ipa": "/ˈdʒʌstɪs/",
+   "lvl": "B2",
+   "ar": "العدالة",
+   "ex": "Families of victims often feel that *justice* has not been done.",
+   "exAr": "كثيرًا ما تشعر أسر الضحايا بأن *العدالة* لم تتحقق.",
+   "syn": [
+    "fairness",
+    "equity"
+   ],
+   "col": [
+    "the criminal justice system",
+    "social justice",
+    "bring someone to justice"
+   ],
+   "fam": "just (adj.) · justly (adv.) · injustice (n.)"
+  },
+  {
+   "w": "court",
+   "pos": "n.",
+   "ipa": "/kɔːt/",
+   "lvl": "B1",
+   "ar": "محكمة",
+   "ex": "The dispute between the two companies was finally settled in *court* after two years.",
+   "exAr": "حُسم النزاع بين الشركتين أخيرًا في *المحكمة* بعد عامين.",
+   "syn": [
+    "tribunal",
+    "law court"
+   ],
+   "col": [
+    "go to court",
+    "a court case",
+    "the Supreme Court"
+   ],
+   "fam": "courtroom (n.)"
+  },
+  {
+   "w": "judge",
+   "pos": "n.",
+   "ipa": "/dʒʌdʒ/",
+   "lvl": "B1",
+   "ar": "قاضٍ",
+   "ex": "The *judge* warned the jury not to discuss the case with anyone.",
+   "exAr": "حذّر *القاضي* هيئة المحلفين من مناقشة القضية مع أي أحد.",
+   "syn": [
+    "magistrate",
+    "justice"
+   ],
+   "col": [
+    "a High Court judge",
+    "appear before a judge",
+    "the judge ruled"
+   ],
+   "fam": "judge (v.) · judgement (n.) · judicial (adj.)"
+  },
+  {
+   "w": "jury",
+   "pos": "n.",
+   "ipa": "/ˈdʒʊəri/",
+   "lvl": "B2",
+   "ar": "هيئة المحلفين",
+   "ex": "After three days of deliberation, the *jury* found the defendant not guilty.",
+   "exAr": "بعد ثلاثة أيام من المداولات، قررت *هيئة المحلفين* أن المتهم غير مذنب.",
+   "syn": [
+    "panel of jurors"
+   ],
+   "col": [
+    "serve on a jury",
+    "a jury trial",
+    "the jury reached a verdict"
+   ],
+   "fam": "juror (n.)"
+  },
+  {
+   "w": "legislation",
+   "pos": "n.",
+   "ipa": "/ˌledʒɪsˈleɪʃn/",
+   "lvl": "C1",
+   "ar": "تشريعات، قوانين",
+   "ex": "New *legislation* was introduced to protect people from online abuse.",
+   "exAr": "صدرت *تشريعات* جديدة لحماية الناس من الإساءة عبر الإنترنت.",
+   "syn": [
+    "laws",
+    "statute"
+   ],
+   "col": [
+    "introduce legislation",
+    "new legislation",
+    "pass legislation"
+   ],
+   "fam": "legislate (v.) · legislative (adj.) · legislator (n.)"
+  },
+  {
+   "w": "illegal",
+   "pos": "adj.",
+   "ipa": "/ɪˈliːɡl/",
+   "lvl": "B1",
+   "ar": "غير قانوني",
+   "ex": "In many countries it is *illegal* to sell cigarettes to children.",
+   "exAr": "في كثير من الدول يعد بيع السجائر للأطفال أمرًا *غير قانوني*.",
+   "syn": [
+    "unlawful",
+    "illicit",
+    "prohibited"
+   ],
+   "col": [
+    "illegal activity",
+    "illegal parking",
+    "illegal dumping"
+   ],
+   "fam": "illegally (adv.) · illegality (n.)"
+  },
+  {
+   "w": "theft",
+   "pos": "n.",
+   "ipa": "/θeft/",
+   "lvl": "B2",
+   "ar": "سرقة",
+   "ex": "Car *theft* has fallen sharply since manufacturers improved security systems.",
+   "exAr": "انخفضت *سرقة* السيارات بشكل حاد منذ أن حسّن المصنعون أنظمة الأمان.",
+   "syn": [
+    "stealing",
+    "robbery"
+   ],
+   "col": [
+    "car theft",
+    "identity theft",
+    "petty theft"
+   ],
+   "fam": "thief (n.) · steal (v.)"
+  },
+  {
+   "w": "burglary",
+   "pos": "n.",
+   "ipa": "/ˈbɜːɡləri/",
+   "lvl": "B2",
+   "ar": "السطو على المنازل",
+   "ex": "Fitting good locks is one of the easiest ways to prevent *burglary*.",
+   "exAr": "تركيب أقفال جيدة من أسهل الطرق لمنع *السطو على المنازل*.",
+   "syn": [
+    "break-in",
+    "housebreaking"
+   ],
+   "col": [
+    "a rise in burglary",
+    "burglary rates",
+    "commit burglary"
+   ],
+   "fam": "burglar (n.) · burgle (v.)"
+  },
+  {
+   "w": "fraud",
+   "pos": "n.",
+   "ipa": "/frɔːd/",
+   "lvl": "B2",
+   "ar": "احتيال، تزوير",
+   "ex": "Banks lose millions every year to credit card *fraud*.",
+   "exAr": "تخسر البنوك الملايين كل عام بسبب *الاحتيال* ببطاقات الائتمان.",
+   "syn": [
+    "deception",
+    "scam",
+    "swindle"
+   ],
+   "col": [
+    "credit card fraud",
+    "tax fraud",
+    "commit fraud"
+   ],
+   "fam": "fraudster (n.) · fraudulent (adj.)"
+  },
+  {
+   "w": "violence",
+   "pos": "n.",
+   "ipa": "/ˈvaɪələns/",
+   "lvl": "B1",
+   "ar": "عنف",
+   "ex": "Some researchers believe that *violence* in video games makes young players more aggressive.",
+   "exAr": "يعتقد بعض الباحثين أن *العنف* في ألعاب الفيديو يجعل اللاعبين الصغار أكثر عدوانية.",
+   "syn": [
+    "aggression",
+    "brutality"
+   ],
+   "col": [
+    "domestic violence",
+    "acts of violence",
+    "street violence"
+   ],
+   "fam": "violent (adj.) · violently (adv.)"
+  },
+  {
+   "w": "deterrent",
+   "pos": "n.",
+   "ipa": "/dɪˈterənt/",
+   "lvl": "C1",
+   "ar": "رادع",
+   "ex": "Supporters of long prison terms say they act as a *deterrent* to would-be criminals.",
+   "exAr": "يقول مؤيدو أحكام السجن الطويلة إنها تشكل *رادعًا* للمجرمين المحتملين.",
+   "syn": [
+    "disincentive",
+    "discouragement"
+   ],
+   "col": [
+    "an effective deterrent",
+    "act as a deterrent",
+    "a strong deterrent"
+   ],
+   "fam": "deter (v.) · deterrence (n.)"
+  },
+  {
+   "w": "rehabilitation",
+   "pos": "n.",
+   "ipa": "/ˌriːəˌbɪlɪˈteɪʃn/",
+   "lvl": "C1",
+   "ar": "إعادة التأهيل",
+   "ex": "Prisons should focus on *rehabilitation* rather than simply locking people up.",
+   "exAr": "ينبغي أن تركز السجون على *إعادة التأهيل* بدلًا من مجرد حبس الناس.",
+   "syn": [
+    "reform",
+    "reintegration"
+   ],
+   "col": [
+    "rehabilitation programmes",
+    "offender rehabilitation",
+    "drug rehabilitation"
+   ],
+   "fam": "rehabilitate (v.) · rehabilitative (adj.)"
+  },
+  {
+   "w": "reoffend",
+   "pos": "v.",
+   "ipa": "/ˌriːəˈfend/",
+   "lvl": "C1",
+   "ar": "يعود إلى الإجرام",
+   "ex": "Prisoners who learn a trade are far less likely to *reoffend* after release.",
+   "exAr": "السجناء الذين يتعلمون حرفة أقل احتمالًا بكثير أن *يعودوا إلى الإجرام* بعد إطلاق سراحهم.",
+   "syn": [
+    "return to crime"
+   ],
+   "col": [
+    "likely to reoffend",
+    "the risk of reoffending",
+    "reoffend within a year"
+   ],
+   "fam": "reoffending (n.) · reoffender (n.)"
+  },
+  {
+   "w": "capital punishment",
+   "pos": "n.",
+   "ipa": "/ˌkæpɪtl ˈpʌnɪʃmənt/",
+   "lvl": "C1",
+   "ar": "عقوبة الإعدام",
+   "ex": "The debate over whether *capital punishment* reduces murder rates continues.",
+   "exAr": "لا يزال الجدل قائمًا حول ما إذا كانت *عقوبة الإعدام* تقلل معدلات القتل.",
+   "syn": [
+    "the death penalty",
+    "execution"
+   ],
+   "col": [
+    "abolish capital punishment",
+    "support capital punishment",
+    "capital punishment for murder"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "community service",
+   "pos": "n.",
+   "ipa": "/kəˌmjuːnəti ˈsɜːvɪs/",
+   "lvl": "B2",
+   "ar": "الخدمة المجتمعية (عقوبة بديلة)",
+   "ex": "Instead of prison, the teenager was ordered to do 200 hours of *community service*.",
+   "exAr": "بدلًا من السجن، ألزمت المحكمة المراهق بأداء 200 ساعة من *الخدمة المجتمعية*.",
+   "syn": [
+    "unpaid work"
+   ],
+   "col": [
+    "do community service",
+    "hours of community service",
+    "a community service order"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "juvenile",
+   "pos": "adj.",
+   "ipa": "/ˈdʒuːvənaɪl/",
+   "lvl": "C1",
+   "ar": "خاص بالأحداث، قاصر",
+   "ex": "*Juvenile* crime often rises when young people have nothing to do after school.",
+   "exAr": "كثيرًا ما ترتفع *جرائم الأحداث* عندما لا يجد الشباب ما يفعلونه بعد المدرسة.",
+   "syn": [
+    "young",
+    "underage",
+    "adolescent"
+   ],
+   "col": [
+    "juvenile crime",
+    "juvenile offenders",
+    "a juvenile court"
+   ],
+   "fam": "juvenile (n.)"
+  },
+  {
+   "w": "crime rate",
+   "pos": "n.",
+   "ipa": "/ˈkraɪm reɪt/",
+   "lvl": "B2",
+   "ar": "معدل الجريمة",
+   "ex": "The city's *crime rate* dropped after more street lighting was installed.",
+   "exAr": "انخفض *معدل الجريمة* في المدينة بعد تركيب مزيد من إنارة الشوارع.",
+   "syn": [
+    "level of crime"
+   ],
+   "col": [
+    "a high crime rate",
+    "reduce the crime rate",
+    "the crime rate rose"
+   ],
+   "fam": "crime (n.) · criminal (adj.)"
+  },
+  {
+   "w": "witness",
+   "pos": "n.",
+   "ipa": "/ˈwɪtnəs/",
+   "lvl": "B2",
+   "ar": "شاهد",
+   "ex": "A *witness* told police she had seen two men running from the shop.",
+   "exAr": "أخبرت *شاهدة* الشرطة بأنها رأت رجلين يركضان خارجين من المتجر.",
+   "syn": [
+    "eyewitness",
+    "onlooker",
+    "observer"
+   ],
+   "col": [
+    "a key witness",
+    "a witness statement",
+    "call a witness"
+   ],
+   "fam": "witness (v.)"
+  },
+  {
+   "w": "evidence",
+   "pos": "n.",
+   "ipa": "/ˈevɪdəns/",
+   "lvl": "B1",
+   "ar": "دليل، أدلة",
+   "ex": "There was not enough *evidence* to prove that he had committed the crime.",
+   "exAr": "لم تكن هناك *أدلة* كافية لإثبات أنه ارتكب الجريمة.",
+   "syn": [
+    "proof",
+    "grounds"
+   ],
+   "col": [
+    "strong evidence",
+    "DNA evidence",
+    "a lack of evidence"
+   ],
+   "fam": "evident (adj.) · evidently (adv.)"
+  },
+  {
+   "w": "trial",
+   "pos": "n.",
+   "ipa": "/ˈtraɪəl/",
+   "lvl": "B2",
+   "ar": "محاكمة",
+   "ex": "The *trial* lasted six weeks and attracted huge media attention.",
+   "exAr": "استمرت *المحاكمة* ستة أسابيع واجتذبت اهتمامًا إعلاميًا كبيرًا.",
+   "syn": [
+    "hearing",
+    "court case"
+   ],
+   "col": [
+    "a fair trial",
+    "stand trial",
+    "go on trial"
+   ],
+   "fam": "try (v.)"
+  },
+  {
+   "w": "prosecute",
+   "pos": "v.",
+   "ipa": "/ˈprɒsɪkjuːt/",
+   "lvl": "C1",
+   "ar": "يقاضي، يلاحق قضائيًا",
+   "ex": "Shops that sell knives to teenagers will be *prosecuted*.",
+   "exAr": "ستتم *مقاضاة* المتاجر التي تبيع السكاكين للمراهقين.",
+   "syn": [
+    "charge",
+    "take to court",
+    "bring charges"
+   ],
+   "col": [
+    "be prosecuted for",
+    "prosecute offenders",
+    "decide to prosecute"
+   ],
+   "fam": "prosecution (n.) · prosecutor (n.)"
+  },
+  {
+   "w": "cybercrime",
+   "pos": "n.",
+   "ipa": "/ˈsaɪbəkraɪm/",
+   "lvl": "C1",
+   "ar": "الجرائم الإلكترونية",
+   "ex": "Governments are investing heavily in fighting *cybercrime* such as hacking.",
+   "exAr": "تستثمر الحكومات بكثافة في مكافحة *الجرائم الإلكترونية* مثل الاختراق.",
+   "syn": [
+    "online crime",
+    "computer crime",
+    "internet crime"
+   ],
+   "col": [
+    "combat cybercrime",
+    "the rise of cybercrime",
+    "victims of cybercrime"
+   ],
+   "fam": "cybercriminal (n.) · cybersecurity (n.)"
+  },
+  {
+   "w": "corruption",
+   "pos": "n.",
+   "ipa": "/kəˈrʌpʃn/",
+   "lvl": "C1",
+   "ar": "فساد",
+   "ex": "*Corruption* among officials can damage public trust in the entire system.",
+   "exAr": "يمكن أن يضر *الفساد* بين المسؤولين بثقة الجمهور في النظام بأكمله.",
+   "syn": [
+    "bribery",
+    "dishonesty"
+   ],
+   "col": [
+    "political corruption",
+    "tackle corruption",
+    "allegations of corruption"
+   ],
+   "fam": "corrupt (adj./v.) · corruptly (adv.)"
+  },
+  {
+   "w": "law enforcement",
+   "pos": "n.",
+   "ipa": "/ˈlɔː ɪnˌfɔːsmənt/",
+   "lvl": "C1",
+   "ar": "إنفاذ القانون",
+   "ex": "Modern *law enforcement* relies increasingly on CCTV and data analysis.",
+   "exAr": "يعتمد *إنفاذ القانون* الحديث بشكل متزايد على كاميرات المراقبة وتحليل البيانات.",
+   "syn": [
+    "policing",
+    "the police"
+   ],
+   "col": [
+    "law enforcement agencies",
+    "law enforcement officers",
+    "effective law enforcement"
+   ],
+   "fam": "enforce (v.) · enforceable (adj.)"
+  }
+ ],
+ "practice": {
+  "bank": [
+   "deterrent",
+   "rehabilitation",
+   "reoffend",
+   "evidence",
+   "jury",
+   "fraud",
+   "legislation",
+   "witness"
+  ],
+  "gap": [
+   {
+    "s": "Without reliable ____, the police could not charge anyone with the robbery.",
+    "a": "evidence"
+   },
+   {
+    "s": "Online shoppers should be careful, as internet ____ is increasing every year.",
+    "a": "fraud"
+   },
+   {
+    "s": "Research shows that offenders who find stable jobs are less likely to ____.",
+    "a": "reoffend"
+   },
+   {
+    "s": "The government plans to pass new ____ to make the roads safer for cyclists.",
+    "a": "legislation"
+   },
+   {
+    "s": "Twelve members of the public sat on the ____ that decided the case.",
+    "a": "jury"
+   },
+   {
+    "s": "Many people doubt that the threat of prison is an effective ____ against crime.",
+    "a": "deterrent"
+   },
+   {
+    "s": "A key ____ came forward and described the driver of the car.",
+    "a": "witness"
+   },
+   {
+    "s": "Education and job training are central to the ____ of prisoners.",
+    "a": "rehabilitation"
+   }
+  ],
+  "para": [
+   {
+    "a": "Crime in the city has gone down a lot.",
+    "b": "The *crime rate* in the city has fallen considerably."
+   },
+   {
+    "a": "People who break the law for the first time should get a second chance.",
+    "b": "First-time *offenders* deserve an opportunity to rebuild their lives."
+   },
+   {
+    "a": "Teenagers who commit crimes should not be treated like adults.",
+    "b": "*Juvenile* offenders should not be treated in the same way as adults."
+   },
+   {
+    "a": "The police alone cannot stop all crime.",
+    "b": "*Law enforcement* on its own cannot eliminate crime entirely."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you feel safe in the area where you live?",
+    "a": "Yes, generally I do. My neighbourhood is quite busy and well lit, so the *crime rate* is fairly low. The only thing people complain about is the occasional bike *theft* near the station."
+   },
+   {
+    "q": "Have you ever watched a crime drama on TV?",
+    "a": "Yes, quite a few. I particularly enjoy courtroom dramas, because you see how a *trial* works and how lawyers present *evidence*. They're entertaining, although I suspect real cases are much slower and less dramatic."
+   },
+   {
+    "q": "Do you think children should learn about the law at school?",
+    "a": "Absolutely. Teenagers often don't realise that some things they do online, like sharing other people's photos without permission, can actually be *illegal*. A few lessons on basic rights and responsibilities would help them make better choices."
+   }
+  ],
+  "p2": {
+   "cue": "Describe a news story about a crime that you heard about.",
+   "points": [
+    "what the crime was",
+    "when and how you heard about it",
+    "what happened to the people involved",
+    "and explain why this story stayed in your memory"
+   ],
+   "a": "I'd like to talk about a story I heard a couple of years ago about an online shopping scam in my city. A small group of young men had created a fake website selling cheap electronics, and hundreds of people paid for phones that never arrived. It was a clear case of *fraud*, and one of the *victims* was actually a friend of my cousin, which is how I first heard about it. The police traced the bank accounts, and the men were eventually *prosecuted*. At the *trial*, the *judge* gave the leader a two-year prison *sentence*, while the younger members were ordered to repay the money and do *community service*. What stayed with me was how ordinary the offenders were. They weren't hardened criminals; they were students who thought nobody would catch them. It made me realise that *cybercrime* can be committed by almost anyone, and it also made me much more careful about where I shop online."
+  },
+  "p3": [
+   {
+    "q": "Do you think prison is the best way to deal with criminals?",
+    "a": "Not always. For violent offenders, *imprisonment* is clearly necessary to protect the public. However, for minor crimes, prison can actually make things worse, because people meet more experienced criminals inside. I think *rehabilitation*, such as education and job training, is more effective in the long run, since it gives people a real reason not to *reoffend* once they are released."
+   },
+   {
+    "q": "Why do some young people get involved in crime?",
+    "a": "There are several reasons. One is peer pressure: teenagers want to fit in, and if their friends are breaking the law, they may follow. Another is a lack of opportunities, particularly in poorer areas where jobs are scarce. That's why I believe *juvenile* crime is best tackled through youth clubs, sport and mentoring rather than simply through harsher *punishment*."
+   }
+  ],
+  "tipAr": "عند الحديث عن الجريمة استخدم مصطلحات دقيقة من هذا الفصل بدل الكلمات العامة، وادعم رأيك بمثال واقعي من بلدك."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Opinion essay",
+  "q": "Some people believe that the most effective way to reduce crime is to give offenders longer prison sentences. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "Growing concern about public safety has led many people to argue that keeping offenders in prison for longer is the surest way to cut crime. While I accept that lengthy *imprisonment* is justified for the most dangerous criminals, I largely disagree that it is the most effective solution overall, as prevention and *rehabilitation* tend to achieve far better results.",
+   "Admittedly, longer *sentences* do have some benefits. Most obviously, an offender who is behind bars cannot harm the public, so serious violent criminals must be removed from society for extended periods. Supporters also claim that the fear of a long term in prison acts as a *deterrent*. However, research suggests that many people who commit crimes act on impulse or do not expect to be caught, which means the length of the possible *punishment* rarely influences their decisions.",
+   "A more effective approach is to address the causes of crime and help offenders change. Prisoners who receive education, vocational training and psychological support are significantly less likely to *reoffend* after release, as they are able to find work and rebuild their lives. For minor offences, *community service* can also be valuable, since it allows offenders to repay society without losing their jobs or family ties. In addition, investment in visible *law enforcement* and youth programmes in deprived areas prevents many crimes from happening in the first place.",
+   "In conclusion, although long prison terms remain necessary for those who pose a serious threat, I do not believe they are the best way to reduce crime in general. Governments would achieve more by combining prevention with genuine efforts to rehabilitate offenders."
+  ],
+  "tipAr": "في مقال الرأي حدد موقفك بوضوح في المقدمة وحافظ عليه في كل الفقرات، واعترف بالرأي المخالف ثم رد عليه بحجة أقوى."
+ }
+}

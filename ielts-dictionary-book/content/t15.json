@@ -1,0 +1,671 @@
+{
+ "n": 15,
+ "entries": [
+  {
+   "w": "globalisation",
+   "pos": "n.",
+   "ipa": "/ˌɡləʊbəlaɪˈzeɪʃn/",
+   "lvl": "C1",
+   "ar": "العولمة",
+   "ex": "*Globalisation* has made it easier for small firms to sell their products abroad.",
+   "exAr": "سهّلت *العولمة* على الشركات الصغيرة بيع منتجاتها في الخارج.",
+   "syn": [
+    "internationalisation"
+   ],
+   "col": [
+    "economic globalisation",
+    "the effects of globalisation",
+    "cultural globalisation"
+   ],
+   "fam": "globalise (v.) · global (adj.) · globally (adv.)"
+  },
+  {
+   "w": "multinational",
+   "pos": "adj.",
+   "ipa": "/ˌmʌltiˈnæʃnəl/",
+   "lvl": "B2",
+   "ar": "متعدد الجنسيات",
+   "ex": "Many *multinational* companies have moved their regional headquarters to Dubai.",
+   "exAr": "نقلت شركات كثيرة *متعددة الجنسيات* مقارها الإقليمية إلى دبي.",
+   "syn": [
+    "international",
+    "global"
+   ],
+   "col": [
+    "a multinational company",
+    "multinational corporations",
+    "a multinational force"
+   ],
+   "fam": "multinational (n.) · nation (n.) · national (adj.)"
+  },
+  {
+   "w": "developing country",
+   "pos": "n.",
+   "ipa": "/dɪˌveləpɪŋ ˈkʌntri/",
+   "lvl": "B2",
+   "ar": "دولة نامية",
+   "ex": "In many *developing countries*, access to clean water remains a serious challenge.",
+   "exAr": "لا يزال الحصول على المياه النظيفة تحديا كبيرا في كثير من *الدول النامية*.",
+   "syn": [
+    "low-income country",
+    "emerging nation"
+   ],
+   "col": [
+    "poor developing countries",
+    "aid to developing countries"
+   ],
+   "fam": "develop (v.) · development (n.) · developed (adj.)"
+  },
+  {
+   "w": "developed country",
+   "pos": "n.",
+   "ipa": "/dɪˌveləpt ˈkʌntri/",
+   "lvl": "B2",
+   "ar": "دولة متقدمة",
+   "ex": "Average life expectancy in most *developed countries* is now around 80 years.",
+   "exAr": "يبلغ متوسط العمر المتوقع في معظم *الدول المتقدمة* اليوم نحو ثمانين عاما.",
+   "syn": [
+    "industrialised nation",
+    "high-income country"
+   ],
+   "col": [
+    "most developed countries",
+    "wealthy developed countries"
+   ],
+   "fam": "develop (v.) · development (n.) · developer (n.)"
+  },
+  {
+   "w": "foreign aid",
+   "pos": "n.",
+   "ipa": "/ˌfɒrən ˈeɪd/",
+   "lvl": "B2",
+   "ar": "المساعدات الخارجية",
+   "ex": "The new hospital was built with *foreign aid* from several European governments.",
+   "exAr": "بُني المستشفى الجديد بفضل *مساعدات خارجية* من عدة حكومات أوروبية.",
+   "syn": [
+    "overseas aid",
+    "development assistance"
+   ],
+   "col": [
+    "receive foreign aid",
+    "cut foreign aid",
+    "the foreign aid budget"
+   ],
+   "fam": "aid (v.) · foreigner (n.)"
+  },
+  {
+   "w": "cooperation",
+   "pos": "n.",
+   "ipa": "/kəʊˌɒpəˈreɪʃn/",
+   "lvl": "B2",
+   "ar": "التعاون",
+   "ex": "Tackling climate change requires close *cooperation* between all nations.",
+   "exAr": "تتطلب مواجهة تغير المناخ *تعاونا* وثيقا بين جميع الدول.",
+   "syn": [
+    "collaboration",
+    "partnership",
+    "teamwork"
+   ],
+   "col": [
+    "international cooperation",
+    "close cooperation",
+    "in cooperation with"
+   ],
+   "fam": "cooperate (v.) · cooperative (adj.)"
+  },
+  {
+   "w": "migration",
+   "pos": "n.",
+   "ipa": "/maɪˈɡreɪʃn/",
+   "lvl": "B2",
+   "ar": "الهجرة",
+   "ex": "Rural-to-urban *migration* has caused many cities in Asia to grow rapidly.",
+   "exAr": "أدت *الهجرة* من الريف إلى المدن إلى نمو سريع في كثير من المدن الآسيوية.",
+   "syn": [
+    "movement",
+    "relocation"
+   ],
+   "col": [
+    "mass migration",
+    "economic migration",
+    "rural-urban migration"
+   ],
+   "fam": "migrate (v.) · migrant (n.) · migratory (adj.)"
+  },
+  {
+   "w": "brain drain",
+   "pos": "n.",
+   "ipa": "/ˈbreɪn dreɪn/",
+   "lvl": "C1",
+   "ar": "هجرة العقول، نزيف الأدمغة",
+   "ex": "The *brain drain* has left many poorer countries short of trained doctors and engineers.",
+   "exAr": "تسببت *هجرة العقول* في نقص الأطباء والمهندسين المدربين في كثير من الدول الفقيرة.",
+   "syn": [
+    "exodus of talent"
+   ],
+   "col": [
+    "reverse the brain drain",
+    "suffer from a brain drain"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "standard of living",
+   "pos": "n.",
+   "ipa": "/ˌstændəd əv ˈlɪvɪŋ/",
+   "lvl": "B2",
+   "ar": "مستوى المعيشة",
+   "ex": "Economic growth has raised the *standard of living* for millions of families in China.",
+   "exAr": "رفع النمو الاقتصادي *مستوى المعيشة* لملايين الأسر في الصين.",
+   "syn": [
+    "living standards",
+    "prosperity"
+   ],
+   "col": [
+    "a high standard of living",
+    "raise the standard of living"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "quality of life",
+   "pos": "n.",
+   "ipa": "/ˌkwɒləti əv ˈlaɪf/",
+   "lvl": "B2",
+   "ar": "جودة الحياة",
+   "ex": "Green spaces and clean air greatly improve residents' *quality of life*.",
+   "exAr": "تحسّن المساحات الخضراء والهواء النقي *جودة الحياة* لدى السكان كثيرا.",
+   "syn": [
+    "well-being",
+    "welfare"
+   ],
+   "col": [
+    "improve quality of life",
+    "a better quality of life",
+    "poor quality of life"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "interdependence",
+   "pos": "n.",
+   "ipa": "/ˌɪntədɪˈpendəns/",
+   "lvl": "C2",
+   "ar": "الاعتماد المتبادل",
+   "ex": "The *interdependence* of national economies means a crisis in one country can spread quickly.",
+   "exAr": "يعني *الاعتماد المتبادل* بين الاقتصادات الوطنية أن أزمة في بلد واحد قد تنتشر بسرعة.",
+   "syn": [
+    "mutual dependence",
+    "interconnection"
+   ],
+   "col": [
+    "economic interdependence",
+    "growing interdependence",
+    "global interdependence"
+   ],
+   "fam": "interdependent (adj.) · depend (v.) · dependence (n.)"
+  },
+  {
+   "w": "outsourcing",
+   "pos": "n.",
+   "ipa": "/ˈaʊtsɔːsɪŋ/",
+   "lvl": "C1",
+   "ar": "الإسناد الخارجي",
+   "ex": "*Outsourcing* customer service to other countries helps companies reduce costs.",
+   "exAr": "يساعد *الإسناد الخارجي* لخدمة العملاء إلى دول أخرى الشركات على خفض التكاليف.",
+   "syn": [
+    "contracting out",
+    "offshoring"
+   ],
+   "col": [
+    "the outsourcing of jobs",
+    "the outsourcing of production"
+   ],
+   "fam": "outsource (v.)"
+  },
+  {
+   "w": "westernisation",
+   "pos": "n.",
+   "ipa": "/ˌwestənaɪˈzeɪʃn/",
+   "lvl": "C2",
+   "ar": "التغريب",
+   "ex": "Some older people worry that *westernisation* is weakening traditional values.",
+   "exAr": "يخشى بعض كبار السن أن يؤدي *التغريب* إلى إضعاف القيم التقليدية.",
+   "syn": [
+    "Americanisation"
+   ],
+   "col": [
+    "cultural westernisation",
+    "the westernisation of diets"
+   ],
+   "fam": "westernise (v.) · western (adj.) · westernised (adj.)"
+  },
+  {
+   "w": "global village",
+   "pos": "n.",
+   "ipa": "/ˌɡləʊbl ˈvɪlɪdʒ/",
+   "lvl": "C1",
+   "ar": "القرية العالمية",
+   "ex": "Thanks to the internet, the world has become a *global village* where news travels instantly.",
+   "exAr": "بفضل الإنترنت أصبح العالم *قرية عالمية* تنتقل فيها الأخبار في لحظات.",
+   "syn": [
+    "interconnected world"
+   ],
+   "col": [
+    "live in a global village",
+    "part of the global village"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "local economy",
+   "pos": "n.",
+   "ipa": "/ˌləʊkl ɪˈkɒnəmi/",
+   "lvl": "B2",
+   "ar": "الاقتصاد المحلي",
+   "ex": "Tourism brings jobs and money into the *local economy*.",
+   "exAr": "تجلب السياحة الوظائف والأموال إلى *الاقتصاد المحلي*.",
+   "syn": [
+    "regional economy"
+   ],
+   "col": [
+    "boost the local economy",
+    "support the local economy"
+   ],
+   "fam": "economic (adj.) · economist (n.) · economical (adj.)"
+  },
+  {
+   "w": "free trade",
+   "pos": "n.",
+   "ipa": "/ˌfriː ˈtreɪd/",
+   "lvl": "B2",
+   "ar": "التجارة الحرة",
+   "ex": "The *free trade* agreement removed tariffs on goods exchanged between the two countries.",
+   "exAr": "ألغت اتفاقية *التجارة الحرة* الرسوم الجمركية على السلع المتبادلة بين البلدين.",
+   "syn": [
+    "open trade"
+   ],
+   "col": [
+    "a free trade agreement",
+    "a free trade zone",
+    "promote free trade"
+   ],
+   "fam": "trade (v.) · trader (n.)"
+  },
+  {
+   "w": "exploitation",
+   "pos": "n.",
+   "ipa": "/ˌeksplɔɪˈteɪʃn/",
+   "lvl": "C1",
+   "ar": "الاستغلال",
+   "ex": "Campaigners are calling for an end to the *exploitation* of child workers in factories.",
+   "exAr": "يطالب الناشطون بوضع حد *لاستغلال* الأطفال العاملين في المصانع.",
+   "syn": [
+    "abuse",
+    "misuse"
+   ],
+   "col": [
+    "the exploitation of workers",
+    "economic exploitation",
+    "exploitation of resources"
+   ],
+   "fam": "exploit (v.) · exploitative (adj.)"
+  },
+  {
+   "w": "cheap labour",
+   "pos": "n.",
+   "ipa": "/ˌtʃiːp ˈleɪbə/",
+   "lvl": "B2",
+   "ar": "العمالة الرخيصة",
+   "ex": "Many manufacturers moved their factories overseas in search of *cheap labour*.",
+   "exAr": "نقل كثير من المصنّعين مصانعهم إلى الخارج بحثا عن *العمالة الرخيصة*.",
+   "syn": [
+    "low-wage workers",
+    "low-cost labour"
+   ],
+   "col": [
+    "rely on cheap labour",
+    "a source of cheap labour"
+   ],
+   "fam": "labourer (n.) · laborious (adj.)"
+  },
+  {
+   "w": "industrialisation",
+   "pos": "n.",
+   "ipa": "/ɪnˌdʌstriəlaɪˈzeɪʃn/",
+   "lvl": "C1",
+   "ar": "التصنيع",
+   "ex": "Rapid *industrialisation* in the nineteenth century changed Britain's economy completely.",
+   "exAr": "غيّر *التصنيع* السريع في القرن التاسع عشر اقتصاد بريطانيا تماما.",
+   "syn": [
+    "industrial development",
+    "modernisation"
+   ],
+   "col": [
+    "rapid industrialisation",
+    "early industrialisation"
+   ],
+   "fam": "industrialise (v.) · industrial (adj.) · industry (n.)"
+  },
+  {
+   "w": "humanitarian",
+   "pos": "adj.",
+   "ipa": "/hjuːˌmænɪˈteəriən/",
+   "lvl": "C1",
+   "ar": "إنساني",
+   "ex": "Aid agencies sent *humanitarian* supplies, such as food and medicine, to the flooded region.",
+   "exAr": "أرسلت وكالات الإغاثة إمدادات *إنسانية*، مثل الغذاء والدواء، إلى المنطقة المنكوبة بالفيضانات.",
+   "syn": [
+    "charitable",
+    "compassionate"
+   ],
+   "col": [
+    "humanitarian aid",
+    "a humanitarian crisis",
+    "on humanitarian grounds"
+   ],
+   "fam": "humanitarianism (n.) · humanity (n.) · humane (adj.)"
+  },
+  {
+   "w": "refugee",
+   "pos": "n.",
+   "ipa": "/ˌrefjuˈdʒiː/",
+   "lvl": "B2",
+   "ar": "لاجئ",
+   "ex": "The camp provides shelter and education for thousands of *refugees* who fled the war.",
+   "exAr": "يوفر المخيم المأوى والتعليم لآلاف *اللاجئين* الذين فروا من الحرب.",
+   "syn": [
+    "displaced person",
+    "asylum seeker"
+   ],
+   "col": [
+    "a refugee camp",
+    "a refugee crisis",
+    "political refugees"
+   ],
+   "fam": "refuge (n.)"
+  },
+  {
+   "w": "conflict",
+   "pos": "n.",
+   "ipa": "/ˈkɒnflɪkt/",
+   "lvl": "B2",
+   "ar": "نزاع، صراع",
+   "ex": "Long periods of *conflict* often destroy schools, hospitals and roads.",
+   "exAr": "كثيرا ما تدمر فترات *النزاع* الطويلة المدارس والمستشفيات والطرق.",
+   "syn": [
+    "war",
+    "dispute",
+    "hostilities"
+   ],
+   "col": [
+    "armed conflict",
+    "resolve a conflict",
+    "a conflict zone"
+   ],
+   "fam": "conflict (v.) · conflicting (adj.)"
+  },
+  {
+   "w": "diplomacy",
+   "pos": "n.",
+   "ipa": "/dɪˈpləʊməsi/",
+   "lvl": "C1",
+   "ar": "الدبلوماسية",
+   "ex": "The border dispute was finally settled through *diplomacy*, not force.",
+   "exAr": "سُوّي النزاع الحدودي أخيرا عن طريق *الدبلوماسية* لا القوة.",
+   "syn": [
+    "negotiation",
+    "statesmanship"
+   ],
+   "col": [
+    "international diplomacy",
+    "through diplomacy",
+    "quiet diplomacy"
+   ],
+   "fam": "diplomat (n.) · diplomatic (adj.) · diplomatically (adv.)"
+  },
+  {
+   "w": "lingua franca",
+   "pos": "n.",
+   "ipa": "/ˌlɪŋɡwə ˈfræŋkə/",
+   "lvl": "C2",
+   "ar": "لغة مشتركة",
+   "ex": "English has become the *lingua franca* of international business and science.",
+   "exAr": "أصبحت الإنجليزية *اللغة المشتركة* في مجالي الأعمال الدولية والعلوم.",
+   "syn": [
+    "common language",
+    "shared language"
+   ],
+   "col": [
+    "a global lingua franca",
+    "serve as a lingua franca"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "global citizen",
+   "pos": "n.",
+   "ipa": "/ˌɡləʊbl ˈsɪtɪzn/",
+   "lvl": "C1",
+   "ar": "مواطن عالمي",
+   "ex": "Schools increasingly teach pupils to see themselves as *global citizens* with shared responsibilities.",
+   "exAr": "تعلّم المدارس التلاميذ بشكل متزايد أن يروا أنفسهم *مواطنين عالميين* تجمعهم مسؤوليات مشتركة.",
+   "syn": [
+    "citizen of the world",
+    "cosmopolitan"
+   ],
+   "col": [
+    "become a global citizen",
+    "educate global citizens"
+   ],
+   "fam": "global citizenship (n.)"
+  },
+  {
+   "w": "homogenisation",
+   "pos": "n.",
+   "ipa": "/həˌmɒdʒənaɪˈzeɪʃn/",
+   "lvl": "C2",
+   "ar": "التنميط، التجانس",
+   "ex": "Critics argue that global fast-food chains lead to the *homogenisation* of eating habits.",
+   "exAr": "يرى المنتقدون أن سلاسل الوجبات السريعة العالمية تؤدي إلى *تنميط* عادات الأكل.",
+   "syn": [
+    "standardisation",
+    "uniformity"
+   ],
+   "col": [
+    "cultural homogenisation",
+    "the homogenisation of culture"
+   ],
+   "fam": "homogenise (v.) · homogeneous (adj.)"
+  },
+  {
+   "w": "international organisation",
+   "pos": "n.",
+   "ipa": "/ˌɪntəˌnæʃnəl ˌɔːɡənaɪˈzeɪʃn/",
+   "lvl": "B2",
+   "ar": "منظمة دولية",
+   "ex": "*International organisations* such as the United Nations help countries work together on global problems.",
+   "exAr": "تساعد *المنظمات الدولية* مثل الأمم المتحدة الدول على العمل معا لحل المشكلات العالمية.",
+   "syn": [
+    "global body",
+    "intergovernmental body"
+   ],
+   "col": [
+    "an international organisation",
+    "international organisations"
+   ],
+   "fam": "organise (v.) · organiser (n.) · nation (n.)"
+  },
+  {
+   "w": "emerging economy",
+   "pos": "n.",
+   "ipa": "/ɪˌmɜːdʒɪŋ ɪˈkɒnəmi/",
+   "lvl": "C1",
+   "ar": "اقتصاد ناشئ",
+   "ex": "India is one of the fastest-growing *emerging economies* in the world.",
+   "exAr": "تعد الهند من أسرع *الاقتصادات الناشئة* نموا في العالم.",
+   "syn": [
+    "emerging market",
+    "developing market"
+   ],
+   "col": [
+    "a major emerging economy",
+    "large emerging economies"
+   ],
+   "fam": "emerge (v.) · emergence (n.)"
+  },
+  {
+   "w": "sanctions",
+   "pos": "n.",
+   "ipa": "/ˈsæŋkʃnz/",
+   "lvl": "C1",
+   "ar": "عقوبات",
+   "ex": "Economic *sanctions* can harm ordinary citizens more than the governments they target.",
+   "exAr": "قد تضر *العقوبات* الاقتصادية بالمواطنين العاديين أكثر من الحكومات المستهدفة بها.",
+   "syn": [
+    "penalties",
+    "embargo",
+    "restrictions"
+   ],
+   "col": [
+    "impose sanctions",
+    "lift sanctions",
+    "economic sanctions"
+   ],
+   "fam": "sanction (v.)"
+  },
+  {
+   "w": "integration",
+   "pos": "n.",
+   "ipa": "/ˌɪntɪˈɡreɪʃn/",
+   "lvl": "C1",
+   "ar": "الاندماج، التكامل",
+   "ex": "Language classes can speed up the *integration* of immigrants into their new community.",
+   "exAr": "يمكن لدروس اللغة أن تسرّع *اندماج* المهاجرين في مجتمعهم الجديد.",
+   "syn": [
+    "assimilation",
+    "inclusion",
+    "incorporation"
+   ],
+   "col": [
+    "social integration",
+    "economic integration",
+    "integration into society"
+   ],
+   "fam": "integrate (v.) · integrated (adj.)"
+  }
+ ],
+ "practice": {
+  "bank": [
+   "globalisation",
+   "brain drain",
+   "refugee",
+   "diplomacy",
+   "outsourcing",
+   "interdependence",
+   "sanctions",
+   "humanitarian"
+  ],
+  "gap": [
+   {
+    "s": "The war forced over a million ____ to cross the border in search of safety.",
+    "a": "refugees"
+   },
+   {
+    "s": "The ____ of IT services to other countries has created thousands of jobs in India.",
+    "a": "outsourcing"
+   },
+   {
+    "s": "Many hospitals in poor nations are short of staff because of the ____ to richer countries.",
+    "a": "brain drain"
+   },
+   {
+    "s": "The trade ____ were lifted after the country agreed to sign the new treaty.",
+    "a": "sanctions"
+   },
+   {
+    "s": "Critics claim that ____ is making cultures around the world increasingly similar.",
+    "a": "globalisation"
+   },
+   {
+    "s": "After the earthquake, ____ agencies set up field hospitals within 48 hours.",
+    "a": "humanitarian"
+   },
+   {
+    "s": "The pandemic revealed the deep ____ of global supply chains.",
+    "a": "interdependence"
+   },
+   {
+    "s": "The two governments avoided war by relying on patient ____ and regular talks.",
+    "a": "diplomacy"
+   }
+  ],
+  "para": [
+   {
+    "a": "Life in many poor countries has got much better.",
+    "b": "The *standard of living* in many developing nations has risen considerably."
+   },
+   {
+    "a": "Lots of people are moving from villages to cities.",
+    "b": "Large-scale rural-to-urban *migration* is taking place in many regions."
+   },
+   {
+    "a": "Countries should work together more.",
+    "b": "Greater international *cooperation* is essential."
+   },
+   {
+    "a": "Some companies pay workers in poor countries very little.",
+    "b": "Some firms are accused of the *exploitation* of low-paid workers abroad."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you like learning about other cultures?",
+    "a": "Yes, very much. I think in today's *global village* it's important to understand how other people live. I often watch documentaries about different countries, and I'd love to travel more when I get the chance."
+   },
+   {
+    "q": "Do you buy many products from other countries?",
+    "a": "Quite a lot, actually. My phone was made in China and most of my clothes come from Bangladesh or Turkey. That said, I try to buy fresh food from local farmers to support the *local economy*."
+   },
+   {
+    "q": "Is English widely spoken in your country?",
+    "a": "Yes, increasingly so. In big cities most young people speak it well, because it's the *lingua franca* of business and tourism. In smaller towns, though, Arabic is still used for almost everything."
+   }
+  ],
+  "p2": {
+   "cue": "Describe someone you know who moved to another country to live or work.",
+   "points": [
+    "who this person is",
+    "where they moved to and when",
+    "what their life is like there now",
+    "and explain why they decided to move"
+   ],
+   "a": "I'd like to talk about my cousin Omar, who moved to Canada about six years ago. He's an engineer, and after graduating he found it hard to get a well-paid job at home, so he applied for a skilled-worker visa and was accepted. At first, life wasn't easy for him. The winters were extremely cold, and he missed his family and our food. However, he took language and culture courses, which really helped his *integration* into Canadian society. Now he works for a large construction firm, and he says his *standard of living* is much higher than before. He also enjoys a better work-life balance, so in many ways his *quality of life* has improved too. He decided to move mainly for career reasons, because a *developed country* offered him more opportunities. Although I'm happy for him, his story makes me a little sad, because it shows how the *brain drain* takes talented people away from countries that really need them."
+  },
+  "p3": [
+   {
+    "q": "What are the main advantages of globalisation for developing countries?",
+    "a": "I'd say the biggest benefit is investment. When *multinational* companies open factories, they create jobs and transfer skills and technology. Over time, this can lift millions out of poverty, as we've seen in parts of Asia. On top of that, *free trade* gives local producers access to much larger markets, although governments need to make sure workers are protected from *exploitation*."
+   },
+   {
+    "q": "Do you think globalisation is making cultures around the world too similar?",
+    "a": "To some extent, yes. You can find the same brands and films in almost every city, so there's a real risk of cultural *homogenisation*. However, I don't think local traditions are disappearing completely. In fact, the internet allows people to share their own stories, food and language with a global audience, which can actually strengthen cultural identity rather than weaken it."
+   }
+  ],
+  "tipAr": "في الجزء الثالث وسّع إجابتك: اذكر رأيك، ثم سببا يدعمه، ثم مثالا من بلدك أو من العالم."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Opinion essay",
+  "q": "Some people believe that globalisation has brought more benefits than problems to developing countries. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "Over the past few decades, *globalisation* has transformed the economies of many poorer nations through trade, investment and technology. While some argue that this process has mainly harmed *developing countries*, I strongly believe that its benefits outweigh its drawbacks, provided that governments manage it wisely and protect their citizens.",
+   "The most obvious advantage is economic growth. When *multinational* corporations invest in countries such as Vietnam or Bangladesh, they create millions of jobs and introduce new technology and management skills. Furthermore, *free trade* allows local farmers and manufacturers to sell their goods in much larger markets. As a result, the *standard of living* in many parts of Asia has risen dramatically, and hundreds of millions of people have escaped extreme poverty in a single generation.",
+   "Admittedly, globalisation also brings serious problems. Some firms are attracted mainly by *cheap labour*, and workers may suffer *exploitation* in the form of low wages and unsafe conditions. In addition, many skilled doctors and engineers leave for richer countries, causing a *brain drain* that weakens local health and education systems. However, these issues can be reduced through sensible policies, such as stronger labour laws, international *cooperation* on workers' rights, and incentives that persuade talented graduates to stay at home.",
+   "In conclusion, although globalisation has a darker side, I am convinced that it has done far more good than harm for developing nations. The key challenge for the future is to ensure that its rewards are shared fairly, so that ordinary workers, and not just large corporations, enjoy a better *quality of life*."
+  ],
+  "tipAr": "في مقال الرأي اذكر موقفك بوضوح في المقدمة وحافظ عليه حتى الخاتمة، واعترف بالرأي المخالف ثم ردّ عليه."
+ }
+}

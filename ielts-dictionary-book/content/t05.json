@@ -1,0 +1,690 @@
+{
+ "n": 5,
+ "entries": [
+  {
+   "w": "employment",
+   "pos": "n.",
+   "ipa": "/ɪmˈplɔɪmənt/",
+   "lvl": "B1",
+   "ar": "توظيف، عمل",
+   "ex": "The new factory is expected to create *employment* for over two thousand local residents.",
+   "exAr": "يُتوقع أن يوفر المصنع الجديد *فرص عمل* لأكثر من ألفين من السكان المحليين.",
+   "syn": [
+    "work",
+    "jobs",
+    "occupation"
+   ],
+   "col": [
+    "full-time employment",
+    "employment opportunities",
+    "the employment rate"
+   ],
+   "fam": "employ (v.) · employer (n.) · employee (n.) · employable (adj.)"
+  },
+  {
+   "w": "unemployment",
+   "pos": "n.",
+   "ipa": "/ˌʌnɪmˈplɔɪmənt/",
+   "lvl": "B2",
+   "ar": "بطالة",
+   "ex": "Youth *unemployment* remains a serious problem in many developing countries.",
+   "exAr": "لا تزال *البطالة* بين الشباب مشكلة خطيرة في كثير من الدول النامية.",
+   "syn": [
+    "joblessness"
+   ],
+   "col": [
+    "high unemployment",
+    "the unemployment rate",
+    "long-term unemployment"
+   ],
+   "fam": "unemployed (adj.)"
+  },
+  {
+   "w": "salary",
+   "pos": "n.",
+   "ipa": "/ˈsæləri/",
+   "lvl": "B1",
+   "ar": "راتب",
+   "ex": "Doctors in the private sector usually earn a higher *salary* than those in public hospitals.",
+   "exAr": "يتقاضى الأطباء في القطاع الخاص عادةً *راتبًا* أعلى من نظرائهم في المستشفيات الحكومية.",
+   "syn": [
+    "pay",
+    "earnings",
+    "income"
+   ],
+   "col": [
+    "an annual salary",
+    "a starting salary",
+    "a competitive salary"
+   ],
+   "fam": "salaried (adj.)"
+  },
+  {
+   "w": "wage",
+   "pos": "n.",
+   "ipa": "/weɪdʒ/",
+   "lvl": "B1",
+   "ar": "أجر",
+   "ex": "The government has raised the minimum *wage* to help low-paid workers.",
+   "exAr": "رفعت الحكومة الحد الأدنى *للأجور* لمساعدة العمال ذوي الأجور المنخفضة.",
+   "syn": [
+    "pay",
+    "earnings"
+   ],
+   "col": [
+    "the minimum wage",
+    "an hourly wage",
+    "a wage increase"
+   ],
+   "fam": "wage earner (n.)"
+  },
+  {
+   "w": "promotion",
+   "pos": "n.",
+   "ipa": "/prəˈməʊʃn/",
+   "lvl": "B1",
+   "ar": "ترقية",
+   "ex": "She received a *promotion* to senior manager after only three years with the company.",
+   "exAr": "حصلت على *ترقية* إلى منصب مديرة أولى بعد ثلاث سنوات فقط في الشركة.",
+   "syn": [
+    "advancement",
+    "step up"
+   ],
+   "col": [
+    "get a promotion",
+    "promotion prospects",
+    "be eligible for promotion"
+   ],
+   "fam": "promote (v.) · promoted (adj.)"
+  },
+  {
+   "w": "colleague",
+   "pos": "n.",
+   "ipa": "/ˈkɒliːɡ/",
+   "lvl": "B1",
+   "ar": "زميل عمل",
+   "ex": "Working closely with experienced *colleagues* helps new staff learn faster.",
+   "exAr": "يساعد العمل عن قرب مع *الزملاء* ذوي الخبرة الموظفين الجدد على التعلم بسرعة أكبر.",
+   "syn": [
+    "co-worker",
+    "associate",
+    "peer"
+   ],
+   "col": [
+    "a former colleague",
+    "a work colleague",
+    "a senior colleague"
+   ],
+   "fam": "collegial (adj.)"
+  },
+  {
+   "w": "employer",
+   "pos": "n.",
+   "ipa": "/ɪmˈplɔɪə(r)/",
+   "lvl": "B1",
+   "ar": "صاحب العمل",
+   "ex": "Many *employers* now value practical skills more than university degrees.",
+   "exAr": "يقدّر كثير من *أصحاب العمل* اليوم المهارات العملية أكثر من الشهادات الجامعية.",
+   "syn": [
+    "boss",
+    "company",
+    "firm"
+   ],
+   "col": [
+    "a major employer",
+    "potential employers",
+    "employer contributions"
+   ],
+   "fam": "employ (v.) · employment (n.) · employee (n.)"
+  },
+  {
+   "w": "employee",
+   "pos": "n.",
+   "ipa": "/ɪmˈplɔɪiː/",
+   "lvl": "B1",
+   "ar": "موظف",
+   "ex": "The company offers every *employee* free health insurance.",
+   "exAr": "تقدم الشركة تأمينًا صحيًا مجانيًا لكل *موظف*.",
+   "syn": [
+    "worker",
+    "staff member"
+   ],
+   "col": [
+    "a full-time employee",
+    "employee benefits",
+    "a loyal employee"
+   ],
+   "fam": "employ (v.) · employer (n.) · employment (n.)"
+  },
+  {
+   "w": "recruit",
+   "pos": "v.",
+   "ipa": "/rɪˈkruːt/",
+   "lvl": "B2",
+   "ar": "يوظّف، يستقطب",
+   "ex": "Hospitals are struggling to *recruit* enough qualified nurses.",
+   "exAr": "تواجه المستشفيات صعوبة في *استقطاب* عدد كافٍ من الممرضين المؤهلين.",
+   "syn": [
+    "hire",
+    "take on",
+    "enlist"
+   ],
+   "col": [
+    "recruit staff",
+    "actively recruit",
+    "newly recruited"
+   ],
+   "fam": "recruitment (n.) · recruiter (n.) · recruit (n.)"
+  },
+  {
+   "w": "resign",
+   "pos": "v.",
+   "ipa": "/rɪˈzaɪn/",
+   "lvl": "B2",
+   "ar": "يستقيل",
+   "ex": "The director *resigned* after a dispute with the board over pay cuts.",
+   "exAr": "*استقال* المدير بعد خلاف مع مجلس الإدارة حول تخفيض الرواتب.",
+   "syn": [
+    "quit",
+    "step down",
+    "leave"
+   ],
+   "col": [
+    "resign from a post",
+    "be forced to resign",
+    "resign immediately"
+   ],
+   "fam": "resignation (n.)"
+  },
+  {
+   "w": "retire",
+   "pos": "v.",
+   "ipa": "/rɪˈtaɪə(r)/",
+   "lvl": "B1",
+   "ar": "يتقاعد",
+   "ex": "In many countries, people are now expected to *retire* later than their parents did.",
+   "exAr": "يُتوقع من الناس اليوم في كثير من البلدان أن *يتقاعدوا* في سن أكبر مما تقاعد فيه آباؤهم.",
+   "syn": [
+    "stop working",
+    "step down"
+   ],
+   "col": [
+    "retire early",
+    "retire at sixty-five",
+    "retire from work"
+   ],
+   "fam": "retirement (n.) · retired (adj.) · retiree (n.)"
+  },
+  {
+   "w": "pension",
+   "pos": "n.",
+   "ipa": "/ˈpenʃn/",
+   "lvl": "B2",
+   "ar": "معاش تقاعدي",
+   "ex": "An ageing population puts pressure on the state *pension* system.",
+   "exAr": "تزيد شيخوخة السكان الضغط على نظام *المعاشات التقاعدية* الحكومي.",
+   "syn": [
+    "retirement income"
+   ],
+   "col": [
+    "a state pension",
+    "a pension scheme",
+    "a pension fund"
+   ],
+   "fam": "pensioner (n.) · pensionable (adj.)"
+  },
+  {
+   "w": "workload",
+   "pos": "n.",
+   "ipa": "/ˈwɜːkləʊd/",
+   "lvl": "B2",
+   "ar": "عبء العمل",
+   "ex": "Teachers often complain that their *workload* has increased dramatically.",
+   "exAr": "كثيرًا ما يشكو المعلمون من أن *عبء العمل* لديهم ازداد بشكل كبير.",
+   "syn": [
+    "duties",
+    "responsibilities"
+   ],
+   "col": [
+    "a heavy workload",
+    "manage your workload",
+    "reduce the workload"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "deadline",
+   "pos": "n.",
+   "ipa": "/ˈdedlaɪn/",
+   "lvl": "B1",
+   "ar": "موعد نهائي",
+   "ex": "Strict *deadlines* can motivate some staff but cause stress for others.",
+   "exAr": "قد تحفّز *المواعيد النهائية* الصارمة بعض الموظفين لكنها تسبب التوتر لآخرين.",
+   "syn": [
+    "time limit",
+    "cut-off date"
+   ],
+   "col": [
+    "meet a deadline",
+    "miss a deadline",
+    "a tight deadline"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "flexible",
+   "pos": "adj.",
+   "ipa": "/ˈfleksəbl/",
+   "lvl": "B2",
+   "ar": "مرن",
+   "ex": "*Flexible* working hours allow parents to balance their jobs and childcare.",
+   "exAr": "تتيح ساعات العمل *المرنة* للآباء والأمهات الموازنة بين وظائفهم ورعاية أطفالهم.",
+   "syn": [
+    "adaptable",
+    "adjustable"
+   ],
+   "col": [
+    "flexible working hours",
+    "a flexible approach",
+    "flexible arrangements"
+   ],
+   "fam": "flexibility (n.) · flexibly (adv.) · inflexible (adj.)"
+  },
+  {
+   "w": "overtime",
+   "pos": "n.",
+   "ipa": "/ˈəʊvətaɪm/",
+   "lvl": "B2",
+   "ar": "عمل إضافي، ساعات إضافية",
+   "ex": "Factory workers are usually paid at a higher rate for *overtime* at weekends.",
+   "exAr": "يتقاضى عمال المصانع عادةً أجرًا أعلى مقابل *العمل الإضافي* في عطلات نهاية الأسبوع.",
+   "syn": [
+    "extra hours"
+   ],
+   "col": [
+    "work overtime",
+    "unpaid overtime",
+    "overtime pay"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "part-time",
+   "pos": "adj.",
+   "ipa": "/ˌpɑːt ˈtaɪm/",
+   "lvl": "B1",
+   "ar": "بدوام جزئي",
+   "ex": "Many students take *part-time* jobs to help pay for their studies.",
+   "exAr": "يعمل كثير من الطلاب في وظائف *بدوام جزئي* للمساعدة في دفع تكاليف دراستهم.",
+   "syn": [],
+   "col": [
+    "a part-time job",
+    "part-time work",
+    "part-time staff"
+   ],
+   "fam": "part-timer (n.)"
+  },
+  {
+   "w": "job satisfaction",
+   "pos": "n.",
+   "ipa": "/ˌdʒɒb sætɪsˈfækʃn/",
+   "lvl": "B2",
+   "ar": "الرضا الوظيفي",
+   "ex": "Studies show that *job satisfaction* depends more on recognition than on pay.",
+   "exAr": "تُظهر الدراسات أن *الرضا الوظيفي* يعتمد على التقدير أكثر من اعتماده على الأجر.",
+   "syn": [
+    "fulfilment",
+    "contentment at work"
+   ],
+   "col": [
+    "high job satisfaction",
+    "improve job satisfaction",
+    "levels of job satisfaction"
+   ],
+   "fam": "satisfy (v.) · satisfied (adj.) · satisfying (adj.)"
+  },
+  {
+   "w": "career",
+   "pos": "n.",
+   "ipa": "/kəˈrɪə(r)/",
+   "lvl": "B1",
+   "ar": "مسيرة مهنية، مسار مهني",
+   "ex": "Choosing a *career* at eighteen is a difficult decision for many young people.",
+   "exAr": "يُعد اختيار *المسار المهني* في سن الثامنة عشرة قرارًا صعبًا لكثير من الشباب.",
+   "syn": [
+    "profession",
+    "occupation",
+    "vocation"
+   ],
+   "col": [
+    "a career path",
+    "a successful career",
+    "career prospects"
+   ],
+   "fam": "career-minded (adj.)"
+  },
+  {
+   "w": "profession",
+   "pos": "n.",
+   "ipa": "/prəˈfeʃn/",
+   "lvl": "B2",
+   "ar": "مهنة",
+   "ex": "Teaching is a demanding *profession* that deserves greater public respect.",
+   "exAr": "التدريس *مهنة* شاقة تستحق مزيدًا من الاحترام في المجتمع.",
+   "syn": [
+    "occupation",
+    "vocation",
+    "career"
+   ],
+   "col": [
+    "the medical profession",
+    "the teaching profession",
+    "enter a profession"
+   ],
+   "fam": "professional (adj., n.) · professionally (adv.)"
+  },
+  {
+   "w": "internship",
+   "pos": "n.",
+   "ipa": "/ˈɪntɜːnʃɪp/",
+   "lvl": "B2",
+   "ar": "تدريب عملي",
+   "ex": "A summer *internship* gives graduates valuable experience of a real workplace.",
+   "exAr": "يمنح *التدريب العملي* الصيفي الخريجين خبرة قيّمة في بيئة عمل حقيقية.",
+   "syn": [
+    "work placement",
+    "traineeship"
+   ],
+   "col": [
+    "an unpaid internship",
+    "do an internship",
+    "an internship programme"
+   ],
+   "fam": "intern (n.)"
+  },
+  {
+   "w": "freelance",
+   "pos": "adj.",
+   "ipa": "/ˈfriːlɑːns/",
+   "lvl": "C1",
+   "ar": "حر، مستقل",
+   "ex": "More designers are choosing *freelance* work because it offers greater independence.",
+   "exAr": "يختار مزيد من المصممين *العمل الحر* لأنه يمنحهم استقلالية أكبر.",
+   "syn": [
+    "self-employed",
+    "independent"
+   ],
+   "col": [
+    "freelance work",
+    "a freelance journalist",
+    "a freelance translator"
+   ],
+   "fam": "freelancer (n.) · freelance (v., adv.)"
+  },
+  {
+   "w": "work-life balance",
+   "pos": "n.",
+   "ipa": "/ˌwɜːk laɪf ˈbæləns/",
+   "lvl": "B2",
+   "ar": "التوازن بين العمل والحياة",
+   "ex": "Remote working can improve *work-life balance* by cutting long commutes.",
+   "exAr": "يمكن للعمل عن بُعد أن يحسّن *التوازن بين العمل والحياة* من خلال تقليص التنقلات الطويلة.",
+   "syn": [],
+   "col": [
+    "a healthy work-life balance",
+    "achieve a work-life balance",
+    "improve work-life balance"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "redundancy",
+   "pos": "n.",
+   "ipa": "/rɪˈdʌndənsi/",
+   "lvl": "C1",
+   "ar": "تسريح من العمل",
+   "ex": "Hundreds of workers faced *redundancy* when the car plant closed.",
+   "exAr": "واجه مئات العمال *التسريح من العمل* عندما أُغلق مصنع السيارات.",
+   "syn": [
+    "dismissal",
+    "lay-off",
+    "job loss"
+   ],
+   "col": [
+    "voluntary redundancy",
+    "redundancy pay",
+    "face redundancy"
+   ],
+   "fam": "redundant (adj.)"
+  },
+  {
+   "w": "incentive",
+   "pos": "n.",
+   "ipa": "/ɪnˈsentɪv/",
+   "lvl": "C1",
+   "ar": "حافز",
+   "ex": "Bonuses act as an *incentive* for staff to exceed their targets.",
+   "exAr": "تُعد المكافآت *حافزًا* يدفع الموظفين إلى تجاوز أهدافهم.",
+   "syn": [
+    "motivation",
+    "encouragement",
+    "stimulus"
+   ],
+   "col": [
+    "a financial incentive",
+    "a strong incentive",
+    "tax incentives"
+   ],
+   "fam": "incentivise (v.)"
+  },
+  {
+   "w": "productivity",
+   "pos": "n.",
+   "ipa": "/ˌprɒdʌkˈtɪvəti/",
+   "lvl": "C1",
+   "ar": "إنتاجية",
+   "ex": "Some research suggests that a four-day week can actually raise *productivity*.",
+   "exAr": "تشير بعض الأبحاث إلى أن أسبوع العمل المكون من أربعة أيام قد يرفع *الإنتاجية* فعلًا.",
+   "syn": [
+    "output",
+    "efficiency"
+   ],
+   "col": [
+    "increase productivity",
+    "labour productivity",
+    "low productivity"
+   ],
+   "fam": "produce (v.) · product (n.) · productive (adj.)"
+  },
+  {
+   "w": "vacancy",
+   "pos": "n.",
+   "ipa": "/ˈveɪkənsi/",
+   "lvl": "B2",
+   "ar": "وظيفة شاغرة",
+   "ex": "There are currently several *vacancies* for software engineers in the capital.",
+   "exAr": "توجد حاليًا عدة *وظائف شاغرة* لمهندسي البرمجيات في العاصمة.",
+   "syn": [
+    "opening",
+    "position",
+    "post"
+   ],
+   "col": [
+    "fill a vacancy",
+    "a job vacancy",
+    "advertise a vacancy"
+   ],
+   "fam": "vacant (adj.)"
+  },
+  {
+   "w": "applicant",
+   "pos": "n.",
+   "ipa": "/ˈæplɪkənt/",
+   "lvl": "B2",
+   "ar": "متقدم لوظيفة، مرشح",
+   "ex": "Each *applicant* must attend an interview and complete a written test.",
+   "exAr": "يجب على كل *متقدم* حضور مقابلة وإجراء اختبار كتابي.",
+   "syn": [
+    "candidate",
+    "job seeker"
+   ],
+   "col": [
+    "a successful applicant",
+    "a job applicant",
+    "suitable applicants"
+   ],
+   "fam": "apply (v.) · application (n.)"
+  },
+  {
+   "w": "contract",
+   "pos": "n.",
+   "ipa": "/ˈkɒntrækt/",
+   "lvl": "B1",
+   "ar": "عقد",
+   "ex": "Many young workers are employed on short-term *contracts* with little job security.",
+   "exAr": "يعمل كثير من الشباب بموجب *عقود* قصيرة الأجل لا توفر لهم إلا قدرًا ضئيلًا من الأمان الوظيفي.",
+   "syn": [
+    "agreement",
+    "deal"
+   ],
+   "col": [
+    "a fixed-term contract",
+    "sign a contract",
+    "an employment contract"
+   ],
+   "fam": "contractual (adj.) · contractor (n.)"
+  },
+  {
+   "w": "burnout",
+   "pos": "n.",
+   "ipa": "/ˈbɜːnaʊt/",
+   "lvl": "C1",
+   "ar": "احتراق وظيفي، إنهاك",
+   "ex": "Long hours without proper breaks are a major cause of *burnout* among nurses.",
+   "exAr": "تُعد ساعات العمل الطويلة دون استراحات كافية سببًا رئيسيًا *للاحتراق الوظيفي* بين الممرضين.",
+   "syn": [
+    "exhaustion",
+    "fatigue"
+   ],
+   "col": [
+    "suffer from burnout",
+    "the risk of burnout",
+    "prevent burnout"
+   ],
+   "fam": "burn out (phr. v.) · burnt-out (adj.)"
+  }
+ ],
+ "practice": {
+  "bank": [
+   "deadline",
+   "recruit",
+   "pension",
+   "vacancy",
+   "incentive",
+   "resign",
+   "overtime",
+   "productivity"
+  ],
+  "gap": [
+   {
+    "s": "The minister ____ after an official report strongly criticised his department.",
+    "a": "resigned"
+   },
+   {
+    "s": "Better technology has helped to boost ____ in the manufacturing sector.",
+    "a": "productivity"
+   },
+   {
+    "s": "The airline plans to ____ five hundred new pilots over the next two years.",
+    "a": "recruit"
+   },
+   {
+    "s": "Students often find it hard to meet a ____ when they have several exams in the same week.",
+    "a": "deadline"
+   },
+   {
+    "s": "Nurses frequently work ____ when hospitals are short of staff.",
+    "a": "overtime"
+   },
+   {
+    "s": "The company advertised the ____ online and received more than three hundred applications.",
+    "a": "vacancy"
+   },
+   {
+    "s": "Without a private ____, many older people rely entirely on support from the state.",
+    "a": "pension"
+   },
+   {
+    "s": "Free training courses are a powerful ____ for skilled staff to stay with a company.",
+    "a": "incentive"
+   }
+  ],
+  "para": [
+   {
+    "a": "She left her job because she was too tired all the time.",
+    "b": "She left her job because she was suffering from *burnout*."
+   },
+   {
+    "a": "Many people now work for themselves and not for one company.",
+    "b": "A growing number of people now work as *freelance* professionals rather than for a single firm."
+   },
+   {
+    "a": "Fewer people were without jobs last year.",
+    "b": "There was a noticeable decline in *unemployment* last year."
+   },
+   {
+    "a": "People who like their jobs usually work harder.",
+    "b": "Staff who enjoy high levels of *job satisfaction* tend to be more productive."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you work or are you a student?",
+    "a": "I'm currently working as an accountant for a medium-sized logistics firm. I joined as an *employee* straight after university, and last year I got my first *promotion*, so I'm quite happy with how things are going."
+   },
+   {
+    "q": "What do you like most about your job?",
+    "a": "Honestly, it's the people. My *colleagues* are very supportive, and we often help each other when the *workload* gets heavy. That team spirit makes even the most stressful weeks feel manageable."
+   },
+   {
+    "q": "Would you like to change your job in the future?",
+    "a": "Possibly, yes. I'd love to try *freelance* work one day because it would give me more control over my schedule. But for now, I really value the security of a stable *salary*."
+   }
+  ],
+  "p2": {
+   "cue": "Describe a job you would like to do in the future.",
+   "points": [
+    "what the job is",
+    "how you learnt about it",
+    "what skills you would need",
+    "and explain why you would like to do this job"
+   ],
+   "a": "I'd like to talk about a *career* in environmental engineering, which is something I've been interested in for years. I first learnt about this *profession* when an engineer visited my school and explained how she designed systems to clean polluted water. I remember thinking that it was the perfect mix of science and social responsibility. To do this job well, I would need a strong background in maths and chemistry, as well as good teamwork skills, because engineers rarely work alone. I'm planning to apply for an *internship* with a water company next summer so that I can gain some practical experience. As for why I'd like to do it, there are several reasons. Firstly, I think it would give me real *job satisfaction*, since I'd be solving problems that affect people's health. Secondly, demand for environmental specialists is rising, so the *employment* prospects are good. Finally, many firms in this field offer *flexible* hours, which would help me maintain a healthy *work-life balance*."
+  },
+  "p3": [
+   {
+    "q": "Why do some people choose to retire early?",
+    "a": "I think there are two main reasons. Some people have saved enough money or have a generous *pension*, so they simply don't need to work any more. Others *retire* early because of health problems or *burnout* after decades in stressful jobs. In both cases, they usually want more time for their families, for travel or for voluntary work, which can be very rewarding."
+   },
+   {
+    "q": "Should governments force companies to pay higher wages?",
+    "a": "To some extent, yes. A decent minimum *wage* protects low-paid workers and reduces poverty. However, if wages are pushed up too quickly, small businesses may cut jobs, which could increase *unemployment*. So I'd say the best approach is gradual increases, combined with *incentives* such as tax breaks for firms that invest in training and raise *productivity*."
+   }
+  ],
+  "tipAr": "في الجزء الثاني، استغل دقيقة التحضير في تدوين كلمة مفتاحية لكل نقطة، ثم تحدث عن النقاط بالترتيب لتغطي البطاقة كاملة."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Advantages and disadvantages",
+  "q": "In many countries, more and more people are working from home rather than in an office. Do the advantages of this trend outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "In recent years, a growing number of *employees* have begun working from home for at least part of the week, a shift that accelerated sharply during the pandemic. Although this arrangement has certain drawbacks, I believe its benefits are considerably greater.",
+   "The most obvious advantage of remote work is that it allows people to achieve a better *work-life balance*. Without a daily commute, which can take two hours in large cities, workers have more time for their families and for rest, which reduces the risk of *burnout*. Moreover, many *employers* have found that *productivity* does not fall; in fact, staff with *flexible* schedules often complete tasks more efficiently because they face fewer interruptions. Companies can also save money on office space and *recruit* talented people who live far away.",
+   "On the other hand, working from home is not without problems. Some people feel isolated because they rarely see their *colleagues*, and this lack of contact can weaken teamwork and make it harder for young staff to learn from experienced mentors. In addition, the boundary between home and work can become blurred, so employees may answer emails late at night and end up with an even heavier *workload*. However, these issues can largely be solved through clear company policies, such as fixed online hours and regular team meetings in the office.",
+   "In conclusion, while remote working can lead to loneliness and longer working days, these disadvantages are manageable. Given the gains in well-being, efficiency and cost, I am convinced that the advantages of this trend clearly outweigh its drawbacks."
+  ],
+  "tipAr": "إذا سألك السؤال هل تفوق المزايا العيوب، فصرّح برأيك في المقدمة والخاتمة، وخصص فقرة للمزايا وأخرى للعيوب."
+ }
+}

@@ -1,0 +1,698 @@
+{
+ "n": 8,
+ "entries": [
+  {
+   "w": "policy",
+   "pos": "n.",
+   "ipa": "/ˈpɒləsi/",
+   "lvl": "B1",
+   "ar": "سياسة",
+   "ex": "The government's new *policy* aims to make housing more affordable for young families.",
+   "exAr": "تهدف *سياسة* الحكومة الجديدة إلى جعل السكن في متناول الأسر الشابة.",
+   "syn": [
+    "strategy",
+    "plan",
+    "approach"
+   ],
+   "col": [
+    "government policy",
+    "introduce a policy",
+    "foreign policy"
+   ],
+   "fam": "policymaker (n.) · policymaking (n.)"
+  },
+  {
+   "w": "citizen",
+   "pos": "n.",
+   "ipa": "/ˈsɪtɪzn/",
+   "lvl": "B1",
+   "ar": "مواطن",
+   "ex": "Every *citizen* has the right to free basic healthcare in this country.",
+   "exAr": "لكل *مواطن* الحق في رعاية صحية أساسية مجانية في هذا البلد.",
+   "syn": [
+    "national",
+    "resident",
+    "inhabitant"
+   ],
+   "col": [
+    "senior citizens",
+    "a law-abiding citizen",
+    "ordinary citizens"
+   ],
+   "fam": "citizenship (n.)"
+  },
+  {
+   "w": "democracy",
+   "pos": "n.",
+   "ipa": "/dɪˈmɒkrəsi/",
+   "lvl": "B2",
+   "ar": "الديمقراطية",
+   "ex": "A free press is often seen as essential for a healthy *democracy*.",
+   "exAr": "كثيرًا ما تعد الصحافة الحرة ضرورية *للديمقراطية* السليمة.",
+   "syn": [
+    "self-government"
+   ],
+   "col": [
+    "a healthy democracy",
+    "parliamentary democracy",
+    "democracy and freedom"
+   ],
+   "fam": "democratic (adj.) · democratically (adv.)"
+  },
+  {
+   "w": "election",
+   "pos": "n.",
+   "ipa": "/ɪˈlekʃn/",
+   "lvl": "B1",
+   "ar": "انتخابات",
+   "ex": "Fewer young people voted in the last *election* than in previous years.",
+   "exAr": "صوّت عدد أقل من الشباب في *الانتخابات* الأخيرة مقارنة بالسنوات السابقة.",
+   "syn": [
+    "vote",
+    "poll",
+    "ballot"
+   ],
+   "col": [
+    "a general election",
+    "win an election",
+    "hold an election"
+   ],
+   "fam": "elect (v.) · elector (n.) · electoral (adj.)"
+  },
+  {
+   "w": "authority",
+   "pos": "n.",
+   "ipa": "/ɔːˈθɒrəti/",
+   "lvl": "B2",
+   "ar": "سلطة، جهة رسمية",
+   "ex": "Local *authorities* are responsible for collecting rubbish and maintaining roads.",
+   "exAr": "*السلطات* المحلية مسؤولة عن جمع النفايات وصيانة الطرق.",
+   "syn": [
+    "council",
+    "administration",
+    "power"
+   ],
+   "col": [
+    "local authorities",
+    "the relevant authorities",
+    "in a position of authority"
+   ],
+   "fam": "authorise (v.) · authoritative (adj.)"
+  },
+  {
+   "w": "public services",
+   "pos": "n.",
+   "ipa": "/ˌpʌblɪk ˈsɜːvɪsɪz/",
+   "lvl": "B2",
+   "ar": "الخدمات العامة",
+   "ex": "Rural areas often have poorer *public services*, such as buses and hospitals.",
+   "exAr": "كثيرًا ما تكون *الخدمات العامة* في المناطق الريفية أضعف، مثل الحافلات والمستشفيات.",
+   "syn": [
+    "state services",
+    "the public sector"
+   ],
+   "col": [
+    "access to public services",
+    "cuts to public services",
+    "improve public services"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "welfare",
+   "pos": "n.",
+   "ipa": "/ˈwelfeə/",
+   "lvl": "B2",
+   "ar": "الرعاية الاجتماعية، الرفاه",
+   "ex": "The state *welfare* system supports families who lose their main source of income.",
+   "exAr": "يدعم نظام *الرعاية الاجتماعية* الحكومي الأسر التي تفقد مصدر دخلها الرئيسي.",
+   "syn": [
+    "well-being",
+    "social assistance",
+    "benefits"
+   ],
+   "col": [
+    "the welfare state",
+    "welfare benefits",
+    "child welfare"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "poverty",
+   "pos": "n.",
+   "ipa": "/ˈpɒvəti/",
+   "lvl": "B2",
+   "ar": "الفقر",
+   "ex": "Access to education is one of the most effective ways to lift families out of *poverty*.",
+   "exAr": "يعد الوصول إلى التعليم من أكثر الطرق فاعلية لانتشال الأسر من *الفقر*.",
+   "syn": [
+    "hardship",
+    "deprivation",
+    "need"
+   ],
+   "col": [
+    "live in poverty",
+    "extreme poverty",
+    "the poverty line"
+   ],
+   "fam": "poor (adj.) · impoverished (adj.)"
+  },
+  {
+   "w": "inequality",
+   "pos": "n.",
+   "ipa": "/ˌɪnɪˈkwɒləti/",
+   "lvl": "C1",
+   "ar": "عدم المساواة، التفاوت",
+   "ex": "The widening gap between rich and poor shows that income *inequality* is growing.",
+   "exAr": "تظهر الفجوة المتسعة بين الأغنياء والفقراء أن *التفاوت* في الدخل يتزايد.",
+   "syn": [
+    "disparity",
+    "imbalance",
+    "unfairness"
+   ],
+   "col": [
+    "income inequality",
+    "social inequality",
+    "reduce inequality"
+   ],
+   "fam": "equal (adj.) · equality (n.) · unequal (adj.)"
+  },
+  {
+   "w": "discrimination",
+   "pos": "n.",
+   "ipa": "/dɪˌskrɪmɪˈneɪʃn/",
+   "lvl": "C1",
+   "ar": "التمييز",
+   "ex": "Laws now protect workers from *discrimination* on the basis of age or disability.",
+   "exAr": "تحمي القوانين الآن العمال من *التمييز* على أساس العمر أو الإعاقة.",
+   "syn": [
+    "prejudice",
+    "bias",
+    "unfair treatment"
+   ],
+   "col": [
+    "racial discrimination",
+    "face discrimination",
+    "discrimination against"
+   ],
+   "fam": "discriminate (v.) · discriminatory (adj.)"
+  },
+  {
+   "w": "minority",
+   "pos": "n.",
+   "ipa": "/maɪˈnɒrəti/",
+   "lvl": "B2",
+   "ar": "أقلية",
+   "ex": "Only a small *minority* of residents opposed the plan to build a new park.",
+   "exAr": "لم تعارض خطة إنشاء حديقة جديدة سوى *أقلية* صغيرة من السكان.",
+   "syn": [
+    "small group",
+    "the few"
+   ],
+   "col": [
+    "ethnic minorities",
+    "a small minority",
+    "minority groups"
+   ],
+   "fam": "minor (adj.)"
+  },
+  {
+   "w": "community",
+   "pos": "n.",
+   "ipa": "/kəˈmjuːnəti/",
+   "lvl": "B1",
+   "ar": "المجتمع المحلي",
+   "ex": "The new library has become a meeting place for the whole *community*.",
+   "exAr": "أصبحت المكتبة الجديدة ملتقى *للمجتمع المحلي* بأكمله.",
+   "syn": [
+    "neighbourhood",
+    "society",
+    "population"
+   ],
+   "col": [
+    "the local community",
+    "a community centre",
+    "a sense of community"
+   ],
+   "fam": "communal (adj.)"
+  },
+  {
+   "w": "volunteer",
+   "pos": "n.",
+   "ipa": "/ˌvɒlənˈtɪə/",
+   "lvl": "B1",
+   "ar": "متطوع",
+   "ex": "The food bank relies entirely on *volunteers* who give up their weekends to help.",
+   "exAr": "يعتمد بنك الطعام كليًا على *المتطوعين* الذين يضحون بعطلات نهاية الأسبوع للمساعدة.",
+   "syn": [
+    "helper",
+    "unpaid worker"
+   ],
+   "col": [
+    "work as a volunteer",
+    "volunteer work",
+    "a team of volunteers"
+   ],
+   "fam": "volunteer (v.) · voluntary (adj.) · voluntarily (adv.)"
+  },
+  {
+   "w": "charity",
+   "pos": "n.",
+   "ipa": "/ˈtʃærəti/",
+   "lvl": "B1",
+   "ar": "جمعية خيرية، عمل خيري",
+   "ex": "Many students raise money for *charity* by organising sponsored runs.",
+   "exAr": "يجمع كثير من الطلاب المال *للأعمال الخيرية* من خلال تنظيم سباقات جري يرعاها متبرعون.",
+   "syn": [
+    "good cause",
+    "aid organisation"
+   ],
+   "col": [
+    "raise money for charity",
+    "a registered charity",
+    "charity work"
+   ],
+   "fam": "charitable (adj.)"
+  },
+  {
+   "w": "immigration",
+   "pos": "n.",
+   "ipa": "/ˌɪmɪˈɡreɪʃn/",
+   "lvl": "B2",
+   "ar": "الهجرة الوافدة",
+   "ex": "*Immigration* has helped fill labour shortages in healthcare and construction.",
+   "exAr": "ساعدت *الهجرة* في سد النقص في الأيدي العاملة في قطاعي الرعاية الصحية والبناء.",
+   "syn": [
+    "migration"
+   ],
+   "col": [
+    "immigration policy",
+    "immigration controls",
+    "levels of immigration"
+   ],
+   "fam": "immigrate (v.) · immigrant (n.)"
+  },
+  {
+   "w": "regulation",
+   "pos": "n.",
+   "ipa": "/ˌreɡjuˈleɪʃn/",
+   "lvl": "B2",
+   "ar": "لائحة، تنظيم",
+   "ex": "Stricter *regulations* on food labelling help consumers make healthier choices.",
+   "exAr": "تساعد *اللوائح* الأكثر صرامة بشأن ملصقات الأغذية المستهلكين على اتخاذ خيارات صحية أكثر.",
+   "syn": [
+    "rule",
+    "control",
+    "directive"
+   ],
+   "col": [
+    "strict regulations",
+    "safety regulations",
+    "government regulation"
+   ],
+   "fam": "regulate (v.) · regulator (n.) · regulatory (adj.)"
+  },
+  {
+   "w": "ban",
+   "pos": "v.",
+   "ipa": "/bæn/",
+   "lvl": "B2",
+   "ar": "يحظر، يمنع",
+   "ex": "Several cities have *banned* cars from their historic centres.",
+   "exAr": "*حظرت* عدة مدن دخول السيارات إلى مراكزها التاريخية.",
+   "syn": [
+    "prohibit",
+    "forbid",
+    "outlaw"
+   ],
+   "col": [
+    "ban smoking in public",
+    "be banned from",
+    "ban something outright"
+   ],
+   "fam": "ban (n.)"
+  },
+  {
+   "w": "funding",
+   "pos": "n.",
+   "ipa": "/ˈfʌndɪŋ/",
+   "lvl": "B2",
+   "ar": "تمويل",
+   "ex": "Many rural schools are struggling because of cuts in government *funding*.",
+   "exAr": "تعاني كثير من المدارس الريفية بسبب تخفيض *التمويل* الحكومي.",
+   "syn": [
+    "finance",
+    "financial support",
+    "investment"
+   ],
+   "col": [
+    "government funding",
+    "cuts in funding",
+    "secure funding"
+   ],
+   "fam": "fund (v./n.)"
+  },
+  {
+   "w": "taxpayer",
+   "pos": "n.",
+   "ipa": "/ˈtækspeɪə/",
+   "lvl": "B2",
+   "ar": "دافع الضرائب",
+   "ex": "Critics argue that the new stadium was a waste of *taxpayers'* money.",
+   "exAr": "يرى المنتقدون أن الملعب الجديد كان إهدارًا لأموال *دافعي الضرائب*.",
+   "syn": [
+    "citizen"
+   ],
+   "col": [
+    "taxpayers' money",
+    "at the taxpayer's expense",
+    "ordinary taxpayers"
+   ],
+   "fam": "tax (n./v.) · taxation (n.)"
+  },
+  {
+   "w": "social security",
+   "pos": "n.",
+   "ipa": "/ˌsəʊʃl sɪˈkjʊərəti/",
+   "lvl": "B2",
+   "ar": "الضمان الاجتماعي",
+   "ex": "Pensioners and the unemployed often depend on *social security* payments.",
+   "exAr": "كثيرًا ما يعتمد المتقاعدون والعاطلون عن العمل على مدفوعات *الضمان الاجتماعي*.",
+   "syn": [
+    "state benefits",
+    "welfare"
+   ],
+   "col": [
+    "social security benefits",
+    "the social security system",
+    "on social security"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "homelessness",
+   "pos": "n.",
+   "ipa": "/ˈhəʊmləsnəs/",
+   "lvl": "C1",
+   "ar": "التشرد",
+   "ex": "Rising rents are one of the main causes of *homelessness* in large cities.",
+   "exAr": "يعد ارتفاع الإيجارات من الأسباب الرئيسية *للتشرد* في المدن الكبرى.",
+   "syn": [
+    "rough sleeping",
+    "lack of housing"
+   ],
+   "col": [
+    "tackle homelessness",
+    "the causes of homelessness",
+    "youth homelessness"
+   ],
+   "fam": "homeless (adj.)"
+  },
+  {
+   "w": "gender equality",
+   "pos": "n.",
+   "ipa": "/ˌdʒendə iˈkwɒləti/",
+   "lvl": "B2",
+   "ar": "المساواة بين الجنسين",
+   "ex": "Equal pay for the same job is a basic step towards *gender equality*.",
+   "exAr": "الأجر المتساوي عن العمل نفسه خطوة أساسية نحو *المساواة بين الجنسين*.",
+   "syn": [
+    "gender parity"
+   ],
+   "col": [
+    "promote gender equality",
+    "achieve gender equality",
+    "gender equality at work"
+   ],
+   "fam": "gender (n.) · equal (adj.)"
+  },
+  {
+   "w": "human rights",
+   "pos": "n.",
+   "ipa": "/ˌhjuːmən ˈraɪts/",
+   "lvl": "B2",
+   "ar": "حقوق الإنسان",
+   "ex": "Access to clean water is increasingly regarded as one of the basic *human rights*.",
+   "exAr": "يُنظر بشكل متزايد إلى الحصول على المياه النظيفة باعتباره أحد *حقوق الإنسان* الأساسية.",
+   "syn": [
+    "civil rights",
+    "basic freedoms"
+   ],
+   "col": [
+    "respect human rights",
+    "protect human rights",
+    "human rights organisations"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "campaign",
+   "pos": "n.",
+   "ipa": "/kæmˈpeɪn/",
+   "lvl": "B2",
+   "ar": "حملة",
+   "ex": "A national *campaign* encouraged people to recycle plastic bottles.",
+   "exAr": "شجعت *حملة* وطنية الناس على إعادة تدوير الزجاجات البلاستيكية.",
+   "syn": [
+    "drive",
+    "movement",
+    "push"
+   ],
+   "col": [
+    "launch a campaign",
+    "an awareness campaign",
+    "a campaign for change"
+   ],
+   "fam": "campaign (v.) · campaigner (n.)"
+  },
+  {
+   "w": "policymaker",
+   "pos": "n.",
+   "ipa": "/ˈpɒləsiˌmeɪkə/",
+   "lvl": "C1",
+   "ar": "صانع السياسات",
+   "ex": "Researchers hope their findings will persuade *policymakers* to invest in early education.",
+   "exAr": "يأمل الباحثون أن تقنع نتائجهم *صناع السياسات* بالاستثمار في التعليم المبكر.",
+   "syn": [
+    "decision-maker",
+    "lawmaker",
+    "legislator"
+   ],
+   "col": [
+    "senior policymakers",
+    "urge policymakers",
+    "policymakers and experts"
+   ],
+   "fam": "policy (n.) · policymaking (n.)"
+  },
+  {
+   "w": "bureaucracy",
+   "pos": "n.",
+   "ipa": "/bjʊəˈrɒkrəsi/",
+   "lvl": "C1",
+   "ar": "البيروقراطية",
+   "ex": "Small businesses often complain that too much *bureaucracy* slows down their growth.",
+   "exAr": "كثيرًا ما تشكو الشركات الصغيرة من أن كثرة *البيروقراطية* تبطئ نموها.",
+   "syn": [
+    "red tape",
+    "paperwork",
+    "officialdom"
+   ],
+   "col": [
+    "cut bureaucracy",
+    "unnecessary bureaucracy",
+    "government bureaucracy"
+   ],
+   "fam": "bureaucrat (n.) · bureaucratic (adj.)"
+  },
+  {
+   "w": "ageing population",
+   "pos": "n.",
+   "ipa": "/ˌeɪdʒɪŋ ˌpɒpjuˈleɪʃn/",
+   "lvl": "C1",
+   "ar": "شيخوخة السكان",
+   "ex": "An *ageing population* puts increasing pressure on health and pension systems.",
+   "exAr": "تشكل *شيخوخة السكان* ضغطًا متزايدًا على أنظمة الصحة والمعاشات التقاعدية.",
+   "syn": [
+    "greying population",
+    "older society"
+   ],
+   "col": [
+    "a rapidly ageing population",
+    "cope with an ageing population"
+   ],
+   "fam": "age (n./v.) · aged (adj.)"
+  },
+  {
+   "w": "census",
+   "pos": "n.",
+   "ipa": "/ˈsensəs/",
+   "lvl": "C1",
+   "ar": "تعداد سكاني",
+   "ex": "According to the latest *census*, more than half the population now lives in cities.",
+   "exAr": "وفقًا لآخر *تعداد سكاني*، يعيش الآن أكثر من نصف السكان في المدن.",
+   "syn": [
+    "population count",
+    "survey"
+   ],
+   "col": [
+    "the national census",
+    "census data",
+    "carry out a census"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "public opinion",
+   "pos": "n.",
+   "ipa": "/ˌpʌblɪk əˈpɪnjən/",
+   "lvl": "B2",
+   "ar": "الرأي العام",
+   "ex": "*Public opinion* has shifted strongly in favour of protecting the environment.",
+   "exAr": "تحول *الرأي العام* بقوة لصالح حماية البيئة.",
+   "syn": [
+    "popular opinion",
+    "public attitudes"
+   ],
+   "col": [
+    "influence public opinion",
+    "a shift in public opinion",
+    "public opinion polls"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "social problem",
+   "pos": "n.",
+   "ipa": "/ˌsəʊʃl ˈprɒbləm/",
+   "lvl": "B2",
+   "ar": "مشكلة اجتماعية",
+   "ex": "Loneliness among elderly people is a growing *social problem* in many countries.",
+   "exAr": "تعد الوحدة بين كبار السن *مشكلة اجتماعية* متنامية في كثير من الدول.",
+   "syn": [
+    "social issue",
+    "social ill"
+   ],
+   "col": [
+    "a serious social problem",
+    "tackle social problems",
+    "a growing social problem"
+   ],
+   "fam": ""
+  }
+ ],
+ "practice": {
+  "bank": [
+   "welfare",
+   "inequality",
+   "volunteer",
+   "bureaucracy",
+   "census",
+   "funding",
+   "discrimination",
+   "campaign"
+  ],
+  "gap": [
+   {
+    "s": "The government launched a ____ to persuade more people to give blood.",
+    "a": "campaign"
+   },
+   {
+    "s": "Job applicants should never face ____ because of their religion or age.",
+    "a": "discrimination"
+   },
+   {
+    "s": "Data from the national ____ showed that the birth rate had fallen.",
+    "a": "census"
+   },
+   {
+    "s": "Many hospitals depend on ____ who help patients without being paid.",
+    "a": "volunteers"
+   },
+   {
+    "s": "The museum may have to close unless it receives more ____ from the council.",
+    "a": "funding"
+   },
+   {
+    "s": "Applying for a simple permit involved weeks of ____ and endless forms.",
+    "a": "bureaucracy"
+   },
+   {
+    "s": "Rising house prices have increased ____ between younger and older generations.",
+    "a": "inequality"
+   },
+   {
+    "s": "Social workers are responsible for the ____ of children in care.",
+    "a": "welfare"
+   }
+  ],
+  "para": [
+   {
+    "a": "There are more and more old people in our country.",
+    "b": "Our country has a rapidly *ageing population*."
+   },
+   {
+    "a": "Many people have nowhere to live in big cities.",
+    "b": "*Homelessness* is a serious issue in many major cities."
+   },
+   {
+    "a": "What most people think can change what the government does.",
+    "b": "*Public opinion* can have a significant influence on government decisions."
+   },
+   {
+    "a": "The government should stop people smoking in parks.",
+    "b": "The government should *ban* smoking in public parks."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you do any volunteer work?",
+    "a": "Not regularly, but during Ramadan I *volunteer* at a local food bank with some friends. We pack boxes of rice, oil and dates for families in need, and it's genuinely one of the most rewarding things I do all year."
+   },
+   {
+    "q": "Is there a strong sense of community where you live?",
+    "a": "Yes, I'd say so. Most families have lived in the neighbourhood for years, so people know each other well. Whenever someone is ill or celebrating, the whole *community* gets involved, which makes it a very supportive place to live."
+   },
+   {
+    "q": "Which public services do you use most often?",
+    "a": "Probably public transport and the local library. I take the metro to work every day, and it's cheap and reliable. I think *public services* like these make a huge difference to ordinary *citizens'* quality of life."
+   }
+  ],
+  "p2": {
+   "cue": "Describe a charity or organisation that helps people in your community.",
+   "points": [
+    "what the organisation is",
+    "who it helps",
+    "what kind of work it does",
+    "and explain why you think its work is important"
+   ],
+   "a": "I'd like to describe a small *charity* in my city that supports elderly people who live alone. It was set up about ten years ago by a retired teacher who noticed that many older neighbours rarely had visitors. Today it has around a hundred *volunteers*, most of them university students. The charity helps elderly residents in several practical ways. Volunteers deliver hot meals, accompany people to hospital appointments and simply sit and chat with them, because loneliness can be as harmful as physical illness. It also runs a regular *campaign* on social media to recruit new helpers and raise donations, since it receives very little government *funding*. I think its work is important because our country, like many others, has an *ageing population*, and *public services* cannot meet everyone's needs. Organisations like this fill the gap, and they also teach young people to respect and care for the older generation, which I believe makes the whole *community* stronger."
+  },
+  "p3": [
+   {
+    "q": "Should governments or individuals be responsible for helping poor people?",
+    "a": "I think it has to be a shared responsibility. Governments have the resources to provide a basic safety net, such as *social security* and affordable housing, so that nobody falls into extreme *poverty*. However, individuals and charities can often respond more quickly and personally to people's needs. Ideally, the state should handle large-scale support, while local communities offer the human contact that official systems lack."
+   },
+   {
+    "q": "How can governments encourage more people to vote in elections?",
+    "a": "One option is to make voting easier, for example by allowing people to vote online or by post. Another is to improve civic education at school, so that young people understand how *democracy* works and why their vote matters. Finally, I think politicians need to address issues young people care about, such as jobs and housing; otherwise many will simply ignore the next *election*."
+   }
+  ],
+  "tipAr": "في الجزء الثالث لا تكتف بإجابة قصيرة: قدّم رأيك، ثم اشرح السبب، ثم أعط مثالًا، وانظر إلى المسألة من أكثر من زاوية."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Problem and solution",
+  "q": "In many cities around the world, the number of homeless people is increasing. What are the main causes of this problem, and what measures could governments take to solve it? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "In many large cities around the world, the number of people sleeping on the streets or in temporary shelters has risen noticeably. This essay will argue that *homelessness* is caused mainly by high housing costs and personal crises, and that governments can tackle it through housing *policy* and better support services.",
+   "The most significant cause is the rising cost of accommodation. As rents in city centres increase faster than wages, low-income families may be unable to afford even a small flat, and a single lost job can leave them without a home. In addition, personal problems such as family breakdown, mental illness or long-term unemployment can push vulnerable people into *poverty*. When these difficulties are combined with complicated *bureaucracy*, many people fail to receive the help they are entitled to before it is too late.",
+   "Governments can address this *social problem* in several ways. Firstly, they should increase *funding* for affordable housing, for instance by requiring developers to include low-cost homes in new projects. Secondly, *welfare* systems should be simplified, so that people at risk of losing their homes can quickly obtain temporary financial support. Finally, the authorities could work closely with charities and *volunteers* to provide counselling, job training and health care, which help homeless people regain their independence rather than simply offering them a bed for the night.",
+   "In conclusion, homelessness results largely from expensive housing and personal hardship. If governments invest in affordable homes, streamline support and cooperate with local organisations, the problem can be significantly reduced, giving vulnerable citizens a genuine chance to rebuild their lives."
+  ],
+  "tipAr": "في مقال المشكلة والحل خصص فقرة للأسباب وفقرة للحلول، واربط كل حل بسبب محدد ذكرته حتى يبدو المقال مترابطًا ومقنعًا."
+ }
+}

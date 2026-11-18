@@ -1,0 +1,694 @@
+{
+ "n": 6,
+ "entries": [
+  {
+   "w": "economy",
+   "pos": "n.",
+   "ipa": "/ɪˈkɒnəmi/",
+   "lvl": "B1",
+   "ar": "اقتصاد",
+   "ex": "Tourism plays a vital role in the national *economy* of many island states.",
+   "exAr": "تؤدي السياحة دورًا حيويًا في *الاقتصاد* الوطني لكثير من الدول الجزرية.",
+   "syn": [
+    "economic system",
+    "market"
+   ],
+   "col": [
+    "the global economy",
+    "a strong economy",
+    "boost the economy"
+   ],
+   "fam": "economic (adj.) · economical (adj.) · economist (n.)"
+  },
+  {
+   "w": "inflation",
+   "pos": "n.",
+   "ipa": "/ɪnˈfleɪʃn/",
+   "lvl": "B2",
+   "ar": "تضخم",
+   "ex": "High *inflation* means that wages buy less than they did a year ago.",
+   "exAr": "يعني *التضخم* المرتفع أن الأجور تشتري أقل مما كانت تشتريه قبل عام.",
+   "syn": [
+    "rising prices"
+   ],
+   "col": [
+    "high inflation",
+    "the inflation rate",
+    "control inflation"
+   ],
+   "fam": "inflate (v.) · inflationary (adj.)"
+  },
+  {
+   "w": "recession",
+   "pos": "n.",
+   "ipa": "/rɪˈseʃn/",
+   "lvl": "C1",
+   "ar": "ركود اقتصادي",
+   "ex": "During the *recession*, thousands of small businesses were forced to close.",
+   "exAr": "خلال *الركود الاقتصادي*، اضطرت آلاف الشركات الصغيرة إلى الإغلاق.",
+   "syn": [
+    "downturn",
+    "slump",
+    "depression"
+   ],
+   "col": [
+    "a deep recession",
+    "go into recession",
+    "a global recession"
+   ],
+   "fam": "recessionary (adj.)"
+  },
+  {
+   "w": "investment",
+   "pos": "n.",
+   "ipa": "/ɪnˈvestmənt/",
+   "lvl": "B2",
+   "ar": "استثمار",
+   "ex": "Greater *investment* in renewable energy could create millions of jobs.",
+   "exAr": "قد تؤدي زيادة *الاستثمار* في الطاقة المتجددة إلى خلق ملايين الوظائف.",
+   "syn": [
+    "funding",
+    "financing"
+   ],
+   "col": [
+    "foreign investment",
+    "a good investment",
+    "investment in education"
+   ],
+   "fam": "invest (v.) · investor (n.)"
+  },
+  {
+   "w": "profit",
+   "pos": "n.",
+   "ipa": "/ˈprɒfɪt/",
+   "lvl": "B1",
+   "ar": "ربح",
+   "ex": "The supermarket chain reported a record *profit* despite rising costs.",
+   "exAr": "أعلنت سلسلة المتاجر الكبرى عن *ربح* قياسي رغم ارتفاع التكاليف.",
+   "syn": [
+    "earnings",
+    "gain",
+    "return"
+   ],
+   "col": [
+    "make a profit",
+    "a net profit",
+    "a profit margin"
+   ],
+   "fam": "profit (v.) · profitable (adj.) · profitability (n.)"
+  },
+  {
+   "w": "revenue",
+   "pos": "n.",
+   "ipa": "/ˈrevənjuː/",
+   "lvl": "C1",
+   "ar": "إيرادات",
+   "ex": "Online advertising now accounts for most of the newspaper's *revenue*.",
+   "exAr": "تشكل الإعلانات عبر الإنترنت الآن معظم *إيرادات* الصحيفة.",
+   "syn": [
+    "income",
+    "takings",
+    "turnover"
+   ],
+   "col": [
+    "tax revenue",
+    "generate revenue",
+    "annual revenue"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "budget",
+   "pos": "n.",
+   "ipa": "/ˈbʌdʒɪt/",
+   "lvl": "B1",
+   "ar": "ميزانية",
+   "ex": "The government has increased the education *budget* by ten per cent this year.",
+   "exAr": "زادت الحكومة *ميزانية* التعليم بنسبة عشرة في المئة هذا العام.",
+   "syn": [
+    "allowance",
+    "funds",
+    "allocation"
+   ],
+   "col": [
+    "a tight budget",
+    "the annual budget",
+    "budget cuts"
+   ],
+   "fam": "budget (v.) · budgetary (adj.)"
+  },
+  {
+   "w": "tax",
+   "pos": "n.",
+   "ipa": "/tæks/",
+   "lvl": "B1",
+   "ar": "ضريبة",
+   "ex": "Some economists argue that a *tax* on sugary drinks would improve public health.",
+   "exAr": "يرى بعض الاقتصاديين أن فرض *ضريبة* على المشروبات السكرية سيحسّن الصحة العامة.",
+   "syn": [
+    "duty",
+    "levy",
+    "tariff"
+   ],
+   "col": [
+    "income tax",
+    "raise taxes",
+    "pay tax"
+   ],
+   "fam": "tax (v.) · taxation (n.) · taxable (adj.) · taxpayer (n.)"
+  },
+  {
+   "w": "consumer",
+   "pos": "n.",
+   "ipa": "/kənˈsjuːmə(r)/",
+   "lvl": "B2",
+   "ar": "مستهلك",
+   "ex": "*Consumers* are increasingly willing to pay more for environmentally friendly products.",
+   "exAr": "يزداد استعداد *المستهلكين* لدفع مبالغ أكبر مقابل المنتجات الصديقة للبيئة.",
+   "syn": [
+    "customer",
+    "buyer",
+    "shopper"
+   ],
+   "col": [
+    "consumer spending",
+    "consumer rights",
+    "consumer goods"
+   ],
+   "fam": "consume (v.) · consumption (n.) · consumerism (n.)"
+  },
+  {
+   "w": "demand",
+   "pos": "n.",
+   "ipa": "/dɪˈmɑːnd/",
+   "lvl": "B2",
+   "ar": "طلب",
+   "ex": "*Demand* for electric cars has risen sharply over the past five years.",
+   "exAr": "ارتفع *الطلب* على السيارات الكهربائية بشكل حاد خلال السنوات الخمس الماضية.",
+   "syn": [
+    "need",
+    "market",
+    "call"
+   ],
+   "col": [
+    "high demand",
+    "meet demand",
+    "demand for housing"
+   ],
+   "fam": "demand (v.) · demanding (adj.)"
+  },
+  {
+   "w": "supply",
+   "pos": "n.",
+   "ipa": "/səˈplaɪ/",
+   "lvl": "B2",
+   "ar": "عرض، إمداد",
+   "ex": "When *supply* cannot keep up with demand, prices usually rise.",
+   "exAr": "عندما لا يواكب *العرض* الطلب، ترتفع الأسعار عادةً.",
+   "syn": [
+    "stock",
+    "provision"
+   ],
+   "col": [
+    "supply and demand",
+    "a shortage of supply",
+    "the supply chain"
+   ],
+   "fam": "supply (v.) · supplier (n.)"
+  },
+  {
+   "w": "competition",
+   "pos": "n.",
+   "ipa": "/ˌkɒmpəˈtɪʃn/",
+   "lvl": "B1",
+   "ar": "منافسة",
+   "ex": "Fierce *competition* between airlines has made air travel much cheaper.",
+   "exAr": "جعلت *المنافسة* الشديدة بين شركات الطيران السفر جوًا أرخص بكثير.",
+   "syn": [
+    "rivalry",
+    "contest"
+   ],
+   "col": [
+    "fierce competition",
+    "healthy competition",
+    "face competition"
+   ],
+   "fam": "compete (v.) · competitive (adj.) · competitor (n.)"
+  },
+  {
+   "w": "entrepreneur",
+   "pos": "n.",
+   "ipa": "/ˌɒntrəprəˈnɜː(r)/",
+   "lvl": "C1",
+   "ar": "رائد أعمال",
+   "ex": "The young *entrepreneur* turned her hobby of baking into a business with twenty staff.",
+   "exAr": "حوّلت *رائدة الأعمال* الشابة هوايتها في الخَبز إلى مشروع تجاري يعمل فيه عشرون موظفًا.",
+   "syn": [
+    "business owner",
+    "founder"
+   ],
+   "col": [
+    "a successful entrepreneur",
+    "young entrepreneurs",
+    "a social entrepreneur"
+   ],
+   "fam": "entrepreneurial (adj.) · entrepreneurship (n.)"
+  },
+  {
+   "w": "startup",
+   "pos": "n.",
+   "ipa": "/ˈstɑːtʌp/",
+   "lvl": "C1",
+   "ar": "شركة ناشئة",
+   "ex": "Most technology *startups* fail within their first three years.",
+   "exAr": "تفشل معظم *الشركات الناشئة* في مجال التكنولوجيا خلال سنواتها الثلاث الأولى.",
+   "syn": [
+    "new business",
+    "new venture"
+   ],
+   "col": [
+    "a tech startup",
+    "startup costs",
+    "fund a startup"
+   ],
+   "fam": "start up (phr. v.)"
+  },
+  {
+   "w": "enterprise",
+   "pos": "n.",
+   "ipa": "/ˈentəpraɪz/",
+   "lvl": "C1",
+   "ar": "مؤسسة، مشروع تجاري",
+   "ex": "Small and medium-sized *enterprises* employ most private-sector workers in the EU.",
+   "exAr": "توظف *المؤسسات* الصغيرة والمتوسطة معظم العاملين في القطاع الخاص في الاتحاد الأوروبي.",
+   "syn": [
+    "business",
+    "firm",
+    "venture"
+   ],
+   "col": [
+    "small enterprises",
+    "private enterprise",
+    "free enterprise"
+   ],
+   "fam": "enterprising (adj.)"
+  },
+  {
+   "w": "export",
+   "pos": "n.",
+   "ipa": "/ˈekspɔːt/",
+   "lvl": "B2",
+   "ar": "صادرات، تصدير",
+   "ex": "Oil remains the country's main *export*, but the government wants to diversify.",
+   "exAr": "لا يزال النفط أهم *صادرات* البلاد، لكن الحكومة تسعى إلى تنويع اقتصادها.",
+   "syn": [],
+   "col": [
+    "export earnings",
+    "a major export",
+    "an export market"
+   ],
+   "fam": "export (v.) · exporter (n.)"
+  },
+  {
+   "w": "import",
+   "pos": "n.",
+   "ipa": "/ˈɪmpɔːt/",
+   "lvl": "B2",
+   "ar": "واردات، استيراد",
+   "ex": "The country relies heavily on food *imports* because it has little farmland.",
+   "exAr": "تعتمد البلاد اعتمادًا كبيرًا على *واردات* الغذاء لقلة أراضيها الزراعية.",
+   "syn": [
+    "foreign goods"
+   ],
+   "col": [
+    "cheap imports",
+    "import duties",
+    "ban imports"
+   ],
+   "fam": "import (v.) · importer (n.)"
+  },
+  {
+   "w": "trade",
+   "pos": "n.",
+   "ipa": "/treɪd/",
+   "lvl": "B1",
+   "ar": "تجارة",
+   "ex": "International *trade* allows countries to buy goods they cannot produce themselves.",
+   "exAr": "تتيح *التجارة* الدولية للدول شراء سلع لا تستطيع إنتاجها بنفسها.",
+   "syn": [
+    "commerce",
+    "business",
+    "exchange"
+   ],
+   "col": [
+    "international trade",
+    "free trade",
+    "a trade agreement"
+   ],
+   "fam": "trade (v.) · trader (n.)"
+  },
+  {
+   "w": "currency",
+   "pos": "n.",
+   "ipa": "/ˈkʌrənsi/",
+   "lvl": "B2",
+   "ar": "عملة",
+   "ex": "A weak *currency* makes a country's exports cheaper for foreign buyers.",
+   "exAr": "تجعل *العملة* الضعيفة صادرات البلد أرخص للمشترين الأجانب.",
+   "syn": [
+    "money",
+    "legal tender"
+   ],
+   "col": [
+    "foreign currency",
+    "a single currency",
+    "currency exchange"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "debt",
+   "pos": "n.",
+   "ipa": "/det/",
+   "lvl": "B2",
+   "ar": "دين",
+   "ex": "Many graduates leave university with large *debts* that take years to repay.",
+   "exAr": "يتخرج كثير من الطلاب في الجامعة وعليهم *ديون* كبيرة يستغرق سدادها سنوات.",
+   "syn": [
+    "liability",
+    "arrears"
+   ],
+   "col": [
+    "be in debt",
+    "the national debt",
+    "pay off a debt"
+   ],
+   "fam": "debtor (n.) · indebted (adj.)"
+  },
+  {
+   "w": "loan",
+   "pos": "n.",
+   "ipa": "/ləʊn/",
+   "lvl": "B1",
+   "ar": "قرض",
+   "ex": "Banks are less willing to give *loans* to companies with no credit history.",
+   "exAr": "تقل رغبة البنوك في منح *القروض* للشركات التي ليس لها سجل ائتماني.",
+   "syn": [
+    "credit",
+    "advance"
+   ],
+   "col": [
+    "take out a loan",
+    "repay a loan",
+    "a student loan"
+   ],
+   "fam": "loan (v.)"
+  },
+  {
+   "w": "interest rate",
+   "pos": "n.",
+   "ipa": "/ˈɪntrəst reɪt/",
+   "lvl": "B2",
+   "ar": "سعر الفائدة",
+   "ex": "The central bank raised the *interest rate* to slow down rising prices.",
+   "exAr": "رفع البنك المركزي *سعر الفائدة* لإبطاء ارتفاع الأسعار.",
+   "syn": [
+    "rate of interest"
+   ],
+   "col": [
+    "raise interest rates",
+    "low interest rates",
+    "cut interest rates"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "economic growth",
+   "pos": "n.",
+   "ipa": "/ˌiːkəˌnɒmɪk ˈɡrəʊθ/",
+   "lvl": "B2",
+   "ar": "نمو اقتصادي",
+   "ex": "Rapid *economic growth* has lifted millions of people out of poverty in Asia.",
+   "exAr": "انتشل *النمو الاقتصادي* السريع ملايين الناس من الفقر في آسيا.",
+   "syn": [
+    "expansion",
+    "development"
+   ],
+   "col": [
+    "sustainable economic growth",
+    "slow economic growth",
+    "drive economic growth"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "e-commerce",
+   "pos": "n.",
+   "ipa": "/ˈiː kɒmɜːs/",
+   "lvl": "C1",
+   "ar": "تجارة إلكترونية",
+   "ex": "The rise of *e-commerce* has forced many high-street shops to close.",
+   "exAr": "أجبر صعود *التجارة الإلكترونية* كثيرًا من المتاجر التقليدية في الشوارع التجارية على الإغلاق.",
+   "syn": [
+    "online shopping",
+    "online retail"
+   ],
+   "col": [
+    "an e-commerce platform",
+    "the growth of e-commerce",
+    "e-commerce sales"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "corporation",
+   "pos": "n.",
+   "ipa": "/ˌkɔːpəˈreɪʃn/",
+   "lvl": "B2",
+   "ar": "شركة كبرى",
+   "ex": "Multinational *corporations* often move production to countries with lower costs.",
+   "exAr": "كثيرًا ما تنقل *الشركات* متعددة الجنسيات الإنتاج إلى بلدان ذات تكاليف أقل.",
+   "syn": [
+    "company",
+    "firm",
+    "conglomerate"
+   ],
+   "col": [
+    "a multinational corporation",
+    "a large corporation",
+    "corporation tax"
+   ],
+   "fam": "corporate (adj.)"
+  },
+  {
+   "w": "merger",
+   "pos": "n.",
+   "ipa": "/ˈmɜːdʒə(r)/",
+   "lvl": "C1",
+   "ar": "اندماج",
+   "ex": "The *merger* of the two banks led to hundreds of job losses.",
+   "exAr": "أدى *اندماج* البنكين إلى فقدان مئات الوظائف.",
+   "syn": [
+    "amalgamation",
+    "union",
+    "consolidation"
+   ],
+   "col": [
+    "a proposed merger",
+    "mergers and acquisitions",
+    "announce a merger"
+   ],
+   "fam": "merge (v.)"
+  },
+  {
+   "w": "stock market",
+   "pos": "n.",
+   "ipa": "/ˈstɒk mɑːkɪt/",
+   "lvl": "B2",
+   "ar": "سوق الأسهم، البورصة",
+   "ex": "Share prices on the *stock market* fell sharply after the announcement.",
+   "exAr": "انخفضت أسعار الأسهم في *البورصة* بشكل حاد بعد الإعلان.",
+   "syn": [
+    "stock exchange",
+    "the market"
+   ],
+   "col": [
+    "a stock market crash",
+    "invest in the stock market",
+    "a volatile stock market"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "subsidy",
+   "pos": "n.",
+   "ipa": "/ˈsʌbsədi/",
+   "lvl": "C1",
+   "ar": "دعم حكومي، إعانة",
+   "ex": "Government *subsidies* keep public transport fares affordable for low-income families.",
+   "exAr": "تُبقي *الإعانات* الحكومية أجور النقل العام في متناول الأسر ذات الدخل المحدود.",
+   "syn": [
+    "grant",
+    "financial aid",
+    "support"
+   ],
+   "col": [
+    "government subsidies",
+    "farm subsidies",
+    "cut subsidies"
+   ],
+   "fam": "subsidise (v.) · subsidised (adj.)"
+  },
+  {
+   "w": "gross domestic product",
+   "pos": "n.",
+   "ipa": "/ˌɡrəʊs dəˌmestɪk ˈprɒdʌkt/",
+   "lvl": "C1",
+   "ar": "الناتج المحلي الإجمالي",
+   "ex": "Agriculture accounts for less than five per cent of the country's *gross domestic product*.",
+   "exAr": "تشكل الزراعة أقل من خمسة في المئة من *الناتج المحلي الإجمالي* للبلاد.",
+   "syn": [
+    "GDP",
+    "national output"
+   ],
+   "col": [
+    "real gross domestic product",
+    "global gross domestic product"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "income",
+   "pos": "n.",
+   "ipa": "/ˈɪnkʌm/",
+   "lvl": "B1",
+   "ar": "دخل",
+   "ex": "Families on a low *income* spend a larger share of their money on food.",
+   "exAr": "تنفق الأسر ذات *الدخل* المنخفض حصة أكبر من أموالها على الغذاء.",
+   "syn": [
+    "earnings",
+    "pay",
+    "wages"
+   ],
+   "col": [
+    "a low income",
+    "household income",
+    "a source of income"
+   ],
+   "fam": ""
+  }
+ ],
+ "practice": {
+  "bank": [
+   "inflation",
+   "recession",
+   "subsidy",
+   "merger",
+   "currency",
+   "entrepreneur",
+   "revenue",
+   "debt"
+  ],
+  "gap": [
+   {
+    "s": "Travellers can change their money into the local ____ at most international airports.",
+    "a": "currency"
+   },
+   {
+    "s": "After the ____, the two airlines began operating under a single name.",
+    "a": "merger"
+   },
+   {
+    "s": "When ____ is high, the cost of basic goods such as bread and fuel rises quickly.",
+    "a": "inflation"
+   },
+   {
+    "s": "The government borrowed heavily, and the national ____ is now at a record level.",
+    "a": "debt"
+   },
+   {
+    "s": "Farmers receive a ____ from the state to help them buy seed and equipment.",
+    "a": "subsidy"
+   },
+   {
+    "s": "The museum's ____ from ticket sales has doubled since it began opening in the evenings.",
+    "a": "revenue"
+   },
+   {
+    "s": "The economy shrank for two quarters in a row, which officially meant it was in ____.",
+    "a": "recession"
+   },
+   {
+    "s": "Many young people dream of becoming an ____ and running their own company.",
+    "a": "entrepreneur"
+   }
+  ],
+  "para": [
+   {
+    "a": "Prices in shops keep going up every month.",
+    "b": "Rising *inflation* is pushing up prices month after month."
+   },
+   {
+    "a": "Lots of people now buy things on the internet.",
+    "b": "*E-commerce* has grown enormously in popularity in recent years."
+   },
+   {
+    "a": "Big companies with offices in many countries are very powerful.",
+    "b": "Multinational *corporations* wield enormous influence."
+   },
+   {
+    "a": "The country sells a lot of its goods to other countries.",
+    "b": "The country *exports* a large share of what it produces."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you usually keep to a budget when you go shopping?",
+    "a": "Yes, I try to. I set myself a monthly *budget* for things like food and transport, and I check my spending every weekend. It stops me from buying things on impulse and helps me save part of my *income*."
+   },
+   {
+    "q": "Do you prefer shopping online or in shops?",
+    "a": "It depends on what I'm buying. For electronics, I prefer *e-commerce* sites because the *competition* between sellers keeps prices low. But for clothes, I'd rather go to a shop so that I can try things on first."
+   },
+   {
+    "q": "Would you like to run your own business one day?",
+    "a": "Definitely. I'd love to set up a small *startup* in the food industry. It would be risky, of course, but I think being my own boss and creating jobs for others would be incredibly rewarding."
+   }
+  ],
+  "p2": {
+   "cue": "Describe a successful business you know about.",
+   "points": [
+    "what the business is",
+    "how it started",
+    "why it is successful",
+    "and explain what you have learnt from it"
+   ],
+   "a": "I'd like to talk about a small bakery in my neighbourhood, which has become one of the most popular businesses in the area. It was started about eight years ago by a young *entrepreneur* who had trained as a chef abroad. At first, she only had a tiny shop and two employees, and she financed everything with her own savings and some help from her family. The bakery is successful for several reasons. Firstly, the quality is excellent and the prices are reasonable, so there is strong *demand* from local families. Secondly, she was quick to adapt: during the pandemic she started selling through a delivery app, which increased her *revenue* considerably. Now she has three branches and around thirty staff, and she still makes a healthy *profit*. What I've learnt from her story is that a business doesn't need huge *investment* to succeed. What really matters is understanding your customers, controlling costs carefully and being willing to change when the market changes."
+  },
+  "p3": [
+   {
+    "q": "Why do some governments give subsidies to certain industries?",
+    "a": "Governments usually provide *subsidies* to protect industries that are important for the country, such as farming or renewable energy. Without this support, local farmers might not survive *competition* from cheap foreign imports. Subsidies can also encourage new technologies that are expensive at first. However, they cost taxpayers a great deal of money, so I think they should be temporary and carefully monitored."
+   },
+   {
+    "q": "How does inflation affect ordinary people?",
+    "a": "*Inflation* hits ordinary families quite hard, especially those on low incomes. When prices rise faster than wages, people can afford less with the same money, so they cut back on things like holidays or eating out. Savings also lose value over time. That's why central banks sometimes raise the *interest rate*, to slow down spending and bring prices back under control."
+   }
+  ],
+  "tipAr": "عند الحديث عن الاقتصاد، اربط الأفكار العامة بأمثلة من حياتك اليومية كالأسعار والتسوق، لتبدو إجابتك طبيعية ومقنعة."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Discussion essay",
+  "q": "Some people think that governments should spend money on supporting small local businesses, while others believe it is better to attract large multinational corporations. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "Governments everywhere want to create jobs and stimulate *economic growth*, but they disagree about the best way to achieve this. While some argue that public money should support small local firms, others believe that attracting multinational *corporations* brings greater benefits. In my view, both strategies have value, but supporting local businesses should be the priority.",
+   "Those who favour multinational companies point to their enormous resources. A single large factory or technology centre can employ thousands of people and bring significant foreign *investment* into a country. Such firms also sell their products worldwide, which earns valuable foreign *currency*, and they often introduce modern management methods that local workers can learn from. Ireland, for example, has transformed its *economy* partly by attracting international technology companies.",
+   "On the other hand, supporters of small businesses argue that these firms are more closely connected to their communities. The profits made by a local *entrepreneur* usually stay in the area, whereas a multinational company may send its earnings abroad and relocate when costs rise. Moreover, a large number of small *enterprises* makes the economy more resilient, because the failure of one company does not lead to thousands of job losses. Targeted measures such as affordable *loans*, *tax* reductions and training programmes can therefore help these businesses grow.",
+   "In conclusion, multinational corporations can provide jobs and investment quickly, but they offer less long-term security. I believe governments should concentrate their resources on helping small local businesses, while still welcoming foreign companies that are willing to make a long-term commitment to the country."
+  ],
+  "tipAr": "في مقال المناقشة، اعرض الرأيين بإنصاف في فقرتين منفصلتين، ثم صرّح برأيك الشخصي بوضوح في المقدمة والخاتمة."
+ }
+}

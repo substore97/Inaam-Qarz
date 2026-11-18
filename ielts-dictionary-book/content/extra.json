@@ -1,0 +1,991 @@
+{
+ "guide": {
+  "introAr": "آيلتس (النظام الدولي لاختبار اللغة الإنجليزية) اختبار يقيس مهارات اللغة الإنجليزية لمن يريد الدراسة أو العمل أو العيش في بلد ناطق بالإنجليزية. وله نسختان: الأكاديمية للدراسة الجامعية، والتدريب العام للعمل والهجرة.",
+  "introEn": "IELTS (International English Language Testing System) is a test of English for people who want to study, work or live in an English-speaking country. It has two versions: Academic, for university study, and General Training, for work and migration.",
+  "skills": [
+   {
+    "en": "Listening",
+    "ar": "الاستماع",
+    "time": "about 30 minutes",
+    "format": "4 parts · 40 questions",
+    "infoEn": "You hear four recordings, two about everyday life and two about education or training, and answer questions as you listen. Each recording is played only once.",
+    "infoAr": "تستمع إلى أربعة تسجيلات، اثنان عن الحياة اليومية واثنان عن التعليم أو التدريب، وتجيب عن الأسئلة أثناء الاستماع. ولا يذاع كل تسجيل إلا مرة واحدة.",
+    "tipsEn": [
+     "Read the questions quickly before each recording starts.",
+     "Check your spelling and plural forms, because mistakes lose the mark.",
+     "Listen for paraphrases, not for the exact words in the question."
+    ],
+    "tipsAr": [
+     "اقرأ الأسئلة بسرعة قبل بدء كل تسجيل.",
+     "راجع الإملاء وصيغ الجمع، لأن الأخطاء تضيع عليك الدرجة.",
+     "انتبه إلى إعادة الصياغة، لا إلى الكلمات نفسها الواردة في السؤال."
+    ]
+   },
+   {
+    "en": "Reading",
+    "ar": "القراءة",
+    "time": "60 minutes",
+    "format": "3 sections · 40 questions",
+    "infoEn": "Academic texts come from books, journals and newspapers; General Training texts come from everyday and workplace materials. There is no extra time to transfer answers.",
+    "infoAr": "نصوص النسخة الأكاديمية مأخوذة من الكتب والمجلات العلمية والصحف، ونصوص التدريب العام من مواد الحياة اليومية والعمل. ولا يوجد وقت إضافي لنقل الإجابات.",
+    "tipsEn": [
+     "Skim each passage first to understand the main idea.",
+     "Scan for names, numbers and key words to find answers quickly.",
+     "Do not spend more than about 20 minutes on one passage."
+    ],
+    "tipsAr": [
+     "تصفح كل نص أولا لتفهم فكرته الرئيسية.",
+     "ابحث بسرعة عن الأسماء والأرقام والكلمات المفتاحية للوصول إلى الإجابات.",
+     "لا تقض أكثر من 20 دقيقة تقريبا في نص واحد."
+    ]
+   },
+   {
+    "en": "Writing",
+    "ar": "الكتابة",
+    "time": "60 minutes",
+    "format": "2 tasks",
+    "infoEn": "In Task 1 (at least 150 words) you describe visual information (Academic) or write a letter (General Training). Task 2 (at least 250 words) is an essay.",
+    "infoAr": "في المهمة الأولى (150 كلمة على الأقل) تصف معلومات مرئية في النسخة الأكاديمية أو تكتب رسالة في التدريب العام. والمهمة الثانية (250 كلمة على الأقل) مقال.",
+    "tipsEn": [
+     "Spend a few minutes planning before you start writing.",
+     "In Task 1, always include a clear overview of the main trends.",
+     "In Task 2, answer every part of the question."
+    ],
+    "tipsAr": [
+     "خصص بضع دقائق للتخطيط قبل أن تبدأ الكتابة.",
+     "في المهمة الأولى، اكتب دائما فقرة عامة واضحة عن الاتجاهات الرئيسية.",
+     "في المهمة الثانية، أجب عن كل أجزاء السؤال."
+    ]
+   },
+   {
+    "en": "Speaking",
+    "ar": "المحادثة",
+    "time": "11–14 minutes",
+    "format": "3 parts",
+    "infoEn": "A face-to-face conversation with an examiner: questions on familiar topics, a two-minute talk from a task card, and a deeper discussion.",
+    "infoAr": "محادثة وجها لوجه مع ممتحن: أسئلة عن موضوعات مألوفة، ثم حديث لمدة دقيقتين عن بطاقة موضوع، ثم نقاش أعمق.",
+    "tipsEn": [
+     "Give full answers with reasons, not just one or two words.",
+     "Use your one minute in Part 2 to make brief notes.",
+     "Do not memorise answers; speak naturally about your own experience."
+    ],
+    "tipsAr": [
+     "قدم إجابات كاملة مع الأسباب، لا كلمة أو كلمتين فقط.",
+     "استغل دقيقة التحضير في الجزء الثاني لتدوين ملاحظات موجزة.",
+     "لا تحفظ الإجابات، بل تحدث بطبيعية عن تجربتك الشخصية."
+    ]
+   }
+  ],
+  "bands": [
+   {
+    "b": "9",
+    "en": "Expert user",
+    "ar": "مستخدم خبير"
+   },
+   {
+    "b": "8",
+    "en": "Very good user",
+    "ar": "مستخدم جيد جدا"
+   },
+   {
+    "b": "7",
+    "en": "Good user",
+    "ar": "مستخدم جيد"
+   },
+   {
+    "b": "6",
+    "en": "Competent user",
+    "ar": "مستخدم كفء"
+   },
+   {
+    "b": "5",
+    "en": "Modest user",
+    "ar": "مستخدم متوسط"
+   },
+   {
+    "b": "4",
+    "en": "Limited user",
+    "ar": "مستخدم محدود"
+   },
+   {
+    "b": "3",
+    "en": "Extremely limited user",
+    "ar": "مستخدم محدود للغاية"
+   },
+   {
+    "b": "2",
+    "en": "Intermittent user",
+    "ar": "مستخدم متقطع"
+   },
+   {
+    "b": "1",
+    "en": "Non-user",
+    "ar": "غير مستخدم للغة"
+   },
+   {
+    "b": "0",
+    "en": "Did not attempt the test",
+    "ar": "لم يؤد الاختبار"
+   }
+  ],
+  "scoreEn": "Each skill receives a band from 0 to 9. The overall band is the average of the four scores, rounded to the nearest whole or half band: for example, 6.25 becomes 6.5 and 6.75 becomes 7.",
+  "scoreAr": "تحصل كل مهارة على درجة من 0 إلى 9. والدرجة الكلية هي متوسط الدرجات الأربع مقربا إلى أقرب درجة كاملة أو نصف درجة: فمثلا يصبح 6.25 هو 6.5، ويصبح 6.75 هو 7."
+ },
+ "howto": {
+  "stepsEn": [
+   "Study one topic chapter at a time and read all 30 of its entries carefully.",
+   "Say each word aloud with the help of the IPA, then read the example and its translation.",
+   "Learn the synonyms, collocations and word family so that you can use each word naturally.",
+   "Check yourself on the practice page, then read the speaking and writing models to see the words in use.",
+   "Use the A–Z indexes to find any word quickly, and review earlier chapters regularly."
+  ],
+  "stepsAr": [
+   "ادرس فصلا واحدا في كل مرة، واقرأ مداخله الثلاثين كلها بعناية.",
+   "انطق كل كلمة بصوت عال مستعينا بالكتابة الصوتية، ثم اقرأ المثال وترجمته.",
+   "تعلم المرادفات والمتلازمات اللفظية ومشتقات الكلمة لتستخدم كل كلمة استخداما طبيعيا.",
+   "اختبر نفسك في صفحة التدريب، ثم اقرأ نماذج المحادثة والكتابة لترى الكلمات مستخدمة.",
+   "استخدم الفهارس الأبجدية للوصول إلى أي كلمة بسرعة، وراجع الفصول السابقة بانتظام."
+  ],
+  "keyEn": [
+   [
+    "n.",
+    "noun"
+   ],
+   [
+    "v.",
+    "verb"
+   ],
+   [
+    "adj.",
+    "adjective"
+   ],
+   [
+    "adv.",
+    "adverb"
+   ],
+   [
+    "phr.",
+    "phrase"
+   ],
+   [
+    "phr. v.",
+    "phrasal verb"
+   ]
+  ],
+  "keyAr": [
+   "اسم",
+   "فعل",
+   "صفة",
+   "ظرف",
+   "عبارة",
+   "فعل مركب"
+  ],
+  "lvlEn": "Each word shows its CEFR level: B1 (intermediate, roughly IELTS band 4–5), B2 (upper intermediate, 5.5–6.5), C1 (advanced, 7–8) and C2 (proficient, 8.5–9).",
+  "lvlAr": "يظهر مع كل كلمة مستواها في الإطار الأوروبي المرجعي للغات: المتوسط يقابل تقريبا درجة 4–5 في آيلتس، وفوق المتوسط 5.5–6.5، والمتقدم 7–8، والمتمكن 8.5–9."
+ },
+ "task1": [
+  {
+   "en": "Describing an increase",
+   "ar": "وصف الزيادة",
+   "items": [
+    {
+     "en": "rise sharply",
+     "ar": "ارتفع ارتفاعا حادا"
+    },
+    {
+     "en": "increase steadily",
+     "ar": "ازداد بثبات"
+    },
+    {
+     "en": "climb gradually",
+     "ar": "صعد تدريجيا"
+    },
+    {
+     "en": "grow significantly",
+     "ar": "نما نموا ملحوظا"
+    },
+    {
+     "en": "double",
+     "ar": "تضاعف"
+    },
+    {
+     "en": "an upward trend",
+     "ar": "اتجاه تصاعدي"
+    }
+   ]
+  },
+  {
+   "en": "Describing a decrease",
+   "ar": "وصف الانخفاض",
+   "items": [
+    {
+     "en": "fall dramatically",
+     "ar": "انخفض انخفاضا كبيرا"
+    },
+    {
+     "en": "decline slightly",
+     "ar": "تراجع قليلا"
+    },
+    {
+     "en": "drop to",
+     "ar": "هبط إلى"
+    },
+    {
+     "en": "decrease gradually",
+     "ar": "تناقص تدريجيا"
+    },
+    {
+     "en": "a sharp fall",
+     "ar": "انخفاض حاد"
+    },
+    {
+     "en": "a downward trend",
+     "ar": "اتجاه تنازلي"
+    }
+   ]
+  },
+  {
+   "en": "Stability and peaks",
+   "ar": "الثبات والذروة",
+   "items": [
+    {
+     "en": "remain stable",
+     "ar": "ظل مستقرا"
+    },
+    {
+     "en": "level off",
+     "ar": "استقر بعد تغير"
+    },
+    {
+     "en": "stay constant at",
+     "ar": "بقي ثابتا عند"
+    },
+    {
+     "en": "reach a peak of",
+     "ar": "بلغ ذروته عند"
+    },
+    {
+     "en": "hit a low of",
+     "ar": "سجل أدنى مستوى له عند"
+    },
+    {
+     "en": "fluctuate between",
+     "ar": "تذبذب بين"
+    }
+   ]
+  },
+  {
+   "en": "Speed and size of change",
+   "ar": "سرعة التغير وحجمه",
+   "items": [
+    {
+     "en": "dramatic / dramatically",
+     "ar": "هائل / بشكل هائل"
+    },
+    {
+     "en": "significant / significantly",
+     "ar": "كبير / بشكل ملحوظ"
+    },
+    {
+     "en": "steady / steadily",
+     "ar": "ثابت / بثبات"
+    },
+    {
+     "en": "gradual / gradually",
+     "ar": "تدريجي / تدريجيا"
+    },
+    {
+     "en": "slight / slightly",
+     "ar": "طفيف / بشكل طفيف"
+    },
+    {
+     "en": "rapid / rapidly",
+     "ar": "سريع / بسرعة"
+    }
+   ]
+  },
+  {
+   "en": "Comparing and contrasting",
+   "ar": "المقارنة والمقابلة",
+   "items": [
+    {
+     "en": "whereas",
+     "ar": "في حين أن"
+    },
+    {
+     "en": "In contrast,",
+     "ar": "في المقابل،"
+    },
+    {
+     "en": "compared with",
+     "ar": "مقارنة بـ"
+    },
+    {
+     "en": "twice as many as",
+     "ar": "ضعف عدد"
+    },
+    {
+     "en": "the highest figure",
+     "ar": "أعلى رقم"
+    },
+    {
+     "en": "Similarly,",
+     "ar": "وبالمثل،"
+    }
+   ]
+  },
+  {
+   "en": "Approximation and proportion",
+   "ar": "التقريب والنسب",
+   "items": [
+    {
+     "en": "approximately",
+     "ar": "تقريبا"
+    },
+    {
+     "en": "just over",
+     "ar": "أكثر بقليل من"
+    },
+    {
+     "en": "just under",
+     "ar": "أقل بقليل من"
+    },
+    {
+     "en": "roughly a quarter",
+     "ar": "نحو الربع"
+    },
+    {
+     "en": "the majority of",
+     "ar": "غالبية"
+    },
+    {
+     "en": "a third of",
+     "ar": "ثلث"
+    }
+   ]
+  }
+ ],
+ "task1Model": [
+  "The number of international students rose sharply from 20,000 in 2005 to just over 45,000 in 2015, whereas the figure for local students remained stable.",
+  "Spending on public transport declined slightly in 2010 before levelling off at approximately a third of the total budget."
+ ],
+ "essayTypes": [
+  {
+   "en": "Opinion essay",
+   "ar": "مقال الرأي",
+   "sampleQ": "Some people believe that university education should be free for all students. To what extent do you agree or disagree?",
+   "plan": [
+    "Introduction: paraphrase the question and state your opinion clearly.",
+    "Body 1: give your first main reason with an example.",
+    "Body 2: give your second main reason with an explanation.",
+    "Conclusion: summarise your reasons and restate your opinion."
+   ],
+   "planAr": [
+    "المقدمة: أعد صياغة السؤال واذكر رأيك بوضوح.",
+    "الفقرة الأولى: اذكر سببك الرئيسي الأول مع مثال.",
+    "الفقرة الثانية: اذكر سببك الرئيسي الثاني مع شرحه.",
+    "الخاتمة: لخص أسبابك وأكد رأيك مرة أخرى."
+   ]
+  },
+  {
+   "en": "Discussion essay",
+   "ar": "مقال النقاش",
+   "sampleQ": "Some people think children should start school at a very early age, while others believe they should start later. Discuss both views and give your own opinion.",
+   "plan": [
+    "Introduction: paraphrase the topic and say that you will discuss both views.",
+    "Body 1: explain the first view and the reasons for it.",
+    "Body 2: explain the second view and the reasons for it.",
+    "Conclusion: summarise both views and give your own opinion."
+   ],
+   "planAr": [
+    "المقدمة: أعد صياغة الموضوع واذكر أنك ستناقش الرأيين.",
+    "الفقرة الأولى: اشرح الرأي الأول وأسبابه.",
+    "الفقرة الثانية: اشرح الرأي الثاني وأسبابه.",
+    "الخاتمة: لخص الرأيين واذكر رأيك الشخصي."
+   ]
+  },
+  {
+   "en": "Advantages and disadvantages",
+   "ar": "المزايا والعيوب",
+   "sampleQ": "Nowadays, many people work from home rather than in an office. Do the advantages of this outweigh the disadvantages?",
+   "plan": [
+    "Introduction: paraphrase the question and say which side is stronger.",
+    "Body 1: explain the main advantages with examples.",
+    "Body 2: explain the main disadvantages with examples.",
+    "Conclusion: weigh both sides and repeat your judgement."
+   ],
+   "planAr": [
+    "المقدمة: أعد صياغة السؤال واذكر أي الجانبين أقوى.",
+    "الفقرة الأولى: اشرح المزايا الرئيسية مع أمثلة.",
+    "الفقرة الثانية: اشرح العيوب الرئيسية مع أمثلة.",
+    "الخاتمة: وازن بين الجانبين وأكد حكمك مرة أخرى."
+   ]
+  },
+  {
+   "en": "Problem and solution",
+   "ar": "المشكلة والحل",
+   "sampleQ": "Traffic congestion is becoming a serious problem in many large cities. What are the causes of this problem, and what measures could be taken to solve it?",
+   "plan": [
+    "Introduction: paraphrase the issue and outline what the essay will cover.",
+    "Body 1: explain the main causes or problems with examples.",
+    "Body 2: suggest practical solutions linked to each cause.",
+    "Conclusion: summarise the causes and the most effective solutions."
+   ],
+   "planAr": [
+    "المقدمة: أعد صياغة القضية وبين ما سيتناوله المقال.",
+    "الفقرة الأولى: اشرح الأسباب أو المشكلات الرئيسية مع أمثلة.",
+    "الفقرة الثانية: اقترح حلولا عملية مرتبطة بكل سبب.",
+    "الخاتمة: لخص الأسباب وأكثر الحلول فاعلية."
+   ]
+  },
+  {
+   "en": "Two-part question",
+   "ar": "السؤال المزدوج",
+   "sampleQ": "More and more people are choosing to live alone. Why is this happening? Is this a positive or negative development?",
+   "plan": [
+    "Introduction: paraphrase the topic and briefly answer both questions.",
+    "Body 1: answer the first question in detail.",
+    "Body 2: answer the second question in detail.",
+    "Conclusion: summarise your answers to both questions."
+   ],
+   "planAr": [
+    "المقدمة: أعد صياغة الموضوع وأجب عن السؤالين باختصار.",
+    "الفقرة الأولى: أجب عن السؤال الأول بالتفصيل.",
+    "الفقرة الثانية: أجب عن السؤال الثاني بالتفصيل.",
+    "الخاتمة: لخص إجابتيك عن السؤالين."
+   ]
+  }
+ ],
+ "linking": [
+  {
+   "en": "Adding ideas",
+   "ar": "إضافة الأفكار",
+   "items": [
+    {
+     "en": "Furthermore,",
+     "ar": "علاوة على ذلك،"
+    },
+    {
+     "en": "In addition,",
+     "ar": "بالإضافة إلى ذلك،"
+    },
+    {
+     "en": "Moreover,",
+     "ar": "فضلا عن ذلك،"
+    },
+    {
+     "en": "What is more,",
+     "ar": "والأكثر من ذلك،"
+    },
+    {
+     "en": "as well as",
+     "ar": "وكذلك، إلى جانب"
+    }
+   ]
+  },
+  {
+   "en": "Contrast",
+   "ar": "المقابلة",
+   "items": [
+    {
+     "en": "However,",
+     "ar": "ومع ذلك،"
+    },
+    {
+     "en": "On the other hand,",
+     "ar": "من ناحية أخرى،"
+    },
+    {
+     "en": "Nevertheless,",
+     "ar": "ورغم ذلك،"
+    },
+    {
+     "en": "Although",
+     "ar": "على الرغم من أن"
+    },
+    {
+     "en": "whereas",
+     "ar": "في حين أن"
+    }
+   ]
+  },
+  {
+   "en": "Cause and effect",
+   "ar": "السبب والنتيجة",
+   "items": [
+    {
+     "en": "As a result,",
+     "ar": "ونتيجة لذلك،"
+    },
+    {
+     "en": "Therefore,",
+     "ar": "لذلك،"
+    },
+    {
+     "en": "Consequently,",
+     "ar": "وبالتالي،"
+    },
+    {
+     "en": "due to",
+     "ar": "بسبب"
+    },
+    {
+     "en": "This means that",
+     "ar": "وهذا يعني أن"
+    }
+   ]
+  },
+  {
+   "en": "Giving examples",
+   "ar": "ضرب الأمثلة",
+   "items": [
+    {
+     "en": "For example,",
+     "ar": "على سبيل المثال،"
+    },
+    {
+     "en": "For instance,",
+     "ar": "مثلا،"
+    },
+    {
+     "en": "such as",
+     "ar": "مثل"
+    },
+    {
+     "en": "A clear example of this is",
+     "ar": "ومن الأمثلة الواضحة على ذلك"
+    },
+    {
+     "en": "particularly",
+     "ar": "ولا سيما"
+    }
+   ]
+  },
+  {
+   "en": "Giving your opinion",
+   "ar": "إبداء الرأي",
+   "items": [
+    {
+     "en": "In my opinion,",
+     "ar": "في رأيي،"
+    },
+    {
+     "en": "I firmly believe that",
+     "ar": "أعتقد اعتقادا راسخا أن"
+    },
+    {
+     "en": "From my point of view,",
+     "ar": "من وجهة نظري،"
+    },
+    {
+     "en": "It seems to me that",
+     "ar": "يبدو لي أن"
+    },
+    {
+     "en": "I would argue that",
+     "ar": "أرى أن"
+    }
+   ]
+  },
+  {
+   "en": "Sequencing",
+   "ar": "الترتيب",
+   "items": [
+    {
+     "en": "Firstly,",
+     "ar": "أولا،"
+    },
+    {
+     "en": "Secondly,",
+     "ar": "ثانيا،"
+    },
+    {
+     "en": "Following this,",
+     "ar": "بعد ذلك،"
+    },
+    {
+     "en": "Subsequently,",
+     "ar": "وفي وقت لاحق،"
+    },
+    {
+     "en": "Finally,",
+     "ar": "وأخيرا،"
+    }
+   ]
+  },
+  {
+   "en": "Emphasis",
+   "ar": "التوكيد",
+   "items": [
+    {
+     "en": "Indeed,",
+     "ar": "بالفعل،"
+    },
+    {
+     "en": "In fact,",
+     "ar": "في الواقع،"
+    },
+    {
+     "en": "Clearly,",
+     "ar": "من الواضح أن"
+    },
+    {
+     "en": "It is important to note that",
+     "ar": "من المهم ملاحظة أن"
+    },
+    {
+     "en": "Above all,",
+     "ar": "وقبل كل شيء،"
+    }
+   ]
+  },
+  {
+   "en": "Concluding",
+   "ar": "الختام",
+   "items": [
+    {
+     "en": "In conclusion,",
+     "ar": "في الختام،"
+    },
+    {
+     "en": "To sum up,",
+     "ar": "خلاصة القول،"
+    },
+    {
+     "en": "Overall,",
+     "ar": "بشكل عام،"
+    },
+    {
+     "en": "On balance,",
+     "ar": "بعد الموازنة بين الجانبين،"
+    },
+    {
+     "en": "All things considered,",
+     "ar": "بعد النظر في كل الجوانب،"
+    }
+   ]
+  }
+ ],
+ "speakPhrases": [
+  {
+   "en": "Buying time to think",
+   "ar": "كسب الوقت للتفكير",
+   "items": [
+    {
+     "en": "That's an interesting question.",
+     "ar": "هذا سؤال مثير للاهتمام."
+    },
+    {
+     "en": "Let me think about that for a moment.",
+     "ar": "دعني أفكر في ذلك لحظة."
+    },
+    {
+     "en": "I've never really thought about that before.",
+     "ar": "لم أفكر في ذلك من قبل حقا."
+    },
+    {
+     "en": "Well, that's a difficult one.",
+     "ar": "حسنا، هذا سؤال صعب."
+    },
+    {
+     "en": "How can I put this?",
+     "ar": "كيف أعبر عن ذلك؟"
+    }
+   ]
+  },
+  {
+   "en": "Giving opinions",
+   "ar": "إبداء الرأي",
+   "items": [
+    {
+     "en": "Personally, I think…",
+     "ar": "أنا شخصيا أظن أن…"
+    },
+    {
+     "en": "If you ask me,…",
+     "ar": "إن سألتني،…"
+    },
+    {
+     "en": "I'd say that…",
+     "ar": "أستطيع القول إن…"
+    },
+    {
+     "en": "As far as I'm concerned,…",
+     "ar": "بالنسبة إلي،…"
+    },
+    {
+     "en": "I'm fairly sure that…",
+     "ar": "أنا متأكد إلى حد ما من أن…"
+    }
+   ]
+  },
+  {
+   "en": "Agreeing and disagreeing",
+   "ar": "الموافقة والاعتراض",
+   "items": [
+    {
+     "en": "I couldn't agree more.",
+     "ar": "أوافقك تماما."
+    },
+    {
+     "en": "That's partly true, but…",
+     "ar": "هذا صحيح جزئيا، لكن…"
+    },
+    {
+     "en": "I see your point, but…",
+     "ar": "أفهم وجهة نظرك، لكن…"
+    },
+    {
+     "en": "I'm not so sure about that.",
+     "ar": "لست متأكدا من ذلك."
+    },
+    {
+     "en": "I totally agree with that.",
+     "ar": "أتفق مع ذلك تماما."
+    }
+   ]
+  },
+  {
+   "en": "Giving examples",
+   "ar": "ضرب الأمثلة",
+   "items": [
+    {
+     "en": "For example,…",
+     "ar": "على سبيل المثال،…"
+    },
+    {
+     "en": "Take my brother, for instance.",
+     "ar": "خذ أخي مثالا على ذلك."
+    },
+    {
+     "en": "A good example would be…",
+     "ar": "من الأمثلة الجيدة على ذلك…"
+    },
+    {
+     "en": "Just to give you an idea,…",
+     "ar": "لأعطيك فكرة فقط،…"
+    },
+    {
+     "en": "Things like…",
+     "ar": "أشياء مثل…"
+    }
+   ]
+  },
+  {
+   "en": "Talking about the past and changes",
+   "ar": "الحديث عن الماضي والتغيرات",
+   "items": [
+    {
+     "en": "When I was younger, I used to…",
+     "ar": "عندما كنت أصغر سنا، كنت…"
+    },
+    {
+     "en": "Things have changed a lot since then.",
+     "ar": "لقد تغيرت الأمور كثيرا منذ ذلك الحين."
+    },
+    {
+     "en": "These days, people tend to…",
+     "ar": "في هذه الأيام، يميل الناس إلى…"
+    },
+    {
+     "en": "Back then,…",
+     "ar": "في ذلك الوقت،…"
+    },
+    {
+     "en": "I remember when…",
+     "ar": "أتذكر عندما…"
+    }
+   ]
+  },
+  {
+   "en": "Speculating about the future",
+   "ar": "التوقع بشأن المستقبل",
+   "items": [
+    {
+     "en": "I imagine that…",
+     "ar": "أتخيل أن…"
+    },
+    {
+     "en": "It's quite likely that…",
+     "ar": "من المرجح جدا أن…"
+    },
+    {
+     "en": "In the future, we might…",
+     "ar": "في المستقبل، قد…"
+    },
+    {
+     "en": "I doubt that…",
+     "ar": "أشك في أن…"
+    },
+    {
+     "en": "There's a good chance that…",
+     "ar": "هناك احتمال كبير أن…"
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "wrong": "I am agree with this opinion.",
+   "right": "I agree with this opinion.",
+   "whyAr": "كلمة «أوافق» هنا فعل، فلا يسبقه فعل الكون."
+  },
+  {
+   "wrong": "According to me, the internet is very useful.",
+   "right": "In my opinion, the internet is very useful.",
+   "whyAr": "عبارة «وفقا لي» لا تستخدم لإبداء الرأي في الإنجليزية، والصحيح «في رأيي» أو «أعتقد أن»."
+  },
+  {
+   "wrong": "Education is important for the society.",
+   "right": "Education is important for society.",
+   "whyAr": "لا نستخدم أداة التعريف مع الأسماء العامة مثل «المجتمع» بمعناه العام."
+  },
+  {
+   "wrong": "My father is engineer.",
+   "right": "My father is an engineer.",
+   "whyAr": "نضع أداة التنكير قبل اسم المهنة المفرد."
+  },
+  {
+   "wrong": "She studies at an university.",
+   "right": "She studies at a university.",
+   "whyAr": "تبدأ كلمة «جامعة» في الإنجليزية بصوت ساكن يشبه الياء، فنستخدم قبلها أداة التنكير الخاصة بالأصوات الساكنة."
+  },
+  {
+   "wrong": "I am interested about science.",
+   "right": "I am interested in science.",
+   "whyAr": "حرف الجر الصحيح بعد «مهتم» هو «في»."
+  },
+  {
+   "wrong": "They gave me many informations.",
+   "right": "They gave me a lot of information.",
+   "whyAr": "كلمة «معلومات» غير معدودة في الإنجليزية، فلا تجمع ولا تستخدم معها «كثير» للمعدود."
+  },
+  {
+   "wrong": "She gave me a useful advice.",
+   "right": "She gave me some useful advice.",
+   "whyAr": "كلمة «نصيحة» غير معدودة في الإنجليزية، فلا نضع قبلها أداة التنكير."
+  },
+  {
+   "wrong": "Many researches show that sleep is important.",
+   "right": "A lot of research shows that sleep is important.",
+   "whyAr": "كلمة «بحث» بمعناها العام غير معدودة، فلا تجمع ويأتي فعلها مفردا."
+  },
+  {
+   "wrong": "The number of students are increasing.",
+   "right": "The number of students is increasing.",
+   "whyAr": "الفاعل الحقيقي هو «العدد» وهو مفرد، فيأتي الفعل مفردا."
+  },
+  {
+   "wrong": "She bought a car red.",
+   "right": "She bought a red car.",
+   "whyAr": "في الإنجليزية تأتي الصفة قبل الاسم لا بعده."
+  },
+  {
+   "wrong": "We must brotect the environment.",
+   "right": "We must protect the environment.",
+   "whyAr": "صوت الباء المهموسة (الباء الأعجمية) غير موجود في العربية، فانتبه ألا تكتبه باء."
+  },
+  {
+   "wrong": "Pollution is a big problim.",
+   "right": "Pollution is a big problem.",
+   "whyAr": "انتبه إلى حروف العلة، فالأصوات المتقاربة قد تكتب بحروف مختلفة."
+  },
+  {
+   "wrong": "My brother he works in Dubai.",
+   "right": "My brother works in Dubai.",
+   "whyAr": "لا نكرر الفاعل بضمير بعده مباشرة."
+  },
+  {
+   "wrong": "I have visited London last year.",
+   "right": "I visited London last year.",
+   "whyAr": "مع زمن محدد في الماضي مثل «العام الماضي» نستخدم الماضي البسيط."
+  },
+  {
+   "wrong": "I made my homework.",
+   "right": "I did my homework.",
+   "whyAr": "مع الواجب المدرسي نستخدم الفعل الذي يعني «أدى» لا الفعل الذي يعني «صنع»."
+  },
+  {
+   "wrong": "He said me the truth.",
+   "right": "He told me the truth.",
+   "whyAr": "فعل «أخبر» يأتي بعده المخاطب مباشرة، أما فعل «قال» فلا."
+  },
+  {
+   "wrong": "Many peoples use public transport.",
+   "right": "Many people use public transport.",
+   "whyAr": "كلمة «الناس» جمع بذاتها، وإضافة حرف السين تجعل معناها «الشعوب»."
+  },
+  {
+   "wrong": "The lecture was too good.",
+   "right": "The lecture was very good.",
+   "whyAr": "الكلمة الأولى تعني «أكثر من اللازم» وتحمل معنى سلبيا، والثانية تعني «جدا»."
+  },
+  {
+   "wrong": "I have studied English since three years.",
+   "right": "I have studied English for three years.",
+   "whyAr": "مع المدة الزمنية نستخدم الحرف الذي يعني «لمدة»، ومع نقطة البداية الحرف الذي يعني «منذ»."
+  },
+  {
+   "wrong": "Prices are rising, people cannot afford homes.",
+   "right": "Prices are rising, so people cannot afford homes.",
+   "whyAr": "لا نربط جملتين كاملتين بفاصلة فقط، بل نستخدم أداة ربط أو نقطة."
+  },
+  {
+   "wrong": "There are many reason for this.",
+   "right": "There are many reasons for this.",
+   "whyAr": "بعد «كثير» يأتي الاسم المعدود بصيغة الجمع."
+  },
+  {
+   "wrong": "We will discuss about this problem.",
+   "right": "We will discuss this problem.",
+   "whyAr": "الفعل «يناقش» يتعدى بنفسه، فلا يأتي بعده حرف جر."
+  },
+  {
+   "wrong": "This method is more better than that one.",
+   "right": "This method is much better than that one.",
+   "whyAr": "كلمة «أفضل» صيغة تفضيل أصلا، فلا نضع قبلها كلمة «أكثر»."
+  }
+ ],
+ "tips": [
+  {
+   "en": "Read every instruction carefully and check the word limit for each answer.",
+   "ar": "اقرأ كل التعليمات بعناية، وتحقق من الحد الأقصى لعدد الكلمات في كل إجابة."
+  },
+  {
+   "en": "Never leave an answer blank, as no marks are taken away for wrong answers.",
+   "ar": "لا تترك أي إجابة فارغة، فلا تخصم درجات على الإجابات الخاطئة."
+  },
+  {
+   "en": "In Writing, spend about 20 minutes on Task 1 and 40 minutes on Task 2.",
+   "ar": "في الكتابة، خصص نحو 20 دقيقة للمهمة الأولى و40 دقيقة للمهمة الثانية."
+  },
+  {
+   "en": "Task 2 is worth twice as much as Task 1, so never run out of time for it.",
+   "ar": "قيمة المهمة الثانية ضعف قيمة المهمة الأولى، فلا تدع الوقت ينفد قبل إتمامها."
+  },
+  {
+   "en": "Leave a few minutes at the end to check spelling, grammar and word count.",
+   "ar": "اترك بضع دقائق في النهاية لمراجعة الإملاء والقواعد وعدد الكلمات."
+  },
+  {
+   "en": "In Speaking, extend your answers with reasons and examples.",
+   "ar": "في المحادثة، وسع إجاباتك بذكر الأسباب والأمثلة."
+  },
+  {
+   "en": "Learn words together with their collocations, not as single words.",
+   "ar": "تعلم الكلمات مع متلازماتها اللفظية، لا كلمات منفردة."
+  },
+  {
+   "en": "Paraphrase the question in your introduction instead of copying it.",
+   "ar": "أعد صياغة السؤال في مقدمتك بدلا من نسخه."
+  },
+  {
+   "en": "Practise with timed tests to build speed and confidence.",
+   "ar": "تدرب على اختبارات محددة الوقت لتكتسب السرعة والثقة."
+  },
+  {
+   "en": "Sleep well the night before and arrive early with the ID you used to register.",
+   "ar": "نم جيدا في الليلة السابقة، واحضر مبكرا ومعك وثيقة الهوية التي سجلت بها."
+  }
+ ]
+}

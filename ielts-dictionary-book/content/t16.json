@@ -1,0 +1,666 @@
+{
+ "n": 16,
+ "entries": [
+  {
+   "w": "renewable energy",
+   "pos": "n.",
+   "ipa": "/rɪˌnjuːəbl ˈenədʒi/",
+   "lvl": "B2",
+   "ar": "الطاقة المتجددة",
+   "ex": "The government aims to produce half of the country's electricity from *renewable energy* by 2035.",
+   "exAr": "تهدف الحكومة إلى إنتاج نصف كهرباء البلاد من *الطاقة المتجددة* بحلول عام 2035.",
+   "syn": [
+    "clean energy",
+    "green energy"
+   ],
+   "col": [
+    "invest in renewable energy",
+    "renewable energy sources"
+   ],
+   "fam": "renew (v.) · renewal (n.) · renewables (n.)"
+  },
+  {
+   "w": "fossil fuel",
+   "pos": "n.",
+   "ipa": "/ˈfɒsl ˌfjuːəl/",
+   "lvl": "B2",
+   "ar": "الوقود الأحفوري",
+   "ex": "Burning *fossil fuels* is the main cause of rising carbon dioxide levels.",
+   "exAr": "يعد حرق *الوقود الأحفوري* السبب الرئيسي لارتفاع مستويات ثاني أكسيد الكربون.",
+   "syn": [
+    "hydrocarbons"
+   ],
+   "col": [
+    "burn fossil fuels",
+    "dependence on fossil fuels"
+   ],
+   "fam": "fossil (n.) · fuel (v.)"
+  },
+  {
+   "w": "solar power",
+   "pos": "n.",
+   "ipa": "/ˌsəʊlə ˈpaʊə/",
+   "lvl": "B2",
+   "ar": "الطاقة الشمسية",
+   "ex": "Sunny countries such as Morocco are investing heavily in *solar power*.",
+   "exAr": "تستثمر الدول المشمسة مثل المغرب بكثافة في *الطاقة الشمسية*.",
+   "syn": [
+    "solar energy"
+   ],
+   "col": [
+    "generate solar power",
+    "a solar power plant"
+   ],
+   "fam": "solar (adj.) · solar panel (n.)"
+  },
+  {
+   "w": "wind power",
+   "pos": "n.",
+   "ipa": "/ˈwɪnd paʊə/",
+   "lvl": "B2",
+   "ar": "طاقة الرياح",
+   "ex": "Denmark gets a large share of its electricity from *wind power*.",
+   "exAr": "تحصل الدنمارك على نسبة كبيرة من كهربائها من *طاقة الرياح*.",
+   "syn": [
+    "wind energy"
+   ],
+   "col": [
+    "harness wind power",
+    "offshore wind power"
+   ],
+   "fam": "windy (adj.) · windmill (n.)"
+  },
+  {
+   "w": "nuclear power",
+   "pos": "n.",
+   "ipa": "/ˌnjuːkliə ˈpaʊə/",
+   "lvl": "B2",
+   "ar": "الطاقة النووية",
+   "ex": "Supporters of *nuclear power* point out that it produces almost no greenhouse gases.",
+   "exAr": "يشير مؤيدو *الطاقة النووية* إلى أنها لا تكاد تنتج أي غازات دفيئة.",
+   "syn": [
+    "nuclear energy",
+    "atomic energy"
+   ],
+   "col": [
+    "a nuclear power plant",
+    "nuclear power stations"
+   ],
+   "fam": "nucleus (n.)"
+  },
+  {
+   "w": "hydroelectric",
+   "pos": "adj.",
+   "ipa": "/ˌhaɪdrəʊɪˈlektrɪk/",
+   "lvl": "C1",
+   "ar": "كهرمائي",
+   "ex": "The new *hydroelectric* dam supplies electricity to over a million homes.",
+   "exAr": "يزود السد *الكهرمائي* الجديد أكثر من مليون منزل بالكهرباء.",
+   "syn": [
+    "water-powered"
+   ],
+   "col": [
+    "a hydroelectric dam",
+    "hydroelectric power",
+    "a hydroelectric plant"
+   ],
+   "fam": "hydroelectricity (n.) · hydropower (n.)"
+  },
+  {
+   "w": "coal",
+   "pos": "n.",
+   "ipa": "/kəʊl/",
+   "lvl": "B1",
+   "ar": "الفحم",
+   "ex": "Several European countries have closed their last *coal* mines.",
+   "exAr": "أغلقت عدة دول أوروبية آخر مناجم *الفحم* لديها.",
+   "syn": [],
+   "col": [
+    "a coal mine",
+    "burn coal",
+    "a coal-fired power station"
+   ],
+   "fam": "coalfield (n.)"
+  },
+  {
+   "w": "natural gas",
+   "pos": "n.",
+   "ipa": "/ˌnætʃrəl ˈɡæs/",
+   "lvl": "B2",
+   "ar": "الغاز الطبيعي",
+   "ex": "Qatar is one of the world's largest exporters of *natural gas*.",
+   "exAr": "تعد قطر من أكبر الدول المصدّرة *للغاز الطبيعي* في العالم.",
+   "syn": [],
+   "col": [
+    "natural gas reserves",
+    "a natural gas pipeline"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "fuel",
+   "pos": "n.",
+   "ipa": "/ˈfjuːəl/",
+   "lvl": "B1",
+   "ar": "وقود",
+   "ex": "Rising *fuel* prices have made public transport more popular in many cities.",
+   "exAr": "جعل ارتفاع أسعار *الوقود* وسائل النقل العام أكثر شعبية في كثير من المدن.",
+   "syn": [
+    "energy source"
+   ],
+   "col": [
+    "fuel prices",
+    "fuel consumption",
+    "run out of fuel"
+   ],
+   "fam": "fuel (v.) · refuel (v.)"
+  },
+  {
+   "w": "consumption",
+   "pos": "n.",
+   "ipa": "/kənˈsʌmpʃn/",
+   "lvl": "C1",
+   "ar": "الاستهلاك",
+   "ex": "Household energy *consumption* rises sharply in summer because of air conditioning.",
+   "exAr": "يرتفع *استهلاك* الطاقة في المنازل ارتفاعا حادا في الصيف بسبب أجهزة التكييف.",
+   "syn": [
+    "use",
+    "usage"
+   ],
+   "col": [
+    "energy consumption",
+    "reduce consumption",
+    "water consumption"
+   ],
+   "fam": "consume (v.) · consumer (n.)"
+  },
+  {
+   "w": "conserve",
+   "pos": "v.",
+   "ipa": "/kənˈsɜːv/",
+   "lvl": "C1",
+   "ar": "يحافظ على، يوفّر، يرشّد",
+   "ex": "Turning off lights in empty rooms is a simple way to *conserve* energy.",
+   "exAr": "إطفاء الأنوار في الغرف الفارغة طريقة بسيطة *لتوفير* الطاقة.",
+   "syn": [
+    "save",
+    "preserve",
+    "protect"
+   ],
+   "col": [
+    "conserve energy",
+    "conserve water",
+    "conserve resources"
+   ],
+   "fam": "conservation (n.) · conservationist (n.)"
+  },
+  {
+   "w": "efficiency",
+   "pos": "n.",
+   "ipa": "/ɪˈfɪʃnsi/",
+   "lvl": "C1",
+   "ar": "الكفاءة",
+   "ex": "LED bulbs have greatly improved the *efficiency* of home lighting.",
+   "exAr": "حسّنت مصابيح الليد *كفاءة* الإضاءة في المنازل تحسينا كبيرا.",
+   "syn": [
+    "economy",
+    "effectiveness"
+   ],
+   "col": [
+    "energy efficiency",
+    "improve efficiency",
+    "fuel efficiency"
+   ],
+   "fam": "efficient (adj.) · efficiently (adv.) · inefficient (adj.)"
+  },
+  {
+   "w": "generate",
+   "pos": "v.",
+   "ipa": "/ˈdʒenəreɪt/",
+   "lvl": "B2",
+   "ar": "يولّد، ينتج",
+   "ex": "The farm's solar panels *generate* enough electricity for the whole village.",
+   "exAr": "*تولّد* الألواح الشمسية في المزرعة ما يكفي من الكهرباء للقرية كلها.",
+   "syn": [
+    "produce",
+    "create"
+   ],
+   "col": [
+    "generate electricity",
+    "generate power",
+    "generate income"
+   ],
+   "fam": "generation (n.) · generator (n.)"
+  },
+  {
+   "w": "power station",
+   "pos": "n.",
+   "ipa": "/ˈpaʊə ˌsteɪʃn/",
+   "lvl": "B2",
+   "ar": "محطة توليد الكهرباء",
+   "ex": "The old *power station* by the river was turned into an art museum.",
+   "exAr": "حُوّلت *محطة توليد الكهرباء* القديمة الواقعة على النهر إلى متحف للفنون.",
+   "syn": [
+    "power plant",
+    "generating station"
+   ],
+   "col": [
+    "a nuclear power station",
+    "a coal-fired power station"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "natural resources",
+   "pos": "n.",
+   "ipa": "/ˌnætʃrəl rɪˈzɔːsɪz/",
+   "lvl": "B2",
+   "ar": "الموارد الطبيعية",
+   "ex": "Countries rich in *natural resources* do not always enjoy strong economic growth.",
+   "exAr": "لا تتمتع الدول الغنية *بالموارد الطبيعية* دائما بنمو اقتصادي قوي.",
+   "syn": [
+    "natural wealth"
+   ],
+   "col": [
+    "rich in natural resources",
+    "exploit natural resources"
+   ],
+   "fam": "nature (n.) · naturally (adv.) · resource (n.)"
+  },
+  {
+   "w": "scarce",
+   "pos": "adj.",
+   "ipa": "/skeəs/",
+   "lvl": "C1",
+   "ar": "نادر، شحيح",
+   "ex": "In many parts of the Middle East, fresh water is becoming increasingly *scarce*.",
+   "exAr": "أصبحت المياه العذبة *شحيحة* على نحو متزايد في أجزاء كثيرة من الشرق الأوسط.",
+   "syn": [
+    "rare",
+    "limited",
+    "in short supply"
+   ],
+   "col": [
+    "scarce resources",
+    "increasingly scarce",
+    "become scarce"
+   ],
+   "fam": "scarcity (n.) · scarcely (adv.)"
+  },
+  {
+   "w": "shortage",
+   "pos": "n.",
+   "ipa": "/ˈʃɔːtɪdʒ/",
+   "lvl": "B2",
+   "ar": "نقص، شح",
+   "ex": "A severe gas *shortage* forced many factories to stop production last winter.",
+   "exAr": "أجبر *نقص* حاد في الغاز مصانع كثيرة على وقف الإنتاج في الشتاء الماضي.",
+   "syn": [
+    "lack",
+    "deficit",
+    "scarcity"
+   ],
+   "col": [
+    "a severe shortage",
+    "a water shortage",
+    "a shortage of workers"
+   ],
+   "fam": "short (adj.) · shortfall (n.)"
+  },
+  {
+   "w": "depletion",
+   "pos": "n.",
+   "ipa": "/dɪˈpliːʃn/",
+   "lvl": "C2",
+   "ar": "استنزاف، نضوب",
+   "ex": "Overfishing has led to the *depletion* of fish stocks in the North Sea.",
+   "exAr": "أدى الصيد الجائر إلى *استنزاف* الثروة السمكية في بحر الشمال.",
+   "syn": [
+    "exhaustion",
+    "reduction",
+    "using up"
+   ],
+   "col": [
+    "resource depletion",
+    "ozone depletion",
+    "the depletion of reserves"
+   ],
+   "fam": "deplete (v.) · depleted (adj.)"
+  },
+  {
+   "w": "run out",
+   "pos": "phr. v.",
+   "ipa": "/ˌrʌn ˈaʊt/",
+   "lvl": "B1",
+   "ar": "ينفد، ينضب",
+   "ex": "Scientists warn that some countries' oil supplies could *run out* within the next few decades.",
+   "exAr": "يحذر العلماء من أن إمدادات النفط في بعض الدول قد *تنفد* خلال العقود القليلة المقبلة.",
+   "syn": [
+    "be used up",
+    "dry up",
+    "be exhausted"
+   ],
+   "col": [
+    "run out of oil",
+    "run out of time",
+    "supplies run out"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "alternative energy",
+   "pos": "n.",
+   "ipa": "/ɔːlˌtɜːnətɪv ˈenədʒi/",
+   "lvl": "B2",
+   "ar": "الطاقة البديلة",
+   "ex": "Tax breaks encourage households to switch to *alternative energy* sources.",
+   "exAr": "تشجع الإعفاءات الضريبية الأسر على التحول إلى مصادر *الطاقة البديلة*.",
+   "syn": [
+    "renewable energy",
+    "green energy"
+   ],
+   "col": [
+    "alternative energy sources",
+    "develop alternative energy"
+   ],
+   "fam": "alternative (adj.) · alternatively (adv.)"
+  },
+  {
+   "w": "raw material",
+   "pos": "n.",
+   "ipa": "/ˌrɔː məˈtɪəriəl/",
+   "lvl": "B2",
+   "ar": "مادة خام",
+   "ex": "Cotton is the main *raw material* used in the textile industry.",
+   "exAr": "القطن هو *المادة الخام* الرئيسية المستخدمة في صناعة النسيج.",
+   "syn": [
+    "commodity",
+    "natural resource"
+   ],
+   "col": [
+    "a source of raw materials",
+    "import raw materials"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "mining",
+   "pos": "n.",
+   "ipa": "/ˈmaɪnɪŋ/",
+   "lvl": "B2",
+   "ar": "التعدين",
+   "ex": "Gold *mining* has caused serious pollution in several rivers in South America.",
+   "exAr": "تسبب *التعدين* عن الذهب في تلوث خطير لعدة أنهار في أمريكا الجنوبية.",
+   "syn": [
+    "extraction",
+    "quarrying"
+   ],
+   "col": [
+    "coal mining",
+    "the mining industry",
+    "open-cast mining"
+   ],
+   "fam": "mine (v.) · miner (n.) · mineral (n.)"
+  },
+  {
+   "w": "petrol",
+   "pos": "n.",
+   "ipa": "/ˈpetrəl/",
+   "lvl": "B1",
+   "ar": "البنزين",
+   "ex": "Electric cars are often cheaper to run than *petrol* cars.",
+   "exAr": "غالبا ما تكون تكلفة تشغيل السيارات الكهربائية أقل من سيارات *البنزين*.",
+   "syn": [
+    "gasoline"
+   ],
+   "col": [
+    "petrol prices",
+    "a petrol station",
+    "a petrol engine"
+   ],
+   "fam": "petroleum (n.)"
+  },
+  {
+   "w": "carbon neutral",
+   "pos": "adj.",
+   "ipa": "/ˌkɑːbən ˈnjuːtrəl/",
+   "lvl": "C1",
+   "ar": "محايد كربونيا",
+   "ex": "The university has promised to become *carbon neutral* by 2030.",
+   "exAr": "تعهدت الجامعة بأن تصبح *محايدة كربونيا* بحلول عام 2030.",
+   "syn": [
+    "net zero",
+    "zero-carbon"
+   ],
+   "col": [
+    "become carbon neutral",
+    "a carbon-neutral building"
+   ],
+   "fam": "carbon neutrality (n.)"
+  },
+  {
+   "w": "insulation",
+   "pos": "n.",
+   "ipa": "/ˌɪnsjuˈleɪʃn/",
+   "lvl": "C1",
+   "ar": "العزل الحراري",
+   "ex": "Good roof *insulation* can significantly cut a home's heating bills.",
+   "exAr": "يمكن أن يخفض *العزل* الجيد للسقف فواتير تدفئة المنزل بشكل كبير.",
+   "syn": [
+    "lagging",
+    "soundproofing"
+   ],
+   "col": [
+    "roof insulation",
+    "thermal insulation",
+    "improve insulation"
+   ],
+   "fam": "insulate (v.) · insulated (adj.)"
+  },
+  {
+   "w": "energy-efficient",
+   "pos": "adj.",
+   "ipa": "/ˌenədʒi ɪˈfɪʃnt/",
+   "lvl": "B2",
+   "ar": "موفّر للطاقة",
+   "ex": "Replacing old fridges with *energy-efficient* models saves money in the long run.",
+   "exAr": "يوفر استبدال الثلاجات القديمة بطرازات *موفرة للطاقة* المال على المدى البعيد.",
+   "syn": [
+    "low-energy",
+    "economical"
+   ],
+   "col": [
+    "energy-efficient appliances",
+    "energy-efficient homes"
+   ],
+   "fam": "energy efficiency (n.)"
+  },
+  {
+   "w": "reserves",
+   "pos": "n.",
+   "ipa": "/rɪˈzɜːvz/",
+   "lvl": "C1",
+   "ar": "احتياطيات",
+   "ex": "Saudi Arabia has some of the largest oil *reserves* in the world.",
+   "exAr": "تملك المملكة العربية السعودية بعضا من أكبر *احتياطيات* النفط في العالم.",
+   "syn": [
+    "supplies",
+    "stocks",
+    "deposits"
+   ],
+   "col": [
+    "oil reserves",
+    "proven reserves",
+    "gas reserves"
+   ],
+   "fam": "reserve (v./n.)"
+  },
+  {
+   "w": "biofuel",
+   "pos": "n.",
+   "ipa": "/ˈbaɪəʊfjuːəl/",
+   "lvl": "C1",
+   "ar": "الوقود الحيوي",
+   "ex": "Some airlines are testing *biofuel* made from used cooking oil.",
+   "exAr": "تختبر بعض شركات الطيران *وقودا حيويا* مصنوعا من زيت الطهي المستعمل.",
+   "syn": [
+    "biodiesel"
+   ],
+   "col": [
+    "produce biofuel",
+    "biofuel crops"
+   ],
+   "fam": "fuel (n.)"
+  },
+  {
+   "w": "power cut",
+   "pos": "n.",
+   "ipa": "/ˈpaʊə kʌt/",
+   "lvl": "B2",
+   "ar": "انقطاع الكهرباء",
+   "ex": "During the heatwave, a *power cut* left thousands of homes without air conditioning.",
+   "exAr": "خلال موجة الحر ترك *انقطاع الكهرباء* آلاف المنازل بلا تكييف.",
+   "syn": [
+    "blackout",
+    "power outage",
+    "power failure"
+   ],
+   "col": [
+    "frequent power cuts",
+    "during a power cut",
+    "a three-hour power cut"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "wind turbine",
+   "pos": "n.",
+   "ipa": "/ˈwɪnd ˌtɜːbaɪn/",
+   "lvl": "B2",
+   "ar": "توربين رياح",
+   "ex": "Each offshore *wind turbine* can supply electricity to thousands of homes.",
+   "exAr": "يمكن لكل *توربين رياح* بحري أن يزود آلاف المنازل بالكهرباء.",
+   "syn": [
+    "windmill"
+   ],
+   "col": [
+    "offshore wind turbines",
+    "install wind turbines"
+   ],
+   "fam": "turbine (n.)"
+  }
+ ],
+ "practice": {
+  "bank": [
+   "scarce",
+   "depletion",
+   "conserve",
+   "generate",
+   "shortage",
+   "consumption",
+   "run out",
+   "insulation"
+  ],
+  "gap": [
+   {
+    "s": "Everyone can help to ____ water by taking shorter showers.",
+    "a": "conserve"
+   },
+   {
+    "s": "Wind farms along the coast now ____ about a fifth of the region's electricity.",
+    "a": "generate"
+   },
+   {
+    "s": "Global energy ____ is expected to keep rising as populations grow.",
+    "a": "consumption"
+   },
+   {
+    "s": "As water becomes more ____, farmers are turning to drip irrigation.",
+    "a": "scarce"
+   },
+   {
+    "s": "The ____ of underground water has caused the land to sink in parts of Mexico City.",
+    "a": "depletion"
+   },
+   {
+    "s": "A ____ of skilled engineers is slowing down the construction of new solar farms.",
+    "a": "shortage"
+   },
+   {
+    "s": "Many experts fear that cheap oil will ____ long before global demand starts to fall.",
+    "a": "run out"
+   },
+   {
+    "s": "Fitting proper ____ in walls and roofs keeps homes warm in winter.",
+    "a": "insulation"
+   }
+  ],
+  "para": [
+   {
+    "a": "We are using up the world's oil very quickly.",
+    "b": "The world's oil *reserves* are being depleted at an alarming rate."
+   },
+   {
+    "a": "The electricity went off for three hours last night.",
+    "b": "There was a three-hour *power cut* last night."
+   },
+   {
+    "a": "This new fridge uses much less electricity.",
+    "b": "This new fridge is far more *energy-efficient*."
+   },
+   {
+    "a": "We need to stop using so much oil, coal and gas.",
+    "b": "We must reduce our dependence on *fossil fuels*."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you try to save energy at home?",
+    "a": "Yes, I do my best. I always switch off lights and chargers when I'm not using them, and in summer I set the air conditioner a couple of degrees warmer. It helps to *conserve* energy and also lowers our bills."
+   },
+   {
+    "q": "Are power cuts common where you live?",
+    "a": "Not really these days. When I was a child, we had a *power cut* almost every summer evening, but the city has built new *power stations* since then, so the supply is much more reliable now."
+   },
+   {
+    "q": "Would you like to drive an electric car?",
+    "a": "Definitely. *Petrol* prices have risen a lot in recent years, and electric cars are quieter and cleaner. The only thing stopping me at the moment is the price, but I expect they'll become cheaper soon."
+   }
+  ],
+  "p2": {
+   "cue": "Describe a time when you had to manage without electricity.",
+   "points": [
+    "when and where it happened",
+    "how long it lasted",
+    "what you did during that time",
+    "and explain how you felt about the experience"
+   ],
+   "a": "I'd like to describe a *power cut* that happened two summers ago, when I was staying with my grandparents in a small village in the mountains. A storm damaged the main power lines, and the whole area was without electricity for nearly two days. At first it was quite exciting. We cooked on a gas stove, played board games by candlelight and chatted for hours instead of looking at our phones. However, by the second day things became difficult. The food in the fridge started to go off, and there was a *shortage* of drinking water because the pumps needed electricity. My grandfather said that this was exactly why he wanted to install a small *solar power* system that could *generate* electricity for the house in an emergency. Overall, I felt a mixture of enjoyment and frustration. The experience made me realise how much we depend on electricity, and since then I have tried to reduce my own *consumption* and waste less energy at home."
+  },
+  "p3": [
+   {
+    "q": "Should governments invest more in renewable energy?",
+    "a": "Absolutely. *Fossil fuels* will not last forever, and burning them is a major cause of climate change. If governments invest in *renewable energy* now, they will create new jobs and reduce their dependence on imported oil and gas. The initial cost is high, but solar and wind power are already cheaper than coal in many countries."
+   },
+   {
+    "q": "What can individuals do to reduce energy consumption?",
+    "a": "There's a lot they can do. People can buy *energy-efficient* appliances, use public transport instead of driving, and improve the *insulation* in their homes so they need less heating or cooling. Small habits matter too, like unplugging devices. If millions of people make these changes, the overall impact on national energy demand can be enormous."
+   }
+  ],
+  "tipAr": "في الجزء الثاني غطِّ النقاط الأربع بالترتيب، واستخدم أزمنة الماضي بدقة عند وصف تجربة سابقة."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Problem and solution",
+  "q": "In many countries, the demand for energy is rising rapidly, while natural resources such as oil and gas are limited. What problems does this situation cause? What solutions can you suggest? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "Global demand for energy continues to grow as populations increase and economies expand. At the same time, *natural resources* such as oil and gas are finite and are being consumed far faster than nature can replace them. This essay will examine the main problems caused by this imbalance and suggest some practical solutions.",
+   "The most serious problem is the environmental damage caused by our dependence on *fossil fuels*. Burning *coal*, oil and gas releases huge amounts of carbon dioxide, which is the main driver of global warming and air pollution in cities. Moreover, as easily accessible *reserves* are used up, companies must drill deeper or mine in fragile areas, which increases costs and pollution. In some regions, a sudden energy *shortage* can also lead to rising prices and frequent *power cuts*, harming households, businesses and essential services such as hospitals.",
+   "There are, however, several effective solutions. Firstly, governments should invest heavily in *renewable energy*, such as *solar power* and *wind power*, which will never *run out*. Morocco's huge Noor solar complex is a good example of what can be achieved. Secondly, *efficiency* must be improved at every level. Stricter building regulations requiring better *insulation*, together with incentives to buy *energy-efficient* appliances, could cut household *consumption* significantly without lowering people's quality of life.",
+   "In conclusion, rising energy demand and limited resources threaten both the environment and economic stability. However, a combination of investment in clean energy and more careful use of power by individuals and industry can ensure a secure supply for future generations, while also protecting the planet they will inherit."
+  ],
+  "tipAr": "في مقال المشكلة والحل اربط كل حل بمشكلة محددة ذكرتها، وادعم كل نقطة بمثال واقعي."
+ }
+}

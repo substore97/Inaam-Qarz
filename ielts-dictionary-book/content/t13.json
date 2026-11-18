@@ -1,0 +1,665 @@
+{
+ "n": 13,
+ "entries": [
+  {
+   "w": "upbringing",
+   "pos": "n.",
+   "ipa": "/ˈʌpbrɪŋɪŋ/",
+   "lvl": "B2",
+   "ar": "تنشئة، تربية",
+   "ex": "A strict *upbringing* can shape a person's attitude to work for the rest of their life.",
+   "exAr": "يمكن أن تشكّل *التنشئة* الصارمة موقف الإنسان من العمل طوال حياته.",
+   "syn": [
+    "rearing",
+    "raising"
+   ],
+   "col": [
+    "a strict upbringing",
+    "a religious upbringing",
+    "a happy upbringing"
+   ],
+   "fam": "bring up (phr. v.)"
+  },
+  {
+   "w": "parenting",
+   "pos": "n.",
+   "ipa": "/ˈpeərəntɪŋ/",
+   "lvl": "B2",
+   "ar": "تربية الأبناء، أسلوب التربية",
+   "ex": "Experts argue that positive *parenting* reduces behavioural problems in children.",
+   "exAr": "يرى الخبراء أن *التربية* الإيجابية تقلّل المشكلات السلوكية لدى الأطفال.",
+   "syn": [
+    "child-rearing"
+   ],
+   "col": [
+    "parenting skills",
+    "positive parenting",
+    "parenting style"
+   ],
+   "fam": "parent (n./v.) · parental (adj.) · parenthood (n.)"
+  },
+  {
+   "w": "sibling",
+   "pos": "n.",
+   "ipa": "/ˈsɪblɪŋ/",
+   "lvl": "B2",
+   "ar": "أخ أو أخت، شقيق",
+   "ex": "Children with several *siblings* often learn to share and negotiate at an early age.",
+   "exAr": "غالبًا ما يتعلم الأطفال الذين لديهم عدة *إخوة* المشاركة والتفاوض في سن مبكرة.",
+   "syn": [
+    "brother or sister"
+   ],
+   "col": [
+    "an older sibling",
+    "sibling rivalry",
+    "younger siblings"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "nuclear family",
+   "pos": "n.",
+   "ipa": "/ˌnjuːkliə ˈfæməli/",
+   "lvl": "B2",
+   "ar": "الأسرة النووية، الأسرة الصغيرة",
+   "ex": "In many cities, the *nuclear family* has gradually replaced larger households.",
+   "exAr": "في كثير من المدن حلّت *الأسرة النووية* تدريجيًا محل الأسر الكبيرة.",
+   "syn": [
+    "immediate family"
+   ],
+   "col": [
+    "the traditional nuclear family",
+    "a typical nuclear family"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "extended family",
+   "pos": "n.",
+   "ipa": "/ɪkˌstendɪd ˈfæməli/",
+   "lvl": "B2",
+   "ar": "العائلة الممتدة",
+   "ex": "Grandparents in an *extended family* often help to raise the children.",
+   "exAr": "كثيرًا ما يساعد الأجداد في *العائلة الممتدة* على تربية الأطفال.",
+   "syn": [
+    "wider family"
+   ],
+   "col": [
+    "live with the extended family",
+    "extended family members"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "relative",
+   "pos": "n.",
+   "ipa": "/ˈrelətɪv/",
+   "lvl": "B1",
+   "ar": "قريب، أحد الأقارب",
+   "ex": "During national holidays, many people travel long distances to visit their *relatives*.",
+   "exAr": "خلال العطلات الوطنية يسافر كثير من الناس مسافات طويلة لزيارة *أقاربهم*.",
+   "syn": [
+    "relation",
+    "kin"
+   ],
+   "col": [
+    "a close relative",
+    "distant relatives",
+    "friends and relatives"
+   ],
+   "fam": "relation (n.) · related (adj.)"
+  },
+  {
+   "w": "generation gap",
+   "pos": "n.",
+   "ipa": "/ˌdʒenəˈreɪʃn ɡæp/",
+   "lvl": "B2",
+   "ar": "فجوة الأجيال",
+   "ex": "Rapid technological change has widened the *generation gap* between parents and teenagers.",
+   "exAr": "وسّع التغير التكنولوجي السريع *فجوة الأجيال* بين الآباء والمراهقين.",
+   "syn": [
+    "generational divide"
+   ],
+   "col": [
+    "bridge the generation gap",
+    "a widening generation gap"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "childhood",
+   "pos": "n.",
+   "ipa": "/ˈtʃaɪldhʊd/",
+   "lvl": "B1",
+   "ar": "الطفولة",
+   "ex": "Experiences in early *childhood* have a lasting effect on brain development.",
+   "exAr": "للتجارب في *الطفولة* المبكرة أثر دائم في نمو الدماغ.",
+   "syn": [
+    "early years",
+    "early life"
+   ],
+   "col": [
+    "early childhood",
+    "a happy childhood",
+    "childhood memories"
+   ],
+   "fam": "child (n.) · childish (adj.) · childlike (adj.)"
+  },
+  {
+   "w": "adolescence",
+   "pos": "n.",
+   "ipa": "/ˌædəˈlesns/",
+   "lvl": "C1",
+   "ar": "المراهقة",
+   "ex": "*Adolescence* is a period of rapid physical and emotional change.",
+   "exAr": "*المراهقة* مرحلة من التغيرات الجسدية والعاطفية السريعة.",
+   "syn": [
+    "youth",
+    "teenage years"
+   ],
+   "col": [
+    "during adolescence",
+    "early adolescence",
+    "late adolescence"
+   ],
+   "fam": "adolescent (n./adj.)"
+  },
+  {
+   "w": "teenager",
+   "pos": "n.",
+   "ipa": "/ˈtiːneɪdʒə/",
+   "lvl": "B1",
+   "ar": "مراهق",
+   "ex": "Many *teenagers* spend more than four hours a day on their phones.",
+   "exAr": "يقضي كثير من *المراهقين* أكثر من أربع ساعات يوميًا على هواتفهم.",
+   "syn": [
+    "adolescent",
+    "youngster"
+   ],
+   "col": [
+    "a typical teenager",
+    "teenagers and young adults"
+   ],
+   "fam": "teenage (adj.) · teens (n.)"
+  },
+  {
+   "w": "role model",
+   "pos": "n.",
+   "ipa": "/ˈrəʊl ˌmɒdl/",
+   "lvl": "B2",
+   "ar": "قدوة",
+   "ex": "Parents are usually a child's first and most important *role models*.",
+   "exAr": "الوالدان عادةً هما أول *قدوة* للطفل وأهمها.",
+   "syn": [
+    "example",
+    "inspiration"
+   ],
+   "col": [
+    "a positive role model",
+    "act as a role model",
+    "a good role model"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "peer pressure",
+   "pos": "n.",
+   "ipa": "/ˈpɪə ˌpreʃə/",
+   "lvl": "B2",
+   "ar": "ضغط الأقران",
+   "ex": "Some young people start smoking because of *peer pressure* at school.",
+   "exAr": "يبدأ بعض الشباب التدخين بسبب *ضغط الأقران* في المدرسة.",
+   "syn": [
+    "social pressure"
+   ],
+   "col": [
+    "resist peer pressure",
+    "give in to peer pressure"
+   ],
+   "fam": "peer (n.)"
+  },
+  {
+   "w": "childcare",
+   "pos": "n.",
+   "ipa": "/ˈtʃaɪldkeə/",
+   "lvl": "B2",
+   "ar": "رعاية الأطفال",
+   "ex": "The high cost of *childcare* prevents many mothers from returning to work.",
+   "exAr": "تمنع التكلفة المرتفعة *لرعاية الأطفال* كثيرًا من الأمهات من العودة إلى العمل.",
+   "syn": [
+    "day care"
+   ],
+   "col": [
+    "affordable childcare",
+    "childcare costs",
+    "childcare facilities"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "nursery",
+   "pos": "n.",
+   "ipa": "/ˈnɜːsəri/",
+   "lvl": "B1",
+   "ar": "حضانة، دار حضانة",
+   "ex": "Children who attend a *nursery* often develop social skills earlier than others.",
+   "exAr": "غالبًا ما يكتسب الأطفال الذين يلتحقون *بالحضانة* المهارات الاجتماعية أبكر من غيرهم.",
+   "syn": [
+    "preschool",
+    "kindergarten"
+   ],
+   "col": [
+    "nursery school",
+    "attend a nursery",
+    "a nursery place"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "single parent",
+   "pos": "n.",
+   "ipa": "/ˌsɪŋɡl ˈpeərənt/",
+   "lvl": "B2",
+   "ar": "أحد الوالدين يربي الأبناء وحده",
+   "ex": "*Single parents* often struggle to balance full-time work and childcare.",
+   "exAr": "كثيرًا ما يجد *من يربّون أبناءهم بمفردهم* صعوبة في الموازنة بين العمل بدوام كامل ورعاية الأطفال.",
+   "syn": [
+    "lone parent"
+   ],
+   "col": [
+    "a single-parent family",
+    "single-parent households"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "divorce",
+   "pos": "n.",
+   "ipa": "/dɪˈvɔːs/",
+   "lvl": "B2",
+   "ar": "طلاق",
+   "ex": "Rising *divorce* rates have changed the structure of many families.",
+   "exAr": "غيّرت معدلات *الطلاق* المتزايدة بنية كثير من الأسر.",
+   "syn": [
+    "separation",
+    "break-up"
+   ],
+   "col": [
+    "the divorce rate",
+    "get a divorce",
+    "end in divorce"
+   ],
+   "fam": "divorce (v.) · divorced (adj.)"
+  },
+  {
+   "w": "household",
+   "pos": "n.",
+   "ipa": "/ˈhaʊshəʊld/",
+   "lvl": "B2",
+   "ar": "أسرة معيشية، أهل البيت",
+   "ex": "The average *household* in Britain now has fewer than 2.5 people.",
+   "exAr": "تضم *الأسرة المعيشية* المتوسطة في بريطانيا اليوم أقل من 2.5 فرد.",
+   "syn": [
+    "family",
+    "home"
+   ],
+   "col": [
+    "household chores",
+    "household income",
+    "the head of the household"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "breadwinner",
+   "pos": "n.",
+   "ipa": "/ˈbredwɪnə/",
+   "lvl": "C1",
+   "ar": "معيل الأسرة",
+   "ex": "In many modern families, both parents are *breadwinners*.",
+   "exAr": "في كثير من الأسر الحديثة يكون كلا الوالدين *معيلين* للأسرة.",
+   "syn": [
+    "earner",
+    "provider"
+   ],
+   "col": [
+    "the main breadwinner",
+    "the sole breadwinner"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "the elderly",
+   "pos": "n.",
+   "ipa": "/ði ˈeldəli/",
+   "lvl": "B2",
+   "ar": "كبار السن، المسنون",
+   "ex": "Governments must plan how to support *the elderly* as populations age.",
+   "exAr": "يجب على الحكومات أن تخطط لكيفية دعم *كبار السن* مع تقدّم أعمار السكان.",
+   "syn": [
+    "older people",
+    "senior citizens"
+   ],
+   "col": [
+    "care for the elderly",
+    "the frail elderly"
+   ],
+   "fam": "elderly (adj.) · elder (n.)"
+  },
+  {
+   "w": "nursing home",
+   "pos": "n.",
+   "ipa": "/ˈnɜːsɪŋ həʊm/",
+   "lvl": "B2",
+   "ar": "دار رعاية المسنين",
+   "ex": "In some cultures, moving parents into a *nursing home* is seen as a last resort.",
+   "exAr": "في بعض الثقافات يُعدّ نقل الوالدين إلى *دار رعاية المسنين* الملاذ الأخير.",
+   "syn": [
+    "care home",
+    "retirement home"
+   ],
+   "col": [
+    "live in a nursing home",
+    "nursing home staff"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "inherit",
+   "pos": "v.",
+   "ipa": "/ɪnˈherɪt/",
+   "lvl": "B2",
+   "ar": "يرث",
+   "ex": "Children may *inherit* not only their parents' wealth but also their attitudes.",
+   "exAr": "قد *يرث* الأبناء لا ثروة آبائهم فحسب بل مواقفهم أيضًا.",
+   "syn": [
+    "be left",
+    "receive"
+   ],
+   "col": [
+    "inherit property",
+    "inherit a fortune",
+    "inherit a trait"
+   ],
+   "fam": "inheritance (n.) · heir (n.) · inherited (adj.)"
+  },
+  {
+   "w": "bond",
+   "pos": "n.",
+   "ipa": "/bɒnd/",
+   "lvl": "B2",
+   "ar": "رابطة، صلة",
+   "ex": "Eating meals together helps to strengthen the *bond* between family members.",
+   "exAr": "يساعد تناول الوجبات معًا على تقوية *الرابطة* بين أفراد الأسرة.",
+   "syn": [
+    "tie",
+    "connection",
+    "attachment"
+   ],
+   "col": [
+    "a strong bond",
+    "family bonds",
+    "strengthen the bond"
+   ],
+   "fam": "bond (v.) · bonding (n.)"
+  },
+  {
+   "w": "spoil",
+   "pos": "v.",
+   "ipa": "/spɔɪl/",
+   "lvl": "B2",
+   "ar": "يدلّل، يفسد بالدلال",
+   "ex": "Some parents *spoil* their children by buying them everything they ask for.",
+   "exAr": "*يدلّل* بعض الآباء أبناءهم بشراء كل ما يطلبونه.",
+   "syn": [
+    "indulge",
+    "pamper",
+    "overindulge"
+   ],
+   "col": [
+    "spoil a child",
+    "spoilt children"
+   ],
+   "fam": "spoilt (adj.)"
+  },
+  {
+   "w": "obedient",
+   "pos": "adj.",
+   "ipa": "/əˈbiːdiənt/",
+   "lvl": "B2",
+   "ar": "مطيع",
+   "ex": "Traditional schools valued *obedient* pupils more than curious ones.",
+   "exAr": "كانت المدارس التقليدية تقدّر التلاميذ *المطيعين* أكثر من التلاميذ المحبين للاستطلاع.",
+   "syn": [
+    "compliant",
+    "dutiful",
+    "well-behaved"
+   ],
+   "col": [
+    "an obedient child",
+    "obedient to their parents"
+   ],
+   "fam": "obey (v.) · obedience (n.) · disobedient (adj.)"
+  },
+  {
+   "w": "independent",
+   "pos": "adj.",
+   "ipa": "/ˌɪndɪˈpendənt/",
+   "lvl": "B1",
+   "ar": "مستقل، معتمد على نفسه",
+   "ex": "Giving children small tasks at home helps them become more *independent*.",
+   "exAr": "يساعد تكليف الأطفال بمهام صغيرة في المنزل على أن يصبحوا أكثر *استقلالية*.",
+   "syn": [
+    "self-reliant",
+    "self-sufficient"
+   ],
+   "col": [
+    "financially independent",
+    "become independent"
+   ],
+   "fam": "independence (n.) · independently (adv.)"
+  },
+  {
+   "w": "responsibility",
+   "pos": "n.",
+   "ipa": "/rɪˌspɒnsəˈbɪləti/",
+   "lvl": "B1",
+   "ar": "مسؤولية",
+   "ex": "Caring for a pet teaches young people a sense of *responsibility*.",
+   "exAr": "تغرس رعاية حيوان أليف في نفوس الصغار الإحساس *بالمسؤولية*.",
+   "syn": [
+    "duty",
+    "obligation"
+   ],
+   "col": [
+    "take responsibility",
+    "a sense of responsibility",
+    "parental responsibility"
+   ],
+   "fam": "responsible (adj.) · responsibly (adv.)"
+  },
+  {
+   "w": "adopt",
+   "pos": "v.",
+   "ipa": "/əˈdɒpt/",
+   "lvl": "B2",
+   "ar": "يتبنّى، يكفل",
+   "ex": "Couples who cannot have children may decide to *adopt* an orphan.",
+   "exAr": "قد يقرر الزوجان اللذان لا ينجبان أن *يكفلا* يتيمًا.",
+   "syn": [
+    "take in",
+    "foster"
+   ],
+   "col": [
+    "adopt a child",
+    "adopted children"
+   ],
+   "fam": "adoption (n.) · adopted (adj.) · adoptive (adj.)"
+  },
+  {
+   "w": "birth rate",
+   "pos": "n.",
+   "ipa": "/ˈbɜːθ reɪt/",
+   "lvl": "B2",
+   "ar": "معدل المواليد",
+   "ex": "Japan's falling *birth rate* has led to a shortage of young workers.",
+   "exAr": "أدى انخفاض *معدل المواليد* في اليابان إلى نقص في العمال الشباب.",
+   "syn": [
+    "fertility rate"
+   ],
+   "col": [
+    "a falling birth rate",
+    "a high birth rate",
+    "a declining birth rate"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "quality time",
+   "pos": "n.",
+   "ipa": "/ˌkwɒləti ˈtaɪm/",
+   "lvl": "B2",
+   "ar": "وقت نوعي مع الأسرة",
+   "ex": "Busy parents should still set aside *quality time* for their children every day.",
+   "exAr": "ينبغي للوالدين المشغولين مع ذلك أن يخصصا *وقتًا نوعيًا* لأطفالهما كل يوم.",
+   "syn": [
+    "time together"
+   ],
+   "col": [
+    "spend quality time",
+    "quality time with the family"
+   ],
+   "fam": ""
+  },
+  {
+   "w": "family values",
+   "pos": "n.",
+   "ipa": "/ˌfæməli ˈvæljuːz/",
+   "lvl": "B2",
+   "ar": "القيم الأسرية",
+   "ex": "Respect for older people is one of the core *family values* in Arab societies.",
+   "exAr": "يُعدّ احترام كبار السن من *القيم الأسرية* الأساسية في المجتمعات العربية.",
+   "syn": [
+    "traditional values"
+   ],
+   "col": [
+    "traditional family values",
+    "strong family values"
+   ],
+   "fam": ""
+  }
+ ],
+ "practice": {
+  "bank": [
+   "upbringing",
+   "sibling",
+   "breadwinner",
+   "inherit",
+   "spoil",
+   "obedient",
+   "birth rate",
+   "childcare"
+  ],
+  "gap": [
+   {
+    "s": "Many countries with a low ____ offer financial support to encourage couples to have children.",
+    "a": "birth rate"
+   },
+   {
+    "s": "Affordable ____ allows both parents to continue their careers.",
+    "a": "childcare"
+   },
+   {
+    "s": "Grandparents who ____ their grandchildren with sweets may undermine the parents' rules.",
+    "a": "spoil"
+   },
+   {
+    "s": "In the past, the father was usually the only ____ in the family.",
+    "a": "breadwinner"
+   },
+   {
+    "s": "Older ____ often help younger ones with their homework.",
+    "a": "siblings"
+   },
+   {
+    "s": "A child's ____ has a strong influence on their values as an adult.",
+    "a": "upbringing"
+   },
+   {
+    "s": "Under Islamic law, both sons and daughters ____ a share of their parents' property.",
+    "a": "inherit"
+   },
+   {
+    "s": "A child who is always ____ is not necessarily happy or confident.",
+    "a": "obedient"
+   }
+  ],
+  "para": [
+   {
+    "a": "Young people often do what their friends do because they want to fit in.",
+    "b": "Many young people give in to *peer pressure* in order to fit in."
+   },
+   {
+    "a": "Families where grandparents, uncles and aunts all live together are less common now.",
+    "b": "*Extended families* living under one roof are becoming less common."
+   },
+   {
+    "a": "Parents and children often don't understand each other.",
+    "b": "The *generation gap* often leads to misunderstandings between parents and children."
+   },
+   {
+    "a": "Children should be able to do things by themselves.",
+    "b": "Children should be encouraged to become *independent* from an early age."
+   }
+  ]
+ },
+ "speaking": {
+  "p1": [
+   {
+    "q": "Do you have a large family?",
+    "a": "Yes, fairly large. I have four *siblings*, and we're very close. We also see our *extended family* every weekend, so there are always cousins, aunts and uncles around, which I really enjoy."
+   },
+   {
+    "q": "Who do you spend most of your free time with?",
+    "a": "Mostly with my parents and my younger brother. We try to spend *quality time* together every evening, usually over dinner, and on Fridays we often visit my grandparents, who live just outside the city."
+   },
+   {
+    "q": "Did you have a happy childhood?",
+    "a": "Yes, I'd say so. My *childhood* was quite simple but happy. We didn't have many expensive toys, but we played outside a lot, and my parents always made time to listen to us."
+   }
+  ],
+  "p2": {
+   "cue": "Describe a family member who has influenced you.",
+   "points": [
+    "who this person is",
+    "what he or she is like",
+    "how often you see him or her",
+    "and explain how this person has influenced you"
+   ],
+   "a": "I'd like to talk about my grandfather, who has been a real *role model* for me. He was a teacher for nearly forty years, and even now, in his late seventies, he reads every single day. He's a calm, patient man who rarely raises his voice, but everyone in the family listens when he speaks. When I was a child, we lived in the same building, so I saw him almost daily. These days I'm at university in another city, but I still visit him at least twice a month, and we talk on the phone every Friday. His influence on my *upbringing* has been enormous. He taught me to take *responsibility* for my mistakes instead of blaming others, and he always said that education is the one thing nobody can take away from you. He also showed me that being *independent* doesn't mean ignoring your family. Honestly, I think much of what I value today, especially honesty and hard work, I *inherited* from him rather than from books."
+  },
+  "p3": [
+   {
+    "q": "Do you think the role of grandparents in families has changed?",
+    "a": "Yes, quite significantly. In the past, most people lived in *extended families*, so grandparents were involved in raising children every day. Nowadays, many couples move to cities for work and live in *nuclear families*, so they see grandparents less often. That said, in many countries grandparents still provide free *childcare*, which is a huge help for working parents."
+   },
+   {
+    "q": "Why do some parents find it difficult to control their teenagers?",
+    "a": "I think there are several reasons. *Adolescence* is naturally a time when young people want more freedom, so some conflict is almost inevitable. On top of that, *peer pressure* and social media now have a huge influence, sometimes more than parents do. Parents who work long hours may also struggle to keep track of what their children are doing online."
+   }
+  ],
+  "tipAr": "في الجزء الثاني استخدم دقيقة التحضير لكتابة كلمات مفتاحية لكل نقطة، ثم تحدّث عنها بالترتيب حتى لا تنسى شيئًا."
+ },
+ "writing": {
+  "task": "Task 2",
+  "type": "Advantages and disadvantages",
+  "q": "In many countries, more and more elderly people are living in nursing homes rather than with their families. Do the advantages of this development outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+  "essay": [
+   "In many parts of the world, *the elderly* are increasingly spending their final years in *nursing homes* instead of living with their children. Although this arrangement offers some practical benefits, I believe that its drawbacks are more significant, particularly for the emotional well-being of older people and for *family values*.",
+   "There are certainly some advantages to professional care. Nursing homes employ trained staff who can provide medical attention around the clock, which most families cannot offer. This is especially important for older people with serious conditions such as dementia. In addition, as more women enter the workforce and both parents become *breadwinners*, few families have a member who can stay at home full-time. Residential care therefore relieves adult children of a heavy *responsibility* that might otherwise damage their careers or health.",
+   "However, these benefits come at a considerable cost. Many residents of care homes suffer from loneliness, since they see their *relatives* only occasionally and lose the daily company of their grandchildren. This weakens the *bond* between generations and widens the *generation gap*, as children grow up with little contact with older people. Moreover, in cultures where caring for one's parents is regarded as a moral and religious duty, placing them in an institution may be seen as abandoning them. Finally, good-quality nursing homes are expensive, while cheaper ones may offer poor standards of care.",
+   "In conclusion, while nursing homes provide expert care and ease the pressure on busy families, I believe the disadvantages outweigh the advantages. Wherever possible, older people should be supported to live with or near their families, with professional help brought into the home when it is needed."
+  ],
+  "tipAr": "إذا سُئلت هل تفوق المزايا العيوب، فاذكر رأيك بوضوح في المقدمة والخاتمة، وخصّص فقرة مستقلة لكل جانب."
+ }
+}
