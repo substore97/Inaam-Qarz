@@ -24,7 +24,7 @@ e = lambda s: html.escape(str(s), quote=False)
 U = lambda n: str(n).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))
 AI = lambda n: str(n).translate(str.maketrans('0123456789', '٠١٢٣٤٥٦٧٨٩'))
 sys.path.insert(0, os.path.dirname(__file__))
-from icons import ICON, ORN, PATTERN, FLOURISH
+from icons import ICON, ORN, PATTERN, FLOURISH, bouquet
 
 def head(t, sub=''):
     return f'<div class="it"><h2>{e(t)}</h2>' + (f'<div class="sub">{e(sub)}</div>' if sub else '') + f'{ORN}</div>'
@@ -114,16 +114,17 @@ while any(by.values()):
 def static_page(inner, hue=40, cls=''):
     return f'<section class="pg {cls}" style="--h:{hue}">{inner}</section>'
 cred = '<div class="cred">تالیف: انعام الرحمن</div>'
-chips = ''.join(f'<span>{e(s["name"])}</span>' for s in SEC if any(x['key'] == s['key'] for x in sections))
-cover = static_page(f'''{PATTERN.replace('class="pat"', 'class="pat" style="opacity:.16"')}<div class="arch"></div>
-<div class="kick">{e(ST["kicker"])}</div><h1>گلدستہ</h1><div class="flw">{FLOURISH}</div>
+chips = ''.join(f'<span style="background:hsl({s["hue"]},75%,88%);color:hsl({s["hue"]},65%,20%);border-color:hsl({s["hue"]},55%,55%)">{e(s["name"])}</span>' for s in SEC if any(x['key'] == s['key'] for x in sections) or s['key'] == 'fun')
+GOLDPAT = PATTERN.replace('stroke="#fff"', 'stroke="#e8c870"')
+cover = static_page(f'''{GOLDPAT}<div class="arch"></div>
+<div class="kick">{e(ST["kicker"])}</div><h1>گلدستہ</h1><div class="bq">{bouquet('f')}</div>
 <div class="sub">{e(ST["coverSub"])}</div><div class="chips">{chips}</div>
 <div class="pages"><span id="totalpages"></span> صفحات پر مشتمل خاندانی رسالہ</div>''', 175, 'cover')
 p2 = static_page(f'''<div class="frame"></div><div class="body" style="justify-content:center;align-items:center;text-align:center">
-<div style="font:700 64px/2 Nastaliq;color:var(--a)">گلدستہ</div><div style="font-size:22px;line-height:2;color:#6b5f4d">{e(ST["kicker"])}</div>
+<div style="font:700 64px/2 Nastaliq;color:#000">گلدستہ</div><div style="font-size:22px;line-height:2;color:#000">{e(ST["kicker"])}</div>
 <div style="width:220px;margin:14px auto">{ORN}</div>
 <div style="font:700 30px/2.1 Nastaliq;color:#2a2118;margin-top:10px">تالیف: انعام الرحمن</div>
-<div style="font-size:19px;line-height:2.2;margin:30px 40px 0;color:#3d3428">{e(ST["p2"])}</div></div>
+<div style="font-size:19px;line-height:2.2;margin:30px 40px 0;color:#000">{e(ST["p2"])}</div></div>
 <div class="ft"><div class="pn"><span></span></div></div>{cred}''', 175)
 toc_rows = ''.join(f'<div class="row" data-sec="{s["key"]}"><i style="background:hsl({s["hue"]},52%,40%)"></i><span>{e(s["name"])}</span><span></span></div>' for s in sections)
 toc_rows += f'<div class="row" data-sec="fun"><i style="background:hsl(95,52%,40%)"></i><span>ذوق و شوق</span><span></span></div>'
@@ -133,8 +134,9 @@ ed = ''.join(f'<p{" class=ni" if i == 0 else ""}>{e(x)}</p>' for i, x in enumera
 edit = static_page(f'''<div class="frame"></div><div class="hd"><span class="sec">اداریہ</span><span class="mag">گلدستہ</span></div>
 <div class="body"><div class="it"><h2>{e(ST["editorialTitle"])}</h2>{ORN}</div><div class="cols one"><div class="col" style="font-size:19.5px">{ed}<div class="end">۞</div></div></div></div>
 <div class="ft"><div class="pn"><span></span></div></div>{cred}''', 175)
-back = f'''<section class="pg cover" id="back" style="--h:175">{PATTERN}<div class="arch" style="height:560px;top:200px"></div>
-<div class="kick" style="top:290px">گلدستہ</div><div class="sub" style="top:360px;left:150px;right:150px">{e(ST["back"])}</div></section>'''
+back = f'''<section class="pg cover" id="back" style="--h:175">{GOLDPAT}<div class="arch" style="height:760px;top:150px"></div>
+<h1 style="top:210px;font-size:84px">گلدستہ</h1><div class="sub" style="top:400px;left:150px;right:150px;font-size:22px">{e(ST["back"])}</div>
+<div class="bq" style="top:600px;width:250px;margin-left:-125px">{bouquet('k')}</div></section>'''
 
 css = open(os.path.join(ROOT, 'src', 'style.css'), encoding='utf-8').read()
 js = open(os.path.join(ROOT, 'src', 'paginate.js'), encoding='utf-8').read()

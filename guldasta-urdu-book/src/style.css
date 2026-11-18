@@ -111,3 +111,42 @@ b { font-weight: 700 }
 .toc .row i { width: 16px; height: 16px; border-radius: 4px; flex: none }
 .toc .row span:nth-child(2) { flex: 1 }
 .toc .row span:last-child { font-weight: 700; min-width: 40px; text-align: left }
+
+/* ===== Owner request (Nov 2026): all inner pages plain WHITE with BLACK text only; colour only on the covers ===== */
+.pg:not(.cover) { background: #fff; color: #000; --a: #000; --a2: #222; --t: #fff; --t2: #9a9a9a }
+.pg:not(.cover) .it .sub, .pg:not(.cover) .when, .pg:not(.cover) .meta, .pg:not(.cover) .ref { color: #000 }
+.pg:not(.cover) .qb .q { color: #000 }
+.pg:not(.cover) .box { background: #fff; border: 1px solid #000; border-right: 4px solid #000 }
+.pg:not(.cover) .ajza, .pg:not(.cover) .ans, .pg:not(.cover) .tip { background: #fff; border: 1px solid #000 }
+.pg:not(.cover) .meta span { background: #fff; border: 1px solid #000 }
+.pg:not(.cover) .step i { background: #fff; border: 1.5px solid #000; color: #000 }
+.pg:not(.cover) .hd .sec { background: #fff; color: #000; border-color: #000 }
+.pg:not(.cover) .pn::before, .pg:not(.cover) .pn::after { background: #fff; border-color: #000 }
+.pg:not(.cover) .pn { color: #000 }
+.pg:not(.cover) .cred { color: #000; font-size: 12px }
+.pg:not(.cover) .frame { border-color: #000 }
+.pg:not(.cover) .frame::after { border-color: #000 }
+.pg:not(.cover) .li::before { color: #000 }
+.op .panel { background: #fff !important; border: 2px solid #000; border-bottom-width: 4px }
+.op .panel svg.pat { display: none }
+.op .panel::before { border-color: #000 }
+.op .medal { background: #fff; border: 2px solid #000; box-shadow: none }
+.op .medal svg { stroke: #000 }
+.op .medal svg .f { fill: #fff }
+.op h1, .op .intro { color: #000 !important; -webkit-text-stroke: 0 !important }
+.toc .row i { background: #000 !important; border-radius: 50% }
+
+/* colourful front & back cover */
+.cover { background: linear-gradient(160deg, #0a3542 0%, #11655e 50%, #0a3542 100%) !important }
+.cover .pat { opacity: .22 !important }
+.cover .arch { background: radial-gradient(ellipse at 50% 35%, #fffdf6 0%, #fbf1d9 60%, #f3e2b8 100%) !important }
+.cover .kick { top: 140px; color: #8a5a12 }
+.cover h1 { top: 178px; color: #7a1238; font-size: 124px }
+.cover .bq { position: absolute; top: 420px; left: 50%; width: 330px; margin-left: -165px }
+.cover .bq svg { width: 100%; height: auto; display: block }
+.cover .sub { top: 712px; color: #3b2a14; font-size: 19px }
+.cover .chips { top: 830px }
+.cover .chips span { font-size: 15px }
+.cover .bq { top: 412px; width: 290px; margin-left: -145px }
+.cover .sub { top: 686px; left: 130px; right: 130px; font-size: 18px; line-height: 2 }
+.cover .sub { text-wrap: balance; left: 120px; right: 120px }

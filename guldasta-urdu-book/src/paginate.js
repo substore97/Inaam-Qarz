@@ -35,7 +35,7 @@
           const mid = (lo + hi) >> 1, e2 = make({ k: 'p', cls: (b.cls || '') + ' sp', text: w.slice(0, mid).join(' ') });
           col.appendChild(e2); if (over(col)) hi = mid - 1; else { best = mid; lo = mid + 1; } col.removeChild(e2);
         }
-        if (best >= 5 && w.length - best >= 3) {
+        if (best >= 5 && (w.length - best >= 3 || !col.children.length)) {
           const e3 = make({ k: 'p', cls: (b.cls || '') + ' sp', text: w.slice(0, best).join(' ') }); e3.style.textAlignLast = 'justify'; col.appendChild(e3);
           b = { k: 'p', cls: 'ni', text: w.slice(best).join(' ') };
         }

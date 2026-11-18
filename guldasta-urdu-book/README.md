@@ -1,6 +1,6 @@
 # گلدستہ — Guldasta, Urdu family digest (رسالہ)
 
-700+ page A4 Urdu family magazine (Noto Nastaliq Urdu; Quran in Amiri with the exact Uthmani text). Reading-only, no grade.
+732-page A4 Urdu family magazine (inner pages white with black text, colourful covers) (Noto Nastaliq Urdu; Quran in Amiri with the exact Uthmani text). Reading-only, no grade.
 
 - Content: `content/w01.json … w15.json` (one file per writer/section), `content/static.json` (cover, page 2,
   editorial, section order/colours/intros), `content/quran_verses.json` (cache of the exact ayat used).
