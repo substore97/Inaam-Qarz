@@ -175,3 +175,7 @@ table.bands td.ar { text-align: right; font-size: 1.08em }
 .cover .tiles .ic .f { fill: rgba(255,255,255,.25) }
 .cover .feat { position: absolute; left: 70px; right: 70px; top: 950px; display: flex; justify-content: center; gap: 14px }
 .cover .feat span { font: 700 15px 'Noto Sans'; color: #1f2d4a; border: 1.5px solid #1f2d4a; border-radius: 30px; padding: 5px 14px }
+
+/* author credit at the very bottom of every page (owner request) */
+.cred { position: absolute; left: 0; right: 0; bottom: 5px; text-align: center; font: 400 11px/1.4 'Noto Naskh Arabic'; color: #7a8294; z-index: 5 }
+.cover .cred { bottom: 42px; color: #47536b }
