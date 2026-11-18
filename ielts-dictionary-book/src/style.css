@@ -178,4 +178,3 @@ table.bands td.ar { text-align: right; font-size: 1.08em }
 
 /* author credit at the very bottom of every page (owner request) */
 .cred { position: absolute; left: 0; right: 0; bottom: 5px; text-align: center; font: 400 11px/1.4 'Noto Naskh Arabic'; color: #7a8294; z-index: 5 }
-.cover .cred { bottom: 42px; color: #47536b }

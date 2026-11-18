@@ -31,7 +31,7 @@ pages = []  # list of (kind, html-builder)
 page_no = {}
 
 def sec(inner, h=212, cls=''):
-    return f'<section class="pg {cls}" style="--h:{h}">{inner}<div class="cred" dir="rtl">تأليف: انعام الرحمن</div></section>'
+    return f'<section class="pg {cls}" style="--h:{h}">{inner}{'' if 'cover' in cls else '<div class="cred" dir="rtl">تأليف: انعام الرحمن</div>'}</section>'
 def footer(n):
     return f'<div class="ft"><span>{TITLE_EN}</span><span class="pn">{n}</span><span class="ar">{TITLE_AR}</span></div>'
 def header(t, mid):
