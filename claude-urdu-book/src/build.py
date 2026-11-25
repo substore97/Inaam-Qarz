@@ -143,8 +143,8 @@ edit = static_page(f'''<div class="frame"></div><div class="hd"><span class="sec
 <div class="body"><div class="it"><h2>{e(ST["editorialTitle"])}</h2>{ORN}</div><div class="cols one"><div class="col" style="font-size:19.5px">{ed}<div class="end">۞</div></div></div></div>
 <div class="ft"><div class="pn"><span></span></div></div>{cred}''', 175)
 back = f'''<section class="pg cover" id="back" style="--h:175">{GOLDPAT}<div class="arch" style="height:760px;top:150px"></div>
-<h1 style="top:210px;font-size:84px">{e(ST["title"])}</h1><div class="sub" style="top:400px;left:150px;right:150px;font-size:22px">{e(ST["back"])}</div>
-<div class="bq" style="top:600px;width:280px;margin-left:-140px">{CHATART}</div></section>'''
+<h1 style="top:210px;font-size:84px">{e(ST["title"])}</h1><div class="sub" style="top:390px !important;left:150px;right:150px;font-size:21px !important">{e(ST["back"])}</div>
+<div class="bq" style="top:680px !important;width:260px !important;margin-left:-130px !important">{CHATART}</div></section>'''
 
 css = open(os.path.join(ROOT, 'src', 'style.css'), encoding='utf-8').read()
 js = open(os.path.join(ROOT, 'src', 'paginate.js'), encoding='utf-8').read()
