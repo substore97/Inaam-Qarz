@@ -1,0 +1,22 @@
+App name (Urdu): کلاڈ اے آئی — مکمل رہنما
+App name (English): Claude AI – Complete Guide in Urdu
+
+Short description (Urdu):
+کلاڈ اے آئی کو آسان اردو میں سیکھیں: اچھے سوال، عملی مثالیں اور احتیاطیں
+
+Short description (English):
+Learn Claude AI in easy Urdu: good prompts, practical examples and safety tips
+
+Full description (Urdu):
+«کلاڈ اے آئی — مکمل رہنما» ان سب لوگوں کے لیے ہے جو مصنوعی ذہانت کے مددگار کلاڈ کو سمجھنا اور درست طریقے سے استعمال کرنا چاہتے ہیں۔
+• تعارف: مصنوعی ذہانت کیا ہے، کلاڈ کیا ہے اور اینتھروپک کمپنی کون ہے
+• استعمال سیکھیں: پہلی بات چیت، اچھا پرامپٹ لکھنے کے اصول، فائلیں اور تصویریں، پروجیکٹس اور آرٹیفیکٹس
+• روزمرہ زندگی: طلبہ، اساتذہ، گھر، چھوٹے کاروبار اور دفتر کے لیے تیار مثالیں
+• احتیاط: تصدیق کی عادت، پرائیویسی کی حفاظت اور ذمہ دارانہ استعمال
+• اکثر پوچھے جانے والے سوالات اور اپنا امتحان
+آسان اردو، خوبصورت نستعلیق اور ہر باب میں آزمانے کے لیے مثالیں۔
+تالیف: انعام الرحمن
+نوٹ: «کلاڈ» اینتھروپک کا تجارتی نشان ہے؛ یہ کتاب ایک آزاد رہنما ہے۔
+
+Full description (English):
+"Claude AI – Complete Guide" explains Claude, the AI assistant by Anthropic, in simple Urdu: what AI and Claude are, how to write good prompts, working with files and images, Projects and Artifacts, ready-to-try examples for students, teachers, families, small businesses and offices, plus safety, privacy and responsible use, an FAQ and a quiz. By Inaam ur Rahman. Claude is a trademark of Anthropic; this is an independent guide.
