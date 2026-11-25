@@ -1,0 +1,15 @@
+App name (Arabic): هيا نقرأ
+App name (English): Let's Read
+
+Short description (Arabic):
+رحلة ممتعة لتعليم القراءة للصف الأول بالحروف والحركات والكلمات والجمل والقصص
+
+Short description (English):
+A fun first-grade Arabic reading journey: letters, harakat, words, stories
+
+Full description (Arabic):
+«هيا نقرأ» كتاب ملون لتعليم القراءة العربية لتلاميذ الصف الأول خطوة خطوة على طريقة القاعدة البغدادية: قراءة الحروف بالفتحة ثم بالكسرة ثم بالضمة، والحروف المتفرقة بالحركات الثلاث، ثم كلمات وجمل قصيرة، ثم بطاقات جمل مصورة، ثم نصوص قصيرة مع صور جميلة. كل حركة لها لون خاص يساعد الطفل على القراءة الصحيحة.
+تأليف: انعام الرحمن
+
+Full description (English):
+"Let's Read" is a colourful first-grade book that teaches Arabic reading step by step in the Baghdadi-qaida way: letters with fatha, kasra and damma, mixed-letter tables, words and short phrases, sentence cards and short illustrated passages. Each haraka has its own colour to help children read correctly. By Inaam ur Rahman.

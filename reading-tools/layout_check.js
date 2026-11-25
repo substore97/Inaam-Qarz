@@ -1,4 +1,4 @@
-// node reading-tools/check.js <book-dir> [outdir pages...] : overflow check + optional screenshots (scale 0.5)
+// node reading-tools/layout_check.js <book-dir> [outdir pages...] : overflow check + optional screenshots
 const { chromium } = require('playwright');
 const path = require('path');
 (async () => {
@@ -13,16 +13,20 @@ const path = require('path');
     document.querySelectorAll('section').forEach((s, i) => {
       const R = s.getBoundingClientRect();
       const pno = s.querySelector('.pno'); const P = pno && pno.getBoundingClientRect();
-      s.querySelectorAll('.tbl, .note, .legend, .cards, .card, .stories, .story, .ttl, .own, .cvc, .cell p, .stext p').forEach(el => {
+      s.querySelectorAll('.tbl, .note, .legend, .cards, .card, .stories, .story, .ttl, .own, .cvc').forEach(el => {
         const r = el.getBoundingClientRect();
         if (r.bottom > R.bottom - 34 || r.top < R.top) o.push(`p${i + 1} OUT ${el.className}`);
-        if (P && r.bottom > P.top + 2 && r.left < P.right && r.right > P.left && !el.closest('.cover')) o.push(`p${i + 1} OVER PAGE NO ${el.className}`);
+        if (P && r.bottom > P.top + 2 && r.left < P.right && r.right > P.left) o.push(`p${i + 1} OVER PAGE NO ${el.className}`);
       });
-      s.querySelectorAll('.cell, .card, .story, .stext').forEach(el => { if (el.scrollWidth > el.clientWidth + 2 || el.scrollHeight > el.clientHeight + 2) o.push(`p${i + 1} CLIP ${el.className} «${el.textContent.trim().slice(0, 20)}»`); });
+      // text must fit inside its box (pseudo-element decorations are ignored)
+      s.querySelectorAll('.cell > span, .card p, .stext').forEach(el => {
+        const box = el.closest('.cell, .card, .story').getBoundingClientRect(), r = el.getBoundingClientRect();
+        if (r.left < box.left - 1 || r.right > box.right + 1 || r.top < box.top - 1 || r.bottom > box.bottom + 1) o.push(`p${i + 1} TEXT OUT OF BOX «${el.textContent.trim().slice(0, 20)}»`);
+      });
     });
     return o;
   });
   console.log(bad.length ? [...new Set(bad)].slice(0, 30).join('\n') : 'LAYOUT OK');
-  if (out) { const secs = await p.$$('section'); for (const i of want) await secs[i - 1].screenshot({ path: `${out}/p${String(i).padStart(2, '0')}.png`, scale: 'css' }); }
+  if (out) { const secs = await p.$$('section'); for (const i of want) await secs[i - 1].screenshot({ path: `${out}/p${String(i).padStart(2, '0')}.png` }); }
   await b.close();
 })();
