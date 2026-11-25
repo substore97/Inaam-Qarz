@@ -1,0 +1,171 @@
+@font-face { font-family: 'AmiriL'; font-weight: 700; src: url(../fonts/amiri-latin-700-normal.woff2) format('woff2') }
+@font-face { font-family: 'Nastaliq'; font-weight: 400; src: url(../fonts/noto-nastaliq-urdu-arabic-400-normal.woff2) format('woff2') }
+@font-face { font-family: 'Nastaliq'; font-weight: 700; src: url(../fonts/noto-nastaliq-urdu-arabic-700-normal.woff2) format('woff2') }
+@font-face { font-family: 'Amiri'; font-weight: 400; src: url(../fonts/amiri-arabic-400-normal.woff2) format('woff2') }
+@font-face { font-family: 'Amiri'; font-weight: 700; src: url(../fonts/amiri-arabic-700-normal.woff2) format('woff2') }
+@page { size: A4; margin: 0 }
+* { box-sizing: border-box; margin: 0; padding: 0 }
+html, body { background: #ddd8cc }
+body { font-family: 'Nastaliq', serif; direction: rtl; color: #2a2118; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.pg { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: #fffcf4; page-break-after: always; break-after: page;
+  --a: hsl(var(--h), 52%, 32%); --a2: hsl(var(--h), 48%, 46%); --t: hsl(var(--h), 55%, 94%); --t2: hsl(var(--h), 45%, 84%) }
+.ar { font-family: 'Amiri', serif; direction: rtl }
+b { font-weight: 700 }
+
+/* frame, header, footer */
+.frame { position: absolute; inset: 22px; border: 2px solid var(--a2); border-radius: 4px; pointer-events: none }
+.frame::after { content: ''; position: absolute; inset: 4px; border: .8px solid var(--t2); border-radius: 2px }
+.hd { position: absolute; top: 34px; left: 44px; right: 44px; height: 44px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid var(--t2) }
+.hd .sec { font: 700 17px/1.9 'Nastaliq'; color: var(--a); background: var(--t); border: 1.5px solid var(--t2); border-top: 0; padding: 0 16px 0 18px; border-radius: 0 0 0 22px; margin-top: -10px }
+.hd .mag { font: 700 16px/1.9 'Nastaliq'; color: var(--a) }
+.ft { position: absolute; bottom: 38px; left: 44px; right: 44px; height: 30px; display: flex; align-items: center; justify-content: center; border-top: 1.5px solid var(--t2) }
+.pn { position: relative; width: 44px; height: 44px; margin-top: -2px; display: flex; align-items: center; justify-content: center; font: 700 15px/1 'Nastaliq'; color: var(--a) }
+.pn::before, .pn::after { content: ''; position: absolute; inset: 7px; background: var(--t); border: 1.5px solid var(--a2); z-index: -1 }
+.pn::after { transform: rotate(45deg) }
+.pn span { position: relative; z-index: 1; padding-top: 4px }
+.cred { position: absolute; left: 0; right: 0; bottom: 4px; text-align: center; font: 400 10.5px/1.8 'Nastaliq'; color: #8a7f6c }
+.body { position: absolute; top: 92px; bottom: 80px; left: 50px; right: 50px; display: flex; flex-direction: column }
+.headr { flex: none }
+.cols { flex: 1; min-height: 0; display: flex; gap: 26px }
+.col { flex: 1; min-width: 0; height: 100%; overflow: hidden; font-size: 22px; line-height: 2.3; text-align: justify }
+.cols.two .col:first-child { border-left: 1px solid var(--t2); padding-left: 13px; margin-left: -13px }
+.cols.one .col { font-size: 22.5px }
+
+/* item titles */
+.it { text-align: center; padding: 6px 0 4px }
+.it h2 { font: 700 33px/2.05 'Nastaliq'; color: var(--a) }
+.it .sub { font-size: 16px; line-height: 2; color: #6b5f4d; margin-top: -4px }
+.orn { display: block; margin: 0 auto 6px; width: 220px; height: 16px }
+.it.small h2 { font-size: 24px; line-height: 2 }
+.col p { margin-bottom: .35em; text-indent: 1.2em }
+.col p.ni { text-indent: 0 }
+.box { background: var(--t); border-right: 4px solid var(--a2); border-radius: 10px 0 0 10px; padding: .25em .8em .35em; margin: .3em 0 .55em; font-size: .93em; line-height: 2.1 }
+.box h4 { font: 700 1em/2 'Nastaliq'; color: var(--a) }
+.moral { border: 1.5px dashed var(--a2); border-radius: 12px; padding: .2em .8em .3em; margin: .3em 0 .6em; font-size: .95em; text-align: center }
+.moral b { color: var(--a) }
+.end { text-align: center; color: var(--a2); font-size: 1.1em; line-height: 1.6; margin: -.1em 0 .4em }
+
+/* quran / hadith / dua */
+.qb { border: 2px solid var(--a2); border-radius: 14px; background: #fff; padding: .35em .9em .45em; margin: .2em 0 .6em; position: relative }
+.qb::before { content: ''; position: absolute; inset: 4px; border: 1px solid var(--t2); border-radius: 10px; pointer-events: none }
+.qb .q { font: 400 1.45em/2.15 'Amiri'; text-align: center; color: #0c4a2e; direction: rtl }
+.qb .q .n { font-size: .8em; color: var(--a2) }
+.qb .ref { text-align: center; font-size: .8em; color: var(--a); line-height: 1.9 }
+.qb .tr { border-top: 1px dashed var(--t2); margin-top: .2em; padding-top: .15em; line-height: 2.1; text-align: center }
+.qb .tr b { color: var(--a); font-size: .85em }
+.when { font-size: .9em; color: #5d5242; text-align: center; line-height: 2 }
+
+/* recipe */
+.meta { display: flex; justify-content: center; gap: 1.2em; font-size: .85em; color: var(--a); margin: -.2em 0 .3em }
+.meta span { background: var(--t); border-radius: 20px; padding: 0 .8em; line-height: 1.9 }
+.ajza { background: var(--t); border-radius: 12px; padding: .2em .9em .3em; margin-bottom: .4em; columns: 2; column-gap: 1.4em; font-size: .92em; line-height: 2 }
+.ajza h4, .stp h4 { column-span: all; font: 700 1em/2 'Nastaliq'; color: var(--a) }
+.ajza div { break-inside: avoid; padding-right: .9em; position: relative }
+.ajza div::before { content: ''; position: absolute; right: 0; top: .95em; width: .38em; height: .38em; background: var(--a2); border-radius: 50% }
+.step { display: flex; gap: .55em; margin-bottom: .2em; line-height: 2.15 }
+.step i { font-style: normal; flex: none; width: 1.6em; height: 1.6em; margin-top: .45em; border-radius: 50%; background: var(--t2); color: var(--a); font: 700 .8em/1.95 'Nastaliq'; text-align: center }
+.tip { font-size: .9em; border-top: 1px dashed var(--a2); padding-top: .15em; margin-bottom: .6em }
+.tip b { color: var(--a) }
+
+/* lists */
+.li { position: relative; padding: .1em 1.5em .15em 0; margin-bottom: .25em; line-height: 2.1 }
+.li::before { content: '۞'; position: absolute; right: 0; top: .05em; color: var(--a2); font-size: .9em }
+.li.joke { background: #fff; border: 1px solid var(--t2); border-radius: 10px; padding: .15em .7em .2em; margin-bottom: .4em }
+.li.joke::before { content: none }
+.li.prov b { color: var(--a) }
+.rq { display: flex; gap: .5em; margin-bottom: .2em; line-height: 2.1 }
+.rq i { font-style: normal; flex: none; color: var(--a); font-weight: 700; min-width: 1.5em }
+.ans { background: var(--t); border-radius: 10px; padding: .2em .8em .3em; margin: .3em 0 .6em; font-size: .88em; line-height: 2 }
+.ans h4 { font: 700 1em/2 'Nastaliq'; color: var(--a) }
+.fill { border: 1.5px solid var(--t2); border-radius: 12px; padding: .1em .8em .25em; margin: .4em 0 .5em; background: #fff; font-size: .92em }
+.fill h4 { font: 700 1em/2 'Nastaliq'; color: var(--a); text-align: center; border-bottom: 1px dashed var(--t2); margin-bottom: .2em }
+.fill .li { margin-bottom: .1em }
+
+/* section opener */
+.op .panel { position: absolute; top: 22px; left: 22px; right: 22px; height: 520px; background: var(--a); border-radius: 4px 4px 0 0; overflow: hidden }
+.op .panel::before { content: ''; position: absolute; inset: 14px; border: 1.5px solid rgba(255,255,255,.35); border-radius: 4px }
+.op .panel svg.pat { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .13 }
+.op .medal { position: absolute; top: 90px; left: 50%; margin-left: -110px; width: 220px; height: 220px; border-radius: 50%; background: #fffcf4; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px rgba(255,255,255,.25) }
+.op .medal svg { width: 120px; height: 120px; stroke: var(--a); stroke-width: 3; fill: none }
+.op .medal svg .f { fill: var(--t2) }
+.op h1 { position: absolute; top: 330px; left: 40px; right: 40px; text-align: center; font: 700 52px/2 'Nastaliq'; color: #fff; -webkit-text-stroke: 2.2px #10201a; paint-order: stroke fill }
+.op .intro { position: absolute; top: 452px; left: 80px; right: 80px; text-align: center; font: 400 18px/2 'Nastaliq'; color: #fff; -webkit-text-stroke: 1.1px #10201a; paint-order: stroke fill }
+.op .list { position: absolute; top: 566px; bottom: 82px; left: 56px; right: 56px; columns: 2; column-gap: 34px; column-rule: 1px dashed var(--t2); column-fill: auto }
+.op .list h3 { column-span: all; text-align: center; font: 700 19px/2 'Nastaliq'; color: var(--a); margin-bottom: 4px }
+.op .list div { display: flex; justify-content: space-between; gap: 10px; break-inside: avoid; border-bottom: 1px dotted var(--t2); font-size: 15px; line-height: 2.05 }
+.op .list div span:last-child { color: var(--a); font-weight: 700 }
+.op .list.dense div { font-size: 13.2px; line-height: 1.85 }
+
+/* cover, inner title, contents */
+.cover { background: #0f3b3a }
+.cover .pat { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .16 }
+.cover .arch { position: absolute; top: 90px; left: 100px; right: 100px; height: 700px; background: #fffcf4; border-radius: 300px 300px 18px 18px; box-shadow: 0 0 0 10px #c9a24a, 0 0 0 14px #0f3b3a, 0 0 0 17px #c9a24a }
+.cover .arch::before { content: ''; position: absolute; inset: 16px; border: 2px solid #c9a24a; border-radius: 284px 284px 10px 10px }
+.cover .kick { position: absolute; top: 150px; left: 0; right: 0; text-align: center; font: 700 22px/2 'Nastaliq'; color: #8a6a1f }
+.cover h1 { position: absolute; top: 220px; left: 0; right: 0; text-align: center; font: 700 120px/1.9 'Nastaliq'; color: #0f3b3a }
+.cover .flw { position: absolute; top: 470px; left: 50%; margin-left: -150px; width: 300px; height: 150px }
+.cover .sub { position: absolute; top: 630px; left: 140px; right: 140px; text-align: center; font: 400 21px/2.1 'Nastaliq'; color: #3d3428 }
+.cover .chips { position: absolute; top: 850px; left: 70px; right: 70px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 12px }
+.cover .chips span { font: 700 16px/2 'Nastaliq'; color: #0f3b3a; background: #f4e3b5; border-radius: 30px; padding: 0 16px; border: 1.5px solid #c9a24a }
+.cover .pages { position: absolute; bottom: 52px; left: 0; right: 0; text-align: center; font: 700 19px/2 'Nastaliq'; color: #f4e3b5; -webkit-text-stroke: 1px #10201a; paint-order: stroke fill }
+.toc .row { display: flex; align-items: center; gap: 12px; padding: 3px 0; border-bottom: 1px dotted #d9ccb0; font-size: 19px; line-height: 2.1 }
+.toc .row i { width: 16px; height: 16px; border-radius: 4px; flex: none }
+.toc .row span:nth-child(2) { flex: 1 }
+.toc .row span:last-child { font-weight: 700; min-width: 40px; text-align: left }
+
+/* ===== Owner request (Nov 2026): all inner pages plain WHITE with BLACK text only; colour only on the covers ===== */
+.pg:not(.cover) { background: #fff; color: #000; --a: #000; --a2: #222; --t: #fff; --t2: #9a9a9a }
+.pg:not(.cover) .it .sub, .pg:not(.cover) .when, .pg:not(.cover) .meta, .pg:not(.cover) .ref { color: #000 }
+.pg:not(.cover) .qb .q { color: #000 }
+.pg:not(.cover) .box { background: #fff; border: 1px solid #000; border-right: 4px solid #000 }
+.pg:not(.cover) .ajza, .pg:not(.cover) .ans, .pg:not(.cover) .tip { background: #fff; border: 1px solid #000 }
+.pg:not(.cover) .meta span { background: #fff; border: 1px solid #000 }
+.pg:not(.cover) .step i { background: #fff; border: 1.5px solid #000; color: #000 }
+.pg:not(.cover) .hd .sec { background: #fff; color: #000; border-color: #000 }
+.pg:not(.cover) .pn::before, .pg:not(.cover) .pn::after { background: #fff; border-color: #000 }
+.pg:not(.cover) .pn { color: #000 }
+.pg:not(.cover) .cred { color: #000; font-size: 12px }
+.pg:not(.cover) .frame { border-color: #000 }
+.pg:not(.cover) .frame::after { border-color: #000 }
+.pg:not(.cover) .li::before { color: #000 }
+.op .panel { background: #fff !important; border: 2px solid #000; border-bottom-width: 4px }
+.op .panel svg.pat { display: none }
+.op .panel::before { border-color: #000 }
+.op .medal { background: #fff; border: 2px solid #000; box-shadow: none }
+.op .medal svg { stroke: #000 }
+.op .medal svg .f { fill: #fff }
+.op h1, .op .intro { color: #000 !important; -webkit-text-stroke: 0 !important }
+.toc .row i { background: #000 !important; border-radius: 50% }
+
+/* colourful front & back cover */
+.cover { background: linear-gradient(160deg, #0a3542 0%, #11655e 50%, #0a3542 100%) !important }
+.cover .pat { opacity: .22 !important }
+.cover .arch { background: radial-gradient(ellipse at 50% 35%, #fffdf6 0%, #fbf1d9 60%, #f3e2b8 100%) !important }
+.cover .kick { top: 140px; color: #8a5a12 }
+.cover h1 { top: 178px; color: #7a1238; font-size: 124px }
+.cover .bq { position: absolute; top: 420px; left: 50%; width: 330px; margin-left: -165px }
+.cover .bq svg { width: 100%; height: auto; display: block }
+.cover .sub { top: 712px; color: #3b2a14; font-size: 19px }
+.cover .chips { top: 830px }
+.cover .chips span { font-size: 15px }
+.cover .bq { top: 412px; width: 290px; margin-left: -145px }
+.cover .sub { top: 686px; left: 130px; right: 130px; font-size: 18px; line-height: 2 }
+.cover .sub { text-wrap: balance; left: 120px; right: 120px }
+
+/* ===== Claude AI guide: cover colours, prompt boxes, FAQ ===== */
+.cover { background: linear-gradient(160deg, #1d1b26 0%, #3a2a2f 45%, #b8553a 100%) !important }
+.cover .pat { opacity: .10 !important }
+.cover .arch { background: radial-gradient(ellipse at 50% 35%, #fffdf8 0%, #f8eee3 65%, #f0dcc8 100%) !important; box-shadow: 0 0 0 10px #e98a64, 0 0 0 14px #1d1b26, 0 0 0 17px #e98a64 !important }
+.cover .arch::before { border-color: #e98a64 !important }
+.cover .kick { color: #b8553a !important }
+.cover h1 { color: #1d1b26 !important; font-size: 92px !important; top: 196px !important }
+.cover .bq { top: 430px !important; width: 320px !important; margin-left: -160px !important }
+.cover .sub { color: #2b2a33 !important }
+.cover .pages { color: #fff !important }
+.cover .latin { position: absolute; top: 380px; left: 0; right: 0; text-align: center; font: 700 34px/1.4 'AmiriL'; color: #b8553a; letter-spacing: 2px; direction: ltr }
+.box.prompt { background: #fff; border: 1.5px solid #000; border-right-width: 1.5px; border-radius: 16px 16px 4px 16px }
+.box.prompt .chat { display: block; border: 1px dashed #000; border-radius: 12px; padding: .1em .6em .2em; margin-top: .1em }
+.faq { margin-bottom: .5em; border-bottom: 1px dashed #999; padding-bottom: .35em }
+.faq .fq { font-weight: 700; line-height: 2.1; display: flex; gap: .5em }
+.faq .fq i { font-style: normal; flex: none; width: 1.7em; height: 1.7em; margin-top: .4em; border: 1.5px solid #000; border-radius: 50%; text-align: center; font-size: .8em; line-height: 2 }
+.faq .fa { line-height: 2.1; padding-right: 2.3em }
